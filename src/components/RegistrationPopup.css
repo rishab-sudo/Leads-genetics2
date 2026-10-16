@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   POPUP OVERLAY
+========================================= */
+
+.registration-popup-overlay {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  margin: 0;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  z-index: 99999;
+
+  overflow: hidden;
+
+  animation: popupOverlayFade 0.5s ease-out forwards;
+}
+
+
+/* =========================================
+   POPUP BOX
+========================================= */
+
+.registration-popup-box {
+  position: relative;
+
+  width: fit-content;
+  height: fit-content;
+
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 40px);
+
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform-origin: center center;
+
+  /* Start small */
+  opacity: 0;
+  transform: scale(0.08);
+
+  /*
+    ONE continuous smooth zoom
+  */
+  animation: popupZoomIn 1.6s ease-out forwards;
+
+  will-change: transform, opacity;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.registration-popup-image {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 40px);
+cursor: pointer;
+  padding: 0;
+  margin: 0;
+
+  border: none;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.registration-popup-close {
+  position: absolute;
+
+  top: 8px;
+  right: 8px;
+
+  width: 38px;
+  height: 38px;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 27px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition: background 0.3s ease;
+}
+
+
+/* =========================================
+   CLOSE BUTTON HOVER
+========================================= */
+
+.registration-popup-close:hover {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+
+/* =========================================
+   OVERLAY FADE
+========================================= */
+
+@keyframes popupOverlayFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================
+   SINGLE SMOOTH ZOOM
+========================================= */
+
+@keyframes popupZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.08);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+  .registration-popup-overlay {
+    padding: 15px;
+  }
+
+  .registration-popup-box {
+    max-width: calc(100vw - 30px);
+    max-height: calc(100dvh - 30px);
+  }
+
+  .registration-popup-image {
+    max-width: calc(100vw - 30px);
+    max-height: calc(100dvh - 30px);
+  }
+
+  .registration-popup-close {
+    top: 7px;
+    right: 7px;
+
+    width: 36px;
+    height: 36px;
+
+    font-size: 25px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .registration-popup-overlay {
+    height: 100dvh;
+    padding: 10px;
+  }
+
+  .registration-popup-box {
+    max-width: calc(100vw - 20px);
+    max-height: calc(100dvh - 20px);
+  }
+
+  .registration-popup-image {
+    max-width: calc(100vw - 20px);
+    max-height: calc(100dvh - 20px);
+  }
+
+  .registration-popup-close {
+    top: 6px;
+    right: 6px;
+
+    width: 34px;
+    height: 34px;
+
+    font-size: 24px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .registration-popup-overlay {
+    padding: 8px;
+  }
+
+  .registration-popup-box {
+    max-width: calc(100vw - 16px);
+    max-height: calc(100dvh - 16px);
+  }
+
+  .registration-popup-image {
+    max-width: calc(100vw - 16px);
+    max-height: calc(100dvh - 16px);
+  }
+
+  .registration-popup-close {
+    top: 5px;
+    right: 5px;
+
+    width: 32px;
+    height: 32px;
+
+    font-size: 22px;
+  }
+}

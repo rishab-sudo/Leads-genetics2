@@ -1,0 +1,413 @@
+.workflow-section {
+  width: 100%;
+  padding: 48px 0 56px;
+  background-color: #e7efed;
+}
+
+.workflow-container {
+
+
+  margin:  auto;
+
+}
+
+/* Heading and subheading */
+.workflow-intro {
+ margin-bottom: 46px;
+}
+
+.section-heading.workflow-heading {
+  max-width: 570px;
+  margin: 0;
+  color: #101a18;
+  font-size: clamp(30px, 3.2vw, 44px);
+  line-height: 1.12;
+}
+
+.page-text.workflow-subheading {
+  max-width: 590px;
+  margin: 0;
+  color: #596460;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* Timeline structure */
+.workflow-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.workflow-timeline::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  background-color: #b9c2bf;
+}
+
+.workflow-step {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.workflow-step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-bottom: 12px;
+  border: 2px solid;
+  border-radius: 50%;
+  background-color: #e7efed;
+  font-size: 13px;
+  line-height: 1;
+  color: #101a18;
+}
+
+.workflow-number-green {
+  border-color: #32cf7b;
+}
+
+.workflow-number-blue {
+  border-color: #6098ff;
+}
+
+.workflow-number-yellow {
+  border-color: #f5b51b;
+}
+
+.workflow-number-red {
+  border-color: #ff655c;
+}
+
+.workflow-number-dark {
+  border-color: #101a18;
+  background-color: #101a18;
+  color: #ffffff;
+}
+
+.workflow-step-title {
+  margin: 0 0 8px;
+  color: #14201d;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.page-text.workflow-step-description {
+  margin: 0;
+  color: #5b6561;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .workflow-intro {
+    gap: 28px;
+    margin-bottom: 38px;
+  }
+
+  .workflow-timeline {
+    gap: 18px;
+  }
+
+  .workflow-step-title {
+    font-size: 15px;
+  }
+
+  .page-text.workflow-step-description {
+    font-size: 13px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .workflow-section {
+    padding: 40px 0;
+  }
+
+  .workflow-container {
+    padding: 0 20px;
+  }
+
+  .workflow-intro {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .section-heading.workflow-heading {
+    font-size: clamp(29px, 7vw, 36px);
+    line-height: 1.15;
+  }
+
+  .page-text.workflow-subheading {
+    font-size: 15px;
+  }
+
+  .workflow-timeline {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding-left: 2px;
+  }
+
+  .workflow-timeline::before {
+    top: 14px;
+    bottom: 14px;
+    left: 15px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .workflow-step {
+    padding-left: 42px;
+  }
+
+  .workflow-step-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+
+  .workflow-step-title {
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+
+  .page-text.workflow-step-description {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+}
+/* ------------ */
+.omics-section {
+  width: 100%;
+  padding: 64px 0;
+  background-color: #0b1714;
+  color: #f4f5f1;
+}
+
+.omics-container {
+margin:  auto;
+
+}
+
+/* Heading and subheading */
+.omics-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 42px;
+}
+
+.section-heading.omics-heading {
+
+  line-height: 1.12;
+}
+
+.page-text.omics-subheading {
+  max-width: 850px;
+  margin: 0;
+  color: #b9c8c3;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Cards: one card per row */
+.omics-card {
+  width: 100%;
+  padding: 30px 32px;
+  border: 1px solid transparent;
+  border-radius: 22px;
+}
+
+.omics-card + .omics-card {
+  margin-top: 24px;
+}
+
+.omics-card-primary {
+  background-color: #39bea8;
+  border-color: #39bea8;
+  color: #09201b;
+}
+
+.omics-card-secondary {
+  background-color: #11221e;
+  border-color: #293d37;
+  color: #f4f5f1;
+}
+
+/* Card headings */
+.omics-card-title {
+  margin: 0 0 10px;
+  color: inherit;
+  font-size: 25px;
+  line-height: 1.3;
+}
+
+/* Card descriptions */
+.page-text.omics-card-description {
+  margin: 0 0 20px;
+  color: inherit;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.omics-card-secondary .omics-card-description {
+  color: #a9c4bc;
+}
+
+/* Bullet lists */
+.omics-list {
+  margin: 0;
+  padding-left: 19px;
+  list-style-type: disc;
+}
+
+.omics-list-item {
+  padding-left: 0;
+  margin-bottom: 9px;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.omics-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.omics-card-primary .omics-list-item::marker {
+  color: #177f70;
+}
+
+.omics-card-secondary .omics-list-item::marker {
+  color: #94a59f;
+}
+
+/* Omics layer tags */
+.omics-layer-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.omics-layer-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background-color: rgba(8, 89, 77, 0.3);
+  color: #09201b;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .omics-section {
+    padding: 52px 0;
+  }
+
+  .omics-card {
+    padding: 26px;
+  }
+
+  .section-heading.omics-heading {
+    font-size: clamp(30px, 4.5vw, 40px);
+  }
+
+  .page-text.omics-subheading {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .omics-section {
+    padding: 42px 0;
+  }
+
+  .omics-container {
+    padding: 0 18px;
+  }
+
+  .omics-intro {
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .section-heading.omics-heading {
+    font-size: clamp(28px, 7vw, 36px);
+    line-height: 1.18;
+  }
+
+  .page-text.omics-subheading {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .omics-card {
+    padding: 23px 20px;
+    border-radius: 18px;
+  }
+
+  .omics-card + .omics-card {
+    margin-top: 18px;
+  }
+
+  .omics-card-title {
+    font-size: 22px;
+  }
+
+  .page-text.omics-card-description {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .omics-list {
+    padding-left: 18px;
+  }
+
+  .omics-list-item {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+  }
+
+  .omics-layer-tags {
+    gap: 7px;
+    margin-top: 20px;
+  }
+
+  .omics-layer-tag {
+    padding: 7px 11px;
+    font-size: 12px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+  .omics-container {
+    padding: 0 14px;
+  }
+
+  .omics-card {
+    padding: 20px 16px;
+  }
+
+  .omics-layer-tag {
+    padding: 7px 9px;
+  }
+}

@@ -1,0 +1,193 @@
+/* ================= SECTION ================= */
+.homework-section {
+  padding: 50px 0px ;
+  background: #ffffff;
+}
+
+.homework-container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+/* ================= HEADING ================= */
+.section-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.subtitle {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: #eef7f1;
+  color: #2f855a;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+/* ================= GRID ================= */
+.homework-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* ================= CARD ================= */
+.genomics-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 270px;
+  border: 1px solid #eef2f7;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.genomics-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.1);
+}
+
+/* Background image */
+.card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  opacity: 0.22;
+}
+
+/* ================= CONTENT ================= */
+.card-content {
+  position: relative;
+  z-index: 1;
+  padding: 26px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.icon-box.green {
+  background: #e7f7ef;
+  color: #2f855a;
+}
+
+.icon-box.blue {
+  background: #e8f0ff;
+  color: #2563eb;
+}
+
+.icon-box.purple {
+  background: #f2eaff;
+  color: #7c3aed;
+}
+
+/* Heading colors like screenshot */
+.genomics-card.green h3 {
+  color: #2f855a;
+}
+
+.genomics-card.blue h3 {
+  color: #1d4ed8;
+}
+
+.genomics-card.purple h3 {
+  color: #6d28d9;
+}
+
+.card-content h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.card-content p {
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 24px;
+}
+
+/* ================= EXPLORE LINK ================= */
+.explore-link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  transition: gap 0.25s ease;
+}
+
+.explore-link.green {
+  color: #2f855a;
+}
+
+.explore-link.blue {
+  color: #2563eb;
+}
+
+.explore-link.purple {
+  color: #7c3aed;
+}
+
+.explore-link:hover {
+  gap: 12px;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+  .homework-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .homework-section {
+    padding: 70px 0;
+  }
+
+  .homework-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .genomics-card {
+    min-height: 250px;
+  }
+
+  .card-content {
+    padding: 22px;
+  }
+}

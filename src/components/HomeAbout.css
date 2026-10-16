@@ -1,0 +1,781 @@
+/* =========================================
+   HOME ABOUT SECTION
+========================================= */
+
+.h-about-section {
+  width: 100%;
+  padding: 45px 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* =========================================
+   FULL WIDTH CONTAINER
+========================================= */
+
+.h-about-container {
+
+}
+
+/* =========================================
+   ROW
+========================================= */
+
+.h-about-container .row {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* =========================================
+   IMAGE COLUMN
+========================================= */
+
+.h-about-image-column {
+  position: relative;
+}
+
+.col-h {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================================
+   IMAGE AREA
+========================================= */
+
+.h-about-image-area {
+  position: relative;
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+/* =========================================
+   IMAGE BOX
+========================================= */
+
+.h-about-image-box {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #e5e7eb;
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.12);
+}
+
+/* =========================================
+   IMAGE CAROUSEL
+========================================= */
+
+.h-about-carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Carousel item should fill image box */
+
+.h-about-carousel .carousel-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+
+/* =========================================
+   CAROUSEL ITEM
+========================================= */
+
+.h-about-carousel .carousel-item {
+  width: 100%;
+  height: 600px;
+  transition: transform 0.8s ease-in-out;
+}
+
+/* =========================================
+   MAIN IMAGE
+========================================= */
+
+.h-about-main-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+/* =========================================
+   IMAGE HOVER
+========================================= */
+
+.h-about-image-box:hover .h-about-main-image {
+  transform: scale(1.03);
+}
+
+/* =========================================
+   CAROUSEL INDICATORS / DOTS
+========================================= */
+
+.h-about-carousel .carousel-indicators {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin: 0;
+
+  padding: 0;
+
+  z-index: 10;
+}
+
+/* Individual dots */
+
+.h-about-carousel .carousel-indicators [data-bs-target] {
+  width: 9px;
+  height: 9px;
+
+  margin: 0 5px;
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.55);
+
+  opacity: 1;
+
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Active dot */
+
+.h-about-carousel .carousel-indicators .active {
+  width: 28px;
+  height: 9px;
+
+  border-radius: 20px;
+
+  background-color: #ffffff;
+}
+
+/* =========================================
+   HIDE CAROUSEL ARROWS
+========================================= */
+
+.h-about-carousel .carousel-control-prev,
+.h-about-carousel .carousel-control-next {
+  display: none;
+}
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.h-about-content {
+  width: 100%;
+  max-width: 700px;
+  padding-left: 20px;
+}
+
+/* =========================================
+   BADGE
+========================================= */
+
+.h-about-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 14px;
+
+  border-radius: 999px;
+
+  background: #fbfbfb;
+  border: 1px solid #0c2d63;
+
+  color: #0c2d63;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.h-about-title {
+  margin: 0 0 25px;
+  color: #0c2d63;
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.h-about-text {
+  margin: 0 0 18px;
+
+
+  line-height: 1.8;
+
+  color: #667085;
+
+  text-align: left;
+}
+
+/* =========================================
+   STATS DIVIDER
+========================================= */
+
+.h-about-stats-divider {
+  width: 100%;
+  height: 1px;
+
+  background: #d9dee7;
+
+  margin-top: 28px;
+  margin-bottom: 24px;
+}
+
+/* =========================================
+   STATS ROW
+========================================= */
+
+.h-about-stats-row {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  align-items: stretch;
+
+  margin-bottom: 28px;
+}
+
+/* =========================================
+   INDIVIDUAL STAT
+========================================= */
+
+.h-about-stat {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 0 22px;
+}
+
+/* Vertical divider between stats */
+
+.h-about-stat + .h-about-stat {
+  border-left: 1px solid #e5e7eb;
+}
+
+/* First stat */
+
+.h-about-stat:first-child {
+  padding-left: 0;
+}
+
+/* Last stat */
+
+.h-about-stat:last-child {
+  padding-right: 0;
+}
+
+/* =========================================
+   STAT ICON
+========================================= */
+
+.h-about-stat-icon {
+  width: 38px;
+  min-width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eef4ff;
+  color: #2563eb;
+}
+
+/* =========================================
+   STAT CONTENT
+========================================= */
+
+.h-about-stat-content {
+  min-width: 0;
+}
+
+/* =========================================
+   STAT NUMBER
+========================================= */
+
+.h-about-stat-value {
+  font-size: 1.65rem;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  color: #0c2d63;
+
+  margin-bottom: 6px;
+
+  white-space: nowrap;
+}
+
+/* =========================================
+   STAT LABEL
+========================================= */
+
+.h-about-stat-label {
+  font-size: 11px;
+
+  line-height: 1.4;
+
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+
+  color: #6b7280;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.h-about-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 0;
+
+  padding: 14px 24px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #0c2d63;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(23, 0, 92, 0.2);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.h-about-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.h-about-btn:hover {
+  background: #0c2d63;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 28px rgba(23, 0, 92, 0.28);
+}
+
+.h-about-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (max-width: 1399px) {
+
+  .h-about-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .h-about-image-box {
+    height: 520px;
+  }
+
+  .h-about-carousel .carousel-item {
+    height: 520px;
+  }
+
+  .h-about-title {
+    font-size: 2.7rem;
+  }
+}
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 1199px) {
+
+  .h-about-section {
+    padding: 80px 0;
+  }
+
+  .h-about-container {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .h-about-image-box {
+    height: 470px;
+  }
+
+  .h-about-carousel .carousel-item {
+    height: 470px;
+  }
+
+  .h-about-content {
+    padding-left: 5px;
+  }
+
+  .h-about-title {
+    font-size: 2.45rem;
+  }
+
+
+  .h-about-stat {
+    padding: 0 14px;
+  }
+
+  .h-about-stat-value {
+    font-size: 1.45rem;
+  }
+
+  .h-about-stat-label {
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+  .h-about-section {
+    padding: 70px 0;
+  }
+
+  .h-about-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .h-about-image-area {
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    padding-bottom: 35px;
+  }
+
+  .h-about-image-box {
+    height: 500px;
+  }
+
+  .h-about-carousel .carousel-item {
+    height: 500px;
+  }
+
+  .h-about-content {
+    max-width: 100%;
+
+    padding-left: 0;
+
+    margin-top: 10px;
+  }
+
+  .h-about-title {
+    font-size: 2.5rem;
+  }
+
+
+  .h-about-stats-row {
+    margin-top: 4px;
+  }
+
+  .h-about-stat {
+    padding: 0 12px;
+
+    gap: 9px;
+  }
+
+  .h-about-stat-icon {
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+  }
+
+  .h-about-stat-value {
+    font-size: 1.35rem;
+  }
+
+  .h-about-stat-label {
+    font-size: 9px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+  .h-about-section {
+    padding: 60px 0;
+  }
+
+  .h-about-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .h-about-container .row {
+    --bs-gutter-y: 40px;
+  }
+
+  /* IMAGE */
+
+  .h-about-image-area {
+    padding-bottom: 30px;
+  }
+
+  .h-about-image-box {
+    height: 400px;
+
+    border-radius: 13px;
+  }
+
+  .h-about-carousel {
+    border-radius: 13px;
+  }
+
+  .h-about-carousel .carousel-inner {
+    border-radius: 13px;
+  }
+
+  .h-about-carousel .carousel-item {
+    height: 400px;
+  }
+
+  .h-about-main-image {
+    border-radius: 13px;
+  }
+
+  /* DOTS */
+
+  .h-about-carousel .carousel-indicators {
+    bottom: 14px;
+  }
+
+  .h-about-carousel .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+
+    margin: 0 4px;
+  }
+
+  .h-about-carousel .carousel-indicators .active {
+    width: 24px;
+    height: 8px;
+  }
+
+  /* CONTENT */
+
+  .h-about-content {
+    margin-top: 5px;
+  }
+
+  .h-about-badge {
+    margin-bottom: 14px;
+  }
+
+  .h-about-title {
+    font-size: 2rem;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+  }
+
+  .h-about-text {
+  
+
+    line-height: 1.75;
+
+    margin-bottom: 16px;
+  }
+
+  /* DIVIDER */
+
+  .h-about-stats-divider {
+    margin-top: 24px;
+    margin-bottom: 20px;
+  }
+
+  /* STATS */
+
+  .h-about-stats-row {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+
+    margin-bottom: 24px;
+  }
+
+  .h-about-stat,
+  .h-about-stat:first-child,
+  .h-about-stat:last-child {
+    padding: 0;
+  }
+
+  .h-about-stat + .h-about-stat {
+    border-left: none;
+  }
+
+  .h-about-stat-icon {
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+  }
+
+  .h-about-stat-value {
+    font-size: 1.35rem;
+  }
+
+  .h-about-stat-label {
+    font-size: 11px;
+  }
+
+  /* BUTTON */
+
+  .h-about-btn {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 575px) {
+
+  .h-about-section {
+    padding: 50px 0;
+  }
+
+  .h-about-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .h-about-image-box {
+    height: 330px;
+
+    border-radius: 11px;
+  }
+
+  .h-about-carousel {
+    border-radius: 11px;
+  }
+
+  .h-about-carousel .carousel-inner {
+    border-radius: 11px;
+  }
+
+  .h-about-carousel .carousel-item {
+    height: 330px;
+  }
+
+  .h-about-main-image {
+    border-radius: 11px;
+  }
+
+  .h-about-carousel .carousel-indicators {
+    bottom: 12px;
+  }
+
+  .h-about-title {
+    font-size: 1.75rem;
+  }
+
+  .h-about-text {
+    line-height: 1.75;
+  }
+
+  .h-about-stat-value {
+    font-size: 1.2rem;
+  }
+
+  .h-about-stat-label {
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   EXTRA SMALL
+========================================= */
+
+@media (max-width: 380px) {
+
+  .h-about-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .h-about-image-box {
+    height: 285px;
+  }
+
+  .h-about-carousel .carousel-item {
+    height: 285px;
+  }
+
+  .h-about-title {
+    font-size: 1.55rem;
+  }
+
+
+
+  .h-about-stat-value {
+    font-size: 1.1rem;
+  }
+}

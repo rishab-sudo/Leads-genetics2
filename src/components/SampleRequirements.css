@@ -1,0 +1,159 @@
+
+.sampleRequire {
+  width: 100%;
+  padding: 26px 0 18px;
+  background: #0b1715;
+  color: #f4f7f6;
+}
+
+.sampleRequire-container {
+  margin:  auto;
+
+}
+
+.sampleRequire-header {
+gap: 45px;
+  margin-bottom: 45px;
+}
+
+.sampleRequire-title {
+
+}
+
+.sampleRequire-subtitle {
+  max-width: 560px;
+  margin: 0;
+  color: #b4d0cc;
+  margin-top: 15px;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.sampleRequire-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #263a36;
+  border-radius: 23px;
+  background: #11201d;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sampleRequire-table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+  text-align: left;
+  color: #f2f6f5;
+}
+
+.sampleRequire-table thead {
+  background: #1a2e29;
+}
+
+.sampleRequire-table th {
+  padding: 18px 20px;
+  color: #a8c8c2;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.sampleRequire-table td {
+  padding: 17px 20px;
+  border-top: 1px solid #293b36;
+  font-size: 14px;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+.sampleRequire-table th:nth-child(1),
+.sampleRequire-table td:nth-child(1) {
+  width: 24%;
+}
+
+.sampleRequire-table th:nth-child(2),
+.sampleRequire-table td:nth-child(2) {
+  width: 20%;
+}
+
+.sampleRequire-table th:nth-child(3),
+.sampleRequire-table td:nth-child(3) {
+  width: 28%;
+}
+
+.sampleRequire-table th:nth-child(4),
+.sampleRequire-table td:nth-child(4) {
+  width: 28%;
+}
+
+.sampleRequire-application {
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.sampleRequire-note {
+  margin: 14px 0 0;
+  color: #a8c8c2;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .sampleRequire {
+    padding: 40px 0 24px;
+  }
+
+  .sampleRequire-header {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  .sampleRequire-title {
+    font-size: 36px;
+  }
+
+  .sampleRequire-subtitle {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .sampleRequire-container {
+    padding: 0 16px;
+  }
+
+  .sampleRequire-title {
+    font-size: 32px;
+    letter-spacing: -0.8px;
+  }
+
+  .sampleRequire-subtitle {
+    font-size: 15px;
+  }
+
+  .sampleRequire-table-wrapper {
+    border-radius: 16px;
+  }
+
+  .sampleRequire-table {
+    min-width: 800px;
+  }
+
+  .sampleRequire-table th {
+    padding: 15px 14px;
+    font-size: 12px;
+  }
+
+  .sampleRequire-table td {
+    padding: 15px 14px;
+    font-size: 13px;
+  }
+
+  .sampleRequire-note {
+    font-size: 12px;
+  }
+}

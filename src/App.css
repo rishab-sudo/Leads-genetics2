@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  
+}
+
+body {
+
+}
+.h-container{
+  width: 80% !important;
+}
+.hero-heading{
+      font-family: 'Cormorant Garamond' !important;
+}
+.section-heading{
+  font-size: 3rem !important;
+  line-height: normal;
+    font-family: 'Cormorant Garamond' !important;
+margin-bottom: 15px;
+  padding: 0;
+}
+p {
+  font-family: "Libre Baskerville", serif !important;
+
+}
+.page-text{
+  font-size: 18px !important;
+}
+
+@media (max-width: 767px) {
+  .h-container{
+  width: 92% !important;
+}
+.section-heading{
+  font-size: 32px !important;
+margin-bottom: 15px;
+}
+}

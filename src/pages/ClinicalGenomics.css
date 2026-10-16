@@ -1,0 +1,603 @@
+.clinical-genomics-section {
+  position: relative;
+  padding: 25px 0 100px;
+
+  background:
+    radial-gradient(
+      circle at 85% 5%,
+      rgba(37, 99, 235, 0.07),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8fbfc 100%
+    );
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   TOP SECTION
+===================================================== */
+
+.clinical-top-row {
+  min-height: 560px;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.clinical-content {
+  padding-right: 55px;
+}
+
+.clinical-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 22px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #087f7b;
+}
+
+.clinical-eyebrow span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #087f7b;
+
+  box-shadow:
+    0 0 0 5px rgba(8, 127, 123, 0.08);
+}
+
+
+.clinical-content h2 {
+  margin: 0;
+
+  color: #101b36;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(48px, 5vw, 72px);
+  line-height: 1.02;
+
+  font-weight: 500;
+
+  letter-spacing: -2px;
+}
+
+
+.clinical-content h2 span {
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #087f7b
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+
+.clinical-line {
+  position: relative;
+
+  width: 100px;
+  height: 3px;
+
+  margin: 30px 0 27px;
+
+  background: #d9e9eb;
+}
+
+
+.clinical-line span {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 70px;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #087f7b
+  );
+}
+
+
+.clinical-content > p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #4b5568;
+
+  font-size: 17px;
+  line-height: 1.85;
+
+  font-weight: 400;
+}
+
+
+/* =====================================================
+   RIGHT IMAGE
+===================================================== */
+
+.clinical-image-wrapper {
+  position: relative;
+
+  padding-left: 15px;
+}
+
+
+.clinical-main-image {
+  display: block;
+
+  width: 100%;
+  height: 470px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 25px 60px rgba(15, 55, 80, 0.14);
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+
+.clinical-image-wrapper:hover .clinical-main-image {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 30px 70px rgba(15, 55, 80, 0.18);
+}
+
+
+/* Floating image badge */
+
+.image-floating-card {
+  position: absolute;
+
+  left: -5px;
+  bottom: 35px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 20px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  border-radius: 12px;
+
+  color: #087f7b;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  box-shadow:
+    0 15px 35px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =====================================================
+   SECOND FULL WIDTH CARD
+===================================================== */
+
+.clinical-bottom-card {
+  position: relative;
+
+  margin-top: 15px;
+
+  padding: 55px 65px 45px;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f0f9fa 0%,
+      #f8fcfd 50%,
+      #edf7fa 100%
+    );
+
+  border: 1px solid rgba(8, 127, 123, 0.10);
+
+  box-shadow:
+    0 20px 55px rgba(15, 55, 80, 0.07);
+
+  overflow: hidden;
+}
+
+
+/* Decorative background */
+
+.clinical-bottom-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -150px;
+  top: -150px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(37, 99, 235, 0.08),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   DNA DECORATION
+===================================================== */
+
+.clinical-decoration {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-bottom: 30px;
+}
+
+
+.decoration-line {
+  width: 180px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(8, 127, 123, 0.45)
+    );
+}
+
+
+.decoration-line:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 127, 123, 0.45),
+      transparent
+    );
+}
+
+
+.clinical-icon {
+  position: relative;
+
+  flex-shrink: 0;
+
+  width: 78px;
+  height: 78px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #087f7b,
+      #0b9e98
+    );
+
+  box-shadow:
+    0 12px 30px rgba(8, 127, 123, 0.22);
+}
+
+
+/* =====================================================
+   SECOND PARAGRAPH
+===================================================== */
+
+.clinical-bottom-text {
+  position: relative;
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+.clinical-bottom-text p {
+  margin: 0;
+
+  color: #1f2b43;
+
+  font-size: 19px;
+
+  line-height: 1.8;
+
+  font-weight: 400;
+}
+
+
+.clinical-bottom-text strong {
+  color: #087f7b;
+
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   HIGHLIGHTS
+===================================================== */
+
+.clinical-highlights {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  margin-top: 45px;
+
+  border-top:
+    1px solid rgba(15, 55, 80, 0.10);
+
+  padding-top: 35px;
+}
+
+
+.clinical-highlight {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 0 35px;
+}
+
+
+.clinical-highlight + .clinical-highlight {
+  border-left:
+    1px solid rgba(8, 127, 123, 0.20);
+}
+
+
+.highlight-icon {
+  flex-shrink: 0;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #087f7b;
+
+  background:
+    rgba(8, 127, 123, 0.09);
+}
+
+
+.clinical-highlight h4 {
+  margin: 0 0 5px;
+
+  color: #111d38;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+
+.clinical-highlight p {
+  margin: 0;
+
+  color: #5a6577;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+  .clinical-genomics-section {
+    padding: 80px 0;
+  }
+
+
+  .clinical-content {
+    padding-right: 15px;
+
+    margin-bottom: 45px;
+  }
+
+
+  .clinical-content h2 {
+    font-size: 55px;
+  }
+
+
+  .clinical-image-wrapper {
+    padding-left: 0;
+  }
+
+
+  .clinical-main-image {
+    height: 420px;
+  }
+
+
+  .clinical-bottom-card {
+    padding: 45px 35px;
+  }
+
+
+  .decoration-line {
+    width: 120px;
+  }
+
+
+  .clinical-highlights {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+
+  .clinical-highlight {
+    padding: 0;
+  }
+
+
+  .clinical-highlight + .clinical-highlight {
+    border-left: 0;
+
+    border-top:
+      1px solid rgba(8, 127, 123, 0.15);
+
+    padding-top: 25px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 575px) {
+
+  .clinical-genomics-section {
+    padding: 65px 0;
+  }
+
+
+  .clinical-eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.3px;
+  }
+
+
+  .clinical-content h2 {
+    font-size: 42px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .clinical-content > p {
+    font-size: 15px;
+
+    line-height: 1.75;
+  }
+
+
+  .clinical-main-image {
+    height: 320px;
+
+    border-radius: 22px;
+  }
+
+
+  .image-floating-card {
+    left: 15px;
+    bottom: 20px;
+
+    padding: 11px 15px;
+
+    font-size: 11px;
+  }
+
+
+  /* Bottom card */
+
+  .clinical-bottom-card {
+    margin-top: 55px;
+
+    padding: 35px 22px;
+
+    border-radius: 20px;
+  }
+
+
+  .clinical-decoration {
+    gap: 12px;
+  }
+
+
+  .decoration-line {
+    width: 55px;
+  }
+
+
+  .clinical-icon {
+    width: 62px;
+    height: 62px;
+  }
+
+
+  .clinical-bottom-text p {
+    font-size: 16px;
+
+    line-height: 1.75;
+  }
+
+
+  .clinical-highlights {
+    margin-top: 35px;
+
+    padding-top: 25px;
+  }
+
+
+  .clinical-highlight {
+    align-items: flex-start;
+  }
+}
+
