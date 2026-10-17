@@ -1,0 +1,238 @@
+.livestock-nutrition-section {
+  padding: 60px 0;
+  background: #f3f6f9;
+  color: #102544;
+}
+
+.livestock-nutrition-header {
+  max-width: 850px;
+  margin-bottom: 64px;
+}
+
+.livestock-nutrition-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: #22c55e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.livestock-nutrition-title {
+  margin: 0 0 14px;
+  color: #102544;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 3vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.livestock-nutrition-description {
+  margin: 0;
+  color: #385473;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Dynamic Card List */
+
+.livestock-nutrition-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.livestock-nutrition-card {
+  overflow: hidden;
+  border: 1px solid #dce5ef;
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(16, 37, 68, 0.04);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.livestock-nutrition-card:hover {
+  border-color: #b7e8c8;
+  box-shadow: 0 12px 28px rgba(16, 37, 68, 0.07);
+}
+
+.livestock-nutrition-media-col {
+  display: flex;
+  min-width: 0;
+}
+
+.livestock-nutrition-image-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 260px;
+  overflow: hidden;
+  background: #e2e8f0;
+}
+
+.livestock-nutrition-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.livestock-nutrition-card:hover .livestock-nutrition-image {
+  transform: scale(1.035);
+}
+
+.livestock-nutrition-category {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 7px 12px;
+  border-radius: 5px;
+  background: #102544;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.livestock-nutrition-content-col {
+  display: flex;
+  min-width: 0;
+}
+
+.livestock-nutrition-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 36px 40px;
+}
+
+.livestock-nutrition-card-title {
+  margin: 0 0 14px;
+  color: #102544;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.livestock-nutrition-card-description {
+  margin: 0 0 24px;
+  color: #385473;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.livestock-nutrition-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  padding-top: 18px;
+  border-top: 1px solid #e7edf4;
+}
+
+.livestock-nutrition-benefit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #526c8b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.livestock-nutrition-check {
+  flex-shrink: 0;
+  color: #26965a;
+  font-size: 15px;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+  .livestock-nutrition-section {
+    padding: 50px 0;
+  }
+
+  .livestock-nutrition-header {
+    margin-bottom: 42px;
+  }
+
+  .livestock-nutrition-list {
+    gap: 24px;
+  }
+
+  .livestock-nutrition-image-wrap,
+  .livestock-nutrition-image {
+    min-height: 300px;
+  }
+
+  .livestock-nutrition-content {
+    padding: 26px;
+  }
+
+  .livestock-nutrition-card-title {
+    font-size: 24px;
+  }
+
+  .livestock-nutrition-benefits {
+    gap: 10px 16px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .livestock-nutrition-section {
+    padding: 40px 0;
+  }
+
+  .livestock-nutrition-header {
+    margin-bottom: 30px;
+  }
+
+  .livestock-nutrition-title {
+    font-size: 30px;
+  }
+
+  .livestock-nutrition-description {
+    font-size: 14px;
+  }
+
+  .livestock-nutrition-list {
+    gap: 22px;
+  }
+
+  .livestock-nutrition-image-wrap,
+  .livestock-nutrition-image {
+    height: 230px;
+    min-height: 230px;
+  }
+
+  .livestock-nutrition-content {
+    padding: 24px 20px;
+  }
+
+  .livestock-nutrition-card-title {
+    font-size: 23px;
+  }
+
+  .livestock-nutrition-card-description {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .livestock-nutrition-benefits {
+    gap: 12px 18px;
+    padding-top: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .livestock-nutrition-card,
+  .livestock-nutrition-image {
+    transition: none;
+  }
+}

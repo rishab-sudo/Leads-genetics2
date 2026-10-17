@@ -1,0 +1,366 @@
+
+/* ==============================
+   QUALITY ASSURANCE SECTION
+================================= */
+
+.quality-page {
+  width: 100%;
+  color: #102442;
+}
+
+.quality-assurance-section {
+  background: #f3f5f8;
+  border-top: 4px solid #182a43;
+  border-bottom: 1px solid #dce4ee;
+  padding: 8px 0 96px;
+}
+
+.quality-section-header {
+  max-width: 760px;
+  margin-bottom: 64px;
+}
+
+.quality-eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #26945d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  line-height: 1.4;
+}
+
+.quality-main-heading {
+  margin: 0 0 14px;
+  color: #0c203e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.6px;
+}
+
+.quality-section-description {
+  max-width: 740px;
+  margin: 0;
+  color: #405979;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.quality-modules-row {
+  --bs-gutter-x: 24px;
+  --bs-gutter-y: 24px;
+}
+
+.quality-module-column {
+  display: flex;
+}
+
+.quality-module-card {
+  width: 100%;
+  min-height: 145px;
+  padding: 24px 24px 22px;
+  background: #ffffff;
+  border: 1px solid #dce5ef;
+  border-radius: 13px;
+  box-shadow: 0 5px 20px rgba(16, 36, 66, 0.025);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.quality-module-card:hover {
+  transform: translateY(-4px);
+  border-color: #b9d7c7;
+  box-shadow: 0 10px 26px rgba(16, 36, 66, 0.07);
+}
+
+.quality-module-code {
+  display: block;
+  margin-bottom: 11px;
+  color: #16845a;
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+}
+
+.quality-module-title {
+  margin: 0 0 10px;
+  color: #0c203e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.quality-module-description {
+  margin: 0;
+  color: #405979;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ==============================
+   AUDIENCE / PARTNERSHIP SECTION
+================================= */
+
+.quality-audience-section {
+  padding: 80px 0 90px;
+  background: #ffffff;
+}
+
+.quality-audience-row {
+  --bs-gutter-x: 32px;
+  --bs-gutter-y: 28px;
+}
+
+.quality-audience-column {
+  display: flex;
+}
+
+.quality-audience-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 360px;
+  padding: 40px;
+  background: #f3f5f8;
+  border: 1px solid #dce5ef;
+  border-radius: 16px;
+}
+
+.quality-audience-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 24px;
+  color: #ffffff;
+  background: #0c203e;
+  border-radius: 8px;
+}
+
+.quality-audience-icon svg {
+  display: block;
+  width: 23px;
+  height: 23px;
+}
+
+.quality-audience-card--research .quality-audience-icon {
+  background: #29945f;
+}
+
+.quality-audience-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #16845a;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.9px;
+}
+
+.quality-audience-card--research .quality-audience-label {
+  color: #0c203e;
+}
+
+.quality-audience-title {
+  margin: 0 0 14px;
+  color: #0c203e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.quality-audience-description {
+  margin: 0 0 28px;
+  color: #405979;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.quality-audience-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+  padding: 13px 20px;
+  color: #ffffff;
+  background: #0c203e;
+  border: 1px solid #0c203e;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.quality-audience-button:hover {
+  color: #ffffff;
+  background: #1a385d;
+  border-color: #1a385d;
+  transform: translateY(-2px);
+}
+
+.quality-audience-card--research .quality-audience-button {
+  background: #29945f;
+  border-color: #29945f;
+}
+
+.quality-audience-card--research .quality-audience-button:hover {
+  background: #20774b;
+  border-color: #20774b;
+}
+
+/* ==============================
+   TABLET RESPONSIVENESS
+================================= */
+
+@media (max-width: 991.98px) {
+  .quality-assurance-section {
+    padding-bottom: 72px;
+  }
+
+  .quality-section-header {
+    margin-bottom: 42px;
+  }
+
+  .quality-main-heading {
+    font-size: 32px;
+  }
+
+  .quality-module-card {
+    min-height: 155px;
+    padding: 22px 20px;
+  }
+
+  .quality-audience-section {
+    padding: 60px 0 70px;
+  }
+
+  .quality-audience-card {
+    min-height: 340px;
+    padding: 32px;
+  }
+
+  .quality-audience-title {
+    font-size: 23px;
+  }
+}
+
+/* ==============================
+   MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 575.98px) {
+  .quality-assurance-section {
+    padding-top: 20px;
+    padding-bottom: 48px;
+  }
+
+  .quality-section-header {
+    margin-bottom: 30px;
+  }
+
+  .quality-eyebrow {
+    font-size: 11px;
+  }
+
+  .quality-main-heading {
+    font-size: 29px;
+    line-height: 1.18;
+    letter-spacing: -0.35px;
+  }
+
+  .quality-desktop-break {
+    display: none;
+  }
+
+  .quality-section-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .quality-modules-row {
+    --bs-gutter-x: 14px;
+    --bs-gutter-y: 16px;
+  }
+
+  .quality-module-card {
+    min-height: auto;
+    padding: 22px 20px;
+  }
+
+  .quality-module-title {
+    font-size: 17px;
+  }
+
+  .quality-module-description {
+    font-size: 13px;
+  }
+
+  .quality-audience-section {
+    padding: 40px 0 48px;
+  }
+
+  .quality-audience-row {
+    --bs-gutter-x: 14px;
+    --bs-gutter-y: 18px;
+  }
+
+  .quality-audience-card {
+    min-height: auto;
+    padding: 26px 22px;
+    border-radius: 12px;
+  }
+
+  .quality-audience-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 22px;
+  }
+
+  .quality-audience-label {
+    font-size: 10px;
+    letter-spacing: 0.65px;
+  }
+
+  .quality-audience-title {
+    font-size: 23px;
+  }
+
+  .quality-audience-description {
+    margin-bottom: 24px;
+    font-size: 13px;
+  }
+
+  .quality-audience-button {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 12px;
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .quality-module-card,
+  .quality-audience-button {
+    transition: none;
+  }
+
+  .quality-module-card:hover,
+  .quality-audience-button:hover {
+    transform: none;
+  }
+}

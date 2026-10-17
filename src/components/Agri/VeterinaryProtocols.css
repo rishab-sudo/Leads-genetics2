@@ -1,0 +1,172 @@
+.veterinary-protocols-section {
+  padding: 60px 0 75px;
+  background: #ffffff;
+  color: #102544;
+}
+
+.veterinary-protocols-header {
+  max-width: 800px;
+  margin-bottom: 64px;
+}
+
+.veterinary-protocols-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: #22c55e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.veterinary-protocols-title {
+  margin: 0 0 16px;
+  color: #102544;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 3vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.veterinary-protocols-description {
+  margin: 0;
+  color: #385473;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* Cards Grid */
+
+.veterinary-protocols-grid {
+  row-gap: 24px;
+}
+
+.veterinary-protocols-column {
+  display: flex;
+}
+
+/* Individual Card */
+
+.veterinary-protocol-card {
+  width: 100%;
+  min-height: 265px;
+  padding: 32px;
+  border: 1px solid #dce5ef;
+  border-radius: 13px;
+  background: #f3f6f9;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.veterinary-protocol-card:hover {
+  transform: translateY(-4px);
+  border-color: #a9e7bf;
+  box-shadow: 0 10px 26px rgba(16, 37, 68, 0.07);
+}
+
+.veterinary-protocol-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 27px;
+  border: 1px solid #dce5ef;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #229653;
+  font-size: 23px;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.veterinary-protocol-card:hover .veterinary-protocol-icon {
+  border-color: #22c55e;
+  background: #22c55e;
+  color: #ffffff;
+}
+
+.veterinary-protocol-card-title {
+  margin: 0 0 10px;
+  color: #102544;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.veterinary-protocol-card-description {
+  margin: 0;
+  color: #385473;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+  .veterinary-protocols-section {
+    padding: 50px 0;
+  }
+
+  .veterinary-protocols-header {
+    margin-bottom: 38px;
+  }
+
+  .veterinary-protocol-card {
+    min-height: 245px;
+    padding: 26px;
+  }
+
+  .veterinary-protocol-icon {
+    margin-bottom: 22px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 575px) {
+  .veterinary-protocols-section {
+    padding: 40px 0;
+  }
+
+  .veterinary-protocols-header {
+    margin-bottom: 30px;
+  }
+
+  .veterinary-protocols-title {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .veterinary-protocols-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .veterinary-protocols-grid {
+    row-gap: 16px;
+  }
+
+  .veterinary-protocol-card {
+    min-height: auto;
+    padding: 25px;
+  }
+
+  .veterinary-protocol-icon {
+    margin-bottom: 20px;
+  }
+
+  .veterinary-protocol-card-title {
+    font-size: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .veterinary-protocol-card,
+  .veterinary-protocol-icon {
+    transition: none;
+  }
+}
