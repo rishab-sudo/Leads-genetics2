@@ -62,7 +62,7 @@ const AgriGenoBanner = () => {
         </p>
       </div>
     </section>
-    // 
+
     <section className="livestock-stats-section">
       <Container>
         <Row className="livestock-stats-row">
