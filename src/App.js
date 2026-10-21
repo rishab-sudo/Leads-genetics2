@@ -11,6 +11,8 @@ import Contact from "./pages/Contact";
 import Research from "./pages/Research";
 import AgriGenomics from "./pages/AgriGenomics";
 import Moet from "./pages/Moet";
+import Blog from "./pages/Blog/Blog";
+import BlogDetails from "./pages/Blog/BlogDetails";
 // import Registration from "./pages/Registration";
 
 import RegistrationPopup from "./components/RegistrationPopup";
@@ -67,6 +69,17 @@ function App() {
         <Route
           path="/contact"
           element={<Contact />}
+        />
+
+         <Route
+          path="/blog"
+          element={<Blog />}
+        />
+
+        {/* Blog Article Detail Page */}
+        <Route
+          path="/blog/:slug"
+          element={<BlogDetails />}
         />
 
         {/* Registration Page */}

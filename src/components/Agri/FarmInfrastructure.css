@@ -29,16 +29,12 @@
 .farm-infrastructure-title {
   margin: 0 0 16px;
   color: #102544;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(30px, 3vw, 40px);
-  font-weight: 700;
   line-height: 1.12;
 }
 
 .farm-infrastructure-description {
   margin: 0;
   color: #385473;
-  font-size: 16px;
   line-height: 1.65;
 }
 
@@ -65,9 +61,11 @@
 }
 
 .farm-infrastructure-feature-card:hover {
-  transform: translateY(-4px);
-  border-color: #b9eccb;
-  box-shadow: 0 12px 28px rgba(16, 37, 68, 0.07);
+  transform: translateY(-10px);
+  border-color: #17853f;
+  box-shadow:
+    0 8px 22px rgba(34, 197, 94, 0.13),
+    0 16px 35px rgba(34, 197, 94, 0.10);
 }
 
 .farm-infrastructure-feature-icon {
@@ -107,6 +105,16 @@
   border-radius: 17px;
   background: #ffffff;
   box-shadow: 0 12px 35px rgba(16, 37, 68, 0.055);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.farm-layout-panel:hover {
+  border-color: #8bcaa1;
+  box-shadow:
+    0 10px 28px rgba(34, 197, 94, 0.12),
+    0 18px 42px rgba(34, 197, 94, 0.08);
 }
 
 .farm-layout-header {
@@ -198,14 +206,17 @@
   text-align: left;
   cursor: pointer;
   transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.2s ease;
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
 }
 
 .farm-shed-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(16, 37, 68, 0.08);
+  transform: translateY(-3px);
+  border-color: #86efac;
+  box-shadow:
+    0 6px 18px rgba(34, 197, 94, 0.16),
+    0 12px 26px rgba(34, 197, 94, 0.10);
 }
 
 .farm-shed-card:focus-visible {
@@ -406,7 +417,7 @@
   }
 
   .farm-infrastructure-title {
-    font-size: 30px;
+
     line-height: 1.2;
   }
 
@@ -414,9 +425,6 @@
     display: none;
   }
 
-  .farm-infrastructure-description {
-    font-size: 14px;
-  }
 
   .farm-infrastructure-features {
     grid-template-columns: 1fr;
@@ -486,8 +494,11 @@
   }
 }
 
+/* Reduced motion accessibility */
+
 @media (prefers-reduced-motion: reduce) {
   .farm-infrastructure-feature-card,
+  .farm-layout-panel,
   .farm-shed-card {
     transition: none;
   }

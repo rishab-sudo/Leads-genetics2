@@ -95,7 +95,7 @@ const QualityAssurance = () => {
               QUALITY ASSURANCE
             </span>
 
-            <h2 className="quality-main-heading">
+            <h2 className="quality-main-heading section-heading ">
               Documented Processes. Traceable
               <br className="quality-desktop-break" /> Operations.
             </h2>

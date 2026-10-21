@@ -33,9 +33,6 @@
 .quality-main-heading {
   margin: 0 0 14px;
   color: #0c203e;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 36px;
-  font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.6px;
 }
@@ -236,10 +233,6 @@
     margin-bottom: 42px;
   }
 
-  .quality-main-heading {
-    font-size: 32px;
-  }
-
   .quality-module-card {
     min-height: 155px;
     padding: 22px 20px;
@@ -278,7 +271,6 @@
   }
 
   .quality-main-heading {
-    font-size: 29px;
     line-height: 1.18;
     letter-spacing: -0.35px;
   }

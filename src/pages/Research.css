@@ -1,19 +1,20 @@
+/* =========================================
+   WORKFLOW SECTION — ORIGINAL THEME
+========================================= */
+
 .workflow-section {
   width: 100%;
   padding: 48px 0 56px;
-  background-color: #e7efed;
+  background-color: #e4f2ff;
 }
 
 .workflow-container {
-
-
-  margin:  auto;
-
+  margin: auto;
 }
 
 /* Heading and subheading */
 .workflow-intro {
- margin-bottom: 46px;
+  margin-bottom: 46px;
 }
 
 .section-heading.workflow-heading {
@@ -107,7 +108,7 @@
   line-height: 1.7;
 }
 
-/* Tablet */
+/* Workflow Tablet */
 @media (max-width: 991px) {
   .workflow-intro {
     gap: 28px;
@@ -127,7 +128,7 @@
   }
 }
 
-/* Mobile */
+/* Workflow Mobile */
 @media (max-width: 767px) {
   .workflow-section {
     padding: 40px 0;
@@ -188,17 +189,21 @@
     line-height: 1.65;
   }
 }
-/* ------------ */
+
+
+/* =========================================
+   OMICS SECTION — LIGHT BLUE THEME
+========================================= */
+
 .omics-section {
   width: 100%;
   padding: 64px 0;
-  background-color: #0b1714;
-  color: #f4f5f1;
+  background-color: #e4f2ff;
+  color: #16344f;
 }
 
 .omics-container {
-margin:  auto;
-
+  margin: auto;
 }
 
 /* Heading and subheading */
@@ -211,63 +216,75 @@ margin:  auto;
 }
 
 .section-heading.omics-heading {
-
+  color: #16344f;
   line-height: 1.12;
 }
 
 .page-text.omics-subheading {
   max-width: 850px;
   margin: 0;
-  color: #b9c8c3;
+  color: #526c82;
   font-size: 17px;
   line-height: 1.7;
 }
 
-/* Cards: one card per row */
+/* =========================================
+   OMICS CARDS (always white)
+========================================= */
+
 .omics-card {
   width: 100%;
   padding: 30px 32px;
-  border: 1px solid transparent;
+  border: 1px solid #d1e2f0;
   border-radius: 22px;
+  background-color: #ffffff;
+  color: #16344f;
+  box-shadow: 0 4px 16px rgba(35, 78, 112, 0.06);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 .omics-card + .omics-card {
   margin-top: 24px;
 }
 
-.omics-card-primary {
-  background-color: #39bea8;
-  border-color: #39bea8;
-  color: #09201b;
-}
-
+.omics-card-primary,
 .omics-card-secondary {
-  background-color: #11221e;
-  border-color: #293d37;
-  color: #f4f5f1;
+  background-color: #ffffff;
+  border-color: #d1e2f0;
+  color: #16344f;
 }
 
-/* Card headings */
+/* Card hover: stay white, green accent border + lift */
+.omics-card:hover,
+.omics-card-primary:hover,
+.omics-card-secondary:hover {
+  background-color: #ffffff;
+  border-color: #39bea8;
+  box-shadow: 0 12px 28px rgba(57, 190, 168, 0.18);
+  transform: translateY(-4px);
+}
+
 .omics-card-title {
   margin: 0 0 10px;
-  color: inherit;
+  color: #16344f;
   font-size: 25px;
   line-height: 1.3;
 }
 
-/* Card descriptions */
 .page-text.omics-card-description {
   margin: 0 0 20px;
-  color: inherit;
+  color: #526c82;
   font-size: 16px;
   line-height: 1.7;
 }
 
-.omics-card-secondary .omics-card-description {
-  color: #a9c4bc;
-}
+/* =========================================
+   BULLET LISTS
+========================================= */
 
-/* Bullet lists */
 .omics-list {
   margin: 0;
   padding-left: 19px;
@@ -285,15 +302,18 @@ margin:  auto;
   margin-bottom: 0;
 }
 
-.omics-card-primary .omics-list-item::marker {
-  color: #177f70;
+.omics-list-item::marker {
+  color: #6b91ac;
 }
 
-.omics-card-secondary .omics-list-item::marker {
-  color: #94a59f;
+.omics-card:hover .omics-list-item::marker {
+  color: #39bea8;
 }
 
-/* Omics layer tags */
+/* =========================================
+   OMICS LAYER TAGS (green on pill hover)
+========================================= */
+
 .omics-layer-tags {
   display: flex;
   flex-wrap: wrap;
@@ -307,13 +327,30 @@ margin:  auto;
   justify-content: center;
   padding: 8px 14px;
   border-radius: 999px;
-  background-color: rgba(8, 89, 77, 0.3);
-  color: #09201b;
+  background-color: #e5f2fc;
+  border: 1px solid #c6deef;
+  color: #245371;
   font-size: 13px;
   line-height: 1.3;
+  cursor: default;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
-/* Tablet */
+.omics-layer-tag:hover {
+  background-color: #39bea8;
+  border-color: #39bea8;
+  color: #09201b;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   OMICS TABLET
+========================================= */
+
 @media (max-width: 991px) {
   .omics-section {
     padding: 52px 0;
@@ -332,7 +369,10 @@ margin:  auto;
   }
 }
 
-/* Mobile */
+/* =========================================
+   OMICS MOBILE
+========================================= */
+
 @media (max-width: 767px) {
   .omics-section {
     padding: 42px 0;
@@ -395,9 +435,20 @@ margin:  auto;
     padding: 7px 11px;
     font-size: 12px;
   }
+
+  /* Avoid hover movement on touch layouts */
+  .omics-card:hover,
+  .omics-card-primary:hover,
+  .omics-card-secondary:hover,
+  .omics-layer-tag:hover {
+    transform: none;
+  }
 }
 
-/* Small mobile */
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
 @media (max-width: 380px) {
   .omics-container {
     padding: 0 14px;
@@ -409,5 +460,22 @@ margin:  auto;
 
   .omics-layer-tag {
     padding: 7px 9px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .omics-card,
+  .omics-layer-tag,
+  .omics-list-item::marker {
+    transition: none;
+  }
+
+  .omics-card:hover,
+  .omics-layer-tag:hover {
+    transform: none;
   }
 }

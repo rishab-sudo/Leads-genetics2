@@ -43,7 +43,7 @@
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 4px;
-  color: #d7d4cf;
+  color: #67e8f9;
   text-transform: uppercase;
 }
 
@@ -58,7 +58,9 @@
 
 .research-banner-title span {
   display: block;
-  color: #d7d4cf;
+  background: linear-gradient(90deg, #67e8f9 0%, #6ee7b7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .research-banner-description {

@@ -95,7 +95,7 @@ const LivestockCare = () => {
               ZONE 2: LIVESTOCK CARE
             </span>
 
-            <h2 className="livestock-care-title">
+            <h2 className="livestock-care-title section-heading ">
               Cattle Diversity, Individualized Animal Management.
             </h2>
 

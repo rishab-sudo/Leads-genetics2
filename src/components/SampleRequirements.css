@@ -1,41 +1,54 @@
-
+/* ========================================================
+   SAMPLE REQUIREMENTS SECTION (Light Blue Theme & Cyan Box with Green Hover)
+   ======================================================== */
 .sampleRequire {
   width: 100%;
-  padding: 26px 0 18px;
-  background: #0b1715;
-  color: #f4f7f6;
+  padding: 56px 0 64px;
+  background: linear-gradient(180deg, #eaf4fb 0%, #f0f8fd 100%);
+  color: #0c2340;
 }
 
 .sampleRequire-container {
-  margin:  auto;
-
+  margin: auto;
 }
 
 .sampleRequire-header {
-gap: 45px;
-  margin-bottom: 45px;
+  gap: 45px;
+  margin-bottom: 40px;
 }
 
 .sampleRequire-title {
-
+  margin: 0;
+  color: #0c2340;
+  font-size: clamp(30px, 3.2vw, 44px);
+  line-height: 1.15;
+  font-weight: 700;
 }
 
 .sampleRequire-subtitle {
-  max-width: 560px;
+  max-width: 580px;
   margin: 0;
-  color: #b4d0cc;
-  margin-top: 15px;
+  color: #3b5a75;
+  margin-top: 14px;
   font-size: 17px;
   line-height: 1.65;
 }
 
+/* Cyan box with green hover effect */
 .sampleRequire-table-wrapper {
   width: 100%;
   overflow-x: auto;
-  border: 1px solid #263a36;
-  border-radius: 23px;
-  background: #11201d;
+  border: 2px solid #67e8f9;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 10px 32px rgba(6, 182, 212, 0.12);
   -webkit-overflow-scrolling: touch;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sampleRequire-table-wrapper:hover {
+  border-color: #10b981;
+  box-shadow: 0 18px 44px rgba(16, 185, 129, 0.22), 0 0 0 1.5px #10b981;
 }
 
 .sampleRequire-table {
@@ -43,28 +56,45 @@ gap: 45px;
   min-width: 850px;
   border-collapse: collapse;
   text-align: left;
-  color: #f2f6f5;
+  color: #1e3a52;
 }
 
 .sampleRequire-table thead {
-  background: #1a2e29;
+  background: linear-gradient(90deg, #cffafe 0%, #e0f7fa 100%);
 }
 
 .sampleRequire-table th {
-  padding: 18px 20px;
-  color: #a8c8c2;
+  padding: 18px 22px;
+  color: #0e7490;
   font-size: 13px;
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   white-space: nowrap;
+  border-bottom: 2px solid #a5f3fc;
+}
+
+.sampleRequire-table tbody tr {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.sampleRequire-table tbody tr:hover {
+  background-color: #ecfdf5; /* Green hover highlight */
 }
 
 .sampleRequire-table td {
-  padding: 17px 20px;
-  border-top: 1px solid #293b36;
+  padding: 18px 22px;
+  border-top: 1px solid #e0f2fe;
   font-size: 14px;
   line-height: 1.5;
   vertical-align: middle;
+  color: #334e68;
+  transition: color 0.2s ease;
+}
+
+.sampleRequire-table tbody tr:hover td {
+  color: #064e3b;
 }
 
 .sampleRequire-table th:nth-child(1),
@@ -89,20 +119,37 @@ gap: 45px;
 
 .sampleRequire-application {
   font-weight: 650;
+  color: #0c2340;
   white-space: nowrap;
 }
 
+.sampleRequire-table tbody tr:hover .sampleRequire-application {
+  color: #059669;
+}
+
 .sampleRequire-note {
-  margin: 14px 0 0;
-  color: #a8c8c2;
-  font-size: 13px;
+  margin: 20px 0 0;
+  color: #164e63;
+  background: linear-gradient(135deg, #ecfeff 0%, #f0fdf4 100%);
+  border: 1.5px solid #a5f3fc;
+  border-left: 5px solid #06b6d4;
+  padding: 16px 22px;
+  border-radius: 12px;
+  font-size: 14px;
   line-height: 1.7;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(6, 182, 212, 0.06);
+}
+
+.sampleRequire-note:hover {
+  border-left-color: #10b981;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.16);
 }
 
 /* Tablet */
 @media (max-width: 991px) {
   .sampleRequire {
-    padding: 40px 0 24px;
+    padding: 44px 0 48px;
   }
 
   .sampleRequire-header {
@@ -122,12 +169,16 @@ gap: 45px;
 
 /* Mobile */
 @media (max-width: 575px) {
+  .sampleRequire {
+    padding: 36px 0 40px;
+  }
+
   .sampleRequire-container {
     padding: 0 16px;
   }
 
   .sampleRequire-title {
-    font-size: 32px;
+    font-size: 30px;
     letter-spacing: -0.8px;
   }
 
@@ -136,7 +187,7 @@ gap: 45px;
   }
 
   .sampleRequire-table-wrapper {
-    border-radius: 16px;
+    border-radius: 18px;
   }
 
   .sampleRequire-table {
@@ -144,16 +195,17 @@ gap: 45px;
   }
 
   .sampleRequire-table th {
-    padding: 15px 14px;
+    padding: 14px 16px;
     font-size: 12px;
   }
 
   .sampleRequire-table td {
-    padding: 15px 14px;
+    padding: 14px 16px;
     font-size: 13px;
   }
 
   .sampleRequire-note {
-    font-size: 12px;
+    font-size: 13px;
+    padding: 14px 16px;
   }
 }

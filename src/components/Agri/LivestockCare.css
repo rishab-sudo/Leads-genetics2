@@ -31,9 +31,6 @@
 .livestock-care-title {
   margin: 0 0 15px;
   color: #102544;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(30px, 3vw, 40px);
-  font-weight: 700;
   line-height: 1.15;
 }
 
@@ -266,9 +263,6 @@
     max-width: 600px;
   }
 
-  .livestock-care-title {
-    font-size: 34px;
-  }
 
   .livestock-breed-image-wrap {
     height: 190px;
@@ -297,9 +291,6 @@
     margin-bottom: 25px;
   }
 
-  .livestock-care-title {
-    font-size: 30px;
-  }
 
   .livestock-care-description {
     font-size: 14px;

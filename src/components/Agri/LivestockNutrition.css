@@ -21,9 +21,6 @@
 .livestock-nutrition-title {
   margin: 0 0 14px;
   color: #102544;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(30px, 3vw, 40px);
-  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -193,9 +190,6 @@
     margin-bottom: 30px;
   }
 
-  .livestock-nutrition-title {
-    font-size: 30px;
-  }
 
   .livestock-nutrition-description {
     font-size: 14px;

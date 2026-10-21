@@ -46,7 +46,7 @@ const AgriGenoBanner = () => {
 
       {/* Banner Content */}
       <div className="agri-geno-banner-content">
-        <span className="agri-geno-banner-subtitle">
+        <span className="agri-geno-banner-subtitle section heading">
           ADVANCING AGRICULTURE THROUGH GENOMICS
         </span>
 

@@ -1,0 +1,249 @@
+/* =========================================================
+   Technology Showcase
+   Tokens are scoped to the section (no :root leakage).
+   ========================================================= */
+
+.tss-section-fluid {
+  --ti-ink: #12344a;
+  --ti-ink-soft: #486477;
+  --ti-muted: #708592;
+  --ti-accent: #2b83b7;
+  --ti-accent-dark: #1c6b99;
+  --ti-accent-soft: #edf7fc;
+  --ti-bg: #f7fbfe;
+  --ti-line: #d9eaf4;
+  --ti-shadow: 0 12px 32px rgba(18, 52, 74, .08);
+  --ti-shadow-hover: 0 20px 45px rgba(18, 52, 74, .12);
+  --ti-ease: cubic-bezier(.22, .61, .36, 1);
+
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 5vw 96px;
+  color: var(--ti-ink);
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(43, 131, 183, .06), transparent 36%),
+    #fff;
+}
+
+.tss-section-fluid * {
+  box-sizing: border-box;
+}
+
+.tss-bg-pattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .5;
+  background-image:
+    linear-gradient(rgba(43, 131, 183, .035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(43, 131, 183, .035) 1px, transparent 1px);
+  background-size: 42px 42px;
+  -webkit-mask-image: linear-gradient(to bottom, #000, transparent 90%);
+  mask-image: linear-gradient(to bottom, #000, transparent 90%);
+}
+
+/* ---------- Headings ---------- */
+
+.tss-header {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 72px 0 40px;
+  text-align: center;
+}
+
+.tss-heading {
+  margin: 0;
+  color: var(--ti-ink);
+  font-size: clamp(2rem, 3.5vw, 3.1rem);
+  line-height: 1.1;
+  letter-spacing: -.04em;
+  font-weight: 650;
+}
+
+.tss-heading::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin: 22px auto 0;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--ti-accent), #8cc8e4);
+}
+
+.tss-subheading {
+  max-width: 640px;
+  margin: 18px auto 0;
+  color: var(--ti-ink-soft);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* ---------- Flow diagram ---------- */
+
+.tss-diagram-wrap {
+  position: relative;
+  z-index: 2;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: 12px 0 36px;
+  overflow-x: auto;
+}
+
+.tss-diagram {
+  display: block;
+  width: 100%;
+  min-width: 760px;
+  height: auto;
+  overflow: visible;
+}
+
+.tss-node circle,
+.tss-node rect {
+  fill: #fff;
+  stroke: #cfe3ee;
+  stroke-width: 1.5;
+}
+
+.tss-node-platform rect {
+  filter: drop-shadow(0 10px 20px rgba(18, 52, 74, .06));
+}
+
+.tss-node-sample circle:first-child,
+.tss-node-analytics circle:first-child {
+  fill: var(--ti-accent-soft);
+  stroke: rgba(43, 131, 183, .32);
+}
+
+.tss-node .tss-icon-bg {
+  fill: var(--ti-accent-soft);
+  stroke: var(--ti-line);
+}
+
+.tss-node-title {
+  fill: var(--ti-ink);
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.tss-node-sub {
+  fill: var(--ti-muted);
+  font-size: 11px;
+}
+
+.tss-node-label {
+  fill: var(--ti-ink);
+  font-size: 13px;
+  font-weight: 650;
+  text-anchor: middle;
+}
+
+.tss-edge {
+  fill: none;
+  stroke: #9bc9e0;
+  stroke-width: 1.6;
+  stroke-dasharray: 5 7;
+  animation: tss-flow 3.2s linear infinite;
+}
+
+.tss-arrowhead { fill: var(--ti-accent); }
+
+.tss-icon-line,
+.tss-icon-rung,
+.tss-icon-bar,
+.tss-icon-pore { stroke: var(--ti-accent); }
+
+.tss-node .tss-icon-pore,
+.tss-node .tss-icon-line { fill: none; }
+
+.tss-node .tss-icon-dot { fill: #7db9d6; stroke: none; }
+.tss-node .tss-icon-dot-accent { fill: var(--ti-accent); stroke: none; }
+
+/* ---------- Capability cards ---------- */
+
+.tss-capabilities {
+  position: relative;
+  z-index: 2;
+  width: min(1120px, 100%);
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.tss-capability {
+  padding: 24px;
+  border: 1px solid var(--ti-line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .9);
+  box-shadow: var(--ti-shadow);
+  transition: transform .35s var(--ti-ease), box-shadow .35s var(--ti-ease), border-color .35s var(--ti-ease);
+}
+
+.tss-capability:hover {
+  transform: translateY(-4px);
+  border-color: #b9d9e9;
+  box-shadow: var(--ti-shadow-hover);
+}
+
+.tss-cap-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  color: var(--ti-accent);
+  background: var(--ti-accent-soft);
+}
+
+.tss-cap-icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.tss-capability h3 {
+  margin: 0 0 8px;
+  color: var(--ti-ink);
+  font-size: 1rem;
+  line-height: 1.35;
+  font-weight: 650;
+}
+
+.tss-capability p {
+  margin: 0;
+  color: var(--ti-ink-soft);
+  font-size: .84rem;
+  line-height: 1.65;
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes tss-flow {
+  to { stroke-dashoffset: -48; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tss-edge { animation: none; }
+  .tss-capability { transition: none; }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1100px) {
+  .tss-capabilities { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 800px) {
+  .tss-section-fluid { padding-left: 20px; padding-right: 20px; padding-bottom: 72px; }
+  .tss-header { padding-top: 64px; padding-bottom: 32px; }
+}
+
+@media (max-width: 560px) {
+  .tss-heading { font-size: 1.9rem; }
+  .tss-subheading { font-size: .92rem; line-height: 1.7; }
+  .tss-capabilities { grid-template-columns: 1fr; }
+}

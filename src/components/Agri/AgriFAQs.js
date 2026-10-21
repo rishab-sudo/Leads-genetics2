@@ -109,7 +109,7 @@ const AgriFAQs = () => {
             COMMON INQUIRIES
           </span>
 
-          <h2 className="common-faq-heading">
+          <h2 className="common-faq-heading section-heading">
             Frequently Asked Questions
           </h2>
 

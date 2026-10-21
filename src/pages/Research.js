@@ -1,5 +1,7 @@
 import React from 'react'
 import ResearchBanner from '../components/ResearchBanner'
+import Advance from '../components/Research/Advance';
+import Technology from '../components/Research/Technology';
 import "./Research.css"
 import SampleRequirements from '../components/SampleRequirements';
 
@@ -110,6 +112,9 @@ One partner for the whole workflow
     </div>
   </div>
   </section>
+
+
+  <Advance/>
   {/*----------------------*/}
   <section className="omics-section">
 <div className="omics-container h-container">
@@ -170,6 +175,9 @@ Multi-omics and bioinformatics
     </div>
   </div>
 </section>
+
+<Technology/>
+
 {/*  */}
 <SampleRequirements/>
 {/*  */}

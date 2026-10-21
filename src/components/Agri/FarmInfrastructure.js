@@ -141,13 +141,13 @@ const FarmInfrastructure = () => {
             ZONE 1: FARM INFRASTRUCTURE
           </span>
 
-          <h2 className="farm-infrastructure-title">
+          <h2 className="farm-infrastructure-title section-heading ">
             Infrastructure Designed for Structured
-            <br className="farm-infrastructure-desktop-break" />
+            <br className="farm-infrastructure-desktop-break section-heading" />
             Livestock Management
           </h2>
 
-          <p className="farm-infrastructure-description">
+          <p className="farm-infrastructure-description page-text ">
             Our livestock infrastructure is organized around dedicated
             animal housing and day-to-day farm management. With nine sheds
             accommodating six cattle breeds, the facility provides a

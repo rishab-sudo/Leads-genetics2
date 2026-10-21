@@ -1,11 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [navbarVisible, setNavbarVisible] = useState(true);
+  const location = useLocation();
+
+  // Pages without a hero image need a dark navbar from the start
+  const alwaysScrolled = !["/", "/agri-genomics", "/research-genomics", "/clinical-genomics", "/chip", "/moet"].includes(location.pathname);
 
   const navRef = useRef(null);
   const lastScrollY = useRef(0);
@@ -46,7 +50,7 @@ const Navbar = () => {
     <>
       <nav
         ref={navRef}
-        className={`navbar ${scrolled ? "scrolled" : ""} ${
+        className={`navbar ${(scrolled || alwaysScrolled) ? "scrolled" : ""} ${
           navbarVisible ? "navbar-visible" : "navbar-hidden"
         }`}
       >
@@ -67,6 +71,14 @@ const Navbar = () => {
 
             <li>
               <Link to="/about">About</Link>
+            </li>
+
+            <li>
+              <Link to="/chip">Product</Link>
+            </li>
+
+             <li>
+              <Link to="/blog">Blog</Link>
             </li>
             
                 {/* <li>

@@ -51,7 +51,7 @@ const LivestockNutrition = () => {
             SCIENTIFIC RATIONING
           </span>
 
-          <h2 className="livestock-nutrition-title">
+          <h2 className="livestock-nutrition-title section-heading ">
             A Structured Approach to Livestock Nutrition
           </h2>
 

@@ -28,9 +28,6 @@
 .common-faq-heading {
   margin: 0 0 14px;
   color: #0c203e;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 38px;
-  font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.55px;
 }
@@ -219,9 +216,6 @@
     margin-bottom: 36px;
   }
 
-  .common-faq-heading {
-    font-size: 34px;
-  }
 
   .common-faq-grid {
     --bs-gutter-x: 18px;
@@ -264,7 +258,6 @@
 
   .common-faq-heading {
     margin-bottom: 12px;
-    font-size: 29px;
     line-height: 1.22;
     letter-spacing: -0.35px;
   }
