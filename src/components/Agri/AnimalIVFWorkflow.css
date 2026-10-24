@@ -1,3 +1,4 @@
+
 .ivf {
   --accent: #1f2d3d;
   --track: #efe6da;
@@ -8,6 +9,7 @@
 }
 
 .ivf-wrap {
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -18,7 +20,7 @@
   font: 400 clamp(32px, 4.4vw, 48px) / 1.12 Georgia, serif;
 }
 
-.ivf-wrap > p {
+.ivf-intro {
   max-width: 62ch;
   margin: 0 0 80px;
   font-size: 14px;
@@ -26,7 +28,7 @@
   color: #777;
 }
 
-/* ---------- the line ---------- */
+/* Timeline */
 
 .ivf-box {
   position: relative;
@@ -47,6 +49,7 @@
   fill: none;
   stroke-width: 4;
   stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .ivf-track {
@@ -59,14 +62,14 @@
 
 .ivf-dot {
   fill: var(--track);
-  transition: fill 0.3s;
+  transition: fill 0.3s ease;
 }
 
 .ivf-dot.on {
   fill: var(--accent);
 }
 
-/* ---------- steps (mobile first) ---------- */
+/* Steps */
 
 .ivf-list {
   display: grid;
@@ -80,7 +83,12 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  min-width: 0;
   padding-left: 40px;
+}
+
+.ivf-text {
+  min-width: 0;
 }
 
 .ivf-num {
@@ -104,7 +112,8 @@
 }
 
 .ivf-step img {
-  width: 320px;
+  display: block;
+  width: 450px;
   max-width: 100%;
   height: auto;
   aspect-ratio: 320 / 190;
@@ -112,7 +121,7 @@
   border-radius: 18px;
 }
 
-/* ---------- desktop zigzag (keep 1024 in sync with the JS) ---------- */
+/* Desktop: preserve the zigzag design */
 
 @media (min-width: 1024px) {
   .ivf-list {
@@ -121,7 +130,7 @@
 
   .ivf-step {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
     gap: 0;
     padding-left: 0;
@@ -131,16 +140,137 @@
     padding-left: 40px;
   }
 
-  /* odd: text left, image right */
+  /* Odd steps: text left, image right */
+
   .ivf-step img {
     justify-self: start;
     margin-left: 40px;
   }
 
-  /* even: image left, text right */
+  /* Even steps: image left, text right */
+
   .ivf-step:nth-child(even) img {
     order: -1;
     justify-self: end;
     margin: 0 40px 0 0;
+  }
+}
+
+/* Tablet */
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .ivf {
+    padding: 64px 28px;
+  }
+
+  .ivf h2 {
+    max-width: 24ch;
+    font-size: clamp(32px, 4.5vw, 42px);
+  }
+
+  .ivf-intro {
+    margin-bottom: 56px;
+  }
+
+  .ivf-list {
+    gap: 64px;
+  }
+
+  .ivf-step {
+    gap: 20px;
+    padding-left: 32px;
+  }
+
+  .ivf-num {
+    font-size: 56px;
+  }
+
+  .ivf-step h3 {
+    font-size: 22px;
+  }
+
+  .ivf-step p {
+    max-width: 500px;
+    font-size: 14px;
+  }
+
+  .ivf-step img {
+    width: min(100%, 520px);
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .ivf {
+    padding: 45px 16px;
+  }
+
+  .ivf h2 {
+    max-width: 100%;
+    margin-bottom: 16px;
+    font-size: clamp(29px, 8vw, 36px);
+    line-height: 1.15;
+  }
+
+  .ivf-intro {
+    margin-bottom: 44px;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .ivf-list {
+    gap: 48px;
+  }
+
+  .ivf-step {
+    gap: 16px;
+    padding-left: 24px;
+  }
+
+  .ivf-num {
+    margin-bottom: 8px;
+    font-size: 48px;
+  }
+
+  .ivf-step h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .ivf-step p {
+    max-width: 100%;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .ivf-step img {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 14px;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 360px) {
+  .ivf {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .ivf-step {
+    padding-left: 20px;
+  }
+
+  .ivf-num {
+    font-size: 42px;
+  }
+
+  .ivf-step h3 {
+    font-size: 18px;
   }
 }

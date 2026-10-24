@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from "react";
 import "./AnimalIVFWorkflow.css";
 
@@ -53,33 +54,55 @@ const steps = [
   },
 ];
 
-const RADIUS = 24; // rounded corner size of the line
-const LEFT = 2; // line x position (half of the 4px stroke)
+const RADIUS = 24;
+const LEFT = 2;
 
-/* Builds the line from the real position of each step. */
-function buildPath(items, width, zigzag) {
-  const rows = items.map((li) => [li.offsetTop, li.offsetTop + li.offsetHeight]);
-  const endY = rows[rows.length - 1][1];
+function buildPath(items, box, zigzag) {
+  const boxRect = box.getBoundingClientRect();
+
+  const rows = items.map((item) => {
+    const rect = item.getBoundingClientRect();
+
+    return {
+      top: rect.top - boxRect.top,
+      bottom: rect.bottom - boxRect.top,
+    };
+  });
+
+  if (!rows.length) {
+    return { d: "", endX: LEFT, endY: 0, startY: 0 };
+  }
 
   let x = LEFT;
-  let d = `M ${x} ${rows[0][0]}`;
+  let d = `M ${x} ${rows[0].top}`;
 
   if (zigzag) {
     for (let i = 0; i < rows.length - 1; i++) {
-      const turnY = (rows[i][1] + rows[i + 1][0]) / 2; // middle of the gap
-      const nextX = x === LEFT ? width / 2 : LEFT;
+      const turnY = (rows[i].bottom + rows[i + 1].top) / 2;
+      const nextX = x === LEFT ? box.clientWidth / 2 : LEFT;
       const dir = nextX > x ? 1 : -1;
 
       d += ` V ${turnY - RADIUS}`;
-      d += ` A ${RADIUS} ${RADIUS} 0 0 ${dir === 1 ? 0 : 1} ${x + dir * RADIUS} ${turnY}`;
+      d += ` A ${RADIUS} ${RADIUS} 0 0 ${
+        dir === 1 ? 0 : 1
+      } ${x + dir * RADIUS} ${turnY}`;
       d += ` H ${nextX - dir * RADIUS}`;
-      d += ` A ${RADIUS} ${RADIUS} 0 0 ${dir === 1 ? 1 : 0} ${nextX} ${turnY + RADIUS}`;
+      d += ` A ${RADIUS} ${RADIUS} 0 0 ${
+        dir === 1 ? 1 : 0
+      } ${nextX} ${turnY + RADIUS}`;
+
       x = nextX;
     }
   }
 
-  d += ` V ${endY}`;
-  return { d, endX: x, endY, startY: rows[0][0] };
+  d += ` V ${rows[rows.length - 1].bottom}`;
+
+  return {
+    d,
+    endX: x,
+    endY: rows[rows.length - 1].bottom,
+    startY: rows[0].top,
+  };
 }
 
 function StepsFlow() {
@@ -93,25 +116,34 @@ function StepsFlow() {
     const track = trackRef.current;
     const bar = barRef.current;
     const dot = dotRef.current;
-    const items = Array.from(box.querySelectorAll("li"));
+
+    if (!box || !track || !bar || !dot) return;
+
     let total = 0;
     let startY = 0;
     let endY = 0;
 
-    // fills the line according to scroll position
     const draw = () => {
-      const tip = window.innerHeight * 0.6 - box.getBoundingClientRect().top;
-      const progress = Math.min(1, Math.max(0, (tip - startY) / (endY - startY)));
+      if (!total || endY <= startY) return;
+
+      const tip =
+        window.innerHeight * 0.6 - box.getBoundingClientRect().top;
+
+      const progress = Math.min(
+        1,
+        Math.max(0, (tip - startY) / (endY - startY))
+      );
 
       bar.style.strokeDashoffset = total * (1 - progress);
-      bar.style.opacity = progress > 0 ? 1 : 0;
+      bar.style.opacity = progress > 0 ? "1" : "0";
       dot.classList.toggle("on", progress >= 1);
     };
 
-    // rebuilds the line whenever the layout changes
     const layout = () => {
+      const items = Array.from(box.querySelectorAll(".ivf-step"));
       const zigzag = window.matchMedia("(min-width: 1024px)").matches;
-      const path = buildPath(items, box.clientWidth, zigzag);
+
+      const path = buildPath(items, box, zigzag);
 
       track.setAttribute("d", path.d);
       bar.setAttribute("d", path.d);
@@ -119,19 +151,29 @@ function StepsFlow() {
       dot.setAttribute("cy", path.endY);
 
       total = bar.getTotalLength();
-      bar.style.strokeDasharray = total;
+      bar.style.strokeDasharray = `${total}`;
       startY = path.startY;
       endY = path.endY;
+
       draw();
     };
 
     const observer = new ResizeObserver(layout);
     observer.observe(box);
+
+    box.querySelectorAll(".ivf-step").forEach((item) => {
+      observer.observe(item);
+    });
+
     window.addEventListener("scroll", draw, { passive: true });
+    window.addEventListener("resize", layout);
+
+    layout();
 
     return () => {
       observer.disconnect();
       window.removeEventListener("scroll", draw);
+      window.removeEventListener("resize", layout);
     };
   }, []);
 
@@ -139,12 +181,13 @@ function StepsFlow() {
     <section className="ivf">
       <div className="ivf-wrap">
         <h2>Advancing Animal Reproduction Through In-House IVF</h2>
-        <p>
+
+        <p className="ivf-intro">
           In-vitro fertilization enables fertilization to take place under
           controlled laboratory conditions rather than inside the animal's
           reproductive tract. Leads Genetics has a confirmed in-house animal
-          IVF laboratory, with the stated scope covering oocyte collection, IVF
-          and embryo culture, and embryo freezing and transfer.
+          IVF laboratory, with the stated scope covering oocyte collection,
+          IVF and embryo culture, and embryo freezing and transfer.
         </p>
 
         <div className="ivf-box" ref={boxRef}>
@@ -162,11 +205,10 @@ function StepsFlow() {
                   <h3>{step.title}</h3>
                   <p>{step.description}</p>
                 </div>
+
                 <img
                   src={step.image}
                   alt={step.title}
-                  width="320"
-                  height="190"
                   loading="lazy"
                 />
               </li>

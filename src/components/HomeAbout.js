@@ -11,9 +11,19 @@ import { useNavigate } from "react-router-dom";
 import "./HomeAbout.css";
 
 // Images
-import backImg from "../assets/clibanner.png";
-import labImg from "../assets/h-about1.png";
-import cowImg from "../assets/cow.jpeg";
+import aboutImg1 from "../assets/h-about1.png";
+import aboutImg2 from "../assets/h-about2.png";
+
+/* =========================================
+   SLIDES (full images, shown one after another)
+========================================= */
+
+const SLIDES = [
+  { src: aboutImg1, alt: "Leads Genetics laboratory" },
+  { src: aboutImg2, alt: "Leads Genetics research" },
+];
+
+const SLIDE_DELAY = 4000; // ms between images
 
 /* =========================================
    STATS
@@ -77,47 +87,45 @@ function AnimatedCounter({ value, prefix = "", suffix = "" }) {
 
 const HomeAbout = () => {
   const navigate = useNavigate();
+  const [active, setActive] = useState(0);
+
+  // change image automatically; restarts the timer when a dot is clicked
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setActive((current) => (current + 1) % SLIDES.length);
+    }, SLIDE_DELAY);
+
+    return () => clearTimeout(timer);
+  }, [active]);
 
   return (
     <section className="h-about-section">
       <Container fluid className="h-about-container">
         <Row className="align-items-center g-5">
-          {/* ============ LEFT: IMAGE COLLAGE ============ */}
+          {/* ============ LEFT: FULL IMAGE SLIDER ============ */}
           <Col xl={6} lg={6} md={12}>
-            <div className="h-about-collage">
-              {/* Leaf */}
-              <svg className="h-about-leaf" viewBox="0 0 64 96" aria-hidden="true">
-                <path
-                  d="M32 2C12 24 4 46 10 66c4 14 14 24 22 28 8-4 18-14 22-28C60 46 52 24 32 2Z"
-                  fill="currentColor"
-                />
-                <path d="M32 20v70" stroke="#fff" strokeOpacity=".6" strokeWidth="2" fill="none" />
-              </svg>
-
-              {/* Test tube */}
-              <svg className="h-about-tube" viewBox="0 0 40 120" aria-hidden="true">
-                <path
-                  d="M6 20v76a14 14 0 0 0 28 0V20"
-                  fill="#fff"
-                  stroke="#1f6b35"
-                  strokeWidth="3"
-                />
-                <path d="M6 64v32a14 14 0 0 0 28 0V64Z" fill="#1f6b35" fillOpacity=".75" />
-                <rect x="2" y="12" width="36" height="8" rx="4" fill="#1f6b35" />
-                <circle cx="16" cy="78" r="2.5" fill="#fff" />
-                <circle cx="24" cy="88" r="2" fill="#fff" />
-              </svg>
-
-              <div className="h-about-img h-about-img--back">
-                <img src={labImg} alt="Leads Genetics" />
+            <div className="h-about-slider">
+              <div className="h-about-slides">
+                {SLIDES.map((slide, index) => (
+                  <img
+                    key={slide.src}
+                    src={slide.src}
+                    alt={slide.alt}
+                    className={`h-about-slide ${index === active ? "active" : ""}`}
+                  />
+                ))}
               </div>
 
-              <div className="h-about-img h-about-img--small">
-                <img src={backImg} alt="Cows at a livestock farm" />
-              </div>
-
-              <div className="h-about-img h-about-img--main">
-                <img src={cowImg} alt="Leads Genetics Laboratory" />
+              <div className="h-about-dots">
+                {SLIDES.map((slide, index) => (
+                  <button
+                    key={slide.src}
+                    type="button"
+                    className={`h-about-dot ${index === active ? "active" : ""}`}
+                    onClick={() => setActive(index)}
+                    aria-label={`Show image ${index + 1}`}
+                  />
+                ))}
               </div>
             </div>
           </Col>
@@ -127,7 +135,7 @@ const HomeAbout = () => {
             <div className="h-about-content">
               <p className="h-about-eyebrow">About Leads Genetics</p>
 
-              <h2 className="h-about-title section-heading ">
+              <h2 className="h-about-title section-heading">
                 Advancing Genomics
                 <span className="h-about-title-accent section-heading">
                   Empowering Agriculture
@@ -143,7 +151,7 @@ const HomeAbout = () => {
                  next-generation sequencing, molecular diagnostics, and bioinformatics.
               </p>
 
-              <p className="h-about-text page-text ">
+              <p className="h-about-text page-text">
                 A new chapter began as the business became part of the Leads / BL Agro ecosystem, bringing together established genomics capabilities with the scale, agricultural reach, and long-term vision of the BL Agro Group. This transition gave rise to Leads Genetics - 
                 a genomics-focused organization designed to connect laboratory 
                 science with real-world biological and agricultural outcomes.
