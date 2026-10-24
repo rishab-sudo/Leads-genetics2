@@ -1,5 +1,6 @@
 import React from 'react';
 import './ResearchBanner.css';
+import clinicalVideo from '../assets/clinical-video.mp4';
 
 const ResearchBanner = () => {
   return (
@@ -13,7 +14,7 @@ const ResearchBanner = () => {
         playsInline
         preload="metadata"
       >
-        <source src="/videos/research-bg.mp4" type="video/mp4" />
+        <source src={clinicalVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 

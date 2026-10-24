@@ -2,6 +2,7 @@ import React from 'react'
 import ResearchBanner from '../components/ResearchBanner'
 import Advance from '../components/Research/Advance';
 import Technology from '../components/Research/Technology';
+import Services from '../components/Services'
 import "./Research.css"
 import SampleRequirements from '../components/SampleRequirements';
 
@@ -177,6 +178,8 @@ Multi-omics and bioinformatics
 </section>
 
 <Technology/>
+<Services/>
+
 
 {/*  */}
 <SampleRequirements/>

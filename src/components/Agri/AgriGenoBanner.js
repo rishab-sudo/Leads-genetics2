@@ -5,25 +5,25 @@ import "./AgriGenoBanner.css";
 
 const AgriGenoBanner = () => {
   const livestockStats = [
-  {
-    id: 1,
-    icon: <FaWarehouse />,
-    title: "9 Livestock Sheds",
-    subtitle: "DEDICATED PURPOSE HOUSING",
-  },
-  {
-    id: 2,
-    icon: <FaListUl />,
-    title: "6 Cattle Breeds",
-    subtitle: "INDIVIDUALIZED MANAGEMENT",
-  },
-  {
-    id: 3,
-    icon: <FaFlask />,
-    title: "In-House IVF Laboratory",
-    subtitle: "ADVANCED EMBRYO BIOTECH",
-  },
-];
+    {
+      id: 1,
+      icon: <FaWarehouse />,
+      title: "10 Dedicated Sheds",
+      subtitle: "STRUCTURED HERD HOUSING",
+    },
+    {
+      id: 2,
+      icon: <FaListUl />,
+      title: "Indigenous & Exotic",
+      subtitle: "GIR, SAHIWAL, PUNGANUR & CROSSBRED HF",
+    },
+    {
+      id: 3,
+      icon: <FaFlask />,
+      title: "In-House IVF Laboratory",
+      subtitle: "ADVANCED EMBRYO BIOTECH",
+    },
+  ];
 
   return (
     <>

@@ -7,7 +7,7 @@ const faqData = [
     id: 1,
     question: "What livestock facilities does Leads Genetics provide?",
     answer:
-      "Leads Genetics provides organized livestock facilities focused on animal management, breeding support, feeding systems, hygiene, and comfortable housing conditions designed to support herd health and productivity.",
+      "Leads Genetics maintains an active cattle strength of 758 animals (as on October 22, 2026) housed across 10 specialized sheds: Vishnu, Khushi, Shubhadra, Maa, Priyanka, Ajay, Sudhir, Chotti, Calf shed, and Quarantine. Facilities cater to indigenous breeds (Gir, Sahiwal, Punganur) and exotic crossbred Holstein Friesian cattle, supported by an in-house IVF laboratory, biosecurity protocols, and veterinary isolation wards.",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const faqData = [
     id: 3,
     question: "What feeding framework is followed for livestock?",
     answer:
-      "Livestock feeding is planned around animal age, breed, body condition, production stage, and nutritional requirements. Balanced feed, clean drinking water, and routine monitoring help maintain animal health and performance.",
+      "Feed ingredients including Green Fodder (Maize, Jowar), Dry Fodder (Wheat Pusa), and Concentrates (Soya Doc, Maize, wheat and rice bran) are scientifically mixed based on dry matter intake (DMI) of 2.5 – 3% of total body weight. The ration is dynamically adjusted for milk yield, pregnancy trimesters, and growing calves/heifers, blended using Total Mixed Ration (TMR) equipment, and supplied twice daily at mangers across each shed.",
   },
   {
     id: 4,

@@ -1,0 +1,190 @@
+.vacination {
+  padding: 80px 0;
+  background-color: #f3f6f9;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  color: #1f2d3d;
+}
+
+.vacination-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.vacination-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.vacination-left,
+.vacination-right {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.vacination-left .section-heading {
+  margin: 0;
+}
+
+/* label */
+.vacination-label {
+  align-self: flex-start;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #1f2d3d;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.vacination-panel .vacination-label {
+  background: #99bcdf;
+  color: #1f2d3d;
+}
+
+/* green cards */
+.vacination-panel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
+  border-radius: 28px;
+  background: rgb(202, 229, 238);
+}
+
+/* image */
+.vacination-image {
+  height: 290px;
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.vacination-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* light blue boxes inside the cards */
+.vacination-item,
+.vacination-list li,
+.vacination-marquee {
+  border-radius: 18px;
+  background: #f3f6f9;
+  transition: background 0.2s ease;
+}
+
+.vacination-item:hover,
+.vacination-list li:hover,
+.vacination-marquee:hover {
+  background: #dce8f4;
+}
+
+.vacination-item {
+  padding: 18px 20px;
+}
+
+.vacination-name {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 19px;
+}
+
+.vacination-item p,
+.vacination-list p {
+  margin: 0;
+  color: #4a5a6a;
+  line-height: 1.55;
+}
+
+/* health list */
+.vacination-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vacination-list li {
+  padding: 14px 18px;
+}
+
+.vacination-list strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* scrolling images, left to right */
+.vacination-marquee {
+  position: relative;
+  flex: 1;
+  min-height: 170px;
+  overflow: hidden;
+}
+
+.vacination-track {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: max-content;
+  padding: 10px 0;
+  animation: vacination-scroll 28s linear infinite;
+}
+
+.vacination-marquee:hover .vacination-track {
+  animation-play-state: paused;
+}
+
+.vacination-group {
+  display: flex;
+}
+
+.vacination-group img {
+  width: 230px;
+  height: 100%;
+  margin-right: 12px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+@keyframes vacination-scroll {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .vacination {
+    padding: 56px 0;
+  }
+
+  .vacination-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vacination-image {
+    height: 240px;
+  }
+
+  .vacination-group img {
+    width: 190px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vacination-track {
+    animation: none;
+  }
+}

@@ -1,348 +1,620 @@
-.livestock-care-section {
-  padding: 65px 0 55px;
-  overflow: hidden;
-  background: #fff;
+.lc-section {
+  padding: 70px 0 60px;
+  background: #ffffff;
   color: #102544;
+  overflow-x: clip;
 }
 
-/* Header */
+/* Type colour tokens: one palette used everywhere */
 
-.livestock-care-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 25px;
-  margin-bottom: 38px;
+[data-type="indigenous"] {
+  --type: #168647;
+  --type-tint: #e8f7ee;
 }
 
-.livestock-care-intro {
-  max-width: 680px;
+[data-type="exotic"] {
+  --type: #1b5e9c;
+  --type-tint: #e6f0fa;
 }
 
-.livestock-care-eyebrow {
+[data-type="mixed"] {
+  --type: #102544;
+  --type-tint: #e3ebf3;
+}
+
+/* Introduction */
+
+.lc-intro {
+  max-width: 720px;
+  margin-bottom: 40px;
+}
+
+.lc-eyebrow {
   display: block;
   margin-bottom: 12px;
-  color: #22c55e;
+  color: #168647;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.2px;
 }
 
-.livestock-care-title {
-  margin: 0 0 15px;
+.lc-title {
+  margin: 0 0 16px;
   color: #102544;
   line-height: 1.15;
 }
 
-.livestock-care-description {
+.lc-description {
   margin: 0;
   color: #385473;
   font-size: 15px;
   line-height: 1.7;
 }
 
-/* Navigation */
+/* Breed classification: open columns, no boxes */
 
-.livestock-care-navigation {
-  display: flex;
-  flex-shrink: 0;
-  gap: 12px;
-  padding-bottom: 3px;
+.lc-classes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  margin-bottom: 56px;
 }
 
-.livestock-care-nav-btn {
-  display: flex;
-  width: 46px;
-  height: 46px;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #cbd8e6;
-  border-radius: 50%;
-  background: #fff;
-  color: #102544;
-  font-size: 22px;
-  cursor: pointer;
-  transition: 0.25s ease;
-}
-
-.livestock-care-nav-btn:hover {
-  border-color: #22c55e;
-  background: #22c55e;
-  color: #fff;
-}
-
-.livestock-care-nav-btn:focus-visible {
-  outline: 2px solid #22c55e;
-  outline-offset: 3px;
-}
-
-/* Swiper */
-
-.livestock-care-slider {
-  width: 100%;
-  overflow: hidden;
-  padding: 3px 1px 10px;
-}
-
-.livestock-care-slider .swiper-slide {
-  display: flex;
-  height: auto;
+.lc-class {
   min-width: 0;
+  padding-top: 18px;
+  border-top: 3px solid var(--type);
 }
 
-/* Breed Card */
+.lc-class-tag {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--type);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
 
-.livestock-breed-card {
+.lc-class-name {
+  margin: 0 0 6px;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.lc-class p:last-child {
+  margin: 0;
+  color: #526c8b;
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+/* Breed explorer: tabs */
+
+.lc-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.lc-tab {
   display: flex;
-  width: 100%;
   min-width: 0;
   flex-direction: column;
+  gap: 3px;
+  padding: 14px 0 0;
+  border: 0;
+  border-top: 3px solid #d3dde8;
+  background: none;
+  color: #102544;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.lc-tab:hover,
+.lc-tab-active {
+  border-top-color: var(--type);
+}
+
+.lc-tab:focus-visible {
+  outline: 3px solid rgba(34, 197, 94, 0.4);
+  outline-offset: 4px;
+}
+
+.lc-tab-num {
+  color: #637b98;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.lc-tab-name {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.lc-tab-cat {
+  color: #637b98;
+  font-size: 12px;
+}
+
+.lc-tab-active .lc-tab-num,
+.lc-tab-active .lc-tab-cat {
+  color: var(--type);
+}
+
+/* Breed explorer: panel */
+
+.lc-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
   overflow: hidden;
-  border: 1px solid #dce5ef;
-  border-radius: 12px;
+  border-radius: 14px;
   background: #f4f6f9;
-  box-shadow: 0 5px 18px rgba(16, 37, 68, 0.04);
-  transition:
-    border-color 0.25s ease,
-    box-shadow 0.25s ease,
-    transform 0.25s ease;
+  animation: lc-enter 0.3s ease;
 }
 
-.livestock-breed-card:hover {
-  transform: translateY(-3px);
-  border-color: #a7e8bf;
-  box-shadow: 0 10px 24px rgba(16, 37, 68, 0.08);
-}
-
-/* Image */
-
-.livestock-breed-image-wrap {
+.lc-panel-media {
   position: relative;
-  width: 100%;
-  height: 200px;
-  flex-shrink: 0;
-  overflow: hidden;
+  min-height: 440px;
   background: #e2e8f0;
 }
 
-.livestock-breed-image {
+.lc-panel-image {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
 }
 
-.livestock-breed-card:hover .livestock-breed-image {
-  transform: scale(1.04);
-}
-
-.livestock-breed-origin {
+.lc-panel-category {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  max-width: calc(100% - 24px);
-  padding: 7px 10px;
-  overflow: hidden;
+  top: 16px;
+  left: 16px;
+  max-width: calc(100% - 32px);
+  padding: 7px 12px;
   border-radius: 30px;
-  background: #102544;
-  color: #fff;
-  font-size: 10px;
+  background: var(--type);
+  color: #ffffff;
+  font-size: 11px;
   font-weight: 600;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
-/* Content */
-
-.livestock-breed-content {
+.lc-panel-body {
   display: flex;
-  flex: 1;
+  min-width: 0;
   flex-direction: column;
-  padding: 20px 17px;
+  padding: 36px 40px;
 }
 
-.livestock-breed-title-row {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 9px;
-  margin-bottom: 12px;
-}
-
-.livestock-breed-title {
-  margin: 0;
-  color: #102544;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 23px;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.livestock-breed-label {
-  display: inline-block;
-  max-width: 100%;
-  padding: 6px 9px;
+.lc-panel-label {
+  align-self: flex-start;
+  margin-bottom: 14px;
+  padding: 6px 10px;
   border-radius: 4px;
-  background: #e8f7ee;
-  color: #168647;
-  font-size: 10px;
-  font-weight: 600;
-  overflow-wrap: anywhere;
+  background: var(--type-tint);
+  color: var(--type);
+  font-size: 11px;
+  font-weight: 700;
 }
 
-.livestock-breed-description {
-  margin: 0 0 16px;
+.lc-panel-name {
+  margin: 0 0 14px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.lc-panel-text {
+  margin: 0 0 24px;
   color: #385473;
-  font-size: 13px;
-  line-height: 1.65;
+  font-size: 14.5px;
+  line-height: 1.75;
 }
 
-/* Specifications */
-
-.livestock-breed-specifications {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding-top: 14px;
-  border-top: 1px solid #dce5ef;
-  margin-bottom: 20px;
+.lc-specs {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 24px;
+  padding-top: 20px;
+  border-top: 1px solid #d3dde8;
 }
 
-.livestock-breed-spec-row {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.livestock-breed-spec-label {
+.lc-specs dt,
+.lc-panel-sheds-label {
+  display: block;
+  margin-bottom: 3px;
   color: #637b98;
   font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.lc-specs dd {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 1.5;
 }
 
-.livestock-breed-spec-value {
-  color: #102544;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.55;
-  overflow-wrap: anywhere;
+.lc-panel-sheds {
+  margin-bottom: 24px;
 }
 
-/* Recordkeeping */
-
-.livestock-breed-record {
+.lc-panel-sheds ul {
   display: flex;
-  min-height: 36px;
-  align-items: center;
-  justify-content: center;
-  margin-top: auto;
-  padding: 8px;
-  border: 1px solid #dce5ef;
-  border-radius: 5px;
-  background: #fff;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lc-panel-sheds li {
+  padding: 6px 12px;
+  border: 1px solid #d3dde8;
+  border-radius: 30px;
+  background: #ffffff;
+  font-size: 12.5px;
+  line-height: 1.3;
+}
+
+.lc-panel-record {
+  margin: auto 0 0;
+  color: #526c8b;
+  font-size: 12px;
+}
+
+.lc-panel-record strong {
   color: #102544;
+}
+
+/* Shed distribution: herd pictogram */
+
+.lc-herd {
+  margin-top: 72px;
+}
+
+.lc-herd-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  margin-bottom: 8px;
+}
+
+.lc-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lc-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #385473;
+  font-size: 13px;
+}
+
+.lc-legend i {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: var(--type);
+}
+
+.lc-legend .lc-legend-dot {
+  border-radius: 50%;
+  background: #8aa0b8;
+}
+
+.lc-herd-total {
+  margin: 0;
+  color: #526c8b;
+  font-size: 13px;
+}
+
+.lc-herd-total strong {
+  color: #102544;
+  font-size: 18px;
+}
+
+.lc-herd-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lc-herd-row {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr) 90px;
+  grid-template-areas:
+    "name dots count"
+    "name info info";
+  align-items: center;
+  gap: 8px 28px;
+  padding: 20px 0;
+  border-bottom: 1px solid #d3dde8;
+  transition: background-color 0.2s ease;
+}
+
+.lc-herd-row:first-child {
+  border-top: 0;
+}
+
+.lc-herd-name {
+  grid-area: name;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.lc-herd-name strong {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.lc-herd-badge {
+  padding: 4px 9px;
+  border-radius: 4px;
+  background: var(--type-tint);
+  color: var(--type);
   font-size: 11px;
-  text-align: center;
-  overflow-wrap: anywhere;
+  font-weight: 700;
+}
+
+.lc-herd-dots {
+  grid-area: dots;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.lc-dot {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right,
+    var(--type) var(--p),
+    var(--type-tint) var(--p)
+  );
+  box-shadow: inset 0 0 0 1px rgba(16, 37, 68, 0.12);
+}
+
+.lc-herd-count {
+  grid-area: count;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 6px;
+  margin: 0;
+}
+
+.lc-herd-count strong {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.lc-herd-count span {
+  color: #637b98;
+  font-size: 12px;
+}
+
+.lc-herd-info {
+  grid-area: info;
+  margin: 0;
+  color: #526c8b;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.lc-herd-info strong {
+  margin-right: 8px;
+  color: #102544;
+  font-size: 13px;
+}
+
+@keyframes lc-enter {
+  from {
+    opacity: 0.4;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Tablet */
 
-@media (min-width: 768px) and (max-width: 1199px) {
-  .livestock-care-section {
-    padding: 50px 0 40px;
+@media (max-width: 1024px) {
+  .lc-classes {
+    gap: 28px;
   }
 
-  .livestock-care-header {
-    align-items: flex-end;
-    margin-bottom: 30px;
+  .lc-panel {
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .livestock-care-intro {
-    max-width: 600px;
+  .lc-panel-media {
+    min-height: 0;
+    height: 320px;
   }
 
-
-  .livestock-breed-image-wrap {
-    height: 190px;
+  .lc-panel-body {
+    padding: 28px;
   }
 
-  .livestock-breed-content {
-    padding: 18px 14px;
+  .lc-specs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
   }
 
-  .livestock-breed-title {
-    font-size: 21px;
-  }
 }
 
 /* Mobile */
 
 @media (max-width: 767px) {
-  .livestock-care-section {
-    padding: 40px 0;
+  .lc-section {
+    padding: 45px 0 40px;
   }
 
-  .livestock-care-header {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 20px;
-    margin-bottom: 25px;
+  .lc-intro {
+    margin-bottom: 32px;
   }
 
-
-  .livestock-care-description {
+  .lc-description {
     font-size: 14px;
   }
 
-  .livestock-care-navigation {
-    justify-content: flex-end;
+  .lc-classes {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
   }
 
-  .livestock-care-nav-btn {
-    width: 42px;
-    height: 42px;
+  .lc-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 12px;
+    margin-bottom: 18px;
   }
 
-  .livestock-care-slider {
-    overflow: hidden;
+  .lc-tab {
+    padding-top: 10px;
   }
 
-  .livestock-breed-image-wrap {
+  .lc-tab-name {
+    font-size: 16px;
+  }
+
+  .lc-panel {
+    border-radius: 12px;
+  }
+
+  .lc-panel-media {
     height: 230px;
   }
 
-  .livestock-breed-content {
-    padding: 22px 20px;
+  .lc-panel-body {
+    padding: 22px 18px 24px;
   }
 
-  .livestock-breed-title-row {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+  .lc-panel-name {
+    font-size: 25px;
   }
 
-  .livestock-breed-title {
-    font-size: 23px;
-  }
-
-  .livestock-breed-description {
+  .lc-panel-text {
     font-size: 14px;
   }
 
-  .livestock-breed-spec-row {
-    display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    gap: 10px;
+  .lc-specs {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/* Small phones */
+
+@media (max-width: 380px) {
+  .lc-panel-media {
+    height: 200px;
+  }
+
+  .lc-panel-name {
+    font-size: 23px;
   }
 }
 
+/* Pictogram: tablet */
+
+@media (max-width: 1024px) {
+  .lc-herd {
+    margin-top: 56px;
+  }
+
+  .lc-herd-row {
+    grid-template-columns: 140px minmax(0, 1fr) 80px;
+    gap: 8px 20px;
+  }
+}
+
+/* Pictogram: mobile */
+
+@media (max-width: 767px) {
+  .lc-herd {
+    margin-top: 44px;
+  }
+
+  .lc-herd-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .lc-herd-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "name count"
+      "dots dots"
+      "info info";
+    gap: 12px 16px;
+    padding: 18px 0;
+  }
+
+  .lc-herd-name {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+  }
+
+  .lc-dot {
+    width: 14px;
+    height: 14px;
+  }
+
+  .lc-herd-info strong {
+    display: block;
+    margin: 0 0 2px;
+  }
+}
+
+/* Reduced motion */
+
 @media (prefers-reduced-motion: reduce) {
-  .livestock-breed-card,
-  .livestock-breed-image,
-  .livestock-care-nav-btn {
+  .lc-tab {
     transition: none;
+  }
+
+  .lc-panel {
+    animation: none;
   }
 }
