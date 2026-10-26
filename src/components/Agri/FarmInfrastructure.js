@@ -7,19 +7,19 @@ const infrastructureFeatures = [
     icon: <FiHome />,
     title: "Animal Housing",
     description:
-      "Dedicated housing for distinct groups and breeds, ensuring optimum density control, social structure stability, and reduced baseline physiological stress.",
+      "Dedicated housing for distinct groups and breeds, ensuring appropriate space allocation, stable social structures, and reduced physiological stress. Each housing area supports the specific needs of livestock at different stages of growth and reproduction.",
   },
   {
     icon: <FiCloud />,
     title: "Environmental Management",
     description:
-      "Passive and active cross-ventilation, specialized sloped drainage systems, anti-skid ergonomic rubber flooring, and radiant heat reduction shade structures.",
+      "Carefully managed ventilation, sloped drainage systems, anti-skid rubber flooring, and shaded structures help maintain a comfortable environment. These measures support animal welfare, hygiene, and effective day-to-day farm management.",
   },
   {
     icon: <FiClipboard />,
     title: "Daily Farm Operations",
     description:
-      "TMR ration distribution, automated alley cleaning, digital ear-tag identification, and scheduled health and estrus monitoring.",
+      "Structured feed distribution, regular cleaning, digital animal identification, and scheduled health and estrus monitoring help maintain consistent farm operations and support the health and productivity of the herd.",
   },
 ];
 
@@ -28,180 +28,135 @@ const zones = [
     key: "active",
     label: "Active Housing",
     description:
-      "Milking herd, pregnancy wards, purebred dwarf conservation, and sire bulls",
+      "Milking herds, pregnancy wards, indigenous Punganur breed conservation, and breeding bulls.",
   },
   {
     key: "ivf",
     label: "IVF & Embryo Transfer",
-    description: "Embryo transfer recipient heifers and elite IVF calves",
+    description:
+      "Recipient heifers prepared for embryo transfer and specialized care for elite IVF calves.",
   },
   {
     key: "quarantine",
     label: "Quarantine / Treatment",
     description:
-      "Veterinary medical isolation, treatment ward, and biosecurity observation",
+      "Veterinary isolation, treatment facilities, health observation, and biosecurity management.",
   },
 ];
 
 const sheds = [
   {
-    id: 1,
+    id: "vishnu",
     zone: "active",
     name: "Vishnu",
-    strength: 146,
-    capacity: "146 Cattle",
     badge: "PREGNANCY WARD",
     breed: "HF, Gir and Sahiwal",
-    purpose: "First and second trimester Pregnant cows",
-    code: "SHED-01",
+    purpose: "First and second trimester pregnant cows",
     details:
-      "Vishnu Shed: Cattle strength of 146 animals comprising Crossbred HF, Gir, and Sahiwal breeds. Purpose: First and second trimester pregnant cows, receiving specialized gestation nutrition and prenatal health management.",
+      "Vishnu Shed houses Crossbred HF, Gir, and Sahiwal cattle during the first and second trimesters of pregnancy. Specialized gestation nutrition, routine veterinary supervision, and prenatal health management help support the well-being of pregnant cows.",
   },
   {
-    id: 4,
+    id: "maa",
     zone: "active",
     name: "Maa",
-    strength: 31,
-    capacity: "31 Cows",
-    badge: "ADVANCED PREGNANT",
+    badge: "ADVANCED PREGNANCY",
     breed: "Crossbred HF",
     purpose: "Advanced pregnant cows",
-    code: "SHED-04",
     details:
-      "Maa Shed: Dedicated to 31 advanced pregnant Crossbred HF cows. Provides specialized maternity bedding, close pre-calving observation, transition ration management, and neonate preparation.",
+      "Maa Shed is dedicated to advanced-pregnancy Crossbred HF cows. Maternity bedding, close pre-calving observation, transition ration management, and preparation for newborn care support cows during this important stage.",
   },
   {
-    id: 5,
+    id: "priyanka",
     zone: "active",
     name: "Priyanka",
-    strength: 130,
-    capacity: "130 Cows",
     badge: "MILKING & DRY",
     breed: "HF and Gir",
     purpose: "Milking and non-pregnant cows",
-    code: "SHED-05",
     details:
-      "Priyanka Shed: Cattle strength of 130 milking and non-pregnant cows (Crossbred HF and Gir), supporting scheduled daily milking routines, udder hygiene monitoring, and high-energy lactation rations.",
+      "Priyanka Shed accommodates milking and non-pregnant cows of Crossbred HF and Gir breeds. Scheduled milking routines, udder hygiene monitoring, and appropriate lactation nutrition support daily dairy operations and animal welfare.",
   },
   {
-    id: 6,
+    id: "ajay",
     zone: "active",
     name: "Ajay",
-    strength: 23,
-    capacity: "23 Bulls",
     badge: "BULLS & SIRES",
-    breed: "HF, Sahiwal, Gir Bulls",
+    breed: "HF, Sahiwal and Gir bulls",
     purpose: "Growing and adult bulls",
-    code: "SHED-06",
     details:
-      "Ajay Shed: Houses 23 growing and adult bulls representing HF, Sahiwal, and Gir lineages, managed for breeding soundness, pedigree sire development, and health evaluations.",
+      "Ajay Shed houses growing and adult bulls representing HF, Sahiwal, and Gir lineages. Dedicated management supports breeding soundness, sire development, pedigree maintenance, and routine health evaluations.",
   },
   {
-    id: 8,
+    id: "chotti",
     zone: "active",
     name: "Chotti",
-    strength: 60,
-    capacity: "60 Animals",
     badge: "PUNGANUR HERD",
-    breed: "Punganur Cows & Calves",
+    breed: "Punganur cows and calves",
     purpose: "Punganur cows and calves",
-    code: "SHED-08",
     details:
-      "Chotti Shed: Accommodates 60 indigenous Punganur cows and calves, dedicated to purebred dwarf breed conservation, maternal nursing, and breed-specific low-input feeding.",
+      "Chotti Shed is dedicated to indigenous Punganur cows and calves, supporting breed conservation, maternal nursing, and breed-appropriate feeding practices. The facility helps maintain a specialized environment for this distinctive indigenous cattle breed.",
   },
   {
-    id: 2,
+    id: "khushi",
     zone: "ivf",
     name: "Khushi",
-    strength: 150,
-    capacity: "150 Heifers",
     badge: "ET RECIPIENT",
-    breed: "HF Heifers",
-    purpose: "Non-pregnant HF heifers ready for embryo transfer",
-    code: "SHED-02",
+    breed: "HF heifers",
+    purpose: "Non-pregnant HF heifers prepared for embryo transfer",
     details:
-      "Khushi Shed: Cattle strength of 150 non-pregnant HF heifers, synchronized and primed for the transfer of IVF embryos, with routine estrus cycle monitoring and reproductive ultrasound tracking.",
+      "Khushi Shed accommodates non-pregnant HF heifers prepared for IVF embryo transfer. Reproductive management includes estrus cycle monitoring, synchronization protocols, and reproductive ultrasound tracking to support recipient readiness.",
   },
   {
-    id: 3,
+    id: "shubhadra",
     zone: "ivf",
     name: "Shubhadra",
-    strength: 148,
-    capacity: "148 Heifers",
     badge: "ET RECIPIENT",
-    breed: "HF, Sahiwal, Gir",
-    purpose: "Non-pregnant heifers ready for embryo transfer",
-    code: "SHED-03",
+    breed: "HF, Sahiwal and Gir",
+    purpose: "Non-pregnant heifers prepared for embryo transfer",
     details:
-      "Shubhadra Shed: Cattle strength of 148 non-pregnant heifers across Crossbred HF, Sahiwal, and Gir breeds, managed in preparation for elite embryo transfer protocols.",
+      "Shubhadra Shed accommodates non-pregnant heifers across Crossbred HF, Sahiwal, and Gir breeds. The management approach focuses on reproductive monitoring and preparation for elite embryo transfer protocols.",
   },
   {
-    id: 9,
+    id: "calf",
     zone: "ivf",
     name: "Calf Shed",
-    strength: 10,
-    capacity: "10 Calves",
     badge: "BRAZIL GIR IVF",
-    breed: "Brazil Gir IVF Calves",
-    purpose: "Brazil Gir IVF calves",
-    code: "SHED-09",
+    breed: "Brazil Gir IVF calves",
+    purpose: "Specialized rearing of Brazil Gir IVF calves",
     details:
-      "Calf Shed: Specialized rearing unit for 10 elite Brazil Gir IVF calves, featuring temperature-regulated housing, colostrum and calf starter nutrition, and rigorous genomic profiling.",
+      "The Calf Shed provides a specialized rearing environment for elite Brazil Gir IVF calves. Care focuses on temperature-appropriate housing, colostrum management, calf starter nutrition, routine health monitoring, and genomic profiling.",
   },
   {
-    id: 7,
+    id: "sudhir",
     zone: "quarantine",
     name: "Sudhir",
-    strength: 31,
-    capacity: "31 Animals",
     badge: "ISOLATION & CARE",
     breed: "Crossbred HF",
     purpose: "Isolation and treatment ward",
-    code: "SHED-07",
     details:
-      "Sudhir Shed: Veterinary isolation and treatment ward caring for 31 Crossbred HF cattle, equipped for diagnostic observation, convalescent care, and biosecurity containment.",
+      "Sudhir Shed serves as a veterinary isolation and treatment ward for Crossbred HF cattle. Diagnostic observation, convalescent care, veterinary supervision, and appropriate biosecurity practices support animal recovery and help limit the spread of disease.",
   },
   {
-    id: 10,
+    id: "quarantine",
     zone: "quarantine",
     name: "Quarantine",
-    strength: 29,
-    capacity: "29 Cows",
     badge: "BIOSECURITY",
-    breed: "Newly Purchased Gir Cows",
-    purpose: "Newly purchased cows",
-    code: "SHED-10",
+    breed: "Newly purchased Gir cows",
+    purpose: "Health screening and acclimatization",
     details:
-      "Quarantine Shed: Biosecurity facility housing 29 newly purchased Gir cows undergoing health screening, blood testing, prophylactic deworming, and acclimatization before herd integration.",
+      "The Quarantine Shed provides a controlled environment for newly purchased Gir cows before they join the main herd. Health screening, blood testing, veterinary assessment, deworming where appropriate, and acclimatization support responsible herd integration.",
   },
 ];
 
-const zoneLabel = (key) => zones.find((z) => z.key === key)?.label;
-const maxStrength = Math.max(...sheds.map((s) => s.strength));
+const zoneLabel = (key) =>
+  zones.find((zone) => zone.key === key)?.label || "";
 
-const zoneTabs = zones.map((zone) => {
-  const list = sheds.filter((s) => s.zone === zone.key);
-  return {
-    ...zone,
-    count: list.length,
-    animals: list.reduce((total, s) => total + s.strength, 0),
-  };
-});
-
-/* Shared detail content (desktop side panel + mobile inline panel) */
 const ShedDetail = ({ shed }) => (
   <>
     <span className="farm-detail-zone">{zoneLabel(shed.zone)}</span>
 
     <div className="farm-detail-top">
-      <p className="farm-detail-name">{shed.name}</p>
-      <span className="farm-detail-code">{shed.code}</span>
+      <h4 className="farm-detail-name">{shed.name}</h4>
     </div>
-
-    <p className="farm-detail-strength">
-      <strong>{shed.strength}</strong>
-      <span>{shed.capacity}</span>
-    </p>
 
     <p className="farm-detail-text">{shed.details}</p>
 
@@ -210,10 +165,12 @@ const ShedDetail = ({ shed }) => (
         <dt>Purpose</dt>
         <dd>{shed.purpose}</dd>
       </div>
+
       <div>
         <dt>Breeds Housed</dt>
         <dd>{shed.breed}</dd>
       </div>
+
       <div>
         <dt>Category</dt>
         <dd>{zoneLabel(shed.zone)}</dd>
@@ -224,43 +181,56 @@ const ShedDetail = ({ shed }) => (
 
 const FarmInfrastructure = () => {
   const [zoneFilter, setZoneFilter] = useState("active");
-  const [selectedShed, setSelectedShed] = useState(1);
+  const [selectedShed, setSelectedShed] = useState("vishnu");
 
-  const visibleSheds = sheds.filter((s) => s.zone === zoneFilter);
+  const visibleSheds = sheds.filter(
+    (shed) => shed.zone === zoneFilter
+  );
+
   const activeShed =
-    visibleSheds.find((s) => s.id === selectedShed) || visibleSheds[0];
-  const activeZone = zoneTabs.find((z) => z.key === zoneFilter);
+    visibleSheds.find((shed) => shed.id === selectedShed) ||
+    visibleSheds[0];
+
+  const activeZone = zones.find(
+    (zone) => zone.key === zoneFilter
+  );
 
   const handleZoneChange = (key) => {
     setZoneFilter(key);
-    setSelectedShed(sheds.find((s) => s.zone === key).id);
+
+    const firstShed = sheds.find((shed) => shed.zone === key);
+
+    if (firstShed) {
+      setSelectedShed(firstShed.id);
+    }
   };
 
   return (
     <section className="farm-infrastructure-section">
       <div className="farm-infrastructure-container">
-        {/* Section Introduction */}
         <div className="farm-infrastructure-intro">
           <span className="farm-infrastructure-eyebrow">
-            ZONE 1: FARM INFRASTRUCTURE
+            FARM INFRASTRUCTURE
           </span>
 
           <h2 className="farm-infrastructure-title section-heading">
             Infrastructure Designed for Structured
-            <br className="farm-infrastructure-desktop-break section-heading" />
+            <br className="farm-infrastructure-desktop-break" />
             Livestock Management
           </h2>
 
           <p className="farm-infrastructure-description page-text">
-            Our livestock infrastructure is organized around 10 dedicated animal
-            housing sheds arranged across three operational zones: Active Housing,
-            IVF & Embryo Transfer, and Quarantine & Treatment. Each shed serves a
-            defined reproductive, milking, rearing, or health purpose across
-            indigenous and exotic breeds.
+            Our livestock infrastructure is organized into dedicated
+            animal housing facilities across three operational zones:
+            Active Housing, IVF & Embryo Transfer, and Quarantine &
+            Treatment. Each facility serves a defined reproductive,
+            milking, rearing, or healthcare purpose for indigenous and
+            exotic breeds. This structured approach supports animal
+            welfare, reproductive management, biosecurity, and
+            efficient daily farm operations.
           </p>
         </div>
 
-        {/* Infrastructure Features */}
         <div className="farm-infrastructure-features">
           {infrastructureFeatures.map((feature) => (
             <article
@@ -270,49 +240,58 @@ const FarmInfrastructure = () => {
               <div className="farm-infrastructure-feature-icon">
                 {feature.icon}
               </div>
+
               <h3 className="farm-infrastructure-feature-title">
                 {feature.title}
               </h3>
+
               <p>{feature.description}</p>
             </article>
           ))}
         </div>
 
-        {/* Facility Explorer */}
         <div className="farm-layout">
           <div className="farm-layout-header">
-            <h3 className="section-heading">Facility Layout & Shed Distribution</h3>
+            <h3 className="section-heading">
+              Facility Layout & Shed Distribution
+            </h3>
+
             <p>
-              Choose an operational zone, then select a shed to view its herd,
-              breeds, and purpose.
+              Explore our operational zones and select a facility
+              to learn about its livestock, breeds, and purpose.
             </p>
           </div>
 
-          {/* Zone tabs */}
-          <div className="farm-filters" role="group" aria-label="Select shed zone">
-            {zoneTabs.map((zone) => (
+          <div
+            className="farm-filters"
+            role="group"
+            aria-label="Select facility zone"
+          >
+            {zones.map((zone) => (
               <button
                 type="button"
                 key={zone.key}
                 className={`farm-filter ${
-                  zoneFilter === zone.key ? "farm-filter-active" : ""
+                  zoneFilter === zone.key
+                    ? "farm-filter-active"
+                    : ""
                 }`}
                 data-zone={zone.key}
                 onClick={() => handleZoneChange(zone.key)}
                 aria-pressed={zoneFilter === zone.key}
               >
-                <span className="farm-filter-label">{zone.label}</span>
-                <span className="farm-filter-meta">
-                  {zone.count} Sheds · {zone.animals} Animals
+                <span className="farm-filter-label">
+                  {zone.label}
                 </span>
               </button>
             ))}
           </div>
 
-          <p className="farm-filter-caption">{activeZone.description}</p>
+          <p className="farm-filter-caption">
+            {activeZone?.description}
+          </p>
 
           <div className="farm-explorer">
-            {/* Shed list */}
             <ul className="farm-list">
               {visibleSheds.map((shed) => {
                 const isSelected = activeShed.id === shed.id;
@@ -321,34 +300,34 @@ const FarmInfrastructure = () => {
                   <li key={shed.id} data-zone={shed.zone}>
                     <button
                       type="button"
-                      className={`farm-item ${isSelected ? "farm-item-selected" : ""}`}
+                      className={`farm-item ${
+                        isSelected ? "farm-item-selected" : ""
+                      }`}
                       onClick={() => setSelectedShed(shed.id)}
                       aria-pressed={isSelected}
-                      aria-label={`Select Shed ${shed.id}: ${shed.name}`}
                     >
                       <span className="farm-item-main">
-                        <span className="farm-item-name">{shed.name}</span>
-                        <span className="farm-item-breed">{shed.breed}</span>
+                        <span className="farm-item-name">
+                          {shed.name}
+                        </span>
+
+                        <span className="farm-item-breed">
+                          {shed.breed}
+                        </span>
                       </span>
 
                       <span className="farm-item-meta">
-                        <span className="farm-item-badge">{shed.badge}</span>
-                        <span className="farm-item-code">{shed.code}</span>
-                      </span>
-
-                      <span className="farm-item-count">
-                        <strong>{shed.strength}</strong>
-                        <span
-                          className="farm-item-bar"
-                          style={{ "--fill": `${(shed.strength / maxStrength) * 100}%` }}
-                          aria-hidden="true"
-                        />
+                        <span className="farm-item-badge">
+                          {shed.badge}
+                        </span>
                       </span>
                     </button>
 
-                    {/* Inline detail: shown under the shed on tablet/mobile */}
                     {isSelected && (
-                      <div className="farm-detail farm-detail-inline">
+                      <div
+                        className="farm-detail farm-detail-inline"
+                        data-zone={shed.zone}
+                      >
                         <ShedDetail shed={shed} />
                       </div>
                     )}
@@ -357,7 +336,6 @@ const FarmInfrastructure = () => {
               })}
             </ul>
 
-            {/* Side detail: shown on desktop */}
             <aside
               className="farm-detail farm-detail-side"
               data-zone={activeShed.zone}

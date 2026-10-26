@@ -10,7 +10,7 @@
   margin: 0 auto;
 }
 
-/* Zone colour tokens (one accent family, used everywhere) */
+/* Zone colours */
 
 [data-zone="active"] {
   --zone: #102544;
@@ -30,7 +30,7 @@
 /* Introduction */
 
 .farm-infrastructure-intro {
-  max-width: 790px;
+  max-width: 900px;
   margin-bottom: 56px;
 }
 
@@ -38,24 +38,26 @@
   display: block;
   margin-bottom: 12px;
   color: #17853f;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 1.2px;
 }
 
 .farm-infrastructure-title {
-  margin: 0 0 16px;
+  margin: 0 0 20px;
   color: #102544;
-  line-height: 1.12;
+  line-height: 1.15;
 }
 
 .farm-infrastructure-description {
   margin: 0;
   color: #385473;
-  line-height: 1.65;
+  font-size: 17px;
+  line-height: 1.85;
+  max-width: 880px;
 }
 
-/* Features: open columns with a top rule, no cards */
+/* Infrastructure features */
 
 .farm-infrastructure-features {
   display: grid;
@@ -72,49 +74,50 @@
 
 .farm-infrastructure-feature-icon {
   display: flex;
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   align-items: center;
   justify-content: center;
   margin-bottom: 18px;
   border-radius: 8px;
   background: #e3ebf3;
   color: #102544;
-  font-size: 22px;
+  font-size: 23px;
 }
 
 .farm-infrastructure-feature-title {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   color: #102544;
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .farm-infrastructure-feature p {
   margin: 0;
   color: #385473;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.85;
 }
 
 /* Facility layout */
 
 .farm-layout-header {
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .farm-layout-header h3 {
-  margin: 0 0 8px;
+  margin: 0 0 12px;
   color: #102544;
+  line-height: 1.3;
 }
 
 .farm-layout-header p {
-  max-width: 560px;
+  max-width: 760px;
   margin: 0;
-  color: #637b98;
-  font-size: 14px;
-  line-height: 1.6;
+  color: #526c8b;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 /* Zone tabs */
@@ -122,15 +125,15 @@
 .farm-filters {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  gap: 20px;
 }
 
 .farm-filter {
   display: flex;
   min-width: 0;
   flex-direction: column;
-  gap: 4px;
-  padding: 14px 0 0;
+  gap: 6px;
+  padding: 16px 0 12px;
   border: 0;
   border-top: 3px solid #d3dde8;
   background: none;
@@ -151,34 +154,24 @@
 }
 
 .farm-filter-label {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
-  line-height: 1.3;
-}
-
-.farm-filter-meta {
-  color: #637b98;
-  font-size: 12px;
-}
-
-.farm-filter-active .farm-filter-meta {
-  color: var(--zone-text);
-  font-weight: 600;
+  line-height: 1.5;
 }
 
 .farm-filter-caption {
-  margin: 16px 0 28px;
+  margin: 18px 0 30px;
   color: #526c8b;
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
-/* Explorer: list + side detail */
+/* Explorer: facility list + detail panel */
 
 .farm-explorer {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-  gap: 48px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 40px;
   align-items: start;
 }
 
@@ -194,12 +187,12 @@
 }
 
 .farm-item {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 150px 84px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 16px;
   width: 100%;
-  padding: 18px 12px 18px 16px;
+  padding: 20px 16px;
   border: 0;
   border-left: 4px solid transparent;
   background: transparent;
@@ -234,66 +227,38 @@
   display: flex;
   min-width: 0;
   flex-direction: column;
-  gap: 2px;
+  gap: 6px;
 }
 
 .farm-item-name {
-  font-size: 17px;
+  color: #102544;
+  font-size: 18px;
   font-weight: 700;
+  line-height: 1.4;
 }
 
 .farm-item-breed {
   color: #526c8b;
-  font-size: 12.5px;
-  line-height: 1.4;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 .farm-item-meta {
   display: flex;
+  flex: 0 0 auto;
   min-width: 0;
   flex-direction: column;
-  gap: 3px;
+  align-items: flex-end;
+  gap: 4px;
 }
 
 .farm-item-badge {
   color: var(--zone-text);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-}
-
-.farm-item-code {
-  color: #637b98;
   font-size: 11px;
-  font-weight: 600;
-}
-
-.farm-item-count {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.farm-item-count strong {
-  font-size: 17px;
-  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
   text-align: right;
-}
-
-.farm-item-bar {
-  display: block;
-  height: 4px;
-  border-radius: 2px;
-  background: #dbe4ee;
-}
-
-.farm-item-bar::after {
-  content: "";
-  display: block;
-  width: var(--fill);
-  height: 100%;
-  border-radius: 2px;
-  background: var(--zone);
 }
 
 /* Detail panel */
@@ -313,18 +278,20 @@
   box-shadow: 0 14px 34px rgba(16, 37, 68, 0.07);
 }
 
-/* Inline detail is only used on tablet and mobile */
+/* Inline detail is used on tablet and mobile */
+
 .farm-detail-inline {
   display: none;
 }
 
 .farm-detail-zone {
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   color: var(--zone-text);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
+  line-height: 1.6;
   text-transform: uppercase;
 }
 
@@ -332,70 +299,51 @@
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  justify-content: space-between;
-  gap: 4px 12px;
+  margin-bottom: 18px;
 }
 
 .farm-detail-name {
   margin: 0;
-  font-size: 28px;
+  color: #102544;
+  font-size: 29px;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.3;
 }
 
-.farm-detail-code {
-  color: #637b98;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.farm-detail-strength {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 4px 10px;
-  margin: 18px 0 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e3ebf3;
-}
-
-.farm-detail-strength strong {
-  font-size: 44px;
-  line-height: 1;
-}
-
-.farm-detail-strength span {
-  color: #526c8b;
-  font-size: 14px;
-}
+/* Larger facility descriptions */
 
 .farm-detail-text {
-  margin: 0 0 24px;
+  margin: 0 0 28px;
   color: #385473;
-  font-size: 14px;
-  line-height: 1.75;
+  font-size: 17px;
+  line-height: 1.9;
 }
+
+/* Facility information */
 
 .farm-detail-meta {
   display: grid;
-  gap: 14px;
+  gap: 20px;
   margin: 0;
+  padding-top: 24px;
+  border-top: 1px solid #e3ebf3;
 }
 
 .farm-detail-meta dt {
-  margin-bottom: 2px;
+  margin-bottom: 6px;
   color: #637b98;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.6px;
+  line-height: 1.5;
   text-transform: uppercase;
 }
 
 .farm-detail-meta dd {
   margin: 0;
   color: #102544;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 @keyframes farm-detail-enter {
@@ -410,7 +358,7 @@
   }
 }
 
-/* Tablet: one column, detail opens under the selected shed */
+/* Tablet */
 
 @media (max-width: 1024px) {
   .farm-infrastructure-features {
@@ -420,6 +368,7 @@
 
   .farm-explorer {
     grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
   }
 
   .farm-detail-side {
@@ -428,14 +377,22 @@
 
   .farm-detail-inline {
     display: block;
-    padding: 24px 20px 28px 20px;
+    padding: 26px 24px 30px;
     border-left: 4px solid var(--zone);
     background: #ffffff;
   }
 
   .farm-detail-meta {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
+  }
+
+  .farm-infrastructure-description {
+    font-size: 16.5px;
+  }
+
+  .farm-infrastructure-feature p {
+    font-size: 15.5px;
   }
 }
 
@@ -443,7 +400,7 @@
 
 @media (max-width: 767px) {
   .farm-infrastructure-section {
-    padding: 45px 0 24px;
+    padding: 45px 0 28px;
   }
 
   .farm-infrastructure-container {
@@ -451,31 +408,55 @@
   }
 
   .farm-infrastructure-intro {
-    margin-bottom: 36px;
+    margin-bottom: 38px;
   }
 
   .farm-infrastructure-desktop-break {
     display: none;
   }
 
+  .farm-infrastructure-description {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
   .farm-infrastructure-features {
     grid-template-columns: minmax(0, 1fr);
-    gap: 28px;
+    gap: 30px;
     margin-bottom: 48px;
   }
 
-  .farm-layout-header {
-    margin-bottom: 20px;
+  .farm-infrastructure-feature {
+    padding-top: 20px;
   }
 
-  /* Zone tabs become a stacked list with a left rule */
+  .farm-infrastructure-feature-title {
+    font-size: 20px;
+  }
+
+  .farm-infrastructure-feature p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .farm-layout-header {
+    margin-bottom: 22px;
+  }
+
+  .farm-layout-header p {
+    font-size: 15.5px;
+    line-height: 1.8;
+  }
+
+  /* Zone tabs */
+
   .farm-filters {
     grid-template-columns: minmax(0, 1fr);
     gap: 10px;
   }
 
   .farm-filter {
-    padding: 10px 0 10px 14px;
+    padding: 12px 0 12px 16px;
     border-top: 0;
     border-left: 3px solid #d3dde8;
   }
@@ -485,50 +466,74 @@
     border-left-color: var(--zone);
   }
 
-  .farm-filter-caption {
-    margin: 14px 0 20px;
+  .farm-filter-label {
+    font-size: 16px;
   }
 
+  .farm-filter-caption {
+    margin: 16px 0 22px;
+    font-size: 15.5px;
+    line-height: 1.8;
+  }
+
+  /* Facility list */
+
   .farm-item {
-    grid-template-columns: minmax(0, 1fr) 72px;
-    grid-template-areas:
-      "main count"
-      "meta meta";
-    gap: 10px 14px;
-    padding: 16px 8px 16px 12px;
+    padding: 17px 10px 17px 12px;
+    gap: 12px;
   }
 
   .farm-item-main {
-    grid-area: main;
+    gap: 5px;
   }
 
-  .farm-item-count {
-    grid-area: count;
+  .farm-item-name {
+    font-size: 17px;
+  }
+
+  .farm-item-breed {
+    font-size: 14.5px;
+    line-height: 1.65;
   }
 
   .farm-item-meta {
-    grid-area: meta;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 4px 12px;
+    max-width: 44%;
   }
 
+  .farm-item-badge {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  /* Inline details */
+
   .farm-detail-inline {
-    padding: 20px 16px 24px;
+    padding: 22px 16px 26px;
   }
 
   .farm-detail-name {
-    font-size: 24px;
+    font-size: 25px;
   }
 
-  .farm-detail-strength strong {
-    font-size: 36px;
+  .farm-detail-text {
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.85;
   }
 
   .farm-detail-meta {
     grid-template-columns: minmax(0, 1fr);
-    gap: 14px;
+    gap: 18px;
+    padding-top: 20px;
+  }
+
+  .farm-detail-meta dt {
+    font-size: 11px;
+  }
+
+  .farm-detail-meta dd {
+    font-size: 15.5px;
+    line-height: 1.75;
   }
 }
 
@@ -539,8 +544,27 @@
     width: min(100% - 24px, 1370px);
   }
 
-  .farm-item-name {
-    font-size: 16px;
+  .farm-infrastructure-title {
+    line-height: 1.2;
+  }
+
+  .farm-item {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .farm-item-meta {
+    max-width: 100%;
+    align-items: flex-start;
+  }
+
+  .farm-item-badge {
+    text-align: left;
+  }
+
+  .farm-detail-inline {
+    padding: 20px 14px 24px;
   }
 }
 
