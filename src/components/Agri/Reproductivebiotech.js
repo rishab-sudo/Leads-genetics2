@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Reproductivebiotech.css";
 
 import moetImg from "../../assets/embroy1.jpeg";
-import chipImg from "../../assets/chip-popup-img.jpeg";
+// import chipImg from "../../assets/chip-popup-img.jpeg";
 
 const items = [
   {
@@ -17,18 +17,18 @@ const items = [
       "Multiple Ovulation and Embryo Transfer (MOET) technology is an advanced reproductive technology that enables rapid genetic improvement in dairy cattle through the production of naturally developed in vivo embryos. In India, although artificial insemination has been widely adopted, advanced reproductive technologies have not yet reached the majority of farmers and remain at a relatively early stage of adoption",
     ],
   },
-  {
-    id: "chip",
-    imageFirst: false,
-    image: chipImg,
-    alt: "Zebu Cattle SNP Chip",
-    route: "/chip",
-    title: "Introducing India's First Zebu Cattle SNP Chip",
-    text: [
-      "Leads Genetics proudly presents India's first indigenous Zebu Cattle SNP Chip — a purpose-built genomic genotyping platform designed to accelerate scientific breed improvement in India's native cattle populations.",
-      "Launched at the Cattle Genomics Summit 2026, Bareilly, this chip marks a foundational milestone in bringing precision genomics to Indian dairy farming — enabling data-driven genomic selection for Gir, Sahiwal, and other indigenous Bos indicus breeds at a scale never before possible in the country.",
-    ],
-  },
+//   {
+//     id: "chip",
+//     imageFirst: false,
+//     image: chipImg,
+//     alt: "Zebu Cattle SNP Chip",
+//     route: "/chip",
+//     title: "Introducing India's First Zebu Cattle SNP Chip",
+//     text: [
+//       "Leads Genetics proudly presents India's first indigenous Zebu Cattle SNP Chip — a purpose-built genomic genotyping platform designed to accelerate scientific breed improvement in India's native cattle populations.",
+//       "Launched at the Cattle Genomics Summit 2026, Bareilly, this chip marks a foundational milestone in bringing precision genomics to Indian dairy farming — enabling data-driven genomic selection for Gir, Sahiwal, and other indigenous Bos indicus breeds at a scale never before possible in the country.",
+//     ],
+//   },
 ];
 
 export default function ReproductiveBiotech() {
