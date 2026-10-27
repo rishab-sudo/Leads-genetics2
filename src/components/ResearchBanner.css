@@ -60,6 +60,7 @@
   display: block;
   background: linear-gradient(90deg, #67e8f9 0%, #6ee7b7 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

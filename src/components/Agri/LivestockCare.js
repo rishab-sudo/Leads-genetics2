@@ -10,22 +10,6 @@ import punganurImg from "../../assets/Breed/Punganur Cow in a Sunlit Field.png";
 const cattleBreeds = [
   {
     id: "01",
-    tab: "Crossbred HF",
-    name: "Crossbred Holstein Friesian",
-    type: "exotic",
-    category: "Exotic Breed",
-    label: "Crossbred Dairy Lineage",
-    origin: "European Lineage (Adapted)",
-    image: holsteinImg,
-    sheds: ["Vishnu", "Khushi", "Shubhadra", "Maa", "Priyanka", "Ajay", "Sudhir"],
-    description:
-      "High-producing exotic crossbred dairy breed recognized for superior milk output and fertility monitoring. Key recipient stock for advanced embryo transfer (ET) and intensive lactation management.",
-    nutrition: "High-Energy Dairy TMR (2.5 - 3% DMI)",
-    reproductive: "Embryo Transfer Recipients & High Milk Yield",
-    record: "LG-EXO-HF",
-  },
-  {
-    id: "02",
     tab: "Gir",
     name: "Gir",
     type: "indigenous",
@@ -48,7 +32,7 @@ const cattleBreeds = [
     record: "LG-IND-GIR",
   },
   {
-    id: "03",
+    id: "02",
     tab: "Sahiwal",
     name: "Sahiwal",
     type: "indigenous",
@@ -64,7 +48,7 @@ const cattleBreeds = [
     record: "LG-IND-SAH",
   },
   {
-    id: "04",
+    id: "03",
     tab: "Punganur",
     name: "Punganur",
     type: "indigenous",
@@ -78,6 +62,22 @@ const cattleBreeds = [
     nutrition: "High Forage Digestibility & Moderate Concentrates",
     reproductive: "Selective Purebred Conservation & Maternal Care",
     record: "LG-IND-PUN",
+  },
+  {
+    id: "04",
+    tab: "Crossbred HF",
+    name: "Crossbred Holstein Friesian",
+    type: "exotic",
+    category: "Exotic Breed",
+    label: "Crossbred Dairy Lineage",
+    origin: "European Lineage (Adapted)",
+    image: holsteinImg,
+    sheds: ["Vishnu", "Khushi", "Shubhadra", "Maa", "Priyanka", "Ajay", "Sudhir"],
+    description:
+      "High-producing exotic crossbred dairy breed recognized for superior milk output and fertility monitoring. Key recipient stock for advanced embryo transfer (ET) and intensive lactation management.",
+    nutrition: "High-Energy Dairy TMR (2.5 - 3% DMI)",
+    reproductive: "Embryo Transfer Recipients & High Milk Yield",
+    record: "LG-EXO-HF",
   },
 ];
 

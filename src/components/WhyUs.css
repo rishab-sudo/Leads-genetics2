@@ -1,148 +1,74 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap");
-
-/* =========================================================
-   WHY US SECTION
-========================================================= */
-
+/* ===== SECTION ===== */
 .whyus-section {
-  --whyus-item-height: 125px;
-  --whyus-accent: #fff;
-  --whyus-navy: #ffffff;
-
   position: relative;
-
-  background-color: #000;
-
   padding: 100px 0;
-
+  background: #000;
   overflow: hidden;
-
   isolation: isolate;
 }
 
-/* =========================================================
-   FULL BACKGROUND IMAGE
-========================================================= */
-
 .whyus-bg-image {
   position: absolute;
-
   inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background-image: url("../assets/Leads-Building.jpg");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
   z-index: -2;
+  background: url("../assets/Leads-Building.jpg") center / cover no-repeat;
 }
 
-/* =========================================================
-   FULL BLACK OVERLAY
-========================================================= */
-
+/* dark overlay */
 .whyus-section::before {
   content: "";
-
   position: absolute;
-
   inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background: rgba(0, 0, 0, 0.70);
-
   z-index: -1;
+  background: rgba(0, 0, 0, 0.7);
 }
-
-/* =========================================================
-   CONTENT
-========================================================= */
 
 .whyus-content {
   position: relative;
-
   z-index: 2;
 }
 
-/* =========================================================
-   LEFT CONTENT
-========================================================= */
-
+/* ===== LEFT COLUMN ===== */
 .whyus-heading-col {
   padding-right: 45px;
-
   margin-bottom: 40px;
 }
 
 .whyus-eyebrow {
   display: inline-block;
-
-  font-size: 16px;
-
-  letter-spacing: 2.5px;
-
-  text-transform: uppercase;
-
-  color: var(--whyus-accent);
-
-  font-weight: 600;
-
   margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 .whyus-heading {
-  font-weight: 700;
-
-  font-size: 3.5rem;
-
-  line-height: 1.15;
-
-  color: #ffffff;
-
   margin-bottom: 22px;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #fff;
 }
 
 .whyus-subtext {
-  font-size: 17px;
-
-  line-height: 1.75;
-
-  color: #ffffff;
-
   max-width: 470px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #fff;
 }
 
-/* =========================================================
-   RIGHT SCROLLING TRACK
-========================================================= */
-
+/* ===== RIGHT SCROLL TRACK (shows 3 items) ===== */
 .whyus-track {
-  overflow-y: auto;
-
-  overflow-x: hidden;
-
-  scroll-behavior: smooth;
-
-  height: calc(3 * var(--whyus-item-height));
-
+  height: 375px;
   padding-right: 12px;
-
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
   scrollbar-width: thin;
-
-  scrollbar-color:
-    rgba(255, 255, 255, 0.35)
-    transparent;
+  scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
 }
-
-/* =========================================================
-   SCROLLBAR
-========================================================= */
 
 .whyus-track::-webkit-scrollbar {
   width: 4px;
@@ -153,111 +79,64 @@
 }
 
 .whyus-track::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.35);
-
+  background: rgba(255, 255, 255, 0.35);
   border-radius: 10px;
 }
 
-/* =========================================================
-   WHY US ITEM
-========================================================= */
-
+/* ===== ITEM ===== */
 .whyus-item {
   display: flex;
-
   align-items: flex-start;
-
   gap: 25px;
-
-  min-height: var(--whyus-item-height);
-
+  min-height: 125px;
   padding: 24px 0;
-
   border-top: 1px solid rgba(255, 255, 255, 0.22);
-
-  transition:
-    opacity 0.4s ease,
-    transform 0.4s ease;
-
   opacity: 0.55;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .whyus-item:first-child {
   border-top: none;
 }
 
-/* Active item */
-
 .whyus-item-active {
   opacity: 1;
-
   transform: translateX(4px);
 }
 
-/* =========================================================
-   NUMBER
-========================================================= */
-
 .whyus-index {
-  font-size: 34px;
-
-  line-height: 1;
-
-  font-weight: 500;
-
-  color: #ffffff;
-
-  min-width: 55px;
-
   flex-shrink: 0;
-
-  transition: color 0.4s ease;
-}
-
-/* ACTIVE NUMBER = GREEN */
-
-.whyus-item-active .whyus-index {
+  min-width: 55px;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1;
   color: #fff;
 }
-
-/* =========================================================
-   ITEM TEXT
-========================================================= */
 
 .whyus-item-text {
   flex: 1;
 }
 
 .whyus-item-title {
-  font-size: 19px;
-
-  line-height: 1.4;
-
-  font-weight: 600;
-
-  color: #ffffff !important;
-
   margin: 0 0 7px;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #fff !important;
 }
 
 .whyus-item-desc {
-  font-size: 15px;
-
-  line-height: 1.7;
-
-  color: #ffffff !important;
-
-  margin: 0;
-
   max-width: 540px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #fff !important;
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
+/* ===== RESPONSIVE (smaller screens) ===== */
 
+/* Tablet */
 @media (max-width: 991px) {
-
   .whyus-section {
     padding: 80px 0;
   }
@@ -287,18 +166,10 @@
   }
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
-
+/* Mobile */
 @media (max-width: 767px) {
-
   .whyus-section {
     padding: 65px 0;
-  }
-
-  .whyus-bg-image {
-    background-position: center;
   }
 
   .whyus-section::before {
@@ -306,49 +177,37 @@
   }
 
   .whyus-heading-col {
-    padding-right: 0;
-
     text-align: center;
-
-    margin-bottom: 40px;
   }
 
   .whyus-eyebrow {
     font-size: 14px;
-
     letter-spacing: 2px;
   }
 
   .whyus-heading {
     font-size: 2.4rem;
-
     line-height: 1.2;
   }
 
   .whyus-subtext {
-    font-size: 15px;
-
     max-width: 100%;
-
     margin: 0 auto;
+    font-size: 15px;
   }
 
   .whyus-track {
-    height: calc(3 * var(--whyus-item-height));
-
     padding-right: 5px;
   }
 
   .whyus-item {
     gap: 15px;
-
     padding: 22px 0;
   }
 
   .whyus-index {
-    font-size: 28px;
-
     min-width: 43px;
+    font-size: 28px;
   }
 
   .whyus-item-title {
@@ -357,29 +216,23 @@
 
   .whyus-item-desc {
     font-size: 14px;
-
     line-height: 1.6;
   }
 }
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
+/* Small mobile */
 @media (max-width: 480px) {
-
   .whyus-section {
     padding: 55px 0;
   }
 
-  .whyus-heading {
-    font-size: 2.1rem;
-  }
-
   .whyus-eyebrow {
     font-size: 13px;
-
     letter-spacing: 1.5px;
+  }
+
+  .whyus-heading {
+    font-size: 2.1rem;
   }
 
   .whyus-item {
@@ -387,9 +240,8 @@
   }
 
   .whyus-index {
-    font-size: 25px;
-
     min-width: 38px;
+    font-size: 25px;
   }
 
   .whyus-item-title {
@@ -398,5 +250,165 @@
 
   .whyus-item-desc {
     font-size: 13px;
+  }
+}
+
+/* ===== RESPONSIVE (bigger screens) ===== */
+
+/* Full HD */
+@media (min-width: 1920px) {
+  .whyus-section {
+    padding: 120px 0;
+  }
+
+  .whyus-section .container,
+  .whyus-section .container-fluid {
+    max-width: 1560px;
+  }
+
+  .whyus-eyebrow {
+    font-size: 18px;
+  }
+
+  .whyus-heading {
+    font-size: 4.2rem;
+  }
+
+  .whyus-subtext {
+    max-width: 560px;
+    font-size: 20px;
+  }
+
+  .whyus-track {
+    height: 450px;
+  }
+
+  .whyus-item {
+    gap: 32px;
+    min-height: 150px;
+    padding: 30px 0;
+  }
+
+  .whyus-index {
+    min-width: 66px;
+    font-size: 40px;
+  }
+
+  .whyus-item-title {
+    font-size: 22px;
+  }
+
+  .whyus-item-desc {
+    max-width: 640px;
+    font-size: 17px;
+  }
+}
+
+/* 2K */
+@media (min-width: 2560px) {
+  .whyus-section {
+    padding: 150px 0;
+  }
+
+  .whyus-section .container,
+  .whyus-section .container-fluid {
+    max-width: 1900px;
+  }
+
+  .whyus-eyebrow {
+    font-size: 22px;
+  }
+
+  .whyus-heading {
+    font-size: 5rem;
+  }
+
+  .whyus-subtext {
+    max-width: 680px;
+    font-size: 24px;
+  }
+
+  .whyus-track {
+    height: 540px;
+  }
+
+  .whyus-item {
+    gap: 40px;
+    min-height: 180px;
+    padding: 36px 0;
+  }
+
+  .whyus-index {
+    min-width: 80px;
+    font-size: 48px;
+  }
+
+  .whyus-item-title {
+    font-size: 27px;
+  }
+
+  .whyus-item-desc {
+    max-width: 780px;
+    font-size: 21px;
+  }
+}
+
+/* 4K */
+@media (min-width: 3200px) {
+  .whyus-section {
+    padding: 180px 0;
+  }
+
+  .whyus-section .container,
+  .whyus-section .container-fluid {
+    max-width: 2300px;
+  }
+
+  .whyus-eyebrow {
+    font-size: 26px;
+  }
+
+  .whyus-heading {
+    font-size: 6rem;
+  }
+
+  .whyus-subtext {
+    max-width: 800px;
+    font-size: 28px;
+  }
+
+  .whyus-track {
+    height: 675px;
+  }
+
+  .whyus-item {
+    gap: 48px;
+    min-height: 225px;
+    padding: 44px 0;
+  }
+
+  .whyus-index {
+    min-width: 96px;
+    font-size: 56px;
+  }
+
+  .whyus-item-title {
+    font-size: 32px;
+  }
+
+  .whyus-item-desc {
+    max-width: 920px;
+    font-size: 25px;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  .whyus-track {
+    scroll-behavior: auto;
+  }
+
+  .whyus-item {
+    transition: none;
   }
 }

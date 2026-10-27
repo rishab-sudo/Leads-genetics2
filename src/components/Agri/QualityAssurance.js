@@ -1,5 +1,5 @@
-
 import React from "react";
+import { Link } from "react-router-dom";
 import "./QualityAssurance.css";
 
 const qualityModules = [
@@ -29,81 +29,24 @@ const qualityModules = [
   },
 ];
 
-const audienceCards = [
-  {
-    id: 1,
-    type: "farmers",
-    label: "FOR FARMERS & LIVESTOCK OWNERS",
-    title: "Empowering Herd Potential",
-    description:
-      "Upgrade your herd genetics in a single generation. Access high-yield indigenous cattle IVF embryos, precision breeding support, and expert farm infrastructure guidance.",
-    buttonText: "Explore Livestock Solutions",
-    icon: "user",
-  },
-  {
-    id: 2,
-    type: "research",
-    label: "FOR RESEARCH & SCIENTIFIC PARTNERS",
-    title: "Collaborative Agri-Genomics",
-    description:
-      "Collaborating with universities, biotechnology firms, and agricultural research institutes on genomic selection trials, oocyte culture media optimization, and cryopreservation research.",
-    buttonText: "Explore Research Partnerships",
-    icon: "flask",
-  },
-];
-
-const AudienceIcon = ({ type }) => {
-  if (type === "user") {
-    return (
-      <svg
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <circle cx="12" cy="7.5" r="3.5" />
-        <path d="M5.5 20v-2a6.5 6.5 0 0 1 13 0v2z" />
-      </svg>
-    );
-  }
-
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M9 3h6M10 3v6l-6 8a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-6-8V3" />
-      <path d="M8 15h8M10 12h4" />
-    </svg>
-  );
-};
-
 const QualityAssurance = () => {
   return (
     <main className="quality-page">
-      {/* Quality Assurance Section */}
+      {/* Quality Assurance */}
       <section className="quality-assurance-section">
         <div className="container">
           <div className="quality-section-header">
-            <span className="quality-eyebrow">
-              QUALITY ASSURANCE
-            </span>
+            <span className="quality-eyebrow">QUALITY ASSURANCE</span>
 
-            <h2 className="quality-main-heading section-heading ">
+            <h2 className="quality-main-heading section-heading">
               Documented Processes. Traceable
               <br className="quality-desktop-break" /> Operations.
             </h2>
 
             <p className="quality-section-description">
-              Every procedure at Leads Genetics follows standardized
-              operating protocols (SOPs) to maintain sample integrity,
-              verifiable pedigree data, and audit compliance.
+              Every procedure at Leads Genetics follows standardized operating
+              protocols (SOPs) to maintain sample integrity, verifiable
+              pedigree data, and audit compliance.
             </p>
           </div>
 
@@ -114,14 +57,8 @@ const QualityAssurance = () => {
                 key={module.code}
               >
                 <article className="quality-module-card">
-                  <span className="quality-module-code">
-                    {module.code}
-                  </span>
-
-                  <h3 className="quality-module-title">
-                    {module.title}
-                  </h3>
-
+                  <span className="quality-module-code">{module.code}</span>
+                  <h3 className="quality-module-title">{module.title}</h3>
                   <p className="quality-module-description">
                     {module.description}
                   </p>
@@ -132,48 +69,23 @@ const QualityAssurance = () => {
         </div>
       </section>
 
-      {/* Audience / Partnership Section */}
-      <section className="quality-audience-section">
+      {/* Contact */}
+      <section className="quality-cta-section">
         <div className="container">
-          <div className="row quality-audience-row">
-            {audienceCards.map((card) => (
-              <div
-                className="col-12 col-lg-6 quality-audience-column"
-                key={card.id}
-              >
-                <article
-                  className={`quality-audience-card quality-audience-card--${card.type}`}
-                >
-                  <div className="quality-audience-icon">
-                    <AudienceIcon type={card.icon} />
-                  </div>
+          <div className="quality-cta-card">
+            <div className="quality-cta-content">
+              <span className="quality-cta-label">WORK WITH US</span>
+              <h3 className="quality-cta-title">Partner With Leads Genetics</h3>
+              <p className="quality-cta-text">
+                Whether you are a farmer upgrading your herd genetics or a
+                research partner exploring genomic selection trials, our team
+                is ready to help.
+              </p>
+            </div>
 
-                  <span className="quality-audience-label">
-                    {card.label}
-                  </span>
-
-                  <h3 className="quality-audience-title">
-                    {card.title}
-                  </h3>
-
-                  <p className="quality-audience-description">
-                    {card.description}
-                  </p>
-
-                  <a
-                    className="quality-audience-button"
-                    href={
-                      card.type === "farmers"
-                        ? "/livestock-solutions"
-                        : "/research"
-                    }
-                  >
-                    {card.buttonText}
-                    <span aria-hidden="true"> →</span>
-                  </a>
-                </article>
-              </div>
-            ))}
+            <Link to="/contact" className="quality-cta-button">
+              Contact Us <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </section>

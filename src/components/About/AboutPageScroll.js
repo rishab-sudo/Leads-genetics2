@@ -1,10 +1,10 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import sequencerImg from "../assets/sequencer-illustration.png";
-import pepLabImg from "../assets/pep_lab.jpeg";
-import homeBlImg from "../assets/home_bl.png";
-import homeKamImg from "../assets/home_kam.png";
+import sequencerImg from "../../assets/sequencer-illustration.png";
+import pepLabImg from "../../assets/pep_lab.jpeg";
+import homeBlImg from "../../assets/home_bl.png";
+import homeKamImg from "../../assets/home_kam.png";
 import { useNavigate } from "react-router-dom";
 import "./AboutPageScroll.css";
 

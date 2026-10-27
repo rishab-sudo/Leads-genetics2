@@ -1,0 +1,76 @@
+/* Mission */
+.mv-mission-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.mv-mission-text h2 { font-size: clamp(1.4rem, 2.6vw, 2rem); }
+.mv-mission-text p { font-size: 1rem; }
+.mv-mission-stats { display: grid; grid-template-columns: 1fr; gap: 0.85rem; }
+.mission-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1.2rem 1.4rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-top: 3px solid #2563b8;
+  border-radius: 14px;
+  cursor: default;
+}
+.ms-value { font-size: 1.8rem; font-weight: 800; line-height: 1; color: #2563b8; }
+.ms-label { font-size: 0.92rem; font-weight: 700; }
+.ms-sub { font-size: 0.78rem; color: #5b6b7d; }
+
+.mv-divider { height: 1px; margin-bottom: 2rem; background: #dfe6ee; }
+
+/* Vision */
+.mv-vision-header { margin-bottom: 1.5rem; }
+.mv-vision-header h2 { max-width: 900px; font-size: clamp(1.35rem, 2.5vw, 1.9rem); }
+.mv-vision-header p { max-width: 900px; }
+
+.vision-chip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+}
+.vision-chip {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.75rem 0.95rem;
+  text-align: left;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.vision-chip:hover,
+.vision-chip--active { background: #e8f0fa; border-color: #2563b8; }
+.vc-icon { font-size: 1.15rem; }
+.vc-text { font-size: 0.85rem; font-weight: 500; line-height: 1.45; }
+
+.vision-conclusion {
+  margin: 0;
+  padding-top: 1rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #0f1b2d !important;
+  border-top: 1px solid #dfe6ee;
+}
+.vision-conclusion strong { font-style: normal; color: #184a8f; }
+
+/* Responsive */
+@media (max-width: 359px) { .vision-chip-grid { grid-template-columns: 1fr; } }
+@media (min-width: 640px) { .mv-mission-stats { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 768px) { .vision-chip-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 960px) {
+  .mv-mission-wrap { grid-template-columns: 1fr 1fr; }
+  .mv-mission-stats { grid-template-columns: 1fr; }
+}

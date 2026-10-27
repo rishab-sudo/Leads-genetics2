@@ -12,7 +12,7 @@ const AboutHero = () => {
         loop
         playsInline
       >
-        <source src={require("../assets/abouthero-video.mp4")} type="video/mp4" />
+        <source src={require("../../assets/abouthero-video.mp4")} type="video/mp4" />
       </video>
 
       {/* Black Overlay */}

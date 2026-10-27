@@ -1,0 +1,49 @@
+.scientific-loop {
+  padding: 1.75rem 1rem;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #2563b8, #184a8f);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px -10px rgba(37, 99, 184, 0.3);
+}
+.loop-label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+.loop-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.loop-step {
+  padding: 0.35em 0.85em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  cursor: default;
+}
+.loop-arrow { display: none; color: rgba(255, 255, 255, 0.55); }
+.scientific-loop .loop-caption,
+.scientific-loop p {
+  max-width: 56ch;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff !important;
+}
+
+@media (min-width: 640px) {
+  .loop-arrow { display: inline; }
+  .loop-step { white-space: nowrap; }
+}

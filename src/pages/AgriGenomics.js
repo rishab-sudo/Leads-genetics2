@@ -7,6 +7,7 @@ import AnimalIVFWorkflow from '../components/Agri/AnimalIVFWorkflow'
 import QualityAssurance from '../components/Agri/QualityAssurance'
 import AgriFAQs from '../components/Agri/AgriFAQs'
 import Vacination from '../components/Agri/Vacination'
+import ReproductiveBiotech from '../components/Agri/Reproductivebiotech'
 
 const AgriGenomics = () => {
   return (
@@ -17,6 +18,7 @@ const AgriGenomics = () => {
       <LivestockNutrition/>
       <Vacination/>
       <AnimalIVFWorkflow/>
+      <ReproductiveBiotech/>
       <QualityAssurance/>
       <AgriFAQs/>
       

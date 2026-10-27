@@ -1,0 +1,198 @@
+/* Font size / family / weight of .section-heading and .page-text
+   come from App.css. This file only handles layout and colours. */
+
+/* ===== SECTION ===== */
+.repro-section {
+  font-size: 16px;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+.repro-section *,
+.repro-section *::before,
+.repro-section *::after {
+  box-sizing: border-box;
+}
+
+.repro-section .container-fluid {
+  width: 100%;
+  max-width: none;
+  padding: 3rem 5%;
+}
+
+/* ===== EYEBROW ===== */
+.repro-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  margin: 0 0 2.5em;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #168647;
+}
+
+.repro-eyebrow::before {
+  content: "";
+  width: 2.5em;
+  height: 2px;
+  background: #168647;
+}
+
+/* ===== ROW (image + text) ===== */
+.repro-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.repro-row + .repro-row {
+  margin-top: 3.5rem;
+}
+
+/* mobile: image always on top */
+.repro-media {
+  order: -1;
+}
+
+.repro-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 14px 34px -14px rgba(15, 27, 45, 0.3);
+}
+
+/* ===== TEXT ===== */
+.repro-text .section-heading {
+  margin: 0 0 0.75em;
+  color: #0f1b2d;
+}
+
+.repro-text .page-text {
+  margin: 0 0 1em;
+  line-height: 1.7;
+  color: #5b6b7d;
+}
+
+/* ===== BUTTON ===== */
+.repro-btn {
+  display: inline-block;
+  margin-top: 0.5em;
+  padding: 0.75em 1.75em;
+  font-size: 1em;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background: #2563b8;
+  border-radius: 999px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.repro-btn:hover {
+  background: #184a8f;
+  transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Phones */
+@media (max-width: 479px) {
+  .repro-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Tablets */
+@media (min-width: 640px) {
+  .repro-section .container-fluid {
+    padding: 4rem 5%;
+  }
+
+  .repro-row {
+    gap: 2.5rem;
+  }
+}
+
+/* Laptops: two columns, DOM order decides left / right */
+@media (min-width: 900px) {
+  .repro-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .repro-media {
+    order: 0;
+  }
+
+  .repro-row + .repro-row {
+    margin-top: 5rem;
+  }
+}
+
+/* Large desktops */
+@media (min-width: 1280px) {
+  .repro-section .container-fluid {
+    padding: 5rem calc((100% - 1240px) / 2);
+  }
+}
+
+/* Full HD */
+@media (min-width: 1920px) {
+  .repro-section {
+    font-size: 18px;
+  }
+
+  .repro-section .container-fluid {
+    padding: 6rem calc((100% - 1560px) / 2);
+  }
+
+  .repro-row {
+    gap: 5rem;
+  }
+}
+
+/* 2K */
+@media (min-width: 2560px) {
+  .repro-section {
+    font-size: 22px;
+  }
+
+  .repro-section .container-fluid {
+    padding: 7rem calc((100% - 1900px) / 2);
+  }
+
+  .repro-row {
+    gap: 6rem;
+  }
+}
+
+/* 4K */
+@media (min-width: 3200px) {
+  .repro-section {
+    font-size: 28px;
+  }
+
+  .repro-section .container-fluid {
+    padding: 8rem calc((100% - 2300px) / 2);
+  }
+
+  .repro-row {
+    gap: 7rem;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  .repro-btn {
+    transition: none;
+  }
+
+  .repro-btn:hover {
+    transform: none;
+  }
+}
