@@ -5,6 +5,8 @@ import AboutHero from "../components/About/AboutHero";
 import AboutPageScroll from "../components/About/AboutPageScroll";
 import OurHistory from "../components/About/OurHistory";
 import OurStory from "../components/About/OurStory";
+import Whyleads from "../components/Whyleads";
+import RoadAhead from "../components/About/RoadAhead";
 import Mission from "../components/About/Mission";
 
 
@@ -12,10 +14,15 @@ const About = () => {
   return (
     <main className="about-page">
       <AboutHero />
-      <OurStory/>
+      <OurStory />
       <AboutPageScroll />
       <OurHistory />
       <Mission/>
+      <Whyleads />
+      <RoadAhead />
+
+
+
 
     </main>
   );

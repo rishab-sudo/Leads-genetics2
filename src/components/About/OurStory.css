@@ -1,62 +1,400 @@
-.about-page .section-header { max-width: 700px; margin-bottom: 2rem; }
 
-.story-grid {
+/* ============================================================
+   SECTION 1: OUR STORY
+   prefix: os-story-
+   ============================================================ */
+
+.os-story,
+.os-story *,
+.os-story *::before,
+.os-story *::after {
+  box-sizing: border-box;
+}
+
+.os-story {
+  padding: 3rem 5%;
+  background: #ffffff;
+}
+
+.os-story-inner {
   display: grid;
   grid-template-columns: 1fr;
+  align-items: stretch;
   gap: 2rem;
-  margin-bottom: 2rem;
+  max-width: 1240px;
+  margin: 0 auto;
 }
-.story-text p { font-size: 1rem; }
 
-.story-highlight-box {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  height: fit-content;
-  padding: 1.5rem;
-  background: #e8f0fa;
-  border: 1px solid #dfe6ee;
-  border-left: 4px solid #2563b8;
+.os-story-media {
+  min-width: 0;
+}
+
+.os-story-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
   border-radius: 14px;
 }
-.highlight-intro { display: flex; flex-direction: column; gap: 0.25rem; }
-.highlight-label {
+
+.os-story-content {
+  min-width: 0;
+}
+
+.os-story-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  padding: 0.3em 0.8em;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #184a8f;
+  background: #e8f0fa;
+  border: 1px solid #d0e1f7;
+  border-radius: 999px;
 }
-.highlight-intro p { margin: 0; font-weight: 600; }
 
-.platform-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
+.os-story-title {
+  margin: 0 0 1.25rem;
+  color: #0f1b2d;
 }
-.platform-list li {
+
+.os-story-text {
+  margin: 0 0 1rem;
+  color: #0f1b2d;
+}
+
+@media (min-width: 960px) {
+  .os-story {
+    padding: 5rem 5%;
+  }
+
+  .os-story-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .os-story-image {
+    min-height: 420px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .os-story-inner {
+    max-width: 1560px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .os-story-inner {
+    max-width: 1900px;
+  }
+}
+
+
+/* ============================================================
+   SECTION 2: RESEARCH BANNER + SERVICES
+   prefix: os-banner-
+   Mobile: 2 columns, icon + heading only
+   Desktop: 3 columns, icon + heading + description
+   ============================================================ */
+
+.os-banner,
+.os-banner *,
+.os-banner *::before,
+.os-banner *::after {
+  box-sizing: border-box;
+}
+
+.os-banner {
+  padding-bottom: 3rem;
+  background: #ffffff;
+}
+
+.os-banner-hero {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  font-size: 0.92rem;
-  font-weight: 500;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 34rem;
+  padding: 6rem 5% 12rem;
+  text-align: center;
+  background: #06151c;
 }
-.list-bullet { color: #2563b8; font-size: 0.78rem; }
 
-.campus-note {
-  display: flex;
+.os-banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.os-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 20, 32, 0.55);
+}
+
+.os-banner-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.os-banner-title {
+  margin: 0 0 1rem;
+  color: #ffffff;
+}
+
+.os-banner-text {
+  max-width: 46ch;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.os-banner-services-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: -8rem auto 0;
+  padding: 0 5%;
+}
+
+.os-banner-panel {
+  position: relative;
+  overflow: hidden;
+  background: #06151c;
+  border-radius: 14px;
+}
+
+.os-banner-panel-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.os-banner-panel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(6, 21, 28, 0.72);
+}
+
+/* Services grid */
+
+.os-banner-services {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
-  padding: 0.85rem 1rem;
-  background: #fff;
-  border: 1px solid #dfe6ee;
-  border-radius: 10px;
+  margin: 0;
+  padding: 0.75rem;
+  list-style: none;
 }
-.campus-note p { margin: 0; font-size: 0.86rem; color: #5b6b7d; }
-.campus-note strong { color: #0f1b2d; }
-.campus-icon { font-size: 1.2rem; }
 
-@media (min-width: 640px) { .story-grid { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 960px) { .story-grid { grid-template-columns: 1.15fr 0.85fr; } }
+/* Individual service card */
+
+.os-banner-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-width: 0;
+  min-height: 100px;
+  padding: 1rem 0.65rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
+  background: rgba(6, 21, 28, 0.35);
+}
+
+.os-banner-card-icon {
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.os-banner-card-title {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #ffffff;
+  overflow-wrap: anywhere;
+}
+
+.os-banner-card-text {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.88);
+  overflow-wrap: anywhere;
+}
+
+/* Mobile: hide descriptions, keep icon and heading */
+
+@media (max-width: 639px) {
+  .os-banner-services-wrap {
+    padding: 0 3%;
+  }
+
+  .os-banner-services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+    padding: 0.65rem;
+  }
+
+  .os-banner-card {
+    min-height: 100px;
+    padding: 1rem 0.5rem;
+    gap: 0.55rem;
+  }
+
+  .os-banner-card-text {
+    display: none;
+  }
+
+  .os-banner-card-icon {
+    font-size: 1.3rem;
+  }
+
+  .os-banner-card-title {
+    font-size: 0.85rem;
+    line-height: 1.35;
+  }
+}
+
+/* Extra-small mobile screens */
+
+@media (max-width: 380px) {
+  .os-banner-services {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .os-banner-card {
+    min-height: 90px;
+    padding: 0.8rem 0.4rem;
+  }
+
+  .os-banner-card-title {
+    font-size: 0.78rem;
+    line-height: 1.3;
+  }
+}
+
+/* Tablet */
+
+@media (min-width: 640px) {
+  .os-banner-hero {
+    min-height: 40rem;
+  }
+
+  .os-banner-services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .os-banner-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .os-banner-card-title {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop */
+
+@media (min-width: 960px) {
+  .os-banner-hero {
+    min-height: 46rem;
+    padding: 8rem 5% 15rem;
+  }
+
+  .os-banner-services-wrap {
+    margin-top: -11rem;
+  }
+
+  .os-banner-services {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .os-banner-card {
+    min-height: 200px;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .os-banner-card-title {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .os-banner-hero {
+    min-height: 56rem;
+  }
+
+  .os-banner-services-wrap {
+    max-width: 1400px;
+  }
+}
+
+
+/* ============================================================
+   SECTION 3: SCIENTIFIC LOOP WRAPPER
+   prefix: os-loop-
+   ============================================================ */
+
+.os-loop,
+.os-loop *,
+.os-loop *::before,
+.os-loop *::after {
+  box-sizing: border-box;
+}
+
+.os-loop {
+  padding: 0 5% 3rem;
+  background: #ffffff;
+}
+
+.os-loop-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+@media (min-width: 960px) {
+  .os-loop {
+    padding: 0 5% 5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .os-loop-inner {
+    max-width: 1560px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .os-loop-inner {
+    max-width: 1900px;
+  }
+}

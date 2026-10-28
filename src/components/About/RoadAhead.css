@@ -1,0 +1,171 @@
+/* ---------- Section ---------- */
+.road-ahead-section {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: clamp(3rem, 7vw, 6rem) 1.25rem;
+  background: linear-gradient(160deg, #184a8f, #0c2b57);
+}
+
+/* soft glow behind content */
+.road-ahead-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(59, 130, 246, 0.25), transparent 70%),
+    radial-gradient(ellipse 50% 60% at 10% 80%, rgba(37, 99, 184, 0.2), transparent 70%);
+}
+
+.road-ahead-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ---------- Tag ---------- */
+.road-ahead-section .road-ahead-tag {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #cfe2ff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+}
+
+/* ---------- Heading + text ---------- */
+.road-ahead-section h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  line-height: 1.2;
+  color: #fff;
+}
+
+.road-ahead-section .road-ahead-text,
+.road-ahead-section .road-conclusion {
+  max-width: 62ch;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.road-ahead-section .road-ahead-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.road-ahead-section .road-conclusion {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.road-ahead-section .road-conclusion em {
+  color: #fff;
+}
+
+/* ---------- Steps (mobile first: 2 columns) ---------- */
+.road-steps-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  max-width: 420px;
+  margin: 2rem auto;
+}
+
+.road-step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  cursor: default;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.road-step-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* 5th card takes full width on mobile so grid looks balanced */
+.road-step-card:last-child {
+  grid-column: 1 / -1;
+}
+
+.rsc-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.rsc-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+
+.road-connector {
+  display: none;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ---------- Tablet: 3 + 2 cards, no arrows ---------- */
+@media (min-width: 640px) {
+  .road-steps-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0.9rem;
+    max-width: none;
+  }
+
+  .road-step-card {
+    flex: 0 1 calc(33.333% - 0.9rem);
+    min-width: 130px;
+  }
+}
+
+/* ---------- Desktop: one row with arrows ---------- */
+@media (min-width: 992px) {
+  .road-steps-row {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .road-step-card {
+    flex: 0 1 auto;
+    min-width: 140px;
+    padding: 1rem 1.25rem;
+  }
+
+  .road-connector {
+    display: block;
+    flex: 0 0 auto;
+  }
+}
