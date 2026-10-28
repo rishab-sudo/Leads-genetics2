@@ -142,7 +142,7 @@ export default function WhyChooseUs() {
             Why Choose Leads Genetics
           </span>
 
-          <h2 className="wcu-title">
+          <h2 className="wcu-title section-heading">
             One unbroken chain of custody — from livestock farm to
             high-throughput genomics.
           </h2>

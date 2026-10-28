@@ -29,11 +29,11 @@ export default function RoadAhead() {
           The Road Ahead
         </motion.span>
 
-        <motion.h2 id="road-ahead-heading" variants={fadeUp}>
+        <motion.h2 id="road-ahead-heading" className=" section-heading " variants={fadeUp}>
           Genomics translated into genetic gain.
         </motion.h2>
 
-        <motion.p className="road-ahead-text" variants={fadeUp}>
+        <motion.p className="road-ahead-text page-text" variants={fadeUp}>
           Leads Genetics is building toward a future where genomic selection
           becomes increasingly accessible across India's cattle-breeding
           ecosystem - from elite breeding programs and organized dairy
@@ -70,7 +70,7 @@ export default function RoadAhead() {
           ))}
         </motion.div>
 
-        <motion.p className="road-conclusion" variants={fadeUp}>
+        <motion.p className="road-conclusion page-text" variants={fadeUp}>
           That is the purpose behind Leads Genetics.{" "}
           <em>
             Not genomics for genomics' sake - but genomics translated into

@@ -52,7 +52,7 @@ export default function OurHistory() {
 
             <h2
               id="lg-history-heading"
-              className="lg-history-heading"
+              className="lg-history-heading section-heading"
             >
               Every generation, selected on purpose
             </h2>
