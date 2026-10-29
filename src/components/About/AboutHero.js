@@ -19,7 +19,7 @@ const AboutHero = () => {
       <div className="AboutHero-overlay"></div>
 
       {/* Heading */}
-      <div className="AboutHero-content">
+      <div className="AboutHero-content section-heading ">
         <h1>Advancing Genomics for a Better Tomorrow</h1>
         <p>Empowering healthcare, agriculture, and research through innovative genomic technologies and precision sequencing.</p>
       </div>

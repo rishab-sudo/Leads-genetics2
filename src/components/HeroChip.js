@@ -13,7 +13,7 @@ const HeroChip = () => {
             UNVEILED AT THE CATTLE GENOMICS SUMMIT 2026 • BAREILLY, INDIA
           </div>
 
-          <h1 className="hero-chip-title">
+          <h1 className="hero-chip-title section-heading">
             India's First
             <br />
             Indigenous Zebu

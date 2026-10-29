@@ -1,7 +1,5 @@
-
 /* ============================================================
    SECTION 1: OUR STORY
-   prefix: os-story-
    ============================================================ */
 
 .os-story,
@@ -13,7 +11,7 @@
 
 .os-story {
   padding: 3rem 5%;
-  background: #ffffff;
+  background: #f3f6f9;
 }
 
 .os-story-inner {
@@ -96,9 +94,9 @@
 
 /* ============================================================
    SECTION 2: RESEARCH BANNER + SERVICES
-   prefix: os-banner-
    Mobile: 2 columns, icon + heading only
    Desktop: 3 columns, icon + heading + description
+   Panel width matches the scientific loop width
    ============================================================ */
 
 .os-banner,
@@ -161,17 +159,24 @@
   color: #ffffff;
 }
 
+/* Wrapper: same side padding as .os-loop (5%) */
+
 .os-banner-services-wrap {
   position: relative;
   z-index: 2;
-  max-width: 1200px;
-  margin: -8rem auto 0;
+  width: 100%;
+  margin: -8rem 0 0 0;
   padding: 0 5%;
 }
+
+/* Panel: same max-width as .os-loop-inner */
 
 .os-banner-panel {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
   background: #06151c;
   border-radius: 14px;
 }
@@ -231,6 +236,7 @@
 
 .os-banner-card-title {
   margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
   line-height: 1.35;
@@ -239,10 +245,13 @@
 }
 
 .os-banner-card-text {
+  max-width: 32ch;
   margin: 0;
-  font-size: 1rem;
-  line-height: 1.45;
-  color: rgba(255, 255, 255, 0.88);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.85);
   overflow-wrap: anywhere;
 }
 
@@ -250,7 +259,7 @@
 
 @media (max-width: 639px) {
   .os-banner-services-wrap {
-    padding: 0 3%;
+    padding: 0 5%;
   }
 
   .os-banner-services {
@@ -267,10 +276,6 @@
 
   .os-banner-card-text {
     display: none;
-  }
-
-  .os-banner-card-icon {
-    font-size: 1.3rem;
   }
 
   .os-banner-card-title {
@@ -312,11 +317,16 @@
   }
 
   .os-banner-card {
+    min-height: 170px;
     padding: 1.25rem 1rem;
   }
 
   .os-banner-card-title {
     font-size: 1rem;
+  }
+
+  .os-banner-card-text {
+    font-size: 0.875rem;
   }
 }
 
@@ -341,10 +351,15 @@
   .os-banner-card {
     min-height: 200px;
     padding: 1.5rem 1.25rem;
+    gap: 0.75rem;
   }
 
   .os-banner-card-title {
     font-size: 1.05rem;
+  }
+
+  .os-banner-card-text {
+    font-size: 0.9rem;
   }
 }
 
@@ -353,15 +368,20 @@
     min-height: 56rem;
   }
 
-  .os-banner-services-wrap {
-    max-width: 1400px;
+  .os-banner-panel {
+    max-width: 1560px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .os-banner-panel {
+    max-width: 1900px;
   }
 }
 
 
 /* ============================================================
    SECTION 3: SCIENTIFIC LOOP WRAPPER
-   prefix: os-loop-
    ============================================================ */
 
 .os-loop,

@@ -1,19 +1,22 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { blogs } from "./Data";
-import reaBanner from "../../assets/reabanner.png";
+import reaBanner from "../../assets/Leads-Building.jpg";
 import "./Blog.css";
 
 function Blog() {
   return (
     <main className="leads-blog">
-      <section className="blog-hero" style={{ backgroundImage: `url(${reaBanner})` }}>
+      <section
+        className="blog-hero"
+        style={{ backgroundImage: `url(${reaBanner})` }}
+      >
+        <div className="blog-hero-overlay"></div>
 
         <div className="blog-hero-content">
           <span className="blog-eyebrow">LEADS GENETICS / BLOG</span>
 
-          <h1>
+          <h1 className="section-heading ">
             Insights from the
             <br />
             World of Genomics
@@ -31,7 +34,7 @@ function Blog() {
         </div>
 
         <div className="blog-hero-note">
-          <span className="hero-note-dot" />
+          <span className="hero-note-dot"></span>
           SCIENCE. DATA. DISCOVERY.
         </div>
       </section>
@@ -39,13 +42,15 @@ function Blog() {
       <section className="blog-listing" id="latest-articles">
         <div className="blog-section-heading">
           <div>
-            <span className="blog-eyebrow">KNOWLEDGE HUB</span>
-            <h2>Latest Articles<span>.</span></h2>
+            <span className="blog-eyebrow blog-eyebrow-dark">KNOWLEDGE HUB</span>
+            <h2>
+              Latest Articles<span>.</span>
+            </h2>
             <p>Research insights and perspectives from LEADS Genetics.</p>
           </div>
 
           <span className="blog-article-count">
-            0{blogs.length} ARTICLES
+            {String(blogs.length).padStart(2, "0")} ARTICLES
           </span>
         </div>
 
@@ -54,7 +59,7 @@ function Blog() {
             <article
               className="blog-card"
               key={blog.id}
-              style={{ "--card-index": index }}
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <Link
                 to={`/blog/${blog.slug}`}
@@ -77,9 +82,7 @@ function Blog() {
                 </div>
 
                 <h3>
-                  <Link to={`/blog/${blog.slug}`}>
-                    {blog.title}
-                  </Link>
+                  <Link to={`/blog/${blog.slug}`}>{blog.title}</Link>
                 </h3>
 
                 <p className="blog-card-excerpt">{blog.excerpt}</p>
@@ -89,10 +92,7 @@ function Blog() {
                     <span aria-hidden="true">◷</span> {blog.date}
                   </span>
 
-                  <Link
-                    className="blog-read-more"
-                    to={`/blog/${blog.slug}`}
-                  >
+                  <Link className="blog-read-more" to={`/blog/${blog.slug}`}>
                     Read Article <span>→</span>
                   </Link>
                 </div>
@@ -102,19 +102,21 @@ function Blog() {
         </div>
 
         <div className="blog-bottom-note">
-          <span className="blog-bottom-line" />
-          <p>
-            Advancing knowledge through genomics, research and innovation.
-          </p>
-          <span className="blog-bottom-line" />
+          <span className="blog-bottom-line"></span>
+          <p>Advancing knowledge through genomics, research and innovation.</p>
+          <span className="blog-bottom-line"></span>
         </div>
       </section>
 
       <section className="blog-cta">
-        <div className="blog-cta-mark" aria-hidden="true">DNA</div>
+        <div className="blog-cta-mark" aria-hidden="true">
+          DNA
+        </div>
 
         <div className="blog-cta-copy">
-          <span className="blog-eyebrow">LET'S COLLABORATE</span>
+          <span className="blog-eyebrow blog-eyebrow-dark">
+            LET'S COLLABORATE
+          </span>
           <h2>Have a research project in mind?</h2>
           <p>
             Let's explore how genomic insights can support your next discovery.

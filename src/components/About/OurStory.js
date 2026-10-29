@@ -65,8 +65,6 @@ export default function OurStory() {
     <>
       {/* ========================================================
           SECTION 1: OUR STORY
-          prefix: os-story-
-          Layout: image container left, text container right
           ======================================================== */}
       <section
         id="about-our-story"
@@ -120,9 +118,6 @@ export default function OurStory() {
 
       {/* ========================================================
           SECTION 2: RESEARCH BANNER + SERVICES
-          prefix: os-banner-
-          Layout: image banner with heading, dark services panel with video background
-          overlapping the bottom edge of the banner
           ======================================================== */}
       <section
         id="about-services-banner"
@@ -165,37 +160,37 @@ export default function OurStory() {
               aria-hidden="true"
             />
             <div className="os-banner-panel-overlay" />
-          <motion.ul
-            className="os-banner-services"
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.15 }}
-            variants={stagger}
-          >
-            {services.map((service) => (
-              <motion.li
-                key={service.id}
-                className="os-banner-card"
-                variants={fadeUp}
-              >
-                <service.icon
-                  className="os-banner-card-icon"
-                  size={28}
-                  weight="regular"
-                  aria-hidden="true"
-                />
-                <h3 className="os-banner-card-title">{service.title}</h3>
-                <p className="page-text os-banner-card-text">{service.desc}</p>
-              </motion.li>
-            ))}
-          </motion.ul>
+
+            <motion.ul
+              className="os-banner-services"
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.15 }}
+              variants={stagger}
+            >
+              {services.map((service) => (
+                <motion.li
+                  key={service.id}
+                  className="os-banner-card"
+                  variants={fadeUp}
+                >
+                  <service.icon
+                    className="os-banner-card-icon"
+                    size={28}
+                    weight="regular"
+                    aria-hidden="true"
+                  />
+                  <h3 className="os-banner-card-title">{service.title}</h3>
+                  <p className="os-banner-card-text">{service.desc}</p>
+                </motion.li>
+              ))}
+            </motion.ul>
           </div>
         </div>
       </section>
 
       {/* ========================================================
           SECTION 3: SCIENTIFIC LOOP
-          Owned by ./ScientificLoop (own file, own styles)
           ======================================================== */}
       <section className="os-loop" aria-label="The closed scientific loop">
         <div className="os-loop-inner">
