@@ -5,7 +5,8 @@
 .workflow-section {
   width: 100%;
   padding: 48px 0 56px;
-  background-color: #e4f2ff;
+  /* background-color: #e4f2ff; */
+    background: rgba(234, 236, 238, 0.459);
 }
 
 .workflow-container {
@@ -198,7 +199,8 @@
 .omics-section {
   width: 100%;
   padding: 64px 0;
-  background-color: #e4f2ff;
+  /* background-color: #e4f2ff; */
+    background: rgba(234, 236, 238, 0.459);
   color: #16344f;
 }
 
