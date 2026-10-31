@@ -1,0 +1,599 @@
+/* ==========================================================
+   WORKING SECTION – UNIVERSAL 1200px CONTAINER
+   ========================================================== */
+
+.working {
+  --working-container: 1200px;
+  width: 100%;
+  background-color: #f3f6f9;
+  overflow: hidden;
+}
+
+.working__science,
+.working__process {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.working__science-container,
+.working__process-container {
+  width: min(var(--working-container), calc(100% - 48px));
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* ==========================================================
+   SECTION 1 – HOW DOES MOET WORK?
+   ========================================================== */
+
+.working__science {
+  padding: 64px 0 60px;
+}
+
+.working__science-container {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 56px;
+}
+
+/* ---------- Image ---------- */
+
+.working__visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+}
+
+.working__card {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 1.2 / 1;
+  padding: 7px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 18px 42px rgba(20, 40, 30, 0.10);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.working__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 18px;
+}
+
+/* ---------- Image overlay ---------- */
+
+.working__card-overlay {
+  position: absolute;
+  left: 7px;
+  right: 7px;
+  bottom: 7px;
+  padding: 65px 24px 22px;
+  border-radius: 0 0 18px 18px;
+  background: linear-gradient(
+    to top,
+    rgba(10, 20, 15, 0.82),
+    rgba(10, 20, 15, 0.35) 60%,
+    transparent
+  );
+}
+
+.working__card-label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8fe6c6;
+}
+
+.working__card-text {
+  max-width: 380px;
+  margin: 0;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #ffffff;
+}
+
+/* ---------- Content ---------- */
+
+.working__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.working__eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #14885a;
+}
+
+.working__title {
+  margin: 0 0 20px;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #0f2a47;
+}
+
+.working__text {
+  max-width: 580px;
+  margin: 0 0 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #4a5a68;
+}
+
+.working__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.working__list-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.working__check {
+  flex-shrink: 0;
+}
+
+.working__list-text {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #1f3a4d;
+}
+
+/* ==========================================================
+   SECTION 2 – MOET PROCESS FLOW
+   ========================================================== */
+
+.working__process {
+  padding: 54px 0 72px;
+  background-color: #f3f6f9;
+  border-top: 1px solid #e4eaf0;
+}
+
+.working__process-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  margin-bottom: 46px;
+}
+
+.working__process-eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #14885a;
+}
+
+.working__process-intro {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #4a5a68;
+}
+
+/* ---------- Timeline ---------- */
+
+.working__steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+/* Timeline line – limited to the actual step area */
+
+.working__steps::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 8.33%;
+  right: 8.33%;
+  height: 2px;
+  background: #cfe5d8;
+}
+
+.working__steps::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 8.33%;
+  right: 8.33%;
+  height: 4px;
+  border-radius: 4px;
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(20, 136, 90, 0.95) 50%,
+    transparent 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 25% 100%;
+  background-position: -40% 0;
+  animation: working-flow-horizontal 4s linear infinite;
+}
+
+.working__step {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  padding: 0 6px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* ---------- Number circles ---------- */
+
+.working__step-number {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 20px;
+  border: 4px solid #f3f6f9;
+  border-radius: 50%;
+  background: #14885a;
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 1px #14885a;
+  animation: working-breathe 3.2s ease-in-out infinite;
+}
+
+.working__step-number::after {
+  content: "";
+  position: absolute;
+  inset: -13px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    transparent 52%,
+    rgba(20, 136, 90, 0.25) 65%,
+    transparent 78%
+  );
+  pointer-events: none;
+  animation: working-ring 3.2s ease-in-out infinite;
+}
+
+/* Staggered animation */
+
+.working__step:nth-child(1) .working__step-number { animation-delay: 0s; }
+.working__step:nth-child(2) .working__step-number { animation-delay: 0.5s; }
+.working__step:nth-child(3) .working__step-number { animation-delay: 1s; }
+.working__step:nth-child(4) .working__step-number { animation-delay: 1.5s; }
+.working__step:nth-child(5) .working__step-number { animation-delay: 2s; }
+.working__step:nth-child(6) .working__step-number { animation-delay: 2.5s; }
+
+/* ---------- Step text ---------- */
+
+.working__step-title {
+  margin: 0 0 7px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #1c2b26;
+}
+
+.working__step-text {
+  max-width: 160px;
+  margin: 0 auto;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #5d6b66;
+}
+
+/* ---------- Animations ---------- */
+
+@keyframes working-flow-horizontal {
+  0% { background-position: -40% 0; }
+  100% { background-position: 140% 0; }
+}
+
+@keyframes working-flow-vertical {
+  0% { background-position: 0 -40%; }
+  100% { background-position: 0 140%; }
+}
+
+@keyframes working-breathe {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 1px #14885a, 0 0 0 0 rgba(20, 136, 90, 0.3);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 1px #14885a, 0 0 0 9px rgba(20, 136, 90, 0);
+  }
+}
+
+@keyframes working-ring {
+  0%, 100% {
+    transform: scale(0.85);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.9;
+  }
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+/* Laptops */
+
+@media (max-width: 1100px) {
+  .working__science-container {
+    gap: 36px;
+  }
+
+  .working__card {
+    max-width: 460px;
+  }
+
+  .working__steps {
+    gap: 6px;
+  }
+
+  .working__step-title {
+    font-size: 15px;
+  }
+}
+
+/* Tablets */
+
+@media (max-width: 991px) {
+  .working__science {
+    padding: 52px 0;
+  }
+
+  .working__science-container {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    max-width: 720px;
+  }
+
+  .working__visual {
+    justify-content: flex-start;
+  }
+
+  .working__card {
+    max-width: 580px;
+    aspect-ratio: 1.5 / 1;
+  }
+
+  .working__process {
+    padding: 48px 0 58px;
+  }
+
+  .working__process-header {
+    margin-bottom: 36px;
+  }
+
+  .working__steps {
+    display: block;
+    max-width: 680px;
+    margin: 0;
+  }
+
+  .working__steps::before {
+    top: 22px;
+    bottom: 22px;
+    left: 23px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .working__steps::after {
+    top: 22px;
+    bottom: 22px;
+    left: 22px;
+    right: auto;
+    width: 4px;
+    height: auto;
+    background-image: linear-gradient(
+      180deg,
+      transparent,
+      rgba(20, 136, 90, 0.95),
+      transparent
+    );
+    background-size: 100% 25%;
+    background-position: 0 -40%;
+    animation-name: working-flow-vertical;
+  }
+
+  .working__step {
+    min-height: 48px;
+    margin-bottom: 28px;
+    padding: 0 0 0 70px;
+    text-align: left;
+  }
+
+  .working__step-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+
+  .working__step-title {
+    padding-top: 3px;
+    font-size: 17px;
+  }
+
+  .working__step-text {
+    max-width: 100%;
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .working__science,
+  .working__process {
+    padding-top: 42px;
+    padding-bottom: 44px;
+  }
+
+  .working__science-container,
+  .working__process-container {
+    width: calc(100% - 40px);
+  }
+
+  .working__science-container {
+    gap: 28px;
+  }
+
+  .working__card {
+    max-width: 100%;
+    aspect-ratio: 1.35 / 1;
+    padding: 6px;
+    border-radius: 20px;
+  }
+
+  .working__image {
+    border-radius: 14px;
+  }
+
+  .working__card-overlay {
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    padding: 48px 18px 16px;
+    border-radius: 0 0 14px 14px;
+  }
+
+  .working__card-label {
+    font-size: 11px;
+  }
+
+  .working__card-text {
+    font-size: 19px;
+  }
+
+  .working__eyebrow,
+  .working__process-eyebrow {
+    font-size: 11px;
+  }
+
+  .working__text {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .working__list-text {
+    font-size: 14px;
+  }
+
+  .working__process-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+
+  .working__process-intro {
+    font-size: 15px;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 480px) {
+  .working__science-container,
+  .working__process-container {
+    width: calc(100% - 32px);
+  }
+
+  .working__card {
+    aspect-ratio: 1.2 / 1;
+  }
+
+  .working__card-text {
+    font-size: 17px;
+  }
+
+  .working__list {
+    gap: 13px;
+  }
+
+  .working__list-item {
+    align-items: flex-start;
+  }
+
+  .working__check {
+    width: 21px;
+    height: 21px;
+  }
+
+  .working__step {
+    padding-left: 64px;
+    margin-bottom: 26px;
+  }
+
+  .working__step-number {
+    width: 44px;
+    height: 44px;
+    font-size: 15px;
+  }
+
+  .working__steps::before {
+    left: 21px;
+  }
+
+  .working__steps::after {
+    left: 20px;
+  }
+}
+
+/* Reduced motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .working__steps::after,
+  .working__step-number,
+  .working__step-number::after {
+    animation: none !important;
+  }
+}

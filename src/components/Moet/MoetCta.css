@@ -1,0 +1,267 @@
+/* ---------- Section wrapper ---------- */
+.moet-cta {
+  background-color: #f3f6f9;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* ---------- Shared label (small green text above headings) ---------- */
+.moet-cta .moet-cta-label {
+  color: #14804f;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+
+/* ---------- Heading (font-size, family, weight come from App.css) ---------- */
+.moet-cta .section-heading {
+  color: #0f2d4a;
+  margin-top: 0px;
+  margin-bottom: 18px;
+}
+
+/* ---------- Page text (color and line-height only, font comes from App.css) ---------- */
+.moet-cta .page-text {
+  color: #5f6b78;
+}
+
+/* ===================== CARD 1: THE RECIPIENT MATTERS ===================== */
+.moet-cta .moet-cta-recipient {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1125px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-image: linear-gradient(135deg, #ffffff, #e9f2fb);
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cfe0ee;
+  border-radius: 24px;
+}
+
+.moet-cta .moet-cta-recipient-left {
+  flex-grow: 1;
+  flex-basis: 420px;
+  max-width: 600px;
+}
+
+.moet-cta .moet-cta-recipient-right {
+  flex-grow: 1;
+  flex-basis: 340px;
+  max-width: 415px;
+}
+
+.moet-cta .moet-cta-recipient-intro {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 0px;
+  margin-bottom: 22px;
+}
+
+/* ---------- Checklist ---------- */
+.moet-cta .moet-cta-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.moet-cta .moet-cta-check-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.moet-cta .moet-cta-check-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  background-color: #14804f;
+  border-radius: 50%;
+}
+
+.moet-cta .moet-cta-check-text {
+  color: #1f3347;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* ---------- Formula card (Donor + Quality embryo + Suitable recipient) ---------- */
+.moet-cta .moet-cta-formula {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 26px;
+  padding-right: 26px;
+  background-color: #f7fbfe;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cfe0ee;
+  border-radius: 24px;
+}
+
+.moet-cta .moet-cta-formula-item {
+  color: #0f2d4a;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.moet-cta .moet-cta-formula-plus {
+  color: #14804f;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.moet-cta .moet-cta-formula-result {
+  width: 100%;
+  margin-top: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: #dff0e6;
+  border-radius: 14px;
+}
+
+.moet-cta .moet-cta-formula-result-text {
+  color: #14804f;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* ===================== CARD 2: CALL TO ACTION ===================== */
+.moet-cta .moet-cta-banner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1125px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 44px;
+  padding-bottom: 44px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-image: linear-gradient(135deg, #dcebfa, #eef5fc);
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c5dbee;
+  border-radius: 24px;
+}
+
+.moet-cta .moet-cta-banner-left {
+  flex-grow: 1;
+  flex-basis: 420px;
+  max-width: 640px;
+}
+
+.moet-cta .moet-cta-banner-right {
+  flex-shrink: 0;
+}
+
+.moet-cta .moet-cta-banner-text {
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 620px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* ---------- Contact button ---------- */
+.moet-cta .moet-cta-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: #14804f;
+  border-radius: 40px;
+  text-decoration: none;
+}
+
+.moet-cta .moet-cta-button-text {
+  color: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.moet-cta .moet-cta-button-arrow {
+  color: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.moet-cta .moet-cta-button:hover {
+  background-color: #0f6a41;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 700px) {
+  .moet-cta {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .moet-cta .moet-cta-recipient {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 60px;
+  }
+
+  .moet-cta .moet-cta-banner {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .moet-cta .moet-cta-recipient-right {
+    max-width: 100%;
+  }
+}

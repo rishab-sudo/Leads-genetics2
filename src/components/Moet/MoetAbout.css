@@ -1,0 +1,434 @@
+/* ==========================================================
+   MoetAbout.css
+   NOTE: font-size, font-family and font-weight of the row
+   headings come from `.section-heading` in App.css, and the
+   paragraph font family comes from `.page-text` in App.css.
+   ========================================================== */
+
+/* ---------- Section wrapper ---------- */
+.moet-about {
+  position: relative;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #f3f6f9;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* decorative arc in the top-right corner */
+.moet-about::after {
+  content: "";
+  position: absolute;
+  top: -260px;
+  right: -60px;
+  width: 520px;
+  height: 520px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(33, 120, 181, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ---------- Container: 1200px with 32px side padding ---------- */
+.moet-about .moet-about__container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 32px;
+  padding-right: 32px;
+  box-sizing: border-box;
+}
+
+/* ---------- Row 2 (default): heading left, text right ---------- */
+.moet-about .moet-about__row {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  column-gap: 72px;
+  row-gap: 36px;
+  align-items: start;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.moet-about .moet-about__row--second {
+  margin-top: 72px;
+  padding-top: 72px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #d3e0ec;
+}
+
+/* ---------- Row 1 (reversed): text left, heading right ---------- */
+.moet-about .moet-about__row--reverse {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.moet-about .moet-about__row--reverse .moet-about__row-body {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.moet-about .moet-about__row--reverse .moet-about__row-head {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+/* ---------- Heading column: number, eyebrow, heading ---------- */
+.moet-about .moet-about__row-head {
+  position: relative;
+}
+
+.moet-about .moet-about__number {
+  display: block;
+  margin-bottom: 4px;
+  color: rgba(20, 136, 90, 0.16);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 110px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.moet-about .moet-about__eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #14885a;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.moet-about .moet-about__title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #0f2a47;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* accent bar under the heading */
+.moet-about .moet-about__title::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin-top: 20px;
+  border-radius: 4px;
+  background-image: linear-gradient(90deg, #14885a, #2178b5);
+}
+
+/* ---------- Text column ---------- */
+.moet-about .moet-about__row-body {
+  padding-top: 18px;
+}
+
+.moet-about .moet-about__text {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  color: #4a5a68;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* ---------- Step timeline (Row 1) ---------- */
+.moet-about .moet-about__steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 16px;
+  margin-top: 36px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  list-style-type: none;
+}
+
+.moet-about .moet-about__step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* line connecting one step to the next */
+.moet-about .moet-about__step::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 44px;
+  width: calc(100% - 34px);
+  height: 2px;
+  background-image: linear-gradient(90deg, #14885a, #2178b5);
+  opacity: 0.45;
+}
+
+.moet-about .moet-about__step:last-child::after {
+  display: none;
+}
+
+.moet-about .moet-about__step-number {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  color: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #14885a;
+  border-width: 4px;
+  border-style: solid;
+  border-color: #f3f6f9;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 1px #14885a;
+}
+
+.moet-about .moet-about__step-label {
+  color: #0f2a47;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+/* ---------- Highlight banner (Row 2, full width) ---------- */
+.moet-about .moet-about__banner {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+  margin-top: 12px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-image: linear-gradient(110deg, #0f2a47 0%, #12503f 70%, #14885a 100%);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0px 24px 50px rgba(15, 42, 71, 0.2);
+  box-sizing: border-box;
+}
+
+/* soft circle decoration inside the banner */
+.moet-about .moet-about__banner::after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -60px;
+  width: 260px;
+  height: 260px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.moet-about .moet-about__banner-icon {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 58px;
+  height: 58px;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.14);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.moet-about .moet-about__banner-body {
+  position: relative;
+  z-index: 1;
+}
+
+.moet-about .moet-about__banner-title {
+  margin-top: 0px;
+  margin-bottom: 6px;
+  color: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.moet-about .moet-about__banner-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: rgba(255, 255, 255, 0.82);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+/* Large laptops */
+@media (max-width: 1280px) {
+  .moet-about .moet-about__row {
+    column-gap: 56px;
+  }
+
+  .moet-about .moet-about__number {
+    font-size: 92px;
+  }
+
+  .moet-about .moet-about__text {
+    font-size: 17px;
+  }
+}
+
+/* Tablets: one column, heading on top for both rows */
+@media (max-width: 991px) {
+  .moet-about {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .moet-about .moet-about__container {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .moet-about .moet-about__row {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+
+  .moet-about .moet-about__row--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .moet-about .moet-about__row--reverse .moet-about__row-head {
+    grid-column-start: auto;
+    grid-row-start: auto;
+  }
+
+  .moet-about .moet-about__row--reverse .moet-about__row-body {
+    grid-column-start: auto;
+    grid-row-start: auto;
+  }
+
+  .moet-about .moet-about__row--second {
+    margin-top: 56px;
+    padding-top: 56px;
+  }
+
+  .moet-about .moet-about__row-body {
+    padding-top: 0px;
+  }
+
+  .moet-about .moet-about__number {
+    font-size: 80px;
+  }
+
+  .moet-about .moet-about__banner {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+
+/* Mobile landscape / large phones */
+@media (max-width: 767px) {
+  .moet-about {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  .moet-about .moet-about__container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .moet-about .moet-about__row--second {
+    margin-top: 44px;
+    padding-top: 44px;
+  }
+
+  .moet-about .moet-about__number {
+    font-size: 64px;
+  }
+
+  .moet-about .moet-about__eyebrow {
+    margin-bottom: 12px;
+    font-size: 12px;
+  }
+
+  .moet-about .moet-about__text {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .moet-about .moet-about__banner {
+    gap: 16px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 20px;
+  }
+
+  .moet-about .moet-about__banner-title {
+    font-size: 20px;
+  }
+}
+
+/* Small phones: steps stack vertically */
+@media (max-width: 560px) {
+  .moet-about .moet-about__container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .moet-about .moet-about__steps {
+    grid-template-columns: 1fr;
+    row-gap: 22px;
+  }
+
+  .moet-about .moet-about__step {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .moet-about .moet-about__step::after {
+    top: 34px;
+    left: 17px;
+    width: 2px;
+    height: calc(100% + 6px);
+    background-image: linear-gradient(180deg, #14885a, #2178b5);
+  }
+
+  .moet-about .moet-about__banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .moet-about .moet-about__number {
+    font-size: 52px;
+  }
+}

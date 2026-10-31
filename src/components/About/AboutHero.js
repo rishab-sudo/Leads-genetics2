@@ -5,23 +5,25 @@ const AboutHero = () => {
   return (
     <section className="AboutHero">
       {/* Background Video */}
-      <video
-        className="AboutHero-video"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src={require("../../assets/abouthero-video.mp4")} type="video/mp4" />
+      <video className="AboutHero-video" autoPlay muted loop playsInline>
+        <source
+          src={require("../../assets/abouthero-video_gwr_video_mvp.mp4")}
+          type="video/mp4"
+        />
       </video>
 
       {/* Black Overlay */}
       <div className="AboutHero-overlay"></div>
 
-      {/* Heading */}
-      <div className="AboutHero-content section-heading ">
-        <h1>Advancing Genomics for a Better Tomorrow</h1>
-        <p>Empowering healthcare, agriculture, and research through innovative genomic technologies and precision sequencing.</p>
+      {/* Content (same container width as the other sections) */}
+      <div className="AboutHero-inner">
+        <div className="AboutHero-content section-heading">
+          <h1>Advancing Genomics for a Better Tomorrow</h1>
+          <p>
+            Empowering healthcare, agriculture, and research through innovative
+            genomic technologies and precision sequencing.
+          </p>
+        </div>
       </div>
     </section>
   );

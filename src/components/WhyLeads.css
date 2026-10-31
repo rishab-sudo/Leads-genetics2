@@ -47,9 +47,6 @@
 .wcu-title {
   margin: 0 0 0.85rem;
   color: #0f172a;
-  font-family: "Inter", "Segoe UI", Arial, sans-serif;
-  font-size: clamp(1.65rem, 3.2vw, 2.35rem);
-  font-weight: 800;
   line-height: 1.22;
   letter-spacing: -0.02em;
 }

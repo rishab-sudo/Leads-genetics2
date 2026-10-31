@@ -1,0 +1,263 @@
+/* ---------- Page wrapper ---------- */
+.moet-ivf {
+  background-color: #eef4f9;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* ---------- Sections ---------- */
+.moet-advantages {
+  max-width: 1130px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+}
+
+.moet-comparison {
+  max-width: 1130px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- Heading (font-size, family, weight come from App.css) ---------- */
+.section-heading {
+  color: #0f2d4a;
+  margin-top: 0px;
+  margin-bottom: 14px;
+}
+
+/* ---------- Page text (font comes from App.css) ---------- */
+.page-text {
+  color: #5f6b78;
+  line-height: 1.7;
+}
+
+/* ---------- Advantages: top area ---------- */
+.moet-advantages-label {
+  color: #14804f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.moet-advantages-intro {
+  max-width: 620px;
+  margin-top: 0px;
+  margin-bottom: 36px;
+}
+
+/* ---------- Advantages: cards ---------- */
+.advantage-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.advantage-card {
+  flex-grow: 1;
+  flex-basis: 240px;
+  background-color: #f7fbfe;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cfe3f2;
+  border-radius: 20px;
+  padding-top: 24px;
+  padding-bottom: 28px;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.advantage-card-number {
+  display: block;
+  color: #9db4c8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.advantage-card-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #dff0e6;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+
+.advantage-card-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.advantage-card-title {
+  color: #0f2d4a;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.advantage-card-text {
+  font-size: 14px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* ---------- Comparison: top area ---------- */
+.moet-comparison-intro {
+  max-width: 620px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+/* ---------- Comparison: method cards ---------- */
+.method-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.method-card {
+  flex-grow: 1;
+  flex-basis: 380px;
+  background-color: #e6f2fb;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cfe3f2;
+  border-radius: 20px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.method-card-title {
+  color: #0f2d4a;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.method-card-text {
+  font-size: 14px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* ---------- Comparison: table ---------- */
+.comparison-table-wrapper {
+  background-color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cfe3f2;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.comparison-table-head-row {
+  background-color: #0f2d4a;
+}
+
+.comparison-table-head-cell {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.comparison-table-row {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #dce8f1;
+}
+
+.comparison-table-row:nth-child(even) {
+  background-color: #f1f6fa;
+}
+
+.comparison-table-parameter {
+  color: #0f2d4a;
+  font-size: 13px;
+  font-weight: 700;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.comparison-table-cell {
+  color: #5f6b78;
+  font-size: 13px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ---------- Note box (used in both sections) ---------- */
+.note-box {
+  background-color: #f2f9f4;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cfe5d8;
+  border-left-width: 4px;
+  border-left-color: #14804f;
+  border-radius: 12px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.note-box-title {
+  color: #0f2d4a;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+.note-box-text {
+  font-size: 14px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 700px) {
+  .moet-ivf {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .comparison-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .comparison-table {
+    min-width: 600px;
+  }
+}
