@@ -20,7 +20,6 @@ export default function LeadsGeneticsPage() {
      <Semen/>
      <MoetCta/>
      <MoetFaq/>
-      {/* INTRO STRIP */}
     </main>
   );
 }

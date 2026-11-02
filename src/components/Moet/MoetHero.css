@@ -1,215 +1,125 @@
-/* ==========================================================
-   MoetHero.css
-   NOTE: font-size, font-family and font-weight of the main
-   heading come from `.section-heading` in App.css.
-   ========================================================== */
+/* ================= HERO ================= */
 
 .moet-hero {
   position: relative;
   width: 100%;
-  padding-top: 100px;
-  padding-bottom: 80px;
-  padding-left: 0px;
-  padding-right: 0px;
-  background: linear-gradient(120deg, #f4f7fb 0%, #eaf3fb 55%, #d8e9f8 100%);
+  height: 100vh;
+  min-height: 620px;
   overflow: hidden;
+  background-color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: min(17vh, 11vw);
   box-sizing: border-box;
 }
 
-/* ---------- Green strip behind the navbar ---------- */
+.moet-hero__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* ================= PAPER BACKGROUND ================= */
+
+.moet-hero__paper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.moet-hero__lines {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ================= GREEN STRIP (BEHIND NAVBAR) ================= */
+
 .moet-hero__strip {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 85px;
-  z-index: 1;
   background-image: linear-gradient(90deg, #14885a, #0f7049);
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: rgba(255, 255, 255, 0.18);
   box-shadow: 0px 8px 24px rgba(15, 112, 73, 0.25);
+  z-index: 5;
   pointer-events: none;
 }
 
-/* decorative arc behind the card */
-.moet-hero::after {
-  content: "";
+/* ================= WORD ROW: MO | PILL | ET ================= */
+
+/* The centering (-50%, -50%) is done in the JS with GSAP */
+.moet-hero__row {
   position: absolute;
-  right: -120px;
-  bottom: -200px;
-  width: 520px;
-  height: 520px;
-  border: 1px solid rgba(33, 120, 181, 0.12);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.moet-hero__container {
-  position: relative;
-  z-index: 1;
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 0 48px;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
-  gap: 64px;
-  box-sizing: border-box;
-}
-
-/* ---------- Content ---------- */
-
-.moet-hero__content {
+  top: 50%;
+  left: 50%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.moet-hero__eyebrow {
-  display: inline-block;
-  margin-bottom: 16px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #14885a;
-}
-
-.moet-hero__title {
-  margin: 0 0 28px;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-}
-
-.moet-hero__title-dark {
-  color: #0f2a47;
-}
-
-.moet-hero__title-blue {
-  color: #2178b5;
-}
-
-.moet-hero__subtitle {
-  margin: 0 0 16px;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  color: #111c26;
-}
-
-.moet-hero__description {
-  max-width: 640px;
-  margin: 0 0 36px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 20px;
-  line-height: 1.95;
-  color: #4a5a68;
-}
-
-/* ---------- Buttons ---------- */
-
-.moet-hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 28px;
-}
-
-.moet-hero__btn {
-  display: inline-flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  height: 60px;
-  padding: 0 28px;
-  border-radius: 999px;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
+  gap: 0;
   white-space: nowrap;
-  cursor: pointer;
-  box-sizing: border-box;
-  transition: background-color 0.25s ease, color 0.25s ease,
-    border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  z-index: 2;
 }
 
-.moet-hero__btn:focus-visible {
-  outline: 3px solid #2178b5;
-  outline-offset: 3px;
+.moet-hero__word {
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.8;
+  color: #1d1d1d;
+  user-select: none;
 }
 
-.moet-hero__btn-icon {
-  flex-shrink: 0;
-}
+/* ================= PILL ================= */
 
-.moet-hero__btn--primary {
-  background-color: #14885a;
-  color: #ffffff;
-  border: 1px solid #14885a;
-}
-
-.moet-hero__btn--primary:hover {
-  background-color: #0f7049;
-  border-color: #0f7049;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(20, 136, 90, 0.28);
-}
-
-.moet-hero__btn--secondary {
-  background-color: #ffffff;
-  color: #0f2a47;
-  border: 1px solid #b9d3ea;
-}
-
-.moet-hero__btn--secondary:hover {
-  border-color: #2178b5;
-  color: #2178b5;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(33, 120, 181, 0.15);
-}
-
-/* ---------- Tagline ---------- */
-
-.moet-hero__tagline {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 0;
-  font-size: 16px;
-  font-weight: 500;
-  color: #4a5a68;
-}
-
-.moet-hero__dot {
+.moet-hero__pill {
   position: relative;
   flex-shrink: 0;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #14885a;
-  box-shadow: 0 0 0 6px rgba(20, 136, 90, 0.15);
+  width: 0;
+  height: 1.81em;
+  border-radius: 999px;
+  overflow: hidden;
+  background-image: linear-gradient(180deg, #cfe6f5, #e3f1e6);
 }
 
-/* ---------- Visual card ---------- */
+/* ================= BASE IMAGE (SHOWN WHEN MOET OPENS) ================= */
 
-.moet-hero__visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.moet-hero__image--base {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
-.moet-hero__card {
-  position: relative;
+/* ================= SLIDES ================= */
+
+.moet-hero__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 680px;
-  aspect-ratio: 1 / 0.78;
-  padding: 8px;
-  background-color: #ffffff;
-  border-radius: 36px;
-  box-shadow: 0 30px 60px rgba(15, 42, 71, 0.14);
-  box-sizing: border-box;
+  height: 100%;
+  clip-path: inset(100% 0% 0% 0%);
+}
+
+.moet-hero__slide--first {
+  z-index: 1;
+}
+
+.moet-hero__slide--second {
+  z-index: 2;
+}
+
+.moet-hero__slide--third {
+  z-index: 3;
 }
 
 .moet-hero__image {
@@ -217,205 +127,353 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  border-radius: 30px;
+  object-position: center center;
 }
 
-.moet-hero__badge {
+/* ================= IMAGE LABELS ================= */
+
+.moet-hero__label {
   position: absolute;
-  top: 36px;
-  right: 36px;
-  padding: 14px 24px;
+  bottom: 20px;
+  padding-top: 10px;
+  padding-right: 18px;
+  padding-bottom: 10px;
+  padding-left: 18px;
   border-radius: 999px;
-  background-color: rgba(235, 235, 235, 0.95);
-  color: #14885a;
-  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #0f2a47;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0;
+  white-space: nowrap;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.18);
 }
 
-.moet-hero__card-overlay {
+.moet-hero__label--left {
+  left: 20px;
+}
+
+.moet-hero__label--right {
+  right: 20px;
+}
+
+/* ================= DOTS ================= */
+
+.moet-hero__dots {
   position: absolute;
-  left: 8px;
-  right: 8px;
-  bottom: 8px;
-  padding: 64px 32px 28px;
-  border-radius: 0 0 30px 30px;
-  background: linear-gradient(
-    to top,
-    rgba(10, 20, 20, 0.78) 0%,
-    rgba(10, 20, 20, 0.35) 55%,
-    rgba(10, 20, 20, 0) 100%
-  );
-  color: #ffffff;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  z-index: 6;
 }
 
-.moet-hero__card-label {
+.moet-hero__dot {
   display: block;
-  margin-bottom: 8px;
-  font-size: 14px;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background-color: rgba(29, 29, 29, 0.25);
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.moet-hero__dot--active {
+  width: 24px;
+  background-color: #14885a;
+}
+
+/* ================= FOOTER ================= */
+
+.moet-hero__footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 0;
+  padding-right: 48px;
+  padding-bottom: 40px;
+  padding-left: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 32px;
+  z-index: 3;
+  box-sizing: border-box;
+}
+
+.moet-hero__text {
+  max-width: 400px;
+}
+
+.moet-hero__eyebrow {
+  display: block;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #7ee2c0;
+  color: #14885a;
 }
 
-.moet-hero__card-text {
-  margin: 0;
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 1.25;
+.moet-hero__paragraph {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #3a3a3a;
+}
+
+/* Drop cap "E" */
+.moet-hero__paragraph::first-letter {
+  float: left;
+  padding-right: 6px;
+  font-size: 2.35em;
+  font-weight: 650;
+  line-height: 0.9;
+  color: #1d1d1d;
+}
+
+.moet-hero__rule {
+  flex-grow: 1;
+  height: 1px;
+  margin-bottom: 24px;
+  background-color: #a9a9a6;
+}
+
+.moet-hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding-top: 0;
+  padding-right: 28px;
+  padding-bottom: 0;
+  padding-left: 28px;
+  border-radius: 999px;
+  background-color: #14885a;
   color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
-/* ==========================================================
-   Responsive
-   ========================================================== */
+.moet-hero__button:hover {
+  background-color: #0f7049;
+  transform: translateY(-2px);
+}
 
-/* Large laptops */
-@media (max-width: 1280px) {
-  .moet-hero__container {
-    padding: 0 40px;
-    gap: 48px;
+/* ================= EXTRA LARGE SCREENS (1400px and up) ================= */
+
+@media (min-width: 1400px) {
+  .moet-hero__strip {
+    height: 95px;
   }
 
-  .moet-hero__subtitle {
-    font-size: 28px;
+  .moet-hero__footer {
+    padding-right: 64px;
+    padding-bottom: 48px;
+    padding-left: 64px;
   }
 
-  .moet-hero__description {
-    font-size: 18px;
+  .moet-hero__text {
+    max-width: 460px;
+  }
+
+  .moet-hero__eyebrow {
+    font-size: 13px;
+  }
+
+  .moet-hero__paragraph {
+    font-size: 15px;
+  }
+
+  .moet-hero__label {
+    bottom: 28px;
+    padding-top: 12px;
+    padding-right: 22px;
+    padding-bottom: 12px;
+    padding-left: 22px;
+    font-size: 17px;
+  }
+
+  .moet-hero__label--left {
+    left: 28px;
+  }
+
+  .moet-hero__label--right {
+    right: 28px;
   }
 }
 
-/* Tablets */
+/* ================= MEDIUM SCREENS (721px to 991px) ================= */
+
 @media (max-width: 991px) {
   .moet-hero {
-    padding-top: 92px;
-    padding-bottom: 48px;
+    font-size: min(17vh, 12vw);
   }
 
   .moet-hero__strip {
     height: 64px;
   }
 
-  .moet-hero__container {
-    grid-template-columns: 1fr;
-    gap: 44px;
-    padding: 0 32px;
+  .moet-hero__footer {
+    padding-right: 32px;
+    padding-bottom: 32px;
+    padding-left: 32px;
+    gap: 24px;
   }
 
-  .moet-hero__description {
-    max-width: 100%;
+  .moet-hero__label {
+    bottom: 16px;
+    font-size: 14px;
   }
 
-  .moet-hero__card {
-    max-width: 720px;
-    margin: 0 auto;
+  .moet-hero__label--left {
+    left: 16px;
+  }
+
+  .moet-hero__label--right {
+    right: 16px;
   }
 }
 
-/* Mobile landscape / large phones */
-@media (max-width: 767px) {
+/* ================= SMALL SCREENS (720px and below) ================= */
+
+@media (max-width: 720px) {
   .moet-hero {
-    padding-top: 84px;
-    padding-bottom: 40px;
+    min-height: 560px;
+    font-size: min(27vw, 16vh);
   }
 
   .moet-hero__strip {
     height: 56px;
   }
 
-  .moet-hero__container {
-    padding: 0 20px;
-    gap: 36px;
+  /* Row 1: MO and ET side by side (MOET in one line). Row 2: pill (full width). */
+  .moet-hero__row {
+    display: grid;
+    grid-template-columns: 1fr auto auto 1fr;
+    align-items: center;
+    justify-items: center;
+    width: calc(100% - 40px);
+    gap: 0;
   }
 
-  .moet-hero__eyebrow {
-    font-size: 12px;
-    letter-spacing: 0.16em;
+  .moet-hero__row > .moet-hero__word:first-child {
+    grid-column: 2;
+    grid-row: 1;
   }
 
-  .moet-hero__title {
-    margin-bottom: 20px;
+  .moet-hero__row > .moet-hero__word:last-child {
+    grid-column: 3;
+    grid-row: 1;
   }
 
-  .moet-hero__subtitle {
-    font-size: 24px;
+  /* Pill opens vertically, below MO and ET. ET moves below it when scrolling. */
+  .moet-hero__pill {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    height: 0;
   }
 
-  .moet-hero__description {
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 28px;
+  .moet-hero__label {
+    bottom: 14px;
+    padding-top: 8px;
+    padding-right: 14px;
+    padding-bottom: 8px;
+    padding-left: 14px;
+    font-size: 13px;
   }
 
-  .moet-hero__btn {
-    height: 54px;
-    padding: 0 24px;
-    font-size: 16px;
+  .moet-hero__label--left {
+    left: 14px;
   }
 
-  .moet-hero__tagline {
-    font-size: 15px;
+  .moet-hero__label--right {
+    right: 14px;
   }
 
-  .moet-hero__card {
-    border-radius: 28px;
-    padding: 6px;
+  .moet-hero__footer {
+    flex-wrap: wrap;
+    align-items: center;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    gap: 16px;
   }
 
-  .moet-hero__image {
-    border-radius: 23px;
+  .moet-hero__text {
+    flex-basis: 100%;
+    max-width: 100%;
   }
 
-  .moet-hero__badge {
-    top: 22px;
-    right: 22px;
-    padding: 10px 18px;
+  .moet-hero__paragraph {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .moet-hero__rule {
+    margin-bottom: 0;
+  }
+
+  .moet-hero__button {
+    height: 38px;
+    padding-right: 20px;
+    padding-left: 20px;
     font-size: 14px;
-  }
-
-  .moet-hero__card-overlay {
-    padding: 48px 22px 20px;
-    border-radius: 0 0 23px 23px;
-  }
-
-  .moet-hero__card-text {
-    font-size: 22px;
   }
 }
 
-/* Small phones */
+/* ================= EXTRA SMALL PHONES (480px and below) ================= */
+
 @media (max-width: 480px) {
-  .moet-hero__actions {
-    flex-direction: column;
-    width: 100%;
-    gap: 12px;
+  .moet-hero__eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.1em;
   }
 
-  .moet-hero__btn {
-    width: 100%;
+  .moet-hero__paragraph {
+    font-size: 12.5px;
   }
 
-  .moet-hero__subtitle {
-    font-size: 21px;
-  }
-
-  .moet-hero__description {
-    font-size: 16px;
-  }
-
-  .moet-hero__card {
-    aspect-ratio: 1 / 1;
-  }
-
-  .moet-hero__card-label {
+  .moet-hero__label {
+    bottom: 12px;
+    padding-top: 7px;
+    padding-right: 12px;
+    padding-bottom: 7px;
+    padding-left: 12px;
     font-size: 12px;
   }
 
-  .moet-hero__card-text {
-    font-size: 19px;
+  .moet-hero__label--left {
+    left: 12px;
+  }
+
+  .moet-hero__label--right {
+    right: 12px;
+  }
+
+  .moet-hero__dots {
+    bottom: 16px;
+  }
+}
+
+/* ================= SHORT SCREENS (phones in landscape) ================= */
+
+@media (max-height: 560px) {
+  .moet-hero {
+    min-height: 0;
   }
 }
