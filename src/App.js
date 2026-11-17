@@ -13,7 +13,6 @@ import AgriGenomics from "./pages/AgriGenomics";
 import Moet from "./pages/Moet";
 import Blog from "./pages/Blog/Blog";
 import BlogDetails from "./pages/Blog/BlogDetails";
-// import Registration from "./pages/Registration";
 
 import RegistrationPopup from "./components/RegistrationPopup";
 
@@ -21,6 +20,10 @@ import ScrollTop from "./components/ScrollTop";
 import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
 import { Chip } from "./pages/Chip";
+import Technologies from "./pages/Technologies";
+import Genomics from "./pages/Services/Genomics";
+import Epigenomics from "./pages/Services/Epigenomics";
+import Transcriptomics from "./pages/Services/Transcriptomics";
 
 function App() {
   return (
@@ -28,10 +31,10 @@ function App() {
       {/* Navbar always visible */}
       <Navbar />
 
-     {/* Scroll to top whenever route/page changes */}
+      {/* Scroll to top whenever route/page changes */}
       <ScrollToTop />
 
-<RegistrationPopup/>
+      <RegistrationPopup />
       <Routes>
         {/* Home Page */}
         <Route path="/" element={<Home />} />
@@ -61,17 +64,17 @@ function App() {
           path="/clinical-genomics"
           element={<ClinicalGenomics />}
         />
- <Route
+        <Route
           path="/chip"
           element={<Chip />}
-        /> 
+        />
         {/* Contact Page */}
         <Route
           path="/contact"
           element={<Contact />}
         />
 
-         <Route
+        <Route
           path="/blog"
           element={<Blog />}
         />
@@ -82,12 +85,36 @@ function App() {
           element={<BlogDetails />}
         />
 
-        {/* Registration Page */}
-        {/* <Route
-          path="/registration"
-          element={<Registration />}
-        /> */}
+        <Route
+          path="/genomics"
+          element={<Genomics />}
+        />
+        <Route
+          path="/Genomics"
+          element={<Genomics />}
+        />
 
+        <Route
+          path="/epigenomics"
+          element={<Epigenomics />}
+        />
+        <Route
+          path="/Epigenomics"
+          element={<Epigenomics />}
+        />
+        <Route
+          path="/transcriptomics"
+          element={<Transcriptomics />}
+        />
+        <Route
+          path="/Transcriptomics"
+          element={<Transcriptomics />}
+        />
+
+        <Route
+          path="/technologies"
+          element={<Technologies />}
+        />
       </Routes>
 
       {/* Footer */}
@@ -100,40 +127,3 @@ function App() {
 }
 
 export default App;
-
-// import React from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-// import Navbar from "./components/Navbar";
-// import Home from "./pages/Home";
-
-// /* Create these pages */
-// import AgriGenomics from "./pages/AgriGenomics";
-// import ResearchGenomics from "./pages/ResearchGenomics";
-// import ClinicalGenomics from "./pages/ClinicalGenomics";
-
-// function App() {
-//   return (
-//     <Router>
-//       <Navbar />
-
-//       <Routes>
-//         {/* Home Page */}
-//         <Route path="/" element={<Home />} />
-
-//         {/* Card Redirect Pages */}
-//         <Route path="/agri-genomics" element={<AgriGenomics />} />
-//         <Route
-//           path="/research-genomics"
-//           element={<ResearchGenomics />}
-//         />
-//         <Route
-//           path="/clinical-genomics"
-//           element={<ClinicalGenomics />}
-//         />
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-// export default App;

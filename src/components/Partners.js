@@ -116,7 +116,7 @@ export default function Client() {
   const infiniteClients = [...CLIENTS, ...CLIENTS];
 
   return (
-    <section className="key-clients-section" id="clients">
+    <section className="key-clients-section" id="trusted-institutions">
       <div className="kc-container h-container">
         
         {/* Section Header */}

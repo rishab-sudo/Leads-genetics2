@@ -14,12 +14,46 @@ import clinicalGenomicsImg from "../assets/lab/lab.jpeg";
 import OncologyGenomics from "../components/OncologyGenomics";
 import RareDiseaseGenomics from "../components/RareDiseaseGenomics";
 import NeonatologyCardiology from "../components/NeonatologyCardiology";
+import { Helmet } from "react-helmet-async";
 
 
 
 const ClinicalGenomicsSection = () => {
   return (
     <> 
+
+<Helmet>
+  <title>Human Genomics & Clinical Research Solutions | Leads Genetics</title>
+  <meta
+    name="description"
+    content="Discover advanced clinical genomics solutions at Leads Genetics, offering human genetic research, DNA sequencing, molecular analysis and bioinformatics to support clinical research and precision medicine."
+  />
+  <link
+    rel="canonical"
+    href="https://www.leadsgenetics.com/clinical-genomics"
+  />
+  <meta
+    property="og:title"
+    content="Clinical Genomics | LEADS Genetics"
+  />
+  <meta
+    property="og:description"
+    content="Discover advanced clinical genomics solutions at Leads Genetics, offering human genetic research, DNA sequencing, molecular analysis and bioinformatics to support clinical research and precision medicine."
+  />
+  <meta
+    property="og:url"
+    content="https://www.leadsgenetics.com/clinical-genomics"
+  />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Clinical Genomics & Genetic Testing | LEADS Genetics" />
+  <meta
+    name="twitter:description"
+    content="Discover clinical genomics, advanced sequencing and genomic analysis services at LEADS Genetics."
+  />
+</Helmet>
+
+
     <ClinicalHero/>
 
     <section className="clinical-genomics-section">

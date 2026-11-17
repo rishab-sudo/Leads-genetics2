@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import "./MoetFaq.css";
 
 const faqList = [
@@ -105,20 +105,13 @@ function MoetFaq() {
           </motion.span>
         </button>
 
-        <AnimatePresence initial={false}>
-          {isOpen && (
-            <motion.div
-              className="moet-faq-answer"
-              key="answer"
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-            >
-              <p className=" moet-faq-answer-text">{item.answer}</p>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <div
+          className={`moet-faq-answer ${isOpen ? "moet-faq-answer-open" : ""}`}
+        >
+          <div className="moet-faq-answer-inner">
+            <p className="moet-faq-answer-text">{item.answer}</p>
+          </div>
+        </div>
       </motion.div>
     );
   }

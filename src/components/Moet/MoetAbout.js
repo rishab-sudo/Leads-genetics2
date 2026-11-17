@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./MoetAbout.css";
 import { motion } from "framer-motion";
 
@@ -28,62 +29,53 @@ const steps = [
 
 const MoetAbout = () => {
   return (
-    <div className="moet-about" id="moet-overview">
-      <div className="moet-about__container">
-        {/* ===================== ROW 1: WHAT IS MOET? (text left, number right) ===================== */}
-        <section className="moet-about__row moet-about__row--reverse">
-          <motion.div
-            className="moet-about__row-head"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            custom={0}
-          >
+    <div className="moet-about">
+      <div className="moet-about__inner">
+        {/* ===================== ROW 1: WHAT IS MOET? (text left, steps right) ===================== */}
+        <section className="moet-about__row moet-about__row--first">
+          <div className="moet-about__row-head">
             <span className="moet-about__number" aria-hidden="true">
               01
             </span>
-            <span className="moet-about__eyebrow">01 / Understanding MOET</span>
-            <h2 className="section-heading moet-about__title">What is MOET?</h2>
-          </motion.div>
-
-          <div className="moet-about__row-body">
-            <motion.p
-              className="page-text moet-about__text"
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              custom={1}
-            >
+            <span className="moet-about__eyebrow">01 / Technology Overview</span>
+            <h2 className="section-heading moet-about__title">
+              What is Multiple Ovulation &amp; Embryo Transfer (MOET)?
+            </h2>
+            <p className="page-text moet-about__text">
               Multiple Ovulation and Embryo Transfer (MOET) is an advanced
-              reproductive technology used for rapid genetic improvement in
-              dairy cattle. It enables an elite donor cow to produce multiple
-              embryos in a single reproductive cycle. These embryos develop
-              naturally inside the donor cow and can then be transferred to
-              suitable recipient cows.
-            </motion.p>
+              reproductive technology that multiplies the contribution of
+              genetically superior female cattle.
+            </p>
+            <p className="page-text moet-about__text">
+              Hormonal treatment stimulates the donor cow to release multiple
+              eggs in one cycle. After artificial insemination, several embryos
+              develop inside the donor, which are then recovered nonsurgically
+              and transferred to recipient cows.
+            </p>
+          </div>
 
-            <ul className="moet-about__steps">
-              {steps.map((step, i) => (
+          <div className="moet-about__steps-card">
+            <h3 className="moet-about__steps-title">Key Steps in MOET</h3>
+            <ul className="moet-about__steps-list">
+              {steps.map((step, index) => (
                 <motion.li
+                  className="moet-about__step-item"
                   key={step}
-                  className="moet-about__step"
                   variants={stepVariants}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true }}
-                  custom={i}
+                  viewport={{ once: true, amount: 0.2 }}
+                  custom={index}
                 >
-                  <span className="moet-about__step-number">{i + 1}</span>
-                  <span className="moet-about__step-label">{step}</span>
+                  <span className="moet-about__step-badge">{index + 1}</span>
+                  <span className="moet-about__step-name">{step}</span>
                 </motion.li>
               ))}
             </ul>
           </div>
         </section>
 
-        {/* ===================== ROW 2: WHY MOET IN INDIA? (number left, text right) ===================== */}
+        {/* ===================== ROW 2: WHY MOET IN INDIA? (heading left, text right) ===================== */}
         <section className="moet-about__row moet-about__row--second">
           <motion.div
             className="moet-about__row-head"
@@ -129,6 +121,25 @@ const MoetAbout = () => {
               accelerate this progress by multiplying the contribution of
               genetically superior animals.
             </motion.p>
+
+            <motion.p
+              className="page-text moet-about__text"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              custom={3}
+            >
+              Learn more about our{" "}
+              <Link to="/agri-genomics" className="moet-about__link">
+                Agricultural Genomics
+              </Link>{" "}
+              programs and how our indigenous{" "}
+              <Link to="/chip" className="moet-about__link">
+                Zebu Cattle SNP Chip
+              </Link>{" "}
+              supports precise genomic evaluation and breeding decisions.
+            </motion.p>
           </div>
 
           {/* Full-width highlight banner */}
@@ -138,7 +149,7 @@ const MoetAbout = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            custom={3}
+            custom={4}
           >
             <span className="moet-about__banner-icon" aria-hidden="true">
               <svg

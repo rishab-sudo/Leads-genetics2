@@ -1,0 +1,105 @@
+
+.genomic-banner {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+
+  background-color: #071a2a;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.genomic-banner__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background: linear-gradient(
+    90deg,
+    rgba(3, 18, 30, 0.42) 0%,
+    rgba(3, 18, 30, 0.2) 43%,
+    rgba(3, 18, 30, 0.02) 100%
+  );
+}
+
+.genomic-banner__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 24px;
+  box-sizing: border-box;
+}
+
+.genomic-banner__content {
+  max-width: 620px;
+}
+
+.genomic-banner__title {
+  margin: 0;
+  color: #ffffff;
+
+  font-size: clamp(34px, 4.5vw, 58px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.genomic-banner__description {
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: clamp(15px, 1.5vw, 19px);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.15px;
+}
+
+/* Tablet and Mobile */
+
+@media (max-width: 760px) {
+  .genomic-banner {
+    min-height: 280px;
+    background-position: 58% center;
+  }
+
+  .genomic-banner__overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(3, 18, 30, 0.78) 0%,
+      rgba(3, 18, 30, 0.58) 58%,
+      rgba(3, 18, 30, 0.2) 100%
+    );
+  }
+
+  .genomic-banner__container {
+    padding: 58px 20px;
+  }
+
+  .genomic-banner__title {
+    letter-spacing: -0.8px;
+  }
+
+  .genomic-banner__description {
+    max-width: 360px;
+    margin-top: 13px;
+  }
+}
+
+/* Small Mobile */
+
+@media (max-width: 420px) {
+  .genomic-banner {
+    min-height: 250px;
+    background-position: 62% center;
+  }
+
+  .genomic-banner__container {
+    padding: 48px 16px;
+  }
+}

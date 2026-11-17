@@ -1,8 +1,34 @@
-
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Link, useParams } from "react-router-dom";
 import { getBlogBySlug } from "./Data";
 import "./BlogDetails.css";
+
+/* Turns [anchor text](/route) or [anchor text](https://...) into links.
+   Internal paths use React Router <Link>; external URLs open in a new tab. */
+const renderRichText = (text) =>
+  text.split(/(\[[^\]]+\]\([^)]+\))/g).map((part, i) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (!match) return part;
+
+    const [, label, href] = match;
+
+    return href.startsWith("/") ? (
+      <Link key={i} to={href} className="blog-inline-link">
+        {label}
+      </Link>
+    ) : (
+      <a
+        key={i}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="blog-inline-link"
+      >
+        {label}
+      </a>
+    );
+  });
 
 function BlogDetails() {
   const { slug } = useParams();
@@ -10,19 +36,57 @@ function BlogDetails() {
 
   if (!blog) {
     return (
-      <main className="blog-details-not-found">
-        <span className="blog-details-eyebrow">ARTICLE NOT FOUND</span>
-        <h1>We couldn't find that article.</h1>
-        <p>The article may have moved or the link may be incorrect.</p>
-        <Link className="blog-back-button" to="/blog">
-          ← Back to Blog
-        </Link>
-      </main>
+      <>
+        <Helmet>
+          <title>Article Not Found | LEADS Genetics</title>
+          <meta name="robots" content="noindex, follow" />
+        </Helmet>
+
+        <main className="blog-details-not-found">
+          <span className="blog-details-eyebrow">ARTICLE NOT FOUND</span>
+          <h1>We couldn't find that article.</h1>
+          <p>The article may have moved or the link may be incorrect.</p>
+          <Link className="blog-back-button" to="/blog">
+            ← Back to Blog
+          </Link>
+        </main>
+      </>
     );
   }
 
+  const pageUrl = `https://www.leadsgenetics.com/blog/${blog.slug}`;
+
   return (
     <main className="blog-details-page">
+      <Helmet>
+        <title>{`${blog.title} | LEADS Genetics`}</title>
+
+        <meta
+          name="description"
+          content={blog.excerpt || blog.intro}
+        />
+
+        <link rel="canonical" href={pageUrl} />
+
+        <meta property="og:title" content={`${blog.title} | LEADS Genetics`} />
+
+        <meta
+          property="og:description"
+          content={blog.excerpt || blog.intro}
+        />
+
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={blog.image} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={blog.title} />
+        <meta
+          name="twitter:description"
+          content={blog.excerpt || blog.intro}
+        />
+      </Helmet>
+
       <div className="blog-details-top">
         <Link to="/blog" className="blog-details-back">
           <span>←</span> All Articles
@@ -86,13 +150,13 @@ function BlogDetails() {
               </div>
 
               {section.paragraphs?.map((paragraph, paragraphIndex) => (
-                <p key={paragraphIndex}>{paragraph}</p>
+                <p key={paragraphIndex}>{renderRichText(paragraph)}</p>
               ))}
 
               {section.bullets && (
                 <ul className="blog-article-list">
                   {section.bullets.map((bullet, bulletIndex) => (
-                    <li key={bulletIndex}>{bullet}</li>
+                    <li key={bulletIndex}>{renderRichText(bullet)}</li>
                   ))}
                 </ul>
               )}

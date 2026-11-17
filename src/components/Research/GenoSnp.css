@@ -1,0 +1,485 @@
+.geno-snp-section {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 70px;
+  padding-right: 4%;
+  padding-bottom: 70px;
+  padding-left: 4%;
+  background-color: #f3f6f9;
+  overflow: hidden;
+}
+
+.geno-snp-container {
+  max-width: 1250px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+}
+
+/* Intro */
+
+.geno-snp-intro {
+  max-width: 900px;
+  margin-bottom: 40px;
+}
+
+.geno-snp-label {
+  display: inline-block;
+  padding-top: 6px;
+  padding-right: 14px;
+  padding-bottom: 6px;
+  padding-left: 14px;
+  margin-bottom: 16px;
+  color: #079b60;
+  background-color: #e3f5ea;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.geno-snp-title {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 14px;
+  margin-left: 0px;
+  color: #10234b;
+}
+
+.geno-snp-intro-text {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  color: #455b7c;
+}
+
+/* Shared */
+
+.geno-snp-block {
+  box-sizing: border-box;
+  padding-top: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  margin-bottom: 32px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 0px 1px #e1eaf2;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  border-bottom-right-radius: 22px;
+  border-bottom-left-radius: 22px;
+}
+
+.geno-snp-block-heading {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 24px;
+  margin-left: 0px;
+  color: #10234b;
+}
+
+.geno-snp-item-title {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 6px;
+  margin-left: 0px;
+  color: #10234b;
+  font-weight: 700;
+}
+
+.geno-snp-item-text {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  color: #52678a;
+}
+
+.geno-snp-step-sub {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 4px;
+  margin-left: 0px;
+  color: #10234b;
+}
+
+/* Combined: workflow + solutions */
+
+.geno-snp-combined-grid {
+  display: grid;
+  grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr);
+  column-gap: 40px;
+  row-gap: 40px;
+}
+
+.geno-snp-workflow-col {
+  min-width: 0px;
+}
+
+.geno-snp-solutions-col {
+  min-width: 0px;
+  padding-left: 40px;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #dbe6ef;
+}
+
+/* Vertical stepper */
+
+.geno-snp-flow {
+  display: flex;
+  flex-direction: column;
+}
+
+.geno-snp-flow-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  column-gap: 18px;
+  row-gap: 18px;
+  padding-top: 12px;
+  padding-right: 14px;
+  padding-bottom: 12px;
+  padding-left: 14px;
+  min-height: 56px;
+  cursor: pointer;
+}
+
+.geno-snp-flow-pill {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 0;
+  background-color: #eef8f4;
+  box-shadow: 0px 0px 0px 1px #cfe9df;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.geno-snp-track {
+  position: absolute;
+  top: 68px;
+  bottom: -12px;
+  left: 41px;
+  width: 2px;
+  z-index: 1;
+  background-color: #dbe6ef;
+}
+
+.geno-snp-track-fill {
+  width: 100%;
+  height: 100%;
+  background-color: #3fbf96;
+  transform-origin: top;
+}
+
+.geno-snp-flow-icon {
+  position: relative;
+  z-index: 2;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 56px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(145deg, #ffffff, #edf8f5);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  font-size: 24px;
+}
+
+.geno-snp-flow-body {
+  position: relative;
+  z-index: 2;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0px;
+  min-width: 0px;
+  padding-top: 4px;
+}
+
+/* Solutions list */
+
+.geno-snp-solution-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+
+.geno-snp-solution-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  column-gap: 16px;
+  row-gap: 16px;
+  padding-top: 18px;
+  padding-right: 18px;
+  padding-bottom: 18px;
+  padding-left: 18px;
+  background-image: linear-gradient(135deg, #ffffff, #eef6fc);
+  box-shadow: 0px 0px 0px 1px #d8e9f7;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.geno-snp-solution-icon {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 52px;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e3f5ea;
+  color: #079b76;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  border-bottom-left-radius: 14px;
+  font-size: 24px;
+}
+
+.geno-snp-solution-body {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0px;
+  min-width: 0px;
+}
+
+/* Capabilities */
+
+.geno-snp-capabilities-heading {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  color: #10234b;
+}
+
+.geno-snp-capability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0px, 1fr));
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.geno-snp-capability-card {
+  box-sizing: border-box;
+  min-width: 0px;
+  min-height: 170px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 20px;
+  padding-top: 22px;
+  padding-right: 22px;
+  padding-bottom: 22px;
+  padding-left: 22px;
+  background-image: linear-gradient(135deg, #ffffff, #eef6fc);
+  box-shadow: 0px 0px 0px 1px #d8e9f7;
+  border-top-left-radius: 21px;
+  border-top-right-radius: 21px;
+  border-bottom-right-radius: 21px;
+  border-bottom-left-radius: 21px;
+}
+
+.geno-snp-visual {
+  box-sizing: border-box;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 40%;
+  min-width: 0px;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 15px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #ccdeed;
+}
+
+.geno-snp-chart {
+  align-items: flex-end;
+  column-gap: 8px;
+  row-gap: 8px;
+  padding-bottom: 5px;
+}
+
+.geno-snp-bar {
+  width: 16%;
+  max-width: 23px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.geno-snp-bar-fill {
+  width: 100%;
+  height: 100%;
+  transform-origin: bottom;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.geno-snp-bar-fill-one {
+  background-image: linear-gradient(to top, #9ce0ce, #67cbbd);
+}
+
+.geno-snp-bar-fill-two {
+  background-image: linear-gradient(to top, #8cdcd0, #5fc9c0);
+}
+
+.geno-snp-bar-fill-three {
+  background-image: linear-gradient(to top, #7fd4d8, #5bbfd2);
+}
+
+.geno-snp-bar-fill-four {
+  background-image: linear-gradient(to top, #76cbdc, #91c9fa);
+}
+
+.geno-snp-bar-fill-five {
+  background-image: linear-gradient(to top, #5ba8e7, #9bcaff);
+}
+
+.geno-snp-curve-svg {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+}
+
+.geno-snp-pedigree {
+  flex-direction: column;
+  row-gap: 0px;
+  column-gap: 0px;
+}
+
+.geno-snp-person {
+  color: #18ad7c;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.geno-snp-pedigree-svg {
+  width: 85%;
+  height: 30px;
+  display: block;
+}
+
+.geno-snp-pedigree-children {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.geno-snp-pedigree-child {
+  display: block;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.geno-snp-capability-content {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0px;
+  min-width: 0px;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+  .geno-snp-combined-grid {
+    grid-template-columns: minmax(0px, 1fr);
+  }
+
+  .geno-snp-solutions-col {
+    padding-left: 0px;
+    padding-top: 32px;
+    border-left-width: 0px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #dbe6ef;
+  }
+
+  .geno-snp-capability-grid {
+    grid-template-columns: minmax(0px, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .geno-snp-section {
+    padding-top: 45px;
+    padding-right: 18px;
+    padding-bottom: 45px;
+    padding-left: 18px;
+  }
+
+  .geno-snp-block {
+    padding-top: 22px;
+    padding-right: 16px;
+    padding-bottom: 22px;
+    padding-left: 16px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+  }
+
+  .geno-snp-capability-card {
+    min-height: 155px;
+    padding-top: 17px;
+    padding-right: 17px;
+    padding-bottom: 17px;
+    padding-left: 17px;
+    column-gap: 15px;
+    row-gap: 15px;
+  }
+
+  .geno-snp-visual {
+    flex-basis: 35%;
+    height: 105px;
+  }
+}
+
+@media (max-width: 380px) {
+  .geno-snp-section {
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+
+  .geno-snp-capability-card {
+    padding-top: 13px;
+    padding-right: 13px;
+    padding-bottom: 13px;
+    padding-left: 13px;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+
+  .geno-snp-visual {
+    flex-basis: 32%;
+    padding-right: 10px;
+  }
+}

@@ -1,0 +1,938 @@
+/* =========================================
+   EPIGENOMICS PAGE
+========================================= */
+
+.epi-page {
+  width: 100%;
+  box-sizing: border-box;
+  background: #f4f8fd;
+  color: #12304f;
+  padding: 55px 24px 85px;
+  display: flex;
+  justify-content: center;
+}
+
+.epi-page *,
+.epi-page *::before,
+.epi-page *::after {
+  box-sizing: border-box;
+}
+
+.epi-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+}
+
+.epi-page .section-heading {
+  margin: 0;
+  color: #102c4b;
+  font-weight: 700;
+}
+
+.epi-page .page-text {
+  margin: 0;
+  color: #526a84;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   COMMON EYEBROW
+========================================= */
+
+.epi-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #2563b8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 1.6;
+}
+
+.epi-eyebrow::before {
+  content: "";
+  width: 21px;
+  height: 2px;
+  background: #3b82c4;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   PAGE INTRODUCTION
+========================================= */
+
+.epi-header {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.epi-main-title {
+  margin: 0;
+  color: #102c4b;
+  font-size: clamp(32px, 3.5vw, 43px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+
+.epi-header .page-text {
+  max-width: 740px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   OVERVIEW SECTION
+========================================= */
+
+.epi-overview-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.epi-overview-heading {
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.epi-overview-heading h2 {
+  font-size: clamp(27px, 3vw, 35px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.epi-overview-heading .page-text {
+  max-width: 810px;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* =========================================
+   EPI 1 IMAGE — BORDERLESS / EDITORIAL
+   No box: no border, background, padding or
+   fixed height. Natural aspect ratio, blended
+   into the page background.
+========================================= */
+
+.epi-overview-visual {
+  width: 100%;
+  margin: 14px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.epi-overview-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 540px;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+  mix-blend-mode: multiply;
+}
+
+.epi-overview-visual figcaption {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #66809d;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  line-height: 1.6;
+}
+
+.epi-overview-visual figcaption::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #3b82c4;
+  border-radius: 10px;
+}
+
+.epi-overview-visual figcaption::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: #dce7f4;
+}
+
+/* =========================================
+   CAPABILITY BENTO GRID
+========================================= */
+
+.epi-capability-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.epi-capability-card {
+  min-width: 0;
+  min-height: 225px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 23px;
+  background: #ffffff;
+  border: 1px solid #dfe8f3;
+  border-radius: 13px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.epi-capability-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(59, 130, 196, 0.1),
+    transparent 60%
+  );
+  transition: opacity 0.3s ease;
+}
+
+.epi-capability-card:hover {
+  transform: translateY(-4px);
+  border-color: #b8cee8;
+  box-shadow: 0 12px 28px rgba(31, 78, 125, 0.07);
+}
+
+.epi-capability-card:hover::before {
+  opacity: 1;
+}
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.epi-capability-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.epi-capability-icon {
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563b8;
+  background: #edf4fd;
+  border: 1px solid #dce9f8;
+  border-radius: 10px;
+}
+
+.epi-capability-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.epi-capability-number {
+  color: #d0deee;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.epi-capability-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.epi-capability-category {
+  color: #3978b8;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  line-height: 1.5;
+}
+
+.epi-capability-content h3 {
+  max-width: 320px;
+  margin: 0;
+  color: #142f4e;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.35px;
+}
+
+.epi-capability-content p {
+  max-width: 360px;
+  margin: 0;
+  color: #657a91;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+.epi-capability-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 13px;
+  border-top: 1px solid #e9eff6;
+}
+
+.epi-capability-footer > span:first-child {
+  color: #526f91;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.epi-capability-arrow {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3978b8;
+  background: #f0f5fb;
+  border-radius: 50%;
+  font-size: 13px;
+  transition: transform 0.25s ease;
+}
+
+.epi-capability-card:hover .epi-capability-arrow {
+  transform: translate(2px, -2px);
+}
+
+/* =========================================
+   ANALYSIS PIPELINE
+========================================= */
+
+.epi-pipeline-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.epi-pipeline-card {
+  width: 100%;
+  min-width: 0;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #dce7f4;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.epi-pipeline-content {
+  width: 100%;
+  min-width: 0;
+}
+
+/* =========================================
+   PIPELINE COMPONENT HEADING
+   Retains only the component's original heading
+========================================= */
+
+.epi-pipeline-content h1,
+.epi-pipeline-content h2 {
+  color: #102c4b;
+}
+
+/* =========================================
+   EPI 2 PIPELINE IMAGE
+========================================= */
+
+.epi-pipeline-visual {
+  width: 100%;
+  margin: 0;
+  padding-top: 23px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid #e7edf5;
+}
+
+.epi-pipeline-image {
+  width: 100%;
+  height: 190px;
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f7fa;
+  border: 1px solid #e5edf6;
+  border-radius: 11px;
+}
+
+.epi-pipeline-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.epi-pipeline-caption {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #66809d;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 1.1px;
+}
+
+.epi-pipeline-caption-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  background: #3b82c4;
+  border-radius: 50%;
+}
+
+/* =========================================
+   SERVICES SECTION
+========================================= */
+
+.epi-services-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.epi-services-header {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.epi-services-header > div {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.epi-services-header h2 {
+  font-size: clamp(28px, 3vw, 36px);
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.epi-services-header .page-text {
+  max-width: 650px;
+  font-size: 14px;
+}
+
+.epi-services-count {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  color: #2563b8;
+  background: #e7f0fc;
+  border: 1px solid #d3e2f5;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   SERVICE CARD LIST
+========================================= */
+
+.epi-service-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+/* =========================================
+   SERVICE CARD
+========================================= */
+
+.epi-service-card {
+  width: 100%;
+  min-width: 0;
+  padding: clamp(24px, 3vw, 34px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: #ffffff;
+  border: 1px solid #dce7f4;
+  border-radius: 15px;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.epi-service-card:hover {
+  border-color: #b9d0ee;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(37, 99, 184, 0.06);
+}
+
+.epi-service-card-top {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.epi-service-card-heading {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.epi-service-platform {
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding: 7px 11px;
+  color: #2563b8;
+  background: #edf4fd;
+  border: 1px solid #dce9f9;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.epi-platform-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  background: #3b82c4;
+  border-radius: 50%;
+}
+
+.epi-service-card-heading h3 {
+  max-width: 700px;
+  margin: 0;
+  color: #102c4b;
+  font-size: clamp(22px, 2.5vw, 29px);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.7px;
+  overflow-wrap: anywhere;
+}
+
+.epi-service-accent {
+  width: 45px;
+  height: 3px;
+  background: #3479c4;
+  border-radius: 10px;
+}
+
+.epi-service-index {
+  flex-shrink: 0;
+  color: #d8e4f3;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+/* =========================================
+   SERVICE DETAILS
+========================================= */
+
+.epi-service-details {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 23px 35px;
+  padding-top: 23px;
+  border-top: 1px solid #e7edf5;
+}
+
+.epi-detail {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.epi-detail h4 {
+  margin: 0;
+  color: #173e69;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.epi-detail p {
+  margin: 0;
+  color: #61748b;
+  font-size: 13px;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .epi-page {
+    padding: 50px 22px 70px;
+  }
+
+  .epi-container {
+    gap: 45px;
+  }
+
+  .epi-capability-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .epi-capability-card {
+    min-height: 215px;
+  }
+
+  .epi-overview-visual img {
+    max-height: 420px;
+  }
+
+  .epi-pipeline-card {
+    padding: 22px;
+  }
+
+  .epi-pipeline-image {
+    height: 165px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .epi-page {
+    padding: 38px 16px 55px;
+  }
+
+  .epi-container {
+    gap: 38px;
+  }
+
+  .epi-header {
+    gap: 10px;
+  }
+
+  .epi-main-title {
+    font-size: 32px;
+  }
+
+  .epi-header .page-text {
+    font-size: 13px;
+  }
+
+  /* Overview */
+
+  .epi-overview-section {
+    gap: 19px;
+  }
+
+  .epi-overview-heading {
+    gap: 10px;
+  }
+
+  .epi-overview-heading h2 {
+    font-size: 25px;
+    letter-spacing: -0.7px;
+  }
+
+  .epi-overview-heading .page-text {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  /* Epi 1 */
+
+  .epi-overview-visual {
+    margin-top: 8px;
+    gap: 12px;
+  }
+
+  .epi-overview-visual img {
+    max-height: 300px;
+  }
+
+  .epi-overview-visual figcaption {
+    font-size: 8px;
+    gap: 10px;
+  }
+
+  .epi-overview-visual figcaption::before {
+    width: 20px;
+  }
+
+  /* Capability grid */
+
+  .epi-capability-grid {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .epi-capability-card {
+    min-height: 0;
+    padding: 19px;
+    gap: 18px;
+    border-radius: 12px;
+  }
+
+  .epi-capability-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .epi-capability-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .epi-capability-content {
+    gap: 7px;
+  }
+
+  .epi-capability-category {
+    font-size: 8px;
+  }
+
+  .epi-capability-content h3 {
+    font-size: 16px;
+  }
+
+  .epi-capability-content p {
+    font-size: 12px;
+  }
+
+  .epi-capability-footer {
+    padding-top: 11px;
+  }
+
+  /* Pipeline */
+
+  .epi-pipeline-card {
+    padding: 15px;
+    gap: 18px;
+    border-radius: 12px;
+  }
+
+  .epi-pipeline-image {
+    height: 135px;
+  }
+
+  .epi-pipeline-visual {
+    padding-top: 17px;
+    gap: 10px;
+  }
+
+  .epi-pipeline-caption {
+    font-size: 8px;
+  }
+
+  /* Services */
+
+  .epi-services-section {
+    gap: 20px;
+  }
+
+  .epi-services-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .epi-services-header h2 {
+    font-size: 25px;
+  }
+
+  .epi-services-header .page-text {
+    font-size: 13px;
+  }
+
+  .epi-service-list {
+    gap: 15px;
+  }
+
+  .epi-service-card {
+    padding: 21px 18px;
+    gap: 20px;
+    border-radius: 13px;
+  }
+
+  .epi-service-card-heading {
+    gap: 12px;
+  }
+
+  .epi-service-card-heading h3 {
+    font-size: 21px;
+  }
+
+  .epi-service-index {
+    font-size: 25px;
+  }
+
+  .epi-service-details {
+    grid-template-columns: 1fr;
+    gap: 17px;
+    padding-top: 18px;
+  }
+
+  .epi-detail h4 {
+    font-size: 12px;
+  }
+
+  .epi-detail p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .epi-page {
+    padding: 34px 12px 45px;
+  }
+
+  .epi-main-title {
+    font-size: 29px;
+  }
+
+  .epi-overview-heading h2 {
+    font-size: 22px;
+  }
+
+  .epi-overview-visual img {
+    max-height: 240px;
+  }
+
+  .epi-capability-card {
+    padding: 17px;
+  }
+
+  .epi-capability-content h3 {
+    font-size: 15px;
+  }
+
+  .epi-pipeline-card {
+    padding: 11px;
+  }
+
+  .epi-pipeline-image {
+    height: 115px;
+  }
+
+  .epi-service-card {
+    padding: 19px 15px;
+  }
+
+  .epi-service-card-heading h3 {
+    font-size: 19px;
+  }
+
+  .epi-service-platform {
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1500px) {
+  .epi-container {
+    max-width: 1250px;
+  }
+
+  .epi-capability-card {
+    min-height: 235px;
+    padding: 26px;
+  }
+
+  .epi-overview-visual img {
+    max-height: 600px;
+  }
+
+  .epi-pipeline-image {
+    height: 210px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .epi-capability-card,
+  .epi-capability-card::before,
+  .epi-capability-arrow,
+  .epi-service-card {
+    transition: none;
+  }
+}

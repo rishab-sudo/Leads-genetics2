@@ -250,7 +250,7 @@ const FarmInfrastructure = () => {
           ))}
         </div>
 
-        <div className="farm-layout">
+        <div className="farm-layout" id="facility-layout">
           <div className="farm-layout-header">
             <h3 className="section-heading">
               Facility Layout & Shed Distribution

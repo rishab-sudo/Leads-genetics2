@@ -21,19 +21,6 @@
   margin-right: auto;
 }
 
-/* ---------- Heading (font-size, family, weight come from App.css) ---------- */
-.section-heading {
-  color: #0f2d4a;
-  margin-top: 0px;
-  margin-bottom: 14px;
-}
-
-/* ---------- Page text (font comes from App.css) ---------- */
-.page-text {
-  color: #5f6b78;
-  line-height: 1.7;
-}
-
 /* ---------- Advantages: top area ---------- */
 .moet-advantages-label {
   color: #14804f;

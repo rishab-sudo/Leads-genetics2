@@ -1,0 +1,310 @@
+
+/* =====================================
+   EPIGENOMICS BANNER
+===================================== */
+
+.epigenomics-banner {
+  position: relative;
+  width: 100%;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #03242c;
+  box-sizing: border-box;
+}
+
+/* Background */
+
+.epigenomics-banner-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.epigenomics-banner-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Overlay */
+
+.epigenomics-banner-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 24, 34, 0.92) 0%,
+    rgba(0, 35, 43, 0.78) 38%,
+    rgba(0, 45, 48, 0.40) 70%,
+    rgba(0, 30, 38, 0.12) 100%
+  );
+}
+
+/* Content Container */
+
+.epigenomics-banner-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 100px 40px;
+
+  box-sizing: border-box;
+}
+
+.epigenomics-banner-content {
+  width: 100%;
+  max-width: 720px;
+}
+
+/* Eyebrow */
+
+.epigenomics-banner-tag {
+  display: inline-block;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+
+  color: #6ee7d0;
+
+  margin-bottom: 20px;
+}
+
+/* Heading */
+/* section-heading typography comes from app.css */
+
+.epigenomics-banner .section-heading {
+  color: #ffffff;
+  margin: 0;
+  line-height: inherit;
+}
+
+/* Description */
+
+.epigenomics-banner-description {
+  max-width: 640px;
+
+  margin: 25px 0 0;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.epigenomics-banner-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  margin-top: 38px;
+}
+
+.epigenomics-btn {
+  min-height: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  padding: 0 24px;
+
+  border-radius: 6px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.epigenomics-btn-arrow {
+  font-size: 17px;
+  transition: transform 0.3s ease;
+}
+
+.epigenomics-btn:hover .epigenomics-btn-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* Primary Button */
+
+.epigenomics-btn-primary {
+  background: #16a085;
+  color: #ffffff;
+  border: 1px solid #16a085;
+}
+
+.epigenomics-btn-primary:hover {
+  background: #117d68;
+  border-color: #117d68;
+  transform: translateY(-2px);
+}
+
+/* Outline Button */
+
+.epigenomics-btn-outline {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.epigenomics-btn-outline:hover {
+  background: #ffffff;
+  color: #073b3b;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1024px) {
+  .epigenomics-banner {
+    min-height: 500px;
+  }
+
+  .epigenomics-banner-container {
+    padding: 85px 35px;
+  }
+
+  .epigenomics-banner-content {
+    max-width: 650px;
+  }
+
+  .epigenomics-banner-description {
+    font-size: 16px;
+  }
+
+  .epigenomics-banner-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 24, 34, 0.94),
+      rgba(0, 35, 43, 0.75) 70%,
+      rgba(0, 35, 43, 0.35)
+    );
+  }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+  .epigenomics-banner {
+    min-height: 500px;
+  }
+
+  .epigenomics-banner-image {
+    object-position: 60% center;
+  }
+
+  .epigenomics-banner-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 24, 34, 0.94) 0%,
+      rgba(0, 35, 43, 0.82) 100%
+    );
+  }
+
+  .epigenomics-banner-container {
+    padding: 85px 24px 65px;
+  }
+
+  .epigenomics-banner-content {
+    max-width: 100%;
+  }
+
+  .epigenomics-banner-tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+
+  .epigenomics-banner-description {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-top: 20px;
+  }
+
+  .epigenomics-banner-actions {
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .epigenomics-btn {
+    min-height: 48px;
+    padding: 0 17px;
+    font-size: 13px;
+    gap: 10px;
+  }
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 480px) {
+  .epigenomics-banner {
+    min-height: 520px;
+  }
+
+  .epigenomics-banner-container {
+    padding: 80px 20px 55px;
+  }
+
+  .epigenomics-banner-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .epigenomics-banner-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .epigenomics-btn {
+    width: 100%;
+    max-width: 260px;
+    justify-content: space-between;
+  }
+}
+
+/* =====================================
+   EXTRA SMALL MOBILE
+===================================== */
+
+@media (max-width: 360px) {
+  .epigenomics-banner-container {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .epigenomics-banner-description {
+    font-size: 13px;
+  }
+}

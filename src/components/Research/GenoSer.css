@@ -1,0 +1,931 @@
+
+.genoser-section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 75px 24px 100px;
+  background: #ffffff;
+  color: #15345b;
+  overflow: hidden;
+}
+
+.genoser-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.genoser-heading {
+  max-width: 760px;
+  margin-bottom: 55px;
+}
+
+.genoser-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #4781b5;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.genoser-eyebrow-line {
+  width: 28px;
+  height: 2px;
+  background: #438ac5;
+}
+
+.genoser-heading .section-heading {
+  margin: 0 0 14px;
+}
+
+.genoser-heading .page-text {
+  max-width: 680px;
+  margin: 0;
+  color: #667c96;
+  line-height: 1.8;
+}
+
+.genoser-platform-heading,
+.genoser-explorer-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.genoser-section-label {
+  display: block;
+  color: #4385bd;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.8px;
+  margin-bottom: 10px;
+}
+
+.genoser-platform-heading h3,
+.genoser-explorer-heading h3 {
+  margin: 0;
+  color: #18395f;
+  font-size: 25px;
+  font-weight: 650;
+  letter-spacing: -0.7px;
+}
+
+.genoser-platform-note {
+  color: #8a9bb0;
+  font-size: 12px;
+  padding-bottom: 4px;
+}
+
+.genoser-platform-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+  margin-bottom: 75px;
+}
+
+.genoser-platform-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 245px;
+  padding: 30px;
+  border: 1px solid transparent;
+  border-radius: 19px;
+  overflow: hidden;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.genoser-platform-card:hover {
+  transform: translateY(-4px);
+}
+
+.genoser-platform-card.active {
+  border-color: #8bbce5;
+  box-shadow: 0 12px 35px rgba(39, 104, 158, 0.1);
+}
+
+.genoser-illumina {
+  background: #f0f6fc;
+}
+
+.genoser-pacbio {
+  background: #f0f7f3;
+}
+
+.genoser-platform-copy {
+  position: relative;
+  z-index: 2;
+  width: 68%;
+}
+
+.genoser-platform-tag {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #5286b8;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 1.5px;
+}
+
+.genoser-pacbio .genoser-platform-tag {
+  color: #48896f;
+}
+
+.genoser-platform-copy h3 {
+  margin: 0 0 10px;
+  color: #173d68;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.genoser-pacbio .genoser-platform-copy h3 {
+  color: #235a48;
+}
+
+.genoser-platform-copy p {
+  max-width: 300px;
+  margin: 0;
+  color: #6c8096;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.genoser-platform-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 22px;
+  color: #2875b4;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.genoser-pacbio .genoser-platform-action {
+  color: #398364;
+}
+
+.genoser-platform-action span {
+  font-size: 17px;
+  transition: transform 0.2s ease;
+}
+
+.genoser-platform-card:hover .genoser-platform-action span {
+  transform: translate(3px, -3px);
+}
+
+.genoser-platform-art {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  width: 180px;
+  height: 180px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.genoser-illumina-art {
+  background: radial-gradient(circle, #dcecfb 0%, #eaf3fb 48%, transparent 70%);
+}
+
+.genoser-pacbio-art {
+  background: radial-gradient(circle, #d9eee3 0%, #e9f4ed 48%, transparent 70%);
+}
+
+.genoser-art-ring {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  border: 1px solid rgba(57, 125, 185, 0.4);
+  border-radius: 50%;
+}
+
+.genoser-art-ring.ring-two {
+  width: 145px;
+  height: 145px;
+  border-color: rgba(57, 125, 185, 0.2);
+}
+
+.genoser-art-core {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #79b4e3, #317bb7);
+  box-shadow: 0 0 35px rgba(49, 123, 183, 0.35);
+}
+
+.genoser-art-label {
+  position: absolute;
+  bottom: 28px;
+  right: 20px;
+  color: #4284b9;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.genoser-pacbio-art .genoser-art-label {
+  color: #428b6d;
+}
+
+.genoser-wave {
+  position: absolute;
+  width: 135px;
+  height: 45px;
+  border-top: 2px solid #63a58a;
+  border-radius: 50%;
+  transform: rotate(-35deg);
+}
+
+.genoser-wave.wave-two {
+  transform: rotate(35deg);
+  border-color: #8bc5a7;
+}
+
+.genoser-wave.wave-three {
+  width: 90px;
+  transform: rotate(90deg);
+  border-color: #3b876a;
+}
+
+.genoser-explorer {
+  scroll-margin-top: 100px;
+}
+
+.genoser-explorer-heading {
+  margin-bottom: 25px;
+}
+
+.genoser-explorer-heading p {
+  margin: 9px 0 0;
+  color: #7c8da2;
+  font-size: 13px;
+}
+
+.genoser-service-count {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.genoser-service-count strong {
+  color: #2b75ae;
+  font-size: 25px;
+  font-weight: 750;
+}
+
+.genoser-service-count span {
+  color: #8b9bae;
+  font-size: 10px;
+}
+
+.genoser-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 0;
+  margin-bottom: 20px;
+  border-top: 1px solid #e9eef4;
+  border-bottom: 1px solid #e9eef4;
+}
+
+.genoser-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.genoser-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 13px;
+  border: 1px solid #e5ebf1;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #6d7e92;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.genoser-filter span {
+  color: #9aa9b8;
+  font-size: 10px;
+}
+
+.genoser-filter:hover {
+  border-color: #a9cbe5;
+  color: #276fa8;
+}
+
+.genoser-filter.active {
+  border-color: #347fb8;
+  background: #edf5fc;
+  color: #286fa8;
+}
+
+.genoser-filter.active span {
+  color: #286fa8;
+}
+
+.genoser-search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 235px;
+  height: 39px;
+  padding: 0 12px;
+  border: 1px solid #e4eaf0;
+  border-radius: 7px;
+  background: #ffffff;
+}
+
+.genoser-search-icon {
+  color: #8195aa;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.genoser-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #234361;
+  font-size: 11px;
+}
+
+.genoser-search input::placeholder {
+  color: #a0adbb;
+}
+
+.genoser-search button {
+  border: 0;
+  background: transparent;
+  color: #7890a7;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.genoser-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.genoser-service-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e8edf2;
+  border-radius: 13px;
+  background: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.genoser-service-card:hover {
+  transform: translateY(-4px);
+  border-color: #c6dbea;
+  box-shadow: 0 12px 28px rgba(34, 74, 112, 0.08);
+}
+
+.genoser-service-card.selected {
+  border-color: #438bc2;
+  box-shadow: 0 0 0 2px rgba(67, 139, 194, 0.09);
+}
+
+.genoser-card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 17px 17px 0;
+}
+
+.genoser-card-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #3987c2;
+}
+
+.genoser-card-dot.pacbio {
+  background: #4b9a78;
+}
+
+.genoser-card-category {
+  color: #8494a6;
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.genoser-card-arrow {
+  margin-left: auto;
+  color: #9aabba;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.genoser-service-card:hover .genoser-card-arrow {
+  transform: translate(3px, -3px);
+  color: #327db7;
+}
+
+.genoser-card-visual {
+  position: relative;
+  height: 105px;
+  margin: 14px 17px 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: linear-gradient(120deg, #f1f7fc, #e8f2fa);
+}
+
+.genoser-service-card:has(.genoser-card-dot.pacbio) .genoser-card-visual {
+  background: linear-gradient(120deg, #f0f7f2, #e6f1e9);
+}
+
+.genoser-visual-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 65px;
+  height: 65px;
+  border: 1px solid rgba(69, 139, 194, 0.45);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.genoser-visual-circle.circle-two {
+  width: 90px;
+  height: 90px;
+  border-color: rgba(69, 139, 194, 0.2);
+}
+
+.genoser-visual-line {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  width: 70%;
+  height: 1px;
+  background: rgba(69, 139, 194, 0.25);
+  transform: rotate(-22deg);
+}
+
+.genoser-visual-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  background: #4a94ca;
+  box-shadow: 0 0 0 5px rgba(74, 148, 202, 0.13);
+  transform: translate(-50%, -50%);
+}
+
+.genoser-visual-caption {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  color: #6795bb;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.genoser-card-bottom {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 17px;
+}
+
+.genoser-card-platform {
+  margin-bottom: 8px;
+  color: #5e8db6;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 1.1px;
+}
+
+.genoser-service-card:has(.genoser-card-dot.pacbio) .genoser-card-platform {
+  color: #568e73;
+}
+
+.genoser-card-bottom h4 {
+  margin: 0 0 9px;
+  color: #1e3c5e;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.genoser-card-bottom p {
+  display: -webkit-box;
+  min-height: 58px;
+  margin: 0;
+  overflow: hidden;
+  color: #7b8b9d;
+  font-size: 11px;
+  line-height: 1.75;
+  -webkit-box-orient: vertical;
+}
+
+.genoser-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 19px;
+  padding-top: 12px;
+  border-top: 1px solid #edf1f5;
+  color: #347eb5;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.genoser-card-link span {
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.genoser-service-card:hover .genoser-card-link span {
+  transform: translateX(4px);
+}
+
+.genoser-empty {
+  padding: 65px 20px;
+  text-align: center;
+  border: 1px dashed #d9e3ec;
+  border-radius: 12px;
+  background: #fafcfe;
+}
+
+.genoser-empty > span {
+  color: #6c9cc3;
+  font-size: 30px;
+}
+
+.genoser-empty h4 {
+  margin: 12px 0 7px;
+  color: #284968;
+  font-size: 17px;
+}
+
+.genoser-empty p {
+  color: #8191a3;
+  font-size: 12px;
+}
+
+.genoser-empty button {
+  margin-top: 12px;
+  padding: 9px 17px;
+  border: 0;
+  border-radius: 6px;
+  background: #eaf3fa;
+  color: #347eb5;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.genoser-detail-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(13, 31, 51, 0.45);
+  backdrop-filter: blur(5px);
+}
+
+.genoser-detail-panel {
+  width: 100%;
+  max-width: 680px;
+  max-height: 88vh;
+  overflow-y: auto;
+  border: 1px solid #e5edf4;
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow: 0 25px 80px rgba(13, 36, 59, 0.2);
+}
+
+.genoser-detail-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 28px 30px 23px;
+  border-bottom: 1px solid #edf1f5;
+  background: #f7fafd;
+}
+
+.genoser-detail-header h3 {
+  margin: 0 0 9px;
+  color: #1c3c60;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.genoser-detail-category {
+  color: #8293a6;
+  font-size: 11px;
+}
+
+.genoser-detail-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #e2eaf0;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #59728b;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.genoser-detail-body {
+  padding: 25px 30px;
+}
+
+.genoser-detail-description > span,
+.genoser-detail-best > span {
+  color: #4385bd;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 1.4px;
+}
+
+.genoser-detail-description p,
+.genoser-detail-best p {
+  margin: 10px 0 0;
+  color: #687e94;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.genoser-detail-best {
+  margin-top: 22px;
+  padding: 17px;
+  border-radius: 9px;
+  background: #f1f7fc;
+}
+
+.genoser-detail-best p {
+  margin-top: 7px;
+  color: #3e5d7b;
+}
+
+.genoser-detail-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 27px;
+}
+
+.genoser-detail-block h4 {
+  margin: 0 0 14px;
+  color: #234363;
+  font-size: 14px;
+}
+
+.genoser-detail-block ul {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.genoser-detail-block li {
+  position: relative;
+  padding-left: 17px;
+  color: #718398;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.genoser-detail-block li::before {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #65a1cf;
+  content: "";
+}
+
+.genoser-detail-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 17px 30px;
+  border-top: 1px solid #edf1f5;
+  background: #fbfcfd;
+}
+
+.genoser-detail-footer span {
+  color: #8393a4;
+  font-size: 11px;
+}
+
+.genoser-detail-footer a {
+  color: #347eb5;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.genoser-detail-footer a span {
+  margin-left: 5px;
+  color: #347eb5;
+}
+
+@media (max-width: 900px) {
+  .genoser-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .genoser-platform-art {
+    right: 0;
+    opacity: 0.75;
+  }
+
+  .genoser-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .genoser-search {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  .genoser-section {
+    padding: 55px 16px 70px;
+  }
+
+  .genoser-heading {
+    margin-bottom: 40px;
+  }
+
+  .genoser-platform-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .genoser-platform-heading h3,
+  .genoser-explorer-heading h3 {
+    font-size: 21px;
+  }
+
+  .genoser-platform-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+    margin-top: 18px;
+    margin-bottom: 55px;
+  }
+
+  .genoser-platform-card {
+    min-height: 205px;
+    padding: 23px;
+  }
+
+  .genoser-platform-copy {
+    width: 75%;
+  }
+
+  .genoser-platform-copy h3 {
+    font-size: 21px;
+  }
+
+  .genoser-platform-copy p {
+    max-width: 230px;
+    font-size: 11px;
+  }
+
+  .genoser-platform-art {
+    right: -35px;
+    width: 145px;
+    height: 145px;
+    opacity: 0.55;
+  }
+
+  .genoser-explorer-heading {
+    align-items: flex-start;
+  }
+
+  .genoser-service-count {
+    padding-top: 10px;
+  }
+
+  .genoser-service-count strong {
+    font-size: 21px;
+  }
+
+  .genoser-service-count span {
+    text-align: right;
+  }
+
+  .genoser-filters {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+
+  .genoser-filter {
+    flex-shrink: 0;
+  }
+
+  .genoser-service-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .genoser-card-visual {
+    height: 90px;
+  }
+
+  .genoser-card-bottom p {
+    min-height: auto;
+  }
+
+  .genoser-detail-backdrop {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .genoser-detail-panel {
+    max-height: 90vh;
+    border-radius: 17px 17px 0 0;
+  }
+
+  .genoser-detail-header {
+    padding: 22px 20px;
+  }
+
+  .genoser-detail-header h3 {
+    font-size: 20px;
+  }
+
+  .genoser-detail-body {
+    padding: 22px 20px;
+  }
+
+  .genoser-detail-columns {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .genoser-detail-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 17px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .genoser-section *,
+  .genoser-section *::before,
+  .genoser-section *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

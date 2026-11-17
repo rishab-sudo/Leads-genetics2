@@ -45,3 +45,10 @@ p {
 margin-bottom: 15px;
 }
 }
+
+#in-house-ivf,
+#facility-layout,
+#insights,
+#trusted-institutions {
+  scroll-margin-top: 110px;
+}

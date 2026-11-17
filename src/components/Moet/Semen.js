@@ -39,7 +39,7 @@ const checkpoints = [
 
 function Semen() {
   return (
-    <section className="semen">
+    <section className="semen" id="semen" style={{ scrollMarginTop: "90px" }}>
       {/* ===================== TOP: HEADING, LIST AND IMAGE ===================== */}
       <div className="semen-top">
         <div className="semen-left">

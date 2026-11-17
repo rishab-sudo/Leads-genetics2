@@ -1,8 +1,103 @@
-
 import cliBanner from "../../assets/clibanner.png";
-import agrBanner from "../../assets/agrbanner.png";
+import agrBanner from "../../assets/agri.jpg";
+import embryoBanner from "../../assets/agr-img.png";
 
 export const blogs = [
+
+  {
+    id: 3,
+    slug: "advanced-animal-breeding-technologies",
+    category: "AGRI GENOMICS",
+    title:
+      "Advanced Animal Breeding Technologies",
+    excerpt:
+      "Explore how genomic evaluation, MOET, OPU-IVF, sex-sorted semen, data analytics and emerging tools are helping breeders improve livestock genetics, including indigenous zebu cattle.",
+    image: embryoBanner,
+    imageAlt: "Cattle embryos examined under a microscope in a breeding laboratory",
+    date: "16 Nov 2026",
+    readTime: "6 min read",
+    intro:
+      "Animal breeding is shifting from selection based mainly on pedigree and visible traits to approaches that combine genomic information, reproductive biotechnology and data. Together, these technologies help breeders make faster and more informed decisions.",
+    sections: [
+      {
+        heading: "The Evolution of Modern Animal Breeding",
+        paragraphs: [
+          "Traditional breeding relied on pedigree, physical appearance and performance records. These remain valuable, but they are slow, particularly in cattle, where a generation interval is long and key traits such as milk yield can only be measured after maturity.",
+          "Advanced breeding technologies shorten this cycle by allowing breeders to evaluate animals at an earlier stage and multiply the contribution of genetically superior parents."
+        ]
+      },
+      {
+        heading: "Understanding Advanced Animal Breeding Technologies",
+        paragraphs: [
+          "Advanced animal breeding brings together three layers: genomics to understand genetic potential, reproductive technologies to apply it, and digital tools to monitor and refine decisions. No single tool delivers results alone; the strongest programs combine them within a structured plan, as seen in our [Agri Genomics](/agri-genomics) work."
+        ]
+      },
+      {
+        heading: "Genomics: Understanding the Genetic Potential of Livestock",
+        paragraphs: [
+          "Genomic evaluation uses DNA markers across the genome to estimate an animal’s Genomic Estimated Breeding Value (GEBV). A GEBV predicts genetic potential for traits such as milk production, fertility, growth and disease-related characteristics.",
+          "Because a calf can be genotyped soon after birth, breeders can assess candidates earlier than with progeny testing. Prediction accuracy depends on a representative reference population and reliable performance records. Read more in our guide to [genomic selection in cattle](/blog/genomic-selection-cattle-breeding)."
+        ]
+      },
+      {
+        heading: "Advanced Reproductive Technologies in Animal Breeding",
+        paragraphs: [
+          "Reproductive technologies help turn genetic information into breeding outcomes:"
+        ],
+        bullets: [
+          "[MOET](/moet) (Multiple Ovulation and Embryo Transfer): A genetically superior donor produces multiple embryos, which are transferred to recipient females, increasing the number of offspring from elite animals.",
+          "OPU-IVF (Ovum Pick-Up and In Vitro Fertilisation): Oocytes are collected from live donors, fertilised in the laboratory and developed into embryos. OPU can be repeated and may be used with younger or hard-to-flush donors. See how it compares in [MOET alongside IVF](/moet#moet-alongside-ivf).",
+          "[Sex-sorted semen](/agri-genomics#semen): Semen is sorted to increase the likelihood of female or male calves, helping breeders plan replacement heifers and target specific breeding goals."
+        ]
+      },
+      {
+        heading: "Precision Livestock Farming and Artificial Intelligence",
+        paragraphs: [
+          "Sensors, farm software and analytics tools can track feeding, activity, milk yield, health events and reproductive status.",
+          "AI and predictive analytics can identify patterns in this data, such as early signs of disease or optimal breeding windows, supporting timely management decisions. These tools support, rather than replace, expert veterinary and breeding judgement."
+        ]
+      },
+      {
+        heading: "Building Climate-Resilient and Productive Livestock",
+        paragraphs: [
+          "Heat, humidity and disease pressure affect productivity and welfare. Genomic tools can help identify animals with traits linked to adaptation, fertility and resilience, allowing breeders to balance production with long-term herd health.",
+          "Data Integration is central here: combining genomic results, pedigree, health records and farm management data gives a more complete picture than any single source."
+        ]
+      },
+      {
+        heading: "Indigenous Cattle Genetics and Breeding in India",
+        paragraphs: [
+          "India’s zebu (Bos indicus) breeds such as Gir, Sahiwal and Red Sindhi are valued for their adaptation to local conditions. Genomic tools developed for taurine cattle may not perform equally well in zebu populations, so breed-relevant markers and reference populations are important.",
+          "This is the focus of our [Zebu Cattle SNP Chip](/chip), designed to support genomic evaluation in indigenous cattle."
+        ]
+      },
+      {
+        heading: "Integrating Genomics and Reproductive Biotechnology",
+        paragraphs: [
+          "The greatest value comes from integration. Genomic evaluation identifies promising donors and sires; [MOET](/moet) and [IVF](/agri-genomics#in-house-ivf) multiply their genetics; [sex-sorted semen](/moet#semen) helps direct outcomes; and recorded performance data feeds back to improve future predictions. Our [Agri Genomics](/agri-genomics) services are built around this connected workflow."
+        ]
+      },
+      {
+        heading: "Challenges and Considerations in Advanced Animal Breeding",
+        paragraphs: [
+          "These technologies require genotyping investment, quality farm records, skilled laboratory and veterinary support, and careful recipient and herd management. Breeding plans should also monitor relatedness to protect genetic diversity and avoid inbreeding."
+        ]
+      },
+      {
+        heading: "The Future of Advanced Animal Breeding",
+        paragraphs: [
+          "Gene editing is being studied as a way to introduce specific beneficial variants, such as disease resistance, into livestock. It remains an emerging area, and its use depends on scientific validation, animal welfare considerations and regulatory approval, which vary by country.",
+          "Alongside gene editing, long-read sequencing, pangenome references and improved predictive models are expected to strengthen genomic research. See how [whole genome sequencing](/blog/whole-genome-sequencing-2026) supports this progress."
+        ]
+      },
+      {
+        heading: "Conclusion",
+        paragraphs: [
+          "Advanced animal breeding technologies work best as an integrated system: genomics to select, reproductive biotechnology to multiply, and data to guide and refine. For breeders and research partners looking to build a structured genetic improvement program, explore our [Agri Genomics](/agri-genomics) programs or [contact our team](/contact) to discuss your goals."
+        ]
+      }
+    ]
+  },
 
   {
     id: 1,

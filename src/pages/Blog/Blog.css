@@ -58,7 +58,7 @@
 
 .blog-eyebrow {
   display: inline-block;
-  color: #53d8b4;
+  color: #ffffff;
   font-family: "Inter", "Segoe UI", sans-serif;
   font-size: 14px;
   font-weight: 800;
@@ -95,9 +95,9 @@
   gap: 24px;
   margin-top: 28px;
   padding: 13px 20px;
-  border: 1px solid #229653;
+  border: 1px solid #2563eb;
   border-radius: 5px;
-  background: #229653;
+  background: #1a4194;
   color: #ffffff;
   font-family: "Inter", "Segoe UI", sans-serif;
   font-size: 13px;
@@ -107,7 +107,7 @@
 
 .blog-hero-button:hover {
   transform: translateY(-3px);
-  background: #007d6b;
+  background: #2563eb;
 }
 
 .blog-hero-note {

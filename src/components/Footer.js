@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Mail, Phone } from "lucide-react";
+import { FaInstagram, FaYoutube, FaXTwitter } from "react-icons/fa6";
 import "./Footer.css";
 
 const Linkedin = ({ size = 18, ...props }) => (
@@ -21,35 +23,20 @@ const Linkedin = ({ size = 18, ...props }) => (
   </svg>
 );
 
-// Routes matched against App.js:
-// /agri-genomics, /research-genomics, /clinical-genomics, /about, /contact
-// Order per requested layout: Agricultural, Research, Clinical, Animal & livestock, IVF & reproductive
 const genomicsLinks = [
-  { label: "Agricultural", href: "/agri-genomics" },
-  { label: "Research", href: "/research-genomics" },
-  { label: "Clinical", href: "/clinical-genomics" },
-  { label: "Animal & livestock", href: "/agri-genomics" },
-  { label: "IVF & reproductive", href: "/agri-genomics" },
+  { label: "Agricultural", to: "/agri-genomics" },
+  { label: "Research", to: "/research-genomics" },
+  { label: "Clinical", to: "/clinical-genomics" },
+  { label: "Animal & livestock", to: "/agri-genomics#facility-layout" },
+  { label: "IVF & reproductive", to: "/agri-genomics#in-house-ivf" },
 ];
 
 const companyLinks = [
-  { label: "About", href: "/about" },
-  { label: "Why choose us", href: "/about#why-choose" },
-  { label: "Trust & credibility", href: "/credibility" },
-  { label: "Partners", href: "/contact" },
-  { label: "Careers", href: "/contact" },
-];
-
-const resourceLinks = [
-  { label: "Publications", href: "/#faq" },
-  { label: "Case studies", href: "/#faq" },
-  { label: "News", href: "/resources/news" },
-  { label: "FAQs", href: "/#faq" },
-];
-
-const legalLinks = [
-  { label: "Privacy policy", href: "/privacy-policy" },
-  { label: "Terms of service", href: "/terms-of-service" },
+  { label: "About", to: "/about" },
+  { label: "Why choose us", to: "/about#why-choose" },
+  { label: "News", to: "/#insights" },
+  { label: "Trust & credibility", to: "/#trusted-institutions" },
+  { label: "Careers", to: "/contact" },
 ];
 
 function FooterColumn({ title, links }) {
@@ -58,8 +45,8 @@ function FooterColumn({ title, links }) {
       <p className="footer-column-title">{title}</p>
       <ul className="footer-link-list">
         {links.map((link) => (
-          <li key={link.href + link.label}>
-            <a href={link.href}>{link.label}</a>
+          <li key={link.to + link.label}>
+            <Link to={link.to}>{link.label}</Link>
           </li>
         ))}
       </ul>
@@ -75,16 +62,50 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <p className="footer-logo"><img alt="lead-genetics-video" src={require("../assets/logo.png")}/></p>
+            <p className="footer-logo">
+              <img alt="lead-genetics-video" src={require("../assets/logo.png")} />
+            </p>
             <p className="footer-tagline">
               Agricultural, research and clinical genomics under one
               premium, science-led brand.
             </p>
             <div className="footer-social">
-              <a href="https://www.linkedin.com/company/leads-genetics-1/" aria-label="LinkedIn" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.instagram.com/leadsgenetics/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LEADS Genetics on Instagram"
+              >
+                <FaInstagram size={18} />
+              </a>
+              <a
+                href="https://x.com/Leadsgenetics"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LEADS Genetics on X"
+              >
+                <FaXTwitter size={18} />
+              </a>
+              <a
+                href="https://www.youtube.com/@LeadsGenetics"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LEADS Genetics on YouTube"
+              >
+                <FaYoutube size={18} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/leads-genetics-1/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LEADS Genetics on LinkedIn"
+              >
                 <Linkedin size={18} />
               </a>
-              <a href="mailto:Info@leadsgenetics.com" aria-label="Email">
+              <a
+                href="mailto:Info@leadsgenetics.com"
+                aria-label="Email LEADS Genetics"
+              >
                 <Mail size={18} />
               </a>
             </div>
@@ -92,13 +113,12 @@ export default function Footer() {
 
           <FooterColumn title="Genomics" links={genomicsLinks} />
           <FooterColumn title="Company" links={companyLinks} />
-          <FooterColumn title="Resources" links={resourceLinks} />
 
           <div className="footer-column">
             <p className="footer-column-title">Contact</p>
             <ul className="footer-link-list">
-              <li><a href="/contact">Request consultation</a></li>
-              <li><a href="/contact">Locations</a></li>
+              <li><Link to="/contact">Request consultation</Link></li>
+              <li><Link to="/contact">Locations</Link></li>
               <li>
                 <a href="mailto:Info@leadsgenetics.com" className="footer-contact-line">
                   <Mail size={14} /> Info@leadsgenetics.com
@@ -123,11 +143,8 @@ export default function Footer() {
             &copy; {year} Leads Genetics. All rights reserved.
           </p>
           <ul className="footer-legal-list">
-            {legalLinks.map((link) => (
-              <li key={link.href}>
-                <a href={link.href}>{link.label}</a>
-              </li>
-            ))}
+            <li><span className="footer-legal-text">Privacy policy</span></li>
+            <li><span className="footer-legal-text">Terms of service</span></li>
           </ul>
         </div>
       </div>

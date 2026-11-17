@@ -178,7 +178,7 @@ function StepsFlow() {
   }, []);
 
   return (
-    <section className="ivf">
+    <section className="ivf" id="in-house-ivf">
       <div className="ivf-wrap">
         <h2>Advancing Animal Reproduction Through In-House IVF</h2>
 

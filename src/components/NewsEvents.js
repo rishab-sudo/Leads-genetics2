@@ -201,7 +201,7 @@ const NewsEvents = () => {
   );
 
   return (
-    <section className="news-events-section">
+    <section className="news-events-section" id="insights">
       <Container fluid className="h-container">
         {/* ================= HEADER ================= */}
         <div className="news-header">

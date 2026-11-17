@@ -1,8 +1,10 @@
+
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import "./Home.css";
+
 import Hero from "../components/Hero";
 import Reveal from "../components/Reveal";
-
 import HomeAbout from "../components/HomeAbout";
 import Team from "../components/Team";
 import NewsEvents from "../components/NewsEvents";
@@ -10,6 +12,7 @@ import SectionSep from "../components/SectionSep";
 
 import cliImg from "../assets/clibanner.png";
 import agrImg from "../assets/agr-img.png";
+
 import FAQ from "../components/FAQ";
 import Credentials from "../components/Credentials";
 import WhyUs from "../components/WhyUs";
@@ -20,6 +23,42 @@ import ChipVideo from "../components/ChipVideo";
 const Home = () => {
   return (
     <>
+      <Helmet>
+
+        <link
+          rel="canonical"
+          href="https://www.leadsgenetics.com/"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="LEADS Genetics | Advancing Genomics & Genetic Research"
+        />
+        <meta
+          property="og:description"
+          content="Advancing agricultural, research and clinical genomics through scientific innovation, advanced sequencing and genetic research."
+        />
+        <meta
+          property="og:url"
+          content="https://www.leadsgenetics.com/"
+        />
+        <meta
+          property="og:site_name"
+          content="LEADS Genetics"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="LEADS Genetics | Advancing Genomics & Genetic Research"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore LEADS Genetics' agricultural, research and clinical genomics capabilities."
+        />
+      </Helmet>
+
       <Hero />
 
       <Reveal>
@@ -30,10 +69,10 @@ const Home = () => {
         <Team />
       </Reveal>
 
- <Reveal>
+      <Reveal>
         <ChipVideo />
-      </Reveal> 
-      
+      </Reveal>
+
       <Reveal>
         <NewsEvents />
       </Reveal>

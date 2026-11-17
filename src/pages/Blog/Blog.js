@@ -3,10 +3,38 @@ import { Link } from "react-router-dom";
 import { blogs } from "./Data";
 import reaBanner from "../../assets/Leads-Building.jpg";
 import "./Blog.css";
+import { Helmet } from "react-helmet-async";
 
 function Blog() {
   return (
     <main className="leads-blog">
+
+<Helmet>
+  <title>Genomics Research & Insights | LEADS Genetics Blog</title>
+  <meta
+    name="description"
+    content="Read articles and research insights from LEADS Genetics on whole genome sequencing, agricultural genomics, cattle breeding, clinical genomics and genomic technologies."
+  />
+  <link rel="canonical" href="https://www.leadsgenetics.com/blog" />
+  <meta
+    property="og:title"
+    content="Genomics Research & Insights | LEADS Genetics Blog"
+  />
+  <meta
+    property="og:description"
+    content="Explore articles and insights on genomics, genetic research, livestock breeding and genomic technologies."
+  />
+  <meta property="og:url" content="https://www.leadsgenetics.com/blog" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Genomics Research & Insights | LEADS Genetics Blog" />
+  <meta
+    name="twitter:description"
+    content="Explore articles and insights on genomics, genetic research, livestock breeding and genomic technologies."
+  />
+</Helmet>
+
+
       <section
         className="blog-hero"
         style={{ backgroundImage: `url(${reaBanner})` }}
@@ -14,7 +42,6 @@ function Blog() {
         <div className="blog-hero-overlay"></div>
 
         <div className="blog-hero-content">
-          <span className="blog-eyebrow">LEADS GENETICS / BLOG</span>
 
           <h1 className="section-heading ">
             Insights from the

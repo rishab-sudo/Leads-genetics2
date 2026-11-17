@@ -60,7 +60,7 @@ function MoetIvf() {
   return (
     <div className="moet-ivf">
       {/* ===================== SECTION 1: ADVANTAGES ===================== */}
-      <section className="moet-advantages">
+      <section className="moet-advantages" id="moet-advantages" style={{ scrollMarginTop: "90px" }}>
         <motion.h2
           className="section-heading"
           variants={fadeUp}
@@ -128,7 +128,7 @@ function MoetIvf() {
       </section>
 
       {/* ===================== SECTION 2: MOET ALONGSIDE IVF ===================== */}
-      <section className="moet-comparison">
+      <section className="moet-comparison" id="moet-alongside-ivf" style={{ scrollMarginTop: "90px" }}>
         <motion.h2
           className="section-heading"
           variants={fadeUp}
