@@ -4,6 +4,7 @@ import { blogs } from "./Data";
 import reaBanner from "../../assets/Leads-Building.jpg";
 import "./Blog.css";
 import { Helmet } from "react-helmet-async";
+import Button from "../../components/Button";
 
 function Blog() {
   return (
@@ -55,9 +56,9 @@ function Blog() {
             in agricultural and human genomics.
           </p>
 
-          <a href="#latest-articles" className="blog-hero-button">
-            Explore Articles <span>↘</span>
-          </a>
+          <Button href="#latest-articles" variant="primary" size="large">
+            Explore Articles ↘
+          </Button>
         </div>
 
         <div className="blog-hero-note">

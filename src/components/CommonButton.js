@@ -1,24 +1,30 @@
 import React from "react";
-import "./CommonButton.css";
+import Button from "./Button";
 
+/**
+ * CommonButton — thin wrapper around the global Button component.
+ * Kept for backward-compatibility with any places still importing it.
+ */
 const CommonButton = ({
   text = "Click Here",
   to = "/",
+  onClick,
   type = "button",
+  variant = "primary",
+  size = "medium",
   className = "",
 }) => {
-  const handleClick = () => {
-    window.location.href = to;
-  };
-
   return (
-    <button
+    <Button
+      to={to}
+      onClick={onClick}
       type={type}
-      className={`common-btn ${className}`}
-      onClick={handleClick}
+      variant={variant}
+      size={size}
+      className={className}
     >
-      <span>{text}</span>
-    </button>
+      {text}
+    </Button>
   );
 };
 

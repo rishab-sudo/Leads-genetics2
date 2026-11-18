@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import "./GetAQuote.css";
+import Button from "./Button";
 
 const GetAQuote = () => {
   const [formData, setFormData] = useState({
@@ -422,13 +423,9 @@ const GetAQuote = () => {
                 </p>
               </div>
 
-              <button
-                type="submit"
-                className="quote-submit"
-              >
-                Submit
-                <span>↗</span>
-              </button>
+              <Button type="submit" variant="primary" size="large" className="quote-submit">
+                Submit ↗
+              </Button>
 
             </div>
 

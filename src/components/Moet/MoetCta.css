@@ -9,7 +9,7 @@
 
 /* ---------- Shared label (small green text above headings) ---------- */
 .moet-cta .moet-cta-label {
-  color: #14804f;
+  color: #1d6fd8;
   font-family: "Inter", Arial, sans-serif;
   font-size: 11px;
   font-weight: 700;
@@ -97,7 +97,7 @@
   font-family: "Inter", Arial, sans-serif;
   font-size: 11px;
   font-weight: 700;
-  background-color: #14804f;
+  background-color: #1d6fd8;
   border-radius: 50%;
 }
 
@@ -138,7 +138,7 @@
 }
 
 .moet-cta .moet-cta-formula-plus {
-  color: #14804f;
+  color: #1d6fd8;
   font-family: "Inter", Arial, sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -152,12 +152,12 @@
   margin-top: 26px;
   padding-top: 14px;
   padding-bottom: 14px;
-  background-color: #dff0e6;
+  background-color: #eaf2fb;
   border-radius: 14px;
 }
 
 .moet-cta .moet-cta-formula-result-text {
-  color: #14804f;
+  color: #1d6fd8;
   font-family: "Inter", Arial, sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -216,7 +216,7 @@
   padding-bottom: 15px;
   padding-left: 25px;
   padding-right: 25px;
-  background-color: #14804f;
+  background-color: #0f2d5c;
   border-radius: 40px;
   text-decoration: none;
 }
@@ -236,7 +236,7 @@
 }
 
 .moet-cta .moet-cta-button:hover {
-  background-color: #0f6a41;
+  background-color: #1d6fd8;
 }
 
 /* ---------- Small screens ---------- */

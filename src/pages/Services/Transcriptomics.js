@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import "./Transcriptomics.css";
 
 const pageData = {
@@ -228,6 +229,29 @@ function Transcriptomics() {
 
   return (
     <div className="tra-page">
+      <Helmet>
+        <title>Transcriptomics & RNA Sequencing Services | Leads Genetics</title>
+        <meta
+          name="description"
+          content="Comprehensive transcriptomics and RNA sequencing services at Leads Genetics: bulk RNA-Seq, mRNA-Seq, PacBio Iso-Seq full-length isoform sequencing, and single-cell RNA-Seq."
+        />
+        <link rel="canonical" href="https://www.leadsgenetics.com/transcriptomics" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Transcriptomics & RNA Sequencing Services | Leads Genetics" />
+        <meta
+          property="og:description"
+          content="Comprehensive transcriptomics and RNA sequencing services at Leads Genetics: bulk RNA-Seq, mRNA-Seq, PacBio Iso-Seq, and single-cell RNA-Seq."
+        />
+        <meta property="og:url" content="https://www.leadsgenetics.com/transcriptomics" />
+        <meta property="og:site_name" content="LEADS Genetics" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Transcriptomics & RNA Sequencing Services | Leads Genetics" />
+        <meta
+          name="twitter:description"
+          content="Explore RNA sequencing and transcriptomics services at Leads Genetics."
+        />
+      </Helmet>
+
       <div className="tra-container">
         <div className="tra-header">
           <h1 className="section-heading">{pageData.title}</h1>

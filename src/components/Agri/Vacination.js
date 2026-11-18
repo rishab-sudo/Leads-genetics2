@@ -60,7 +60,7 @@ function Vacination() {
           {/* LEFT: heading + vaccination schedule */}
           <div className="vacination-left">
             <h2 className="section-heading">
-              Cattle health and vaccination care
+              Tracking Livestock Genetics
             </h2>
 
             <span className="vacination-label">Vaccination schedule</span>

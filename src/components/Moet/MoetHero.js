@@ -1,4 +1,5 @@
 import React, { useState, useLayoutEffect, useRef } from "react";
+import Button from "../Button";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./MoetHero.css";
@@ -413,9 +414,9 @@ const MoetHero = () => {
 
         <span className="moet-hero__rule" />
 
-        <a href="#moet-overview" className="moet-hero__button">
+        <Button href="#moet-overview"size="large" className="moet-hero__button">
           Discover MOET
-        </a>
+        </Button>
       </div>
     </section>
   );

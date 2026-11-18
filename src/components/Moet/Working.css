@@ -121,7 +121,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #14885a;
+  color: #1d6fd8;
 }
 
 .working__title {
@@ -191,7 +191,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #14885a;
+  color: #1d6fd8;
 }
 
 .working__process-intro {
@@ -225,7 +225,7 @@
   left: 8.33%;
   right: 8.33%;
   height: 2px;
-  background: #cfe5d8;
+  background: #d5e5f5;
 }
 
 .working__steps::after {
@@ -239,7 +239,7 @@
   background-image: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(20, 136, 90, 0.95) 50%,
+    rgba(29, 111, 216, 0.95) 50%,
     transparent 100%
   );
   background-repeat: no-repeat;
@@ -270,12 +270,12 @@
   margin: 0 auto 20px;
   border: 4px solid #f3f6f9;
   border-radius: 50%;
-  background: #14885a;
+  background: #1d6fd8;
   font-size: 17px;
   font-weight: 700;
   color: #ffffff;
   box-sizing: border-box;
-  box-shadow: 0 0 0 1px #14885a;
+  box-shadow: 0 0 0 1px #1d6fd8;
   animation: working-breathe 3.2s ease-in-out infinite;
 }
 
@@ -287,7 +287,7 @@
   background: radial-gradient(
     circle,
     transparent 52%,
-    rgba(20, 136, 90, 0.25) 65%,
+    rgba(29, 111, 216, 0.25) 65%,
     transparent 78%
   );
   pointer-events: none;
@@ -336,11 +336,11 @@
 @keyframes working-breathe {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 0 1px #14885a, 0 0 0 0 rgba(20, 136, 90, 0.3);
+    box-shadow: 0 0 0 1px #1d6fd8, 0 0 0 0 rgba(29, 111, 216, 0.3);
   }
   50% {
     transform: scale(1.08);
-    box-shadow: 0 0 0 1px #14885a, 0 0 0 9px rgba(20, 136, 90, 0);
+    box-shadow: 0 0 0 1px #1d6fd8, 0 0 0 9px rgba(29, 111, 216, 0);
   }
 }
 

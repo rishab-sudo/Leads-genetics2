@@ -23,7 +23,7 @@
 
 /* ---------- Advantages: top area ---------- */
 .moet-advantages-label {
-  color: #14804f;
+  color: #1d6fd8;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -75,7 +75,7 @@
   justify-content: center;
   width: 44px;
   height: 44px;
-  background-color: #dff0e6;
+  background-color: #eaf2fb;
   border-radius: 12px;
   margin-bottom: 18px;
 }
@@ -206,12 +206,12 @@
 
 /* ---------- Note box (used in both sections) ---------- */
 .note-box {
-  background-color: #f2f9f4;
+  background-color: #f0f6fc;
   border-width: 1px;
   border-style: solid;
-  border-color: #cfe5d8;
+  border-color: #bcd4ee;
   border-left-width: 4px;
-  border-left-color: #14804f;
+  border-left-color: #1d6fd8;
   border-radius: 12px;
   padding-top: 18px;
   padding-bottom: 18px;

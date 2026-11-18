@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Swal from "sweetalert2";
 import "./Registration.css";
+import Button from "../components/Button";
 
 import registrationBanner from "../assets/registration-banner.jpg";
 
@@ -714,12 +715,13 @@ const handleSubmit = async (e) => {
 
               <div className="registration-submit-wrapper">
 
-                <button
+                <Button
                   type="submit"
+                  variant="primary"
+                  size="large"
                   className="registration-submit-btn"
                   disabled={loading}
                 >
-
                   {loading ? (
                     <>
                       <span className="registration-spinner"></span>
@@ -728,8 +730,7 @@ const handleSubmit = async (e) => {
                   ) : (
                     "SUBMIT REGISTRATION"
                   )}
-
-                </button>
+                </Button>
 
               </div>
 

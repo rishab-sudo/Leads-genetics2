@@ -16,7 +16,8 @@ body,
 
 
 .h-container{
-  width: 80% !important;
+  min-width: 80% !important;
+  /* background-color: aqua; */
 }
 .hero-heading{
       font-family: 'Cormorant Garamond' !important;
@@ -44,11 +45,4 @@ p {
   font-size: 32px !important;
 margin-bottom: 15px;
 }
-}
-
-#in-house-ivf,
-#facility-layout,
-#insights,
-#trusted-institutions {
-  scroll-margin-top: 110px;
 }

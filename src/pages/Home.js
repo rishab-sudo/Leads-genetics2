@@ -33,7 +33,7 @@ const Home = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="LEADS Genetics | Advancing Genomics & Genetic Research"
+          content="Leads Genetics | Advancing Genomics & Genetic Research"
         />
         <meta
           property="og:description"
@@ -45,17 +45,17 @@ const Home = () => {
         />
         <meta
           property="og:site_name"
-          content="LEADS Genetics"
+          content="Leads Genetics"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="LEADS Genetics | Advancing Genomics & Genetic Research"
+          content="Leads Genetics | Advancing Genomics & Genetic Research"
         />
         <meta
           name="twitter:description"
-          content="Explore LEADS Genetics' agricultural, research and clinical genomics capabilities."
+          content="Explore Leads Genetics' agricultural, research and clinical genomics capabilities."
         />
       </Helmet>
 

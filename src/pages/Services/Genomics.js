@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion, MotionConfig } from "framer-motion";
 import "./Genomics.css";
@@ -15,6 +16,29 @@ function Genomics() {
   return (
     <MotionConfig reducedMotion="user">
       <>
+        <Helmet>
+          <title>Genomic Sequencing Services & Solutions | Leads Genetics</title>
+          <meta
+            name="description"
+            content="Comprehensive genomic sequencing services including Whole Genome Sequencing (WGS), Whole Exome Sequencing (WES), targeted sequencing, GBS, and variant discovery powered by Illumina and PacBio platforms."
+          />
+          <link rel="canonical" href="https://www.leadsgenetics.com/genomics" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Genomic Sequencing Services & Solutions | Leads Genetics" />
+          <meta
+            property="og:description"
+            content="Comprehensive genomic sequencing services including Whole Genome Sequencing, Exome Sequencing, targeted sequencing, and variant discovery."
+          />
+          <meta property="og:url" content="https://www.leadsgenetics.com/genomics" />
+          <meta property="og:site_name" content="LEADS Genetics" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Genomic Sequencing Services & Solutions | Leads Genetics" />
+          <meta
+            name="twitter:description"
+            content="Comprehensive genomic sequencing services including Whole Genome Sequencing, Exome Sequencing, and targeted sequencing at Leads Genetics."
+          />
+        </Helmet>
+
         <GenomicBanner />
 
         <GenoAbout />

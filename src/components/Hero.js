@@ -1,22 +1,13 @@
-import React, {
-  useEffect,
-  useRef,
-  useState,
-  useCallback,
-} from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  Leaf,
-  FlaskConical,
-  CirclePlus,
-} from "lucide-react";
+import { Leaf, FlaskConical } from "lucide-react";
 import "./Hero.css";
 
 const slides = [
   {
     heading: "From Sequence to Solution",
     description:
-      "India’s integrated genomics company combining advanced multi-omics laboratories, agricultural and livestock genomics, research capabilities, and clinical solutions to transform genomic data into real-world impact.",
+      "India’s integrated genomics company combining advanced multi-omics laboratories, livestock genomics to transform genomic data into real-world impact.",
   },
   {
     heading: "One Genome<br />Multiple Possibilities",
@@ -26,28 +17,22 @@ const slides = [
   {
     heading: "From Farm to Research",
     description:
-      "Building India’s integrated genomics ecosystem across agriculture, cattle and livestock, scientific research, and clinical genomics, connecting advanced sequencing and multi-omics with solutions designed for a healthier, smarter future.",
+      "Building India’s integrated genomics ecosystem across cattle and livestock, scientific research, and clinical genomics, connecting advanced sequencing and multi-omics with solutions designed for a healthier, smarter future.",
   },
 ];
 
 const cards = [
   {
-    title: "Agri Genomics",
+    title: "LiveStock",
     icon: <Leaf size={26} />,
     link: "/agri-genomics",
     color: "green",
   },
   {
-    title: "Research Genomics",
+    title: "Genomics",
     icon: <FlaskConical size={26} />,
     link: "/research-genomics",
     color: "blue",
-  },
-  {
-    title: "Clinical Genomics",
-    icon: <CirclePlus size={26} />,
-    link: "/clinical-genomics",
-    color: "purple",
   },
 ];
 
@@ -55,182 +40,30 @@ const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animate, setAnimate] = useState(true);
 
-  const [activeCard, setActiveCard] = useState(0);
-
-  const cardsRef = useRef(null);
-  const autoSlideRef = useRef(null);
-
-  /* =========================================================
-     HERO TEXT AUTO SLIDER
-  ========================================================= */
-
+  /* HERO TEXT AUTO SLIDER */
   useEffect(() => {
+    let swapTimeout;
+
     const interval = setInterval(() => {
       setAnimate(false);
 
-      setTimeout(() => {
-        setActiveIndex(
-          (prev) => (prev + 1) % slides.length
-        );
-
+      swapTimeout = setTimeout(() => {
+        setActiveIndex((prev) => (prev + 1) % slides.length);
         setAnimate(true);
       }, 600);
     }, 6500);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      clearTimeout(swapTimeout);
+    };
   }, []);
-
-  /* =========================================================
-     SCROLL TO ACTIVE CARD
-  ========================================================= */
-
-  const scrollToCard = useCallback(
-    (index, smooth = true) => {
-      const container = cardsRef.current;
-
-      if (!container) return;
-
-      const cardElements =
-        container.querySelectorAll(".hero-card");
-
-      const card = cardElements[index];
-
-      if (!card) return;
-
-      const containerWidth = container.offsetWidth;
-      const cardWidth = card.offsetWidth;
-
-      const targetScroll =
-        card.offsetLeft -
-        (containerWidth - cardWidth) / 2;
-
-      container.scrollTo({
-        left: targetScroll,
-        behavior: smooth ? "smooth" : "auto",
-      });
-
-      setActiveCard(index);
-    },
-    []
-  );
-
-  /* =========================================================
-     AUTO CARD SLIDER
-     Every 2 seconds
-  ========================================================= */
-
-  const startAutoSlide = useCallback(() => {
-    clearInterval(autoSlideRef.current);
-
-    autoSlideRef.current = setInterval(() => {
-      setActiveCard((prev) => {
-        const nextIndex =
-          (prev + 1) % cards.length;
-
-        scrollToCard(nextIndex);
-
-        return nextIndex;
-      });
-    }, 2000);
-  }, [scrollToCard]);
-
-  /* =========================================================
-     START AUTO SLIDER
-  ========================================================= */
-
-  useEffect(() => {
-    startAutoSlide();
-
-    return () => {
-      clearInterval(autoSlideRef.current);
-    };
-  }, [startAutoSlide]);
-
-  /* =========================================================
-     DETECT MANUAL SWIPE
-  ========================================================= */
-
-  useEffect(() => {
-    const container = cardsRef.current;
-
-    if (!container) return;
-
-    let scrollTimeout;
-
-    const handleScroll = () => {
-      clearTimeout(scrollTimeout);
-
-      scrollTimeout = setTimeout(() => {
-        const cardElements =
-          container.querySelectorAll(".hero-card");
-
-        if (!cardElements.length) return;
-
-        const containerCenter =
-          container.scrollLeft +
-          container.offsetWidth / 2;
-
-        let closestIndex = 0;
-        let closestDistance = Infinity;
-
-        cardElements.forEach((card, index) => {
-          const cardCenter =
-            card.offsetLeft +
-            card.offsetWidth / 2;
-
-          const distance = Math.abs(
-            containerCenter - cardCenter
-          );
-
-          if (distance < closestDistance) {
-            closestDistance = distance;
-            closestIndex = index;
-          }
-        });
-
-        setActiveCard(closestIndex);
-
-        startAutoSlide();
-      }, 120);
-    };
-
-    container.addEventListener(
-      "scroll",
-      handleScroll,
-      {
-        passive: true,
-      }
-    );
-
-    return () => {
-      container.removeEventListener(
-        "scroll",
-        handleScroll
-      );
-
-      clearTimeout(scrollTimeout);
-    };
-  }, [startAutoSlide]);
-
-  /* =========================================================
-     DOT CLICK
-  ========================================================= */
-
-  const handleDotClick = (index) => {
-    scrollToCard(index);
-
-    startAutoSlide();
-  };
 
   const currentSlide = slides[activeIndex];
 
   return (
     <section className="hero">
-
-      {/* =====================================================
-          VIDEO BACKGROUND
-      ===================================================== */}
-
+      {/* VIDEO BACKGROUND */}
       <video
         autoPlay
         muted
@@ -245,100 +78,40 @@ const Hero = () => {
         />
       </video>
 
-      {/* =====================================================
-          DARK OVERLAY
-      ===================================================== */}
-
+      {/* OVERLAY */}
       <div className="hero-overlay"></div>
 
-      {/* =====================================================
-          CONTENT
-      ===================================================== */}
-
+      {/* CONTENT */}
       <div className="hero-container">
-
-        {/* ===================================================
-            HERO TEXT
-        =================================================== */}
-
-        <div
-          className={`hero-text ${
-            animate ? "show" : "hide"
-          }`}
-        >
+        {/* HERO TEXT */}
+        <div className={`hero-text ${animate ? "show" : "hide"}`}>
           <h1
             className="hero-heading"
-            dangerouslySetInnerHTML={{
-              __html: currentSlide.heading,
-            }}
+            dangerouslySetInnerHTML={{ __html: currentSlide.heading }}
           />
 
-          <p className="hero-description">
-            {currentSlide.description}
-          </p>
+          <p className="hero-description">{currentSlide.description}</p>
         </div>
 
-        {/* ===================================================
-            GENOMICS CARDS
-        =================================================== */}
-
-        <div
-          className="hero-cards"
-          ref={cardsRef}
-        >
-          {cards.map((card, index) => (
+        {/* GENOMICS CARDS */}
+        <div className="hero-cards">
+          {cards.map((card) => (
             <Link
-              key={index}
+              key={card.link}
               to={card.link}
               className={`hero-card ${card.color}`}
             >
               <div className="hero-card-content">
-
-                <div
-                  className={`hero-icon ${card.color}`}
-                >
-                  {card.icon}
-                </div>
+                <div className={`hero-icon ${card.color}`}>{card.icon}</div>
 
                 <div className="hero-card-text">
-
                   <h3>{card.title}</h3>
-
-                  <span>
-                    Explore Services →
-                  </span>
-
+                  <span>Explore Services →</span>
                 </div>
-
               </div>
             </Link>
           ))}
         </div>
-
-        {/* ===================================================
-            MOBILE SLIDER INDICATORS
-        =================================================== */}
-
-        <div className="hero-card-indicators">
-
-          {cards.map((card, index) => (
-            <button
-              key={index}
-              type="button"
-              aria-label={`Show ${card.title}`}
-              className={`hero-card-dot ${
-                activeCard === index
-                  ? "active"
-                  : ""
-              }`}
-              onClick={() =>
-                handleDotClick(index)
-              }
-            />
-          ))}
-
-        </div>
-
       </div>
     </section>
   );

@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link, useParams } from "react-router-dom";
 import { getBlogBySlug } from "./Data";
 import "./BlogDetails.css";
+import Button from "../../components/Button";
 
 /* Turns [anchor text](/route) or [anchor text](https://...) into links.
    Internal paths use React Router <Link>; external URLs open in a new tab. */
@@ -46,9 +47,9 @@ function BlogDetails() {
           <span className="blog-details-eyebrow">ARTICLE NOT FOUND</span>
           <h1>We couldn't find that article.</h1>
           <p>The article may have moved or the link may be incorrect.</p>
-          <Link className="blog-back-button" to="/blog">
+          <Button to="/blog" variant="outline" size="medium" className="blog-back-button">
             ← Back to Blog
-          </Link>
+          </Button>
         </main>
       </>
     );
@@ -175,9 +176,9 @@ function BlogDetails() {
               <h3>Continue exploring genomics.</h3>
             </div>
 
-            <Link to="/blog" className="blog-back-button">
-              All Articles <span>→</span>
-            </Link>
+            <Button to="/blog" variant="primary" size="medium">
+              All Articles →
+            </Button>
           </div>
         </article>
       </div>

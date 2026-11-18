@@ -180,7 +180,7 @@ function StepsFlow() {
   return (
     <section className="ivf" id="in-house-ivf">
       <div className="ivf-wrap">
-        <h2>Advancing Animal Reproduction Through In-House IVF</h2>
+        <h2>Advanced OPU and IVF Animal Reproduction </h2>
 
         <p className="ivf-intro">
           In-vitro fertilization enables fertilization to take place under

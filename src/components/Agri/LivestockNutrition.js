@@ -257,7 +257,7 @@ const LivestockNutrition = () => {
               FEED PREPARATION & NUTRITIONAL PROTOCOLS
             </span>
             <h3 className="ln-prep-title section-heading">
-              Feed Preparation & Management Protocol
+              Genomic Prediction for Breeders
             </h3>
             <p className="ln-prep-description">
               Ration formulation is customized according to individual animal body

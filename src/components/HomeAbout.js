@@ -5,10 +5,9 @@ import {
   Microscope,
   Globe2,
   Award,
-  ArrowRight,
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 import "./HomeAbout.css";
+import Button from "./Button";
 
 // Images
 import aboutImg1 from "../assets/h-about1.png";
@@ -86,7 +85,6 @@ function AnimatedCounter({ value, prefix = "", suffix = "" }) {
 ========================================= */
 
 const HomeAbout = () => {
-  const navigate = useNavigate();
   const [active, setActive] = useState(0);
 
   // change image automatically; restarts the timer when a dot is clicked
@@ -100,7 +98,7 @@ const HomeAbout = () => {
 
   return (
     <section className="h-about-section">
-      <Container fluid className="h-about-container">
+      <Container fluid className="h-about-container h-container">
         <Row className="align-items-center g-5">
           {/* ============ LEFT: FULL IMAGE SLIDER ============ */}
           <Col xl={6} lg={6} md={12}>
@@ -171,14 +169,9 @@ const HomeAbout = () => {
                 ))}
               </div>
 
-              <button
-                type="button"
-                className="h-about-btn"
-                onClick={() => navigate("/about")}
-              >
-                <span>Know More About Us</span>
-                <ArrowRight size={16} />
-              </button>
+              <Button to="/about" variant="primary" size="large">
+                Know More About Us
+              </Button>
             </div>
           </Col>
         </Row>

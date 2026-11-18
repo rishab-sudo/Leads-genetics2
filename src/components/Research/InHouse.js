@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Button from "../Button";
 import "./InHouse.css";
 
 import iscan from "../../assets/iscan.jpg";
@@ -18,9 +18,9 @@ function InHouse() {
             </h2>
           </div>
 
-          <Link to="/technologies" className="inhouse-hub-link">
-            View Full Technology Hub <span className="inhouse-hub-arrow">→</span>
-          </Link>
+          <Button to="/technologies" variant="outline" size="medium" className="inhouse-hub-link">
+            View Full Technology Hub →
+          </Button>
         </div>
 
         <div className="inhouse-grid">

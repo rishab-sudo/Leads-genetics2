@@ -1,0 +1,197 @@
+
+/* =========================================
+   GLOBAL BUTTON SYSTEM
+========================================= */
+
+.global-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  padding: 13px 25px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* =========================================
+   PRIMARY - GREEN
+========================================= */
+
+.btn-primary {
+  background: #16A34A;
+  color: #FFFFFF;
+  border-color: #16A34A;
+}
+
+.btn-primary:hover {
+  background: #15803D;
+  border-color: #15803D;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(22, 163, 74, 0.18);
+}
+
+/* =========================================
+   SECONDARY - BLUE
+========================================= */
+
+.btn-secondary {
+  background: #2563EB;
+  color: #FFFFFF;
+  border-color: #2563EB;
+}
+
+.btn-secondary:hover {
+  background: #1D4ED8;
+  border-color: #1D4ED8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.18);
+}
+
+/* =========================================
+   OUTLINE - GREEN
+========================================= */
+
+.btn-outline {
+  background: transparent;
+  color: #16A34A;
+  border-color: #16A34A;
+}
+
+.btn-outline:hover {
+  background: #DCFCE7;
+  border-color: #15803D;
+  color: #15803D;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   OUTLINE BLUE
+========================================= */
+
+.btn-outline-blue {
+  background: transparent;
+  color: #2563EB;
+  border-color: #2563EB;
+}
+
+.btn-outline-blue:hover {
+  background: #DBEAFE;
+  border-color: #1D4ED8;
+  color: #1D4ED8;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   LIGHT - GREEN
+========================================= */
+
+.btn-light {
+  background: #DCFCE7;
+  color: #166534;
+  border-color: #DCFCE7;
+}
+
+.btn-light:hover {
+  background: #BBF7D0;
+  border-color: #BBF7D0;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   LIGHT - BLUE
+========================================= */
+
+.btn-light-blue {
+  background: #DBEAFE;
+  color: #1D4ED8;
+  border-color: #DBEAFE;
+}
+
+.btn-light-blue:hover {
+  background: #BFDBFE;
+  border-color: #BFDBFE;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   BUTTON SIZES
+========================================= */
+
+.btn-small {
+  padding: 9px 17px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+
+.btn-medium {
+  padding: 13px 25px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.btn-large {
+  padding: 16px 32px;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+/* =========================================
+   ACTIVE STATE
+========================================= */
+
+.global-btn:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: none;
+}
+
+/* =========================================
+   DISABLED STATE
+========================================= */
+
+.global-btn:disabled,
+.global-btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+  box-shadow: none;
+}
+
+/* =========================================
+   ACCESSIBILITY - KEYBOARD FOCUS
+========================================= */
+
+.global-btn:focus-visible {
+  outline: 3px solid #93C5FD;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .btn-large {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+}

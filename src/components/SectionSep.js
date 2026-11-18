@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Button from "./Button";
 import "./SectionSep.css";
 
 const SectionSep = ({
@@ -21,9 +21,9 @@ const SectionSep = ({
 
             <p>{description}</p>
 
-            <Link to={link} className="explore-btn">
+            <Button to={link} variant="primary" size="medium" className="explore-btn">
               {buttonText}
-            </Link>
+            </Button>
           </div>
         </div>
       </section>

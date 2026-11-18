@@ -23,7 +23,7 @@
 .agri-geno-banner-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .agri-geno-banner-content h1 span {
-  color: #c7dba7;
+  color: #fff;
 }
 
 .agri-geno-banner-content p {

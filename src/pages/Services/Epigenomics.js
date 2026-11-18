@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import "./Epigenomics.css";
 
 import AnalysisPipeline from "../../components/Research/AnalysisPipeline";
@@ -216,6 +217,29 @@ function Epigenomics() {
 
   return (
     <>
+      <Helmet>
+        <title>Epigenomics & DNA Methylation Profiling Services | Leads Genetics</title>
+        <meta
+          name="description"
+          content="Explore advanced epigenomics and methylation profiling solutions at Leads Genetics, including Whole Genome Bisulfite Sequencing (WGBS), RRBS, ChIP-Seq, and chromatin accessibility analysis."
+        />
+        <link rel="canonical" href="https://www.leadsgenetics.com/epigenomics" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Epigenomics & DNA Methylation Profiling Services | Leads Genetics" />
+        <meta
+          property="og:description"
+          content="Explore advanced epigenomics solutions including Whole Genome Bisulfite Sequencing, RRBS, ChIP-Seq, and chromatin accessibility analysis."
+        />
+        <meta property="og:url" content="https://www.leadsgenetics.com/epigenomics" />
+        <meta property="og:site_name" content="LEADS Genetics" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Epigenomics & DNA Methylation Profiling Services | Leads Genetics" />
+        <meta
+          name="twitter:description"
+          content="Explore advanced epigenomics and methylation profiling solutions at Leads Genetics."
+        />
+      </Helmet>
+
       <EpigenomicsBanner />
 
       <main className="epi-page">

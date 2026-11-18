@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
+import Button from "./Button";
 
 const SOLUTION_PAGES = [
   "/agri-genomics",
@@ -297,9 +298,9 @@ const Navbar = () => {
         {/* RIGHT SECTION */}
 
         <div className="nav-right">
-          <Link to="/contact" className="common-btn nav-btn">
-            <span>Get A Quote</span>
-          </Link>
+          <Button to="/contact" size="small" className="nav-btn">
+            Get A Quote
+          </Button>
 
           <button
             type="button"

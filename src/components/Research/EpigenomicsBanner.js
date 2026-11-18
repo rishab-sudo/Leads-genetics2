@@ -1,13 +1,11 @@
 
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "./EpigenomicsBanner.css";
+import Button from "../Button";
 
 import epiBanner from "../../assets/EpiBan.png";
 
 const EpigenomicsBanner = () => {
-  const navigate = useNavigate();
-
   return (
     <section className="epigenomics-banner">
 
@@ -40,21 +38,14 @@ const EpigenomicsBanner = () => {
           {/* Action Buttons */}
           <div className="epigenomics-banner-actions">
 
-            <button
-              className="epigenomics-btn epigenomics-btn-primary"
-              onClick={() => navigate("/research-genomics")}
-            >
+            <Button to="/research-genomics" variant="primary" size="large" >
               View Sample Guidelines
-              <span className="epigenomics-btn-arrow">↗</span>
-            </button>
+            </Button>
 
-            <button
-              className="epigenomics-btn epigenomics-btn-outline"
-              onClick={() => navigate("/contact")}
-            >
+            <Button to="/contact" variant="outline" size="large" >
               Get a Quote
-              <span className="epigenomics-btn-arrow">↗</span>
-            </button>
+              
+            </Button>
 
           </div>
 

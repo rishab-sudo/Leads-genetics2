@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Button from "../Button";
 import "./Reproductivebiotech.css";
 
 import moetImg from "../../assets/embroy1.jpeg";
@@ -12,9 +12,9 @@ const items = [
     image: moetImg,
     alt: "MOET embryo technology",
     route: "/moet",
-    title: "(MOET) Technology: A Method for Rapid Genetic Improvement",
+    title: "Multiple Ovulation and Embryo Transfer",
     text: [
-      "Multiple Ovulation and Embryo Transfer (MOET) technology is an advanced reproductive technology that enables rapid genetic improvement in dairy cattle through the production of naturally developed in vivo embryos. In India, although artificial insemination has been widely adopted, advanced reproductive technologies have not yet reached the majority of farmers and remain at a relatively early stage of adoption",
+      "MOET technology is an advanced reproductive technology that enables rapid genetic improvement in dairy cattle through the production of naturally developed in vivo embryos. In India, although artificial insemination has been widely adopted, advanced reproductive technologies have not yet reached the majority of farmers and remain at a relatively early stage of adoption",
     ],
   },
 //   {
@@ -54,9 +54,9 @@ export default function ReproductiveBiotech() {
                   {para}
                 </p>
               ))}
-              <Link to={item.route} className="repro-btn">
+              <Button to={item.route} variant="primary" size="medium" className="repro-btn">
                 Know more →
-              </Link>
+              </Button>
             </div>
           );
 

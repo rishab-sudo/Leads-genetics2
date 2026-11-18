@@ -100,7 +100,7 @@ function MoetIvf() {
                 <card.Icon
                   size={24}
                   weight="duotone"
-                  color="#14885a"
+                  color="#1d6fd8"
                 />
               </div>
               <h3 className="advantage-card-title">{card.title}</h3>

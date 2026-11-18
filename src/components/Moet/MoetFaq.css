@@ -67,7 +67,7 @@
 
 .moet-faq .moet-faq-item-open {
   background-color: #f7fbfe;
-  border-color: #14804f;
+  border-color: #1d6fd8;
 }
 
 /* ---------- Question button ---------- */
@@ -90,7 +90,7 @@
 .moet-faq .moet-faq-number {
   flex-shrink: 0;
   min-width: 22px;
-  color: #14804f;
+  color: #1d6fd8;
   font-family: "Inter", Arial, sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -112,18 +112,18 @@
   flex-shrink: 0;
   width: 30px;
   height: 30px;
-  color: #14804f;
+  color: #1d6fd8;
   font-family: "Inter", Arial, sans-serif;
   font-size: 20px;
   font-weight: 700;
   line-height: 1;
-  background-color: #dff0e6;
+  background-color: #eaf2fb;
   border-radius: 50%;
 }
 
 .moet-faq .moet-faq-item-open .moet-faq-icon {
   color: #ffffff;
-  background-color: #14804f;
+  background-color: #1d6fd8;
 }
 
 /* ---------- Answer (CSS grid expansion so all answers stay in DOM) ---------- */

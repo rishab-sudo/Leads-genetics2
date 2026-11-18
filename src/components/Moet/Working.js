@@ -107,7 +107,7 @@ const Working = () => {
                     height="24"
                     aria-hidden="true"
                   >
-                    <circle cx="12" cy="12" r="12" fill="#14885a" />
+                    <circle cx="12" cy="12" r="12" fill="#1d6fd8" />
                     <polyline
                       points="7 12.5 10.5 16 17 9"
                       fill="none"

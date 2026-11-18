@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
+// eslint-disable-next-line no-unused-vars
+import Button from "./Button";
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -793,15 +795,15 @@ const ContactForm = () => {
 
               </div>
 
-              <button
-                className="submit-btn"
+              <Button
                 type="submit"
+                variant="primary"
+                size="large"
+                className="submit-btn"
                 disabled={loading}
               >
-                {loading
-                  ? "Sending..."
-                  : "Submit"}
-              </button>
+                {loading ? "Sending..." : "Submit"}
+              </Button>
 
             </form>
 

@@ -5,7 +5,7 @@ import sequencerImg from "../../assets/sequencer-illustration.png";
 import pepLabImg from "../../assets/pep_lab.jpeg";
 import homeBlImg from "../../assets/home_bl.png";
 import homeKamImg from "../../assets/home_kam.png";
-import { useNavigate } from "react-router-dom";
+import Button from "../Button";
 import "./AboutPageScroll.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -184,7 +184,6 @@ export default function HeroScrollSection() {
 
     return () => ctx.revert();
   }, []);
-  const navigate = useNavigate();
   return (
     <>
       <div className="scene-wrap" ref={sceneRef}>
@@ -200,10 +199,9 @@ export default function HeroScrollSection() {
               data, computation, biology, and field decisions into a single
               continuous loop.
             </p>
-             <button className="cta" onClick={() => navigate("/contact")}>
-      <img src="https://i.pravatar.cc/64?img=12" alt="" />
-      Contact Us
-    </button>
+             <Button to="/contact" variant="primary" size="large" className="cta">
+              Contact Us
+            </Button>
           </div>
 
           <div className="hero-right">

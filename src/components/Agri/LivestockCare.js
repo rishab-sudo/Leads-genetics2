@@ -109,7 +109,7 @@ const LivestockCare = () => {
           <span className="lc-eyebrow">ZONE 2: CATTLE BREEDS & LIVESTOCK CARE</span>
 
           <h2 className="lc-title section-heading">
-            Cattle Breeds, Genetic Categories & Herd Distribution
+            Cattle Breeds Genetic Selection
           </h2>
 
           <p className="lc-description">

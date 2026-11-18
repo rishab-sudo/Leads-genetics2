@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import "./Technologies.css";
 
 import nova from "../../src/assets/novaseq.jpeg";
@@ -229,6 +230,28 @@ function Technologies() {
 
   return (
     <main className="tech-page">
+      <Helmet>
+        <title>Research Technologies & Platform Fleet | Leads Genetics</title>
+        <meta
+          name="description"
+          content="Explore state-of-the-art genomic sequencing technologies at Leads Genetics, including Illumina NovaSeq X, MiSeq i100, iScan Microarray, PacBio Vega HiFi long-read, ONT PromethION, and Olink Proteomics."
+        />
+        <link rel="canonical" href="https://www.leadsgenetics.com/technologies" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Research Technologies & Platform Fleet | Leads Genetics" />
+        <meta
+          property="og:description"
+          content="Explore state-of-the-art genomic sequencing technologies at Leads Genetics, including Illumina NovaSeq X, MiSeq i100, iScan, PacBio Vega, and ONT PromethION."
+        />
+        <meta property="og:url" content="https://www.leadsgenetics.com/technologies" />
+        <meta property="og:site_name" content="LEADS Genetics" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Research Technologies & Platform Fleet | Leads Genetics" />
+        <meta
+          name="twitter:description"
+          content="Explore advanced sequencing platforms and technology fleet at Leads Genetics."
+        />
+      </Helmet>
 
       <TechBanner/>
       <section className="tech-header">

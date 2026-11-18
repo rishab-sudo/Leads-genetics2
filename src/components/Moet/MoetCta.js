@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./MoetCta.css";
+import Button from "../Button";
 import { motion } from "framer-motion";
 
 const fadeUp = {
@@ -154,10 +154,9 @@ function MoetCta() {
           viewport={{ once: true }}
           custom={3}
         >
-          <Link className="moet-cta-button" to="/contact">
-            <span className="moet-cta-button-text">Contact Us</span>
-            <span className="moet-cta-button-arrow">→</span>
-          </Link>
+          <Button to="/contact" variant="primary" size="large" className="moet-cta-button">
+            Contact Us
+          </Button>
         </motion.div>
       </motion.div>
     </section>
