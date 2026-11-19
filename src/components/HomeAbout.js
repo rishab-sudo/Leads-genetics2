@@ -169,7 +169,7 @@ const HomeAbout = () => {
                 ))}
               </div>
 
-              <Button to="/about" variant="primary" size="large">
+              <Button to="/about" variant="secondary" size="large">
                 Know More About Us
               </Button>
             </div>

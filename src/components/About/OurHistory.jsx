@@ -45,7 +45,6 @@ export default function OurHistory() {
     <div className="lg-history-viewport">
       <section className="lg-history" aria-labelledby="lg-history-heading">
         <div className="lg-history-inner">
-
           {/* Header */}
           <header className="lg-history-header">
             <span className="lg-history-eyebrow">Our History</span>
@@ -77,33 +76,21 @@ export default function OurHistory() {
                 >
                   {/* Card */}
                   <div className="lg-history-card">
-                    <span className="lg-history-year">
-                      {m.year}
-                    </span>
+                    <span className="lg-history-year">{m.year}</span>
 
-                    <h3 className="lg-history-title">
-                      {m.title}
-                    </h3>
+                    <h3 className="lg-history-title">{m.title}</h3>
 
-                    <p className="lg-history-detail">
-                      {m.detail}
-                    </p>
+                    <p className="lg-history-detail">{m.detail}</p>
                   </div>
 
                   {/* Node */}
-                  <div
-                    className="lg-history-node"
-                    aria-hidden="true"
-                  >
-                    <span className="lg-history-node-tag">
-                      {m.gen}
-                    </span>
+                  <div className="lg-history-node" aria-hidden="true">
+                    <span className="lg-history-node-tag">{m.gen}</span>
                   </div>
                 </li>
               ))}
             </ol>
           </div>
-
         </div>
       </section>
     </div>

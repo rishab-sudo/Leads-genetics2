@@ -70,7 +70,7 @@ const Research = () => {
       <Technology />
       
       <Services />
-            <Bio/>
+      <Bio/>
       <SampleRequirements />
 
 

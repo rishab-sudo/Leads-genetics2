@@ -31,10 +31,9 @@ const products = [
     badgeLeft: "Pedigree Certified",
     badgeRight: "Live Herd Stock",
     title: "Genetically Breed Calves",
-    desc: "Healthy, vaccinated, and climate-acclimatized exotic female calves & pregnant bred from imported sire lines—ready to accelerate your farm's next-generation milking herd.",
+    desc: "Healthy, vaccinated, female calves & pregnant bred from imported sire lines-ready to accelerate your farm's next-generation milking herd.",
     features: [
       ["Verified 3-Generation Pedigree", "with DNA parentage certificates"],
-      ["Complete Immunization Passport", "(FMD, HS, BQ, Brucellosis free)"],
       ["Tropical Heat Tolerance", "& superior feed-to-milk conversion"],
     ],
     tags: ["HF Female Calves","Gir", "Sahiwal"],
@@ -48,9 +47,8 @@ const products = [
     badgeLeft: "Elite Genomic Index",
     badgeRight: "IVF & Embryo Transfer",
     title: "High-Yield Cattle Genes",
-    desc: "Next-generation IVF embryos, elite donor genetics, and genomic trait selection engineered for 35L–50L+ peak daily milk yield, A2A2 beta-casein purity, and mastitis resilience.",
+    desc: "Next-generation IVF embryos and genomic trait selection engineered for 35L–50L+ peak daily milk yield, A2A2 beta-casein purity, and mastitis resilience.",
     features: [
-      ["+45% Lactation Yield Potential", "from top 1% genomic donor dams"],
       ["A2A2 Beta-Casein & High Fat/SNF", "genetic marker selection"],
       ["On-Farm Embryo Transfer (ET)", "& genomic herd profiling support"],
     ],

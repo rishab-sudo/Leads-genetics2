@@ -199,7 +199,7 @@ export default function HeroScrollSection() {
               data, computation, biology, and field decisions into a single
               continuous loop.
             </p>
-             <Button to="/contact" variant="primary" size="large" className="cta">
+             <Button to="/contact" variant="secondary" size="large" className="cta">
               Contact Us
             </Button>
           </div>
@@ -263,7 +263,7 @@ export default function HeroScrollSection() {
           <div className="quote-box">
             <p>
               This integrated approach allows Leads Genetics to build toward
-              a continuously improving cattle population — where each
+              a continuously improving cattle population - where each
               generation provides new genomic and phenotypic information
               that strengthens the selection decisions for the next.
             </p>

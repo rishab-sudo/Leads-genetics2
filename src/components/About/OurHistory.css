@@ -7,9 +7,10 @@
 .lg-history {
   width: 100%;
   padding: 4rem 1.5rem;
-  color: #102a43;
-  background: #fafafa;
-;
+  color: #ffffff;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(34, 211, 238, 0.12), transparent 60%),
+    linear-gradient(160deg, #184a8f, #0c2b57);
 }
 
 .lg-history-inner {
@@ -29,35 +30,37 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  margin-bottom: 10px;
   padding: 7px 14px;
-  border: 2px solid #b7e9d3;
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 30px;
-  background: #2564eb21;
-  color: #2563eb;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.6px;
-  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
-.lg-history-heading {
+/* font-size/family/weight come from .section-heading in App.css */
+.lg-history .lg-history-heading {
   margin: 0 auto 1rem;
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 600;
-  line-height: 1.12;
-  letter-spacing: -0.02em;
-  color: #102a43;
+  color: #ffffff;
 }
 
 .lg-history-lede {
   max-width: 620px;
   margin: 0 auto;
+  color: #ffffff;
   font-size: 1rem;
   line-height: 1.55;
-  color: #4b6580;
 }
 
-/* ===== TIMELINE (desktop: 6 columns) ===== */
+/* ===== TIMELINE ===== */
+.lg-history-timeline-wrapper {
+  position: relative;
+}
+
 .lg-history-timeline {
   position: relative;
   display: grid;
@@ -68,7 +71,7 @@
   list-style: none;
 }
 
-/* the two animated dashed lines */
+/* Dashed base lines (drifting, glowing) */
 .lg-history-timeline::before,
 .lg-history-timeline::after {
   content: "";
@@ -77,18 +80,72 @@
   right: 2%;
   height: 2px;
   z-index: 0;
+  filter: drop-shadow(0 0 4px rgba(34, 211, 238, 0.7));
 }
 
 .lg-history-timeline::before {
   top: 50%;
-  background: repeating-linear-gradient(to right, #3b82d0 0 10px, transparent 10px 16px);
+  background: repeating-linear-gradient(
+    to right,
+    rgba(34, 211, 238, 0.65) 0 10px,
+    transparent 10px 16px
+  );
   animation: lg-drift 6s linear infinite;
 }
 
 .lg-history-timeline::after {
   top: calc(50% + 5px);
-  background: repeating-linear-gradient(to right, #5b9fe3 0 10px, transparent 10px 16px);
+  background: repeating-linear-gradient(
+    to right,
+    rgba(125, 211, 252, 0.5) 0 10px,
+    transparent 10px 16px
+  );
   animation: lg-drift-reverse 6s linear infinite;
+}
+
+/* Electric pulses travelling on top of both lines */
+.lg-history-timeline-wrapper::before,
+.lg-history-timeline-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 2%;
+  right: 2%;
+  height: 2px;
+  z-index: 1;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: 22% 100%;
+  filter: drop-shadow(0 0 5px #22d3ee) drop-shadow(0 0 12px rgba(34, 211, 238, 0.7));
+}
+
+.lg-history-timeline-wrapper::before {
+  top: 50%;
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    #67e8f9 40%,
+    #ecfeff 50%,
+    #67e8f9 60%,
+    transparent
+  );
+  animation:
+    lg-pulse 3.2s linear infinite,
+    lg-flicker 1.7s linear infinite;
+}
+
+.lg-history-timeline-wrapper::after {
+  top: calc(50% + 5px);
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    #7dd3fc 40%,
+    #f0f9ff 50%,
+    #7dd3fc 60%,
+    transparent
+  );
+  animation:
+    lg-pulse-reverse 4.1s linear infinite,
+    lg-flicker 2.3s linear infinite;
 }
 
 @keyframes lg-drift {
@@ -99,6 +156,29 @@
 @keyframes lg-drift-reverse {
   from { background-position-x: 32px; }
   to   { background-position-x: 0; }
+}
+
+@keyframes lg-pulse {
+  from { background-position: 0% 0; }
+  to   { background-position: 100% 0; }
+}
+
+@keyframes lg-pulse-reverse {
+  from { background-position: 100% 0; }
+  to   { background-position: 0% 0; }
+}
+
+@keyframes lg-pulse-vertical {
+  from { background-position: 0 0%; }
+  to   { background-position: 0 100%; }
+}
+
+@keyframes lg-flicker {
+  0%, 100% { opacity: 1; }
+  8%       { opacity: 0.55; }
+  12%      { opacity: 1; }
+  46%      { opacity: 0.7; }
+  50%      { opacity: 1; }
 }
 
 /* ===== ITEM ===== */
@@ -121,7 +201,7 @@
   width: 1px;
   height: 45px;
   z-index: 1;
-  background: #b8d7f7;
+  background: rgba(255, 255, 255, 0.5);
   transform: translateX(-50%);
 }
 
@@ -140,28 +220,33 @@
   justify-content: center;
   width: 42px;
   height: 42px;
-  background: #fff;
-  border: 2px solid #3b82d0;
+  background: #0c2b57;
+  border: 2px solid #22d3ee;
   border-radius: 50%;
-  box-shadow: 0 0 0 5px #f4f9ff;
+  box-shadow:
+    0 0 0 5px rgba(34, 211, 238, 0.12),
+    0 0 16px rgba(34, 211, 238, 0.55);
   transform: translate(-50%, -50%);
 }
 
 .lg-history-node-tag {
+  color: #67e8f9;
   font-size: 0.65rem;
   font-weight: 500;
-  color: #3b82d0;
 }
 
 .lg-history-item:nth-child(even) .lg-history-node {
-  border-color: #5b9fe3;
+  border-color: #38bdf8;
+  box-shadow:
+    0 0 0 5px rgba(56, 189, 248, 0.12),
+    0 0 16px rgba(56, 189, 248, 0.5);
 }
 
 .lg-history-item:nth-child(even) .lg-history-node-tag {
-  color: #5b9fe3;
+  color: #7dd3fc;
 }
 
-/* ===== CARD ===== */
+/* ===== CARD (white) ===== */
 .lg-history-card {
   position: absolute;
   left: 7px;
@@ -169,15 +254,18 @@
   z-index: 2;
   padding: 1rem;
   text-align: center;
-  background: #fff;
-  border: 1px solid #b8d7f7;
-  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(5, 20, 45, 0.25);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .lg-history-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(13, 43, 82, 0.34), 0 4px 10px rgba(13, 43, 82, 0.18);
+  box-shadow:
+    0 0 24px rgba(34, 211, 238, 0.35),
+    0 10px 28px rgba(5, 20, 45, 0.45);
 }
 
 .lg-history-item--top .lg-history-card {
@@ -188,36 +276,34 @@
   top: calc(50% + 45px);
 }
 
-.lg-history-year {
+/* Card text (dark, so it stays readable on white) */
+.lg-history-year,
+.lg-history-item:nth-child(even) .lg-history-year {
   display: block;
   margin-bottom: 0.3rem;
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: #5b9fe3;
-}
-
-.lg-history-item:nth-child(even) .lg-history-year {
   color: #2563b8;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
 .lg-history-title {
   margin: 0 0 0.4rem;
+  color: #102a43;
   font-size: 0.98rem;
   font-weight: 600;
   line-height: 1.2;
-  color: #102a43;
 }
 
 .lg-history-detail {
   margin: 0;
+  color: #4b6580;
   font-size: 0.78rem;
   line-height: 1.4;
-  color: #4b6580;
 }
 
 /* ===== RESPONSIVE: smaller screens ===== */
 
-/* Small laptops / large tablets: 6 columns get tight */
 @media (max-width: 1100px) {
   .lg-history-item {
     height: 420px;
@@ -253,7 +339,7 @@
     display: block;
   }
 
-  /* one vertical line, running through the node centers */
+  /* vertical dashed line through node centers */
   .lg-history-timeline::before {
     top: 0;
     bottom: 0;
@@ -261,11 +347,42 @@
     right: auto;
     width: 2px;
     height: auto;
-    background: repeating-linear-gradient(to bottom, #3b82d0 0 10px, transparent 10px 16px);
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(34, 211, 238, 0.65) 0 10px,
+      transparent 10px 16px
+    );
+    animation: none;
   }
 
   .lg-history-timeline::after,
   .lg-history-item::before {
+    display: none;
+  }
+
+  /* vertical electric pulse */
+  .lg-history-timeline-wrapper::before {
+    top: 0;
+    bottom: 0;
+    left: 18px;
+    right: auto;
+    width: 2px;
+    height: auto;
+    background-size: 100% 18%;
+    background-image: linear-gradient(
+      180deg,
+      transparent,
+      #67e8f9 40%,
+      #ecfeff 50%,
+      #67e8f9 60%,
+      transparent
+    );
+    animation:
+      lg-pulse-vertical 3.2s linear infinite,
+      lg-flicker 1.7s linear infinite;
+  }
+
+  .lg-history-timeline-wrapper::after {
     display: none;
   }
 
@@ -306,10 +423,6 @@
 
 /* Small phones */
 @media (max-width: 400px) {
-  .lg-history-heading {
-    font-size: 1.8rem;
-  }
-
   .lg-history-lede {
     font-size: 0.88rem;
   }
@@ -331,7 +444,6 @@
 
 /* ===== RESPONSIVE: bigger screens ===== */
 
-/* Large desktops */
 @media (min-width: 1600px) {
   .lg-history {
     padding: 5rem 2rem;
@@ -354,7 +466,6 @@
   }
 }
 
-/* Full HD */
 @media (min-width: 1920px) {
   .lg-history {
     padding: 6rem 2rem;
@@ -385,7 +496,8 @@
     padding: 1.25rem;
   }
 
-  .lg-history-year {
+  .lg-history-year,
+  .lg-history-item:nth-child(even) .lg-history-year {
     font-size: 0.8rem;
   }
 
@@ -407,7 +519,6 @@
   }
 }
 
-/* 2K */
 @media (min-width: 2560px) {
   .lg-history {
     padding: 7rem 2rem;
@@ -439,7 +550,8 @@
     padding: 1.6rem;
   }
 
-  .lg-history-year {
+  .lg-history-year,
+  .lg-history-item:nth-child(even) .lg-history-year {
     font-size: 1rem;
   }
 
@@ -461,7 +573,6 @@
   }
 }
 
-/* 4K */
 @media (min-width: 3200px) {
   .lg-history {
     padding: 8rem 2rem;
@@ -493,7 +604,8 @@
     padding: 2rem;
   }
 
-  .lg-history-year {
+  .lg-history-year,
+  .lg-history-item:nth-child(even) .lg-history-year {
     font-size: 1.2rem;
   }
 
@@ -518,7 +630,9 @@
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
   .lg-history-timeline::before,
-  .lg-history-timeline::after {
+  .lg-history-timeline::after,
+  .lg-history-timeline-wrapper::before,
+  .lg-history-timeline-wrapper::after {
     animation: none;
   }
 

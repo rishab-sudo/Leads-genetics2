@@ -194,14 +194,14 @@ export default function OurStory() {
 
           <motion.div className="os-story-content" variants={v.stagger}>
             <motion.span className="os-story-eyebrow" variants={v.fadeUp}>
-              Our Story
+              Leads Genetics
             </motion.span>
             <motion.h2
               id="os-story-heading"
               className="section-heading os-story-title"
               variants={v.fadeUp}
             >
-              Building the Genomics Platform for Cattle Improvement
+              Next-Generation Sequencing for a Better Tomorrow
             </motion.h2>
             <motion.p className="page-text os-story-text" variants={v.fadeUp}>
               Leads Genetics is the next chapter in the evolution of a long-standing agricultural enterprise rooted in the BL Agro / Leads Group of Companies. With deep experience in agriculture, food, dairy-linked value chains, and farmer-oriented businesses, the Group brings an understanding of Indian agriculture that extends beyond the laboratory - into farms, supply chains, producers, and the realities of improving productivity at scale.

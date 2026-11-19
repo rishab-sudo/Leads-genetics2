@@ -13,7 +13,7 @@ const cards = [
     theme: "mission",
     title:
       "To accelerate the genetic improvement of Indian cattle through genomics.",
-    text: "Our mission is to make genomic selection a practical and scalable tool for improving India's dairy and livestock populations — translating genetic data into better breeding decisions that shorten the improvement cycle for every generation.",
+    text: "Our mission is to make genomic selection a practical and scalable tool for improving India's dairy and livestock populations - translating genetic data into better breeding decisions that shorten the improvement cycle for every generation.",
     stats: [
       {
         value: "1B+",
@@ -32,7 +32,7 @@ const cards = [
     index: "02",
     theme: "vision",
     title:
-      "To build a genomically improved Indian cattle population — healthier, more productive, better adapted.",
+      "To build a genomically improved Indian cattle population - healthier, more productive, better adapted.",
     text: "Leads Genetics is a biotech company working at the intersection of genetics, genomics, artificial intelligence, and advanced research. The company develops innovative solutions across cattle, plants, and human genetics, translating advances in genomic science and AI into real-world applications across agriculture, livestock, and human health.",
   },
 ];
@@ -87,7 +87,7 @@ const Foundation = () => (
 
       <p className="page-text">
         Rather than treating cattle as sequencing samples, Leads Genetics views
-        each animal as part of a larger production system — with a genome,
+        each animal as part of a larger production system - with a genome,
         phenotype, pedigree, health history, reproductive history, environment,
         and economic value.
       </p>

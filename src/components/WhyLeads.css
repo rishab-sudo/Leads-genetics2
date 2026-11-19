@@ -5,9 +5,9 @@
 
 .wcu-section {
   width: 100%;
-  padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1rem, 4vw, 3rem);
+  padding: 35px 0px;
   box-sizing: border-box;
-  background: #f8fafc;
+  background: #f3f6f9;
   color: #0f172a;
   font-family: "Inter", "Segoe UI", Arial, sans-serif;
 }
@@ -24,7 +24,7 @@
 
 .wcu-heading {
   width: 100%;
-  max-width: 760px;
+  max-width: 75%;
   margin: 0 auto clamp(2.5rem, 5vw, 3.5rem);
   text-align: center;
 }

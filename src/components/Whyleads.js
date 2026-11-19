@@ -143,8 +143,8 @@ export default function WhyChooseUs() {
           </span>
 
           <h2 className="wcu-title section-heading">
-            One unbroken chain of custody — from livestock farm to
-            high-throughput genomics.
+            From Livestock to
+            high throughput genomics.
           </h2>
 
           <p className="wcu-intro">

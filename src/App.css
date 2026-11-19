@@ -28,6 +28,7 @@ body,
     font-family: 'Cormorant Garamond' !important;
 margin-bottom: 15px;
   padding: 0;
+  text-transform: capitalize !important;
 }
 p {
   font-family: "Libre Baskerville", serif !important;

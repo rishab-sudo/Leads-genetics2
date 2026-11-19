@@ -77,12 +77,25 @@
 .h-about-title {
   margin: 0 0 20px;
   line-height: 1.15;
-  color: #2563EB;
+
+  /* fallback if background-clip is unsupported */
+  color: #2563eb;
+
+  background-image: linear-gradient(
+    135deg,
+    #0b1220 0%,
+    #0f2a5c 35%,
+    #2563eb 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .h-about-title-accent {
   display: block;
-  color: #15803D;
+  color: inherit;
+  -webkit-text-fill-color: transparent;
 }
 
 .h-about-text {
