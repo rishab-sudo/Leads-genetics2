@@ -79,8 +79,18 @@ align-items: center;
 }
 
 .zebu-snp-highlight-label {
-  color: #2d8b61;
-  letter-spacing: 0.7px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border: 2px solid #b7e9d3;
+  border-radius: 30px;
+  background: #2564eb21;
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin-bottom: 10px;
 }
 
 .zebu-snp-highlight-text {
@@ -98,7 +108,7 @@ align-items: center;
 
   border-radius: 5px;
 
-  background: #062650;
+  background: #1D4ED8;
 
   box-shadow: 0 14px 35px rgba(6, 38, 80, 0.13);
 }
@@ -247,12 +257,18 @@ align-items: center;
 }
 
 .genomic-architecture-eyebrow {
-  display: inline-block;
-  margin-bottom: 9px;
-
-  color: #748187;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border: 2px solid #b7e9d3;
+  border-radius: 30px;
+  background: #2564eb21;
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin-bottom: 10px;
 }
 
 .genomic-architecture-header .section-heading {

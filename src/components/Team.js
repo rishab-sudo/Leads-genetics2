@@ -121,6 +121,10 @@ const Team = () => {
         ================================= */}
         <div className="team-top-bar">
           <div className="team-heading">
+              <span className="teams-video-eyebrow">
+          <span className="team-eyebrow-dot"></span>
+          Our Leaders
+        </span>
             <h2 className="team-title section-heading">
               Experts Behind Every Discovery
             </h2>

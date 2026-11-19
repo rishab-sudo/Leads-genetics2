@@ -136,7 +136,7 @@ export default function Services() {
       <div className="container-fluid">
         <div className="services-header">
           <span className="services-header__label">What We Offer</span>
-          <h2 className="services-header__title">
+          <h2 className="services-header__title section-heading">
             Our <strong>Genomics Services</strong>
           </h2>
           <p className="services-header__subtitle">

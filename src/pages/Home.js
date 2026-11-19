@@ -19,6 +19,7 @@ import WhyUs from "../components/WhyUs";
 import SectionDivider from "../components/SectionDivider";
 import Partners from "../components/Partners";
 import ChipVideo from "../components/ChipVideo";
+import HomeProduct from "../components/HomeProduct";
 
 const Home = () => {
   return (
@@ -68,6 +69,12 @@ const Home = () => {
       <Reveal>
         <Team />
       </Reveal>
+<Reveal>
+
+<HomeProduct/>
+</Reveal>
+
+
 
       <Reveal>
         <ChipVideo />

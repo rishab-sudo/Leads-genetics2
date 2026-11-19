@@ -1,0 +1,234 @@
+/* Section */
+.lgomics-section {
+  width: 100%;
+  padding: 64px 0 72px;
+  background-color: #f3f6f9;
+  box-sizing: border-box;
+}
+
+.lgomics-section *,
+.lgomics-section *::before,
+.lgomics-section *::after {
+  box-sizing: border-box;
+}
+
+/* Wrapper: own width, no dependency on global .h-container */
+.lgomics-wrap {
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+/* Intro (font-size/family/weight come from .section-heading in App.css) */
+.lgomics-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 800px;
+  margin-bottom: 44px;
+}
+
+.lgomics-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding: 7px 14px;
+  border: 2px solid #b7e9d3;
+  border-radius: 30px;
+  background: #2564eb21;
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.lgomics-heading {
+  margin: 0 0 14px;
+  color: #0f172a;
+  text-align: left;
+}
+
+.lgomics-subheading {
+  max-width: 650px;
+  margin: 0;
+  color: #5b6675;
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: left;
+}
+
+/* Grid */
+.lgomics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Card (same tokens as InHouse card) */
+.lgomics-card {
+  min-width: 0;
+  padding: 28px 30px 32px;
+  border: 1px solid #e3e9f0;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.lgomics-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(37, 99, 184, 0.14);
+}
+
+.lgomics-card-title {
+  margin: 0 0 10px;
+  color: #0f172a;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.lgomics-card-desc {
+  margin: 0 0 20px;
+  color: #5b6675;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* List */
+.lgomics-list {
+  margin: 0;
+  padding-left: 19px;
+  list-style-type: disc;
+}
+
+.lgomics-list-item {
+  margin-bottom: 9px;
+  color: #5b6675;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.lgomics-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.lgomics-list-item::marker {
+  color: #2563b8;
+}
+
+/* Tags (same tokens as InHouse pill) */
+.lgomics-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.lgomics-tag {
+  display: inline-block;
+  padding: 5px 12px;
+  border: 1px solid #b9d0ee;
+  border-radius: 6px;
+  background-color: #eaf1fb;
+  color: #2563b8;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: default;
+  transition: background-color 0.25s ease, color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.lgomics-tag:hover {
+  border-color: #2563b8;
+  background-color: #2563b8;
+  color: #ffffff;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .lgomics-section {
+    padding: 52px 0 60px;
+  }
+
+  .lgomics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lgomics-card {
+    padding: 26px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .lgomics-section {
+    padding: 48px 0 56px;
+  }
+
+  .lgomics-wrap {
+    width: calc(100% - 36px);
+  }
+
+  .lgomics-intro {
+    margin-bottom: 28px;
+  }
+
+  .lgomics-subheading,
+  .lgomics-card-desc {
+    font-size: 14px;
+  }
+
+  .lgomics-grid {
+    gap: 18px;
+  }
+
+  .lgomics-card {
+    padding: 23px 20px;
+    border-radius: 18px;
+  }
+
+  .lgomics-card-title {
+    font-size: 20px;
+  }
+
+  .lgomics-list {
+    padding-left: 18px;
+  }
+
+  .lgomics-list-item {
+    margin-bottom: 10px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+
+  .lgomics-tags {
+    gap: 7px;
+    margin-top: 20px;
+  }
+
+  .lgomics-card:hover {
+    transform: none;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 380px) {
+  .lgomics-card {
+    padding: 20px 16px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .lgomics-card,
+  .lgomics-tag {
+    transition: none;
+  }
+
+  .lgomics-card:hover {
+    transform: none;
+  }
+}

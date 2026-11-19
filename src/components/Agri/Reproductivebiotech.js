@@ -33,11 +33,11 @@ const items = [
 
 export default function ReproductiveBiotech() {
   return (
-    <section className="repro-section" aria-labelledby="repro-eyebrow">
+    <section className="repro-section">
       <div className="container-fluid">
-        <p className="repro-eyebrow" id="repro-eyebrow">
+        <span className="repro-eyebrow" id="repro-eyebrow">
           Reproductive Biotechnology &amp; Genomic Tools
-        </p>
+        </span>
 
         {items.map((item) => {
           const media = (

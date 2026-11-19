@@ -30,12 +30,18 @@
 }
 
 .lc-eyebrow {
-  display: block;
-  margin-bottom: 12px;
-  color: #168647;
-  font-size: 12px;
+ display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border: 2px solid #b7e9d3;
+  border-radius: 30px;
+  background: #2564eb21;
+  color: #2563eb;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.6px;
+  margin-bottom: 10px;
 }
 
 .lc-title {

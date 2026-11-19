@@ -22,22 +22,25 @@
 
 /* ===== EYEBROW ===== */
 .repro-eyebrow {
-  display: flex;
+   display: inline-flex;
   align-items: center;
-  gap: 0.75em;
-  margin: 0 0 2.5em;
-  font-size: 0.8em;
+  gap: 8px;
+  padding: 7px 14px;
+  border: 2px solid #b7e9d3;
+  border-radius: 30px;
+  background: #2564eb21;
+  color: #2563eb;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #168647;
+  letter-spacing: 0.6px;
+  margin-bottom: 10px;
 }
 
 .repro-eyebrow::before {
   content: "";
   width: 2.5em;
   height: 2px;
-  background: #168647;
+  background: #2563eb;
 }
 
 /* ===== ROW (image + text) ===== */

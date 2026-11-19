@@ -1,6 +1,6 @@
 .chip-video-section {
   width: 85%;
-  height: 80vh;
+  height: 100%;
   margin: 2.5% auto;
   padding: 0;
   border-radius: 8px;
@@ -15,3 +15,37 @@ width: 100%;
   object-fit: cover;
   object-position: center;
 } 
+
+.chip-video-heading {
+  width: 100%;
+  text-align: left;
+  padding: 20px 0;
+}
+
+
+.chip-video-eyebrow {
+    display: block;
+  padding: 6px 14px;
+  width: fit-content !important;
+  border-radius: 999px;
+  border: none;
+  background-color: #2564eb21;
+  color: #2563eb;
+  margin-bottom: 7px;
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.chip-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #009b70;
+}
+
+.chip-video-heading h2 {
+  margin: 0;
+}

@@ -19,13 +19,18 @@
 }
 
 .services-header__label {
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-  color: #0f6e56;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 8px;
+display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border: 2px solid #b7e9d3;
+  border-radius: 30px;
+  background: #2564eb21;
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin-bottom: 10px;
 }
 
 .services-header__title {
@@ -37,7 +42,7 @@
 
 .services-header__title strong {
   font-weight: 700;
-  color: #0f6e56;
+  color: #2563eb;
 }
 
 .services-header__subtitle {
@@ -52,7 +57,7 @@
   display: flex;
   gap: 8px;
   padding: 4px;
-  background: #e1f5ee;
+  background: #e1ecf5;
   border: 1px solid #9fe1cb;
   border-radius: 999px;
   width: fit-content;

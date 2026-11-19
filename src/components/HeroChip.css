@@ -13,7 +13,7 @@
     /* neeche ka fade: white section me smoothly mil jata hai */
     linear-gradient(to bottom, rgba(255, 255, 255, 0) calc(100% - 90px), #ffffff 100%),
     /* upar navbar ke peeche dark blue patti */
-    linear-gradient(to bottom, #0a1f45 0, #0f2d5c var(--nav-band), transparent var(--nav-band)),
+    linear-gradient(to bottom, #1D4ED8 0, #1D4ED8 var(--nav-band), transparent var(--nav-band)),
     /* baaki hero ka light blue */
     linear-gradient(135deg, #dce9fb80 0%, #c4d9f518 100%);
 }

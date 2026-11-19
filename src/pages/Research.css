@@ -1,40 +1,54 @@
 /* =========================================
-   WORKFLOW SECTION — ORIGINAL THEME
+   SHARED (InHouse design tokens)
 ========================================= */
 
-.workflow-section {
-  width: 100%;
-  padding: 48px 0 56px;
-  /* background-color: #e4f2ff; */
-    background: rgba(234, 236, 238, 0.459);
+.research-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border: 2px solid #b7e9d3;
+  border-radius: 30px;
+  background: #2564eb21;
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin-bottom: 10px;
 }
 
-.workflow-container {
-  margin: auto;
+/* =========================================
+   WORKFLOW SECTION
+========================================= */
+
+.workflo-section {
+  padding: 64px 0 72px;
+  background-color: #ffffff;
 }
 
-/* Heading and subheading */
+/* Heading (font-size/family/weight come from .section-heading in App.css) */
 .workflow-intro {
-  margin-bottom: 46px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 800px;
+  margin-bottom: 44px;
 }
 
-.section-heading.workflow-heading {
-  max-width: 570px;
-  margin: 0;
-  color: #101a18;
-  font-size: clamp(30px, 3.2vw, 44px);
-  line-height: 1.12;
+.workflow-heading {
+  margin: 0 0 14px;
+  color: #0f172a;
 }
 
 .page-text.workflow-subheading {
   max-width: 590px;
   margin: 0;
-  color: #596460;
-  font-size: 17px;
+  color: #5b6675;
+  font-size: 15px;
   line-height: 1.65;
 }
 
-/* Timeline structure */
+/* Timeline */
 .workflow-timeline {
   position: relative;
   display: grid;
@@ -49,7 +63,7 @@
   left: 14px;
   right: 14px;
   height: 2px;
-  background-color: #b9c2bf;
+  background-color: #e3e9f0;
 }
 
 .workflow-step {
@@ -64,13 +78,13 @@
   justify-content: center;
   width: 28px;
   height: 28px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   border: 2px solid;
   border-radius: 50%;
-  background-color: #e7efed;
+  background-color: #ffffff;
   font-size: 13px;
   line-height: 1;
-  color: #101a18;
+  color: #0f172a;
 }
 
 .workflow-number-green {
@@ -90,29 +104,29 @@
 }
 
 .workflow-number-dark {
-  border-color: #101a18;
-  background-color: #101a18;
+  border-color: #0f172a;
+  background-color: #0f172a;
   color: #ffffff;
 }
 
 .workflow-step-title {
   margin: 0 0 8px;
-  color: #14201d;
+  color: #0f172a;
   font-size: 17px;
+  font-weight: 700;
   line-height: 1.35;
 }
 
 .page-text.workflow-step-description {
   margin: 0;
-  color: #5b6561;
+  color: #5b6675;
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 /* Workflow Tablet */
 @media (max-width: 991px) {
   .workflow-intro {
-    gap: 28px;
     margin-bottom: 38px;
   }
 
@@ -132,26 +146,15 @@
 /* Workflow Mobile */
 @media (max-width: 767px) {
   .workflow-section {
-    padding: 40px 0;
-  }
-
-  .workflow-container {
-    padding: 0 20px;
+    padding: 48px 0 56px;
   }
 
   .workflow-intro {
-    grid-template-columns: 1fr;
-    gap: 16px;
     margin-bottom: 32px;
   }
 
-  .section-heading.workflow-heading {
-    font-size: clamp(29px, 7vw, 36px);
-    line-height: 1.15;
-  }
-
   .page-text.workflow-subheading {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .workflow-timeline {
@@ -181,112 +184,83 @@
   }
 
   .workflow-step-title {
-    font-size: 17px;
     margin-bottom: 6px;
+    font-size: 17px;
   }
 
   .page-text.workflow-step-description {
     font-size: 14px;
-    line-height: 1.65;
   }
 }
 
-
 /* =========================================
-   OMICS SECTION — LIGHT BLUE THEME
+   OMICS SECTION
 ========================================= */
 
 .omics-section {
   width: 100%;
-  padding: 64px 0;
-  /* background-color: #e4f2ff; */
-    background: rgba(234, 236, 238, 0.459);
-  color: #16344f;
+  padding: 64px 0 72px;
+  background-color: #f3f6f9;
 }
 
-.omics-container {
-  margin: auto;
-}
-
-/* Heading and subheading */
+/* Heading (font-size/family/weight come from .section-heading in App.css) */
 .omics-intro {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 18px;
-  margin-bottom: 42px;
+  max-width: 800px;
+  margin-bottom: 44px;
 }
 
-.section-heading.omics-heading {
-  color: #16344f;
-  line-height: 1.12;
+.omics-heading {
+  margin: 0 0 14px;
+  color: #0f172a;
 }
 
 .page-text.omics-subheading {
   max-width: 850px;
   margin: 0;
-  color: #526c82;
-  font-size: 17px;
-  line-height: 1.7;
+  color: #5b6675;
+  font-size: 15px;
+  line-height: 1.65;
 }
 
-/* =========================================
-   OMICS CARDS (always white)
-========================================= */
-
+/* Cards (same as .inhouse-card) */
 .omics-card {
   width: 100%;
-  padding: 30px 32px;
-  border: 1px solid #d1e2f0;
-  border-radius: 22px;
+  padding: 28px 30px 32px;
+  border: 1px solid #e3e9f0;
+  border-radius: 20px;
   background-color: #ffffff;
-  color: #16344f;
-  box-shadow: 0 4px 16px rgba(35, 78, 112, 0.06);
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease,
-    transform 0.3s ease;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .omics-card + .omics-card {
   margin-top: 24px;
 }
 
-.omics-card-primary,
-.omics-card-secondary {
-  background-color: #ffffff;
-  border-color: #d1e2f0;
-  color: #16344f;
-}
-
-/* Card hover: stay white, green accent border + lift */
-.omics-card:hover,
-.omics-card-primary:hover,
-.omics-card-secondary:hover {
-  background-color: #ffffff;
-  border-color: #39bea8;
-  box-shadow: 0 12px 28px rgba(57, 190, 168, 0.18);
+.omics-card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(37, 99, 184, 0.14);
 }
 
 .omics-card-title {
   margin: 0 0 10px;
-  color: #16344f;
-  font-size: 25px;
+  color: #0f172a;
+  font-size: 22px;
+  font-weight: 700;
   line-height: 1.3;
 }
 
 .page-text.omics-card-description {
   margin: 0 0 20px;
-  color: #526c82;
-  font-size: 16px;
-  line-height: 1.7;
+  color: #5b6675;
+  font-size: 15px;
+  line-height: 1.65;
 }
 
-/* =========================================
-   BULLET LISTS
-========================================= */
-
+/* Bullet lists */
 .omics-list {
   margin: 0;
   padding-left: 19px;
@@ -294,8 +268,8 @@
 }
 
 .omics-list-item {
-  padding-left: 0;
   margin-bottom: 9px;
+  color: #5b6675;
   font-size: 15px;
   line-height: 1.65;
 }
@@ -305,17 +279,10 @@
 }
 
 .omics-list-item::marker {
-  color: #6b91ac;
+  color: #2563b8;
 }
 
-.omics-card:hover .omics-list-item::marker {
-  color: #39bea8;
-}
-
-/* =========================================
-   OMICS LAYER TAGS (green on pill hover)
-========================================= */
-
+/* Layer tags (same as .inhouse-card-pill) */
 .omics-layer-tags {
   display: flex;
   flex-wrap: wrap;
@@ -324,35 +291,27 @@
 }
 
 .omics-layer-tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background-color: #e5f2fc;
-  border: 1px solid #c6deef;
-  color: #245371;
-  font-size: 13px;
-  line-height: 1.3;
+  display: inline-block;
+  padding: 5px 12px;
+  border: 1px solid #b9d0ee;
+  border-radius: 6px;
+  background-color: #eaf1fb;
+  color: #2563b8;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 12px;
+  font-weight: 600;
   cursor: default;
-  transition:
-    background-color 0.25s ease,
-    border-color 0.25s ease,
-    color 0.25s ease,
-    transform 0.25s ease;
+  transition: background-color 0.25s ease, color 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .omics-layer-tag:hover {
-  background-color: #39bea8;
-  border-color: #39bea8;
-  color: #09201b;
-  transform: translateY(-2px);
+  border-color: #2563b8;
+  background-color: #2563b8;
+  color: #ffffff;
 }
 
-/* =========================================
-   OMICS TABLET
-========================================= */
-
+/* Omics Tablet */
 @media (max-width: 991px) {
   .omics-section {
     padding: 52px 0;
@@ -361,42 +320,20 @@
   .omics-card {
     padding: 26px;
   }
-
-  .section-heading.omics-heading {
-    font-size: clamp(30px, 4.5vw, 40px);
-  }
-
-  .page-text.omics-subheading {
-    font-size: 16px;
-  }
 }
 
-/* =========================================
-   OMICS MOBILE
-========================================= */
-
+/* Omics Mobile */
 @media (max-width: 767px) {
   .omics-section {
-    padding: 42px 0;
-  }
-
-  .omics-container {
-    padding: 0 18px;
+    padding: 48px 0 56px;
   }
 
   .omics-intro {
-    gap: 14px;
     margin-bottom: 28px;
   }
 
-  .section-heading.omics-heading {
-    font-size: clamp(28px, 7vw, 36px);
-    line-height: 1.18;
-  }
-
   .page-text.omics-subheading {
-    font-size: 15px;
-    line-height: 1.65;
+    font-size: 14px;
   }
 
   .omics-card {
@@ -409,12 +346,11 @@
   }
 
   .omics-card-title {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .page-text.omics-card-description {
-    font-size: 15px;
-    line-height: 1.65;
+    font-size: 14px;
   }
 
   .omics-list {
@@ -422,9 +358,8 @@
   }
 
   .omics-list-item {
-    font-size: 14px;
-    line-height: 1.65;
     margin-bottom: 10px;
+    font-size: 14px;
     overflow-wrap: anywhere;
   }
 
@@ -433,51 +368,26 @@
     margin-top: 20px;
   }
 
-  .omics-layer-tag {
-    padding: 7px 11px;
-    font-size: 12px;
-  }
-
-  /* Avoid hover movement on touch layouts */
-  .omics-card:hover,
-  .omics-card-primary:hover,
-  .omics-card-secondary:hover,
-  .omics-layer-tag:hover {
+  .omics-card:hover {
     transform: none;
   }
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
+/* Small Mobile */
 @media (max-width: 380px) {
-  .omics-container {
-    padding: 0 14px;
-  }
-
   .omics-card {
     padding: 20px 16px;
   }
-
-  .omics-layer-tag {
-    padding: 7px 9px;
-  }
 }
 
-/* =========================================
-   ACCESSIBILITY
-========================================= */
-
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   .omics-card,
-  .omics-layer-tag,
-  .omics-list-item::marker {
+  .omics-layer-tag {
     transition: none;
   }
 
-  .omics-card:hover,
-  .omics-layer-tag:hover {
+  .omics-card:hover {
     transform: none;
   }
 }

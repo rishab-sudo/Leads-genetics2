@@ -10,7 +10,7 @@ const TechnologyShowcase = () => {
       <div className="tss-bg-pattern" aria-hidden="true" />
 
       <header className="tss-header">
-        <h2 className="tss-heading" id="tss-title">Sequencing technology platforms</h2>
+        <h2 className="tss-heading section-heading" id="tss-title">Sequencing technology platforms</h2>
         <p className="tss-subheading">
           From raw sample to actionable insight, powered by industry-leading
           sequencing platforms.

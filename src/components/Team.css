@@ -528,3 +528,28 @@
   }
 
 }
+
+.teams-video-eyebrow {
+  display: block;
+  padding: 6px 14px;
+width: fit-content !important;
+  border-radius: 999px;
+background: #fbfbfb;
+  border: none;
+  background-color: #2564eb21;
+color: #0c2d63;
+margin-bottom: 7px;
+ font-size: 9px;
+ line-height: 1;
+  font-weight: 800;
+ letter-spacing: 0.13em;
+  text-transform: uppercase;
+ color: #2563eb;
+}
+
+.team-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #009b70;
+}

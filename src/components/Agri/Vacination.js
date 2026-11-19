@@ -56,9 +56,13 @@ function Vacination() {
   return (
     <section className="vacination">
       <div className="container-fluid vacination-container">
+        
         <div className="vacination-grid">
+          
           {/* LEFT: heading + vaccination schedule */}
           <div className="vacination-left">
+            
+                  
             <h2 className="section-heading">
               Tracking Livestock Genetics
             </h2>

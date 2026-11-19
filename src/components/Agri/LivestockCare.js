@@ -105,7 +105,7 @@ const LivestockCare = () => {
     <section className="lc-section">
       <Container>
         {/* Section Header */}
-        <div className="lc-intro">
+        <div className="lc-intro" id="Bull">
           <span className="lc-eyebrow">ZONE 2: CATTLE BREEDS & LIVESTOCK CARE</span>
 
           <h2 className="lc-title section-heading">

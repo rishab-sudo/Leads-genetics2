@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Button from "../Button";
 import "./QualityAssurance.css";
 
 const qualityModules = [
@@ -83,9 +83,9 @@ const QualityAssurance = () => {
               </p>
             </div>
 
-            <Link to="/contact" className="quality-cta-button">
-              Contact Us <span aria-hidden="true">→</span>
-            </Link>
+            <Button to="/contact" variant="primary" size="large">
+              Contact Us
+            </Button>
           </div>
         </div>
       </section>

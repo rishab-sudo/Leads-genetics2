@@ -86,8 +86,6 @@ export const Chip = () => {
 
             {/* Highlight Strip */}
             <div className="zebu-snp-highlight">
-              <span className="zebu-snp-highlight-dot"></span>
-
               <div className="zebu-snp-highlight-content">
                 <span className="zebu-snp-highlight-label">
                   GENOMIC PRECISION

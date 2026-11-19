@@ -33,15 +33,15 @@
   align-self: flex-start;
   padding: 8px 18px;
   border-radius: 999px;
-  background: #1f2d3d;
+  background: #2563EB;
   color: #ffffff;
   font-size: 14px;
   font-weight: 600;
 }
 
 .vacination-panel .vacination-label {
-  background: #99bcdf;
-  color: #1f2d3d;
+  background: #1D4ED8;
+  color: #fff;
 }
 
 /* green cards */

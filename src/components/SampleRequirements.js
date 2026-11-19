@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./SampleRequirements.css";
 
@@ -61,21 +60,23 @@ const sampleRequirements = [
 
 const SampleRequirements = () => {
   return (
-    <section className="sampleRequire">
-      <div className="sampleRequire-container h-container">
-        <div className="sampleRequire-header">
-          <h2 className="sampleRequire-title">
+    <section className="lgsample-section">
+      <div className="lgsample-wrap">
+        <header className="lgsample-intro">
+          <span className="lgsample-eyebrow">SAMPLE QC</span>
+
+          <h2 className="section-heading lgsample-heading">
             Sample requirements
           </h2>
 
-          <p className="sampleRequire-subtitle">
-            Minimum input and the QC gate each sample must pass
-            before library preparation.
+          <p className="lgsample-subheading">
+            Minimum input and the QC gate each sample must pass before library
+            preparation.
           </p>
-        </div>
+        </header>
 
-        <div className="sampleRequire-table-wrapper">
-          <table className="sampleRequire-table">
+        <div className="lgsample-table-wrap">
+          <table className="lgsample-table">
             <thead>
               <tr>
                 <th>Application</th>
@@ -86,11 +87,9 @@ const SampleRequirements = () => {
             </thead>
 
             <tbody>
-              {sampleRequirements.map((sample, index) => (
-                <tr key={index}>
-                  <td className="sampleRequire-application">
-                    {sample.application}
-                  </td>
+              {sampleRequirements.map((sample) => (
+                <tr key={sample.application}>
+                  <td className="lgsample-app">{sample.application}</td>
                   <td>{sample.input}</td>
                   <td>{sample.minimum}</td>
                   <td>{sample.qc}</td>
@@ -100,10 +99,10 @@ const SampleRequirements = () => {
           </table>
         </div>
 
-        <p className="sampleRequire-note">
-          Unsure whether your sample qualifies? Low-input, FFPE
-          and degraded samples can often be processed with
-          adapted protocols. Ask before shipping.
+        <p className="lgsample-note">
+          Unsure whether your sample qualifies? Low-input, FFPE and degraded
+          samples can often be processed with adapted protocols. Ask before
+          shipping.
         </p>
       </div>
     </section>

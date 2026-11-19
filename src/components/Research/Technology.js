@@ -11,7 +11,7 @@ const ResearchInfrastructure = () => {
       <div className="ari-bg-pattern" aria-hidden="true" />
 
       <header className="ari-header">
-        <h2 className="ari-heading" id="ari-title">Research infrastructure &amp; capabilities</h2>
+        <h2 className="ari-heading section-heading" id="ari-title">Research infrastructure &amp; capabilities</h2>
         <p className="ari-subheading">
           State-of-the-art technology powering genomic discoveries.
         </p>
