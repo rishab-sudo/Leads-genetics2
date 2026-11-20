@@ -27,9 +27,9 @@ const ResearchBanner = () => {
           SCIENCE • INNOVATION • DISCOVERY
         </span>
 
-        <h1 className="research-banner-title">
+        <h1 className="research-banner-title hero-heading">
           Advancing Science Through
-          <span> Genomic Research</span>
+        Genomic Research
         </h1>
 
         <p className="research-banner-description">

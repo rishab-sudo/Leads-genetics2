@@ -18,7 +18,7 @@ const AboutHero = () => {
       {/* Content (same container width as the other sections) */}
       <div className="AboutHero-inner">
         <div className="AboutHero-content section-heading">
-          <h1>Advancing Genomics for a Better Tomorrow</h1>
+          <h1>Advancing Genomics For a Better Tomorrow</h1>
           <p>
             Empowering healthcare, agriculture, and research through innovative
             genomic technologies and precision sequencing.

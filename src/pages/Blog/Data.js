@@ -35,7 +35,7 @@ export const blogs = [
       {
         heading: "Genomics: Understanding the Genetic Potential of Livestock",
         paragraphs: [
-          "Genomic evaluation uses DNA markers across the genome to estimate an animal’s Genomic Estimated Breeding Value (GEBV). A GEBV predicts genetic potential for traits such as milk production, fertility, growth and disease-related characteristics.",
+          "Genomic evaluation uses DNA edits across the genome to estimate an animal’s Genomic Estimated Breeding Value (GEBV). A GEBV predicts genetic potential for traits such as milk production, fertility, growth and disease-related characteristics.",
           "Because a calf can be genotyped soon after birth, breeders can assess candidates earlier than with progeny testing. Prediction accuracy depends on a representative reference population and reliable performance records. Read more in our guide to [genomic selection in cattle](/blog/genomic-selection-cattle-breeding)."
         ]
       },
@@ -45,7 +45,7 @@ export const blogs = [
           "Reproductive technologies help turn genetic information into breeding outcomes:"
         ],
         bullets: [
-          "[MOET](/moet) (Multiple Ovulation and Embryo Transfer): A genetically superior donor produces multiple embryos, which are transferred to recipient females, increasing the number of offspring from elite animals.",
+          "[MOET](/moet) (Multiple Ovulation and Embryo Transfer): A genetically superior donor produces multiple embryos, which are transferred to females calves, increasing the number of offspring from elite animals.",
           "OPU-IVF (Ovum Pick-Up and In Vitro Fertilisation): Oocytes are collected from live donors, fertilised in the laboratory and developed into embryos. OPU can be repeated and may be used with younger or hard-to-flush donors. See how it compares in [MOET alongside IVF](/moet#moet-alongside-ivf).",
           "[Sex-sorted semen](/agri-genomics#semen): Semen is sorted to increase the likelihood of female or male calves, helping breeders plan replacement heifers and target specific breeding goals."
         ]
@@ -67,7 +67,7 @@ export const blogs = [
       {
         heading: "Indigenous Cattle Genetics and Breeding in India",
         paragraphs: [
-          "India’s zebu (Bos indicus) breeds such as Gir, Sahiwal and Red Sindhi are valued for their adaptation to local conditions. Genomic tools developed for taurine cattle may not perform equally well in zebu populations, so breed-relevant markers and reference populations are important.",
+          "India’s zebu (Bos indicus) breeds such as Gir, Sahiwal are valued for their adaptation to local conditions. Genomic tools developed for taurine cattle may not perform equally well in zebu populations, so breed-relevant markers and reference populations are important.",
           "This is the focus of our [Zebu Cattle SNP Chip](/chip), designed to support genomic evaluation in indigenous cattle."
         ]
       },

@@ -5,7 +5,7 @@
 .blog-details-page {
   --details-navy: #12345b;
   --details-green: #229653;
-  --details-text: #536d82;
+  --details-text: #000;
   --details-border: #e1ecef;
 
   min-height: 100vh;

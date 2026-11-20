@@ -22,10 +22,10 @@ const ClinicalHero = () => {
       <div className="clinical-content container">
         <span className="hero-tag">CLINICAL GENOMICS</span>
 
-        <h1 className="hero-title">
+        <h1 className="hero-title hero-heading">
           Genomic insights for
           <br />
-          <span>every patient journey</span>
+          every patient journey
         </h1>
 
         <p className="hero-desc">

@@ -44,7 +44,7 @@ function Blog() {
 
         <div className="blog-hero-content">
 
-          <h1 className="section-heading ">
+          <h1 className="hero-heading ">
             Insights from the
             <br />
             World of Genomics
@@ -56,7 +56,7 @@ function Blog() {
             in agricultural and human genomics.
           </p>
 
-          <Button href="#latest-articles" variant="primary" size="large">
+          <Button href="#latest-articles" variant="secondary" size="small">
             Explore Articles ↘
           </Button>
         </div>
