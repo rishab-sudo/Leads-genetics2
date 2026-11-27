@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
@@ -11,8 +10,11 @@ const SOLUTION_PAGES = [
   "/moet",
   "/chip",
   "/genomics",
+  "/transcriptomics",
   "/epigenomics",
   "/technologies",
+  "/illumina",
+  "/pacbio",
 ];
 
 const HERO_PAGES = ["/", ...SOLUTION_PAGES];
@@ -43,11 +45,13 @@ const Navbar = () => {
   const [ddOpen, setDdOpen] = useState(false);
   const [subOpen, setSubOpen] = useState(false);
   const [researchSubOpen, setResearchSubOpen] = useState(false);
+  const [techSubOpen, setTechSubOpen] = useState(false);
 
   // Mobile accordions
   const [mobSolutionsOpen, setMobSolutionsOpen] = useState(false);
   const [mobAgriOpen, setMobAgriOpen] = useState(false);
   const [mobResearchOpen, setMobResearchOpen] = useState(false);
+  const [mobTechOpen, setMobTechOpen] = useState(false);
 
   const { pathname } = useLocation();
   const lastScrollY = useRef(0);
@@ -87,11 +91,13 @@ const Navbar = () => {
     setDdOpen(false);
     setSubOpen(false);
     setResearchSubOpen(false);
+    setTechSubOpen(false);
     setSidebarOpen(false);
 
     setMobSolutionsOpen(false);
     setMobAgriOpen(false);
     setMobResearchOpen(false);
+    setMobTechOpen(false);
   }, [pathname]);
 
   // Lock body scrolling while mobile sidebar is open
@@ -107,11 +113,13 @@ const Navbar = () => {
     setDdOpen(false);
     setSubOpen(false);
     setResearchSubOpen(false);
+    setTechSubOpen(false);
     setSidebarOpen(false);
 
     setMobSolutionsOpen(false);
     setMobAgriOpen(false);
     setMobResearchOpen(false);
+    setMobTechOpen(false);
   };
 
   return (
@@ -157,6 +165,7 @@ const Navbar = () => {
                 setDdOpen(false);
                 setSubOpen(false);
                 setResearchSubOpen(false);
+                setTechSubOpen(false);
               }}
             >
               <span
@@ -177,6 +186,7 @@ const Navbar = () => {
                   onMouseEnter={() => {
                     setSubOpen(true);
                     setResearchSubOpen(false);
+                    setTechSubOpen(false);
                   }}
                   onMouseLeave={() => setSubOpen(false)}
                 >
@@ -220,7 +230,10 @@ const Navbar = () => {
                     setResearchSubOpen(true);
                     setSubOpen(false);
                   }}
-                  onMouseLeave={() => setResearchSubOpen(false)}
+                  onMouseLeave={() => {
+                    setResearchSubOpen(false);
+                    setTechSubOpen(false);
+                  }}
                 >
                   <Link
                     to="/research-genomics"
@@ -236,16 +249,49 @@ const Navbar = () => {
                       researchSubOpen ? "show" : ""
                     }`}
                   >
-                                        <li>
+                    {/* RESEARCH TECHNOLOGIES (opens side panel) */}
+
+                    <li
+                      className="dropdown-item"
+                      onMouseEnter={() => setTechSubOpen(true)}
+                      onMouseLeave={() => setTechSubOpen(false)}
+                    >
                       <Link
                         to="/technologies"
                         className="dropdown-link"
                         onClick={closeMenus}
                       >
                         Research Technologies
+                        <Chevron points="9 6 15 12 9 18" />
                       </Link>
+
+                      <ul
+                        className={`submenu submenu-panel ${
+                          techSubOpen ? "show" : ""
+                        }`}
+                      >
+                        <li>
+                          <Link
+                            to="/illumina"
+                            className="dropdown-link"
+                            onClick={closeMenus}
+                          >
+                            Illumina NGS Services
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            to="/pacbio"
+                            className="dropdown-link"
+                            onClick={closeMenus}
+                          >
+                            PacBio Services
+                          </Link>
+                        </li>
+                      </ul>
                     </li>
-                    
+
                     <li>
                       <Link
                         to="/genomics"
@@ -258,6 +304,16 @@ const Navbar = () => {
 
                     <li>
                       <Link
+                        to="/transcriptomics"
+                        className="dropdown-link"
+                        onClick={closeMenus}
+                      >
+                        Transcriptomics
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
                         to="/epigenomics"
                         className="dropdown-link"
                         onClick={closeMenus}
@@ -265,9 +321,6 @@ const Navbar = () => {
                         Epigenomics
                       </Link>
                     </li>
-
-
-
                   </ul>
                 </li>
 
@@ -456,14 +509,47 @@ const Navbar = () => {
                     mobResearchOpen ? "open" : ""
                   }`}
                 >
+                  {/* RESEARCH TECHNOLOGIES */}
 
-                                    <li>
-                    <Link
-                      to="/technologies"
-                      onClick={closeMenus}
+                  <li>
+                    <div className="sidebar-sub-row">
+                      <Link
+                        to="/technologies"
+                        onClick={closeMenus}
+                      >
+                        Research Technologies
+                      </Link>
+
+                      <button
+                        type="button"
+                        className={`sidebar-sub-toggle ${
+                          mobTechOpen ? "open" : ""
+                        }`}
+                        onClick={() => setMobTechOpen(v => !v)}
+                        aria-expanded={mobTechOpen}
+                        aria-label="Toggle Research Technologies submenu"
+                      >
+                        <Chevron size={14} />
+                      </button>
+                    </div>
+
+                    <ul
+                      className={`sidebar-sub sidebar-sub-nested sidebar-sub-deep ${
+                        mobTechOpen ? "open" : ""
+                      }`}
                     >
-                      Research Technologies
-                    </Link>
+                      <li>
+                        <Link to="/illumina" onClick={closeMenus}>
+                          Illumina NGS Services
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link to="/pacbio" onClick={closeMenus}>
+                          PacBio Services
+                        </Link>
+                      </li>
+                    </ul>
                   </li>
 
                   <li>
@@ -473,12 +559,16 @@ const Navbar = () => {
                   </li>
 
                   <li>
+                    <Link to="/transcriptomics" onClick={closeMenus}>
+                      Transcriptomics
+                    </Link>
+                  </li>
+
+                  <li>
                     <Link to="/epigenomics" onClick={closeMenus}>
                       Epigenomics
                     </Link>
                   </li>
-
-
                 </ul>
               </li>
 

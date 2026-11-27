@@ -1,0 +1,914 @@
+.illumina-section {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 75px;
+  padding-right: 24px;
+  padding-bottom: 100px;
+  padding-left: 24px;
+  background-color: #f3f6f9;
+  color: #15345b;
+  overflow: hidden;
+}
+
+.illumina-container {
+  width: 100%;
+  max-width: 1240px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+}
+
+/* Heading */
+
+.illumina-heading {
+  max-width: 1000px;
+  margin-bottom: 30px;
+}
+
+.illumina-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #4781b5;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.illumina-eyebrow-line {
+  width: 28px;
+  height: 2px;
+  background-color: #438ac5;
+}
+
+.illumina-heading .section-heading {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+/* Article layout with two flowcharts */
+
+.illumina-content-block {
+  margin-bottom: 70px;
+}
+
+.illumina-first-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+  column-gap: 45px;
+  align-items: start;
+  margin-bottom: 45px;
+}
+
+.illumina-article {
+  max-width: 100%;
+  margin-bottom: 0;
+}
+
+.illumina-article p,
+.illumina-second-content p {
+  margin: 0 0 18px;
+  color: #667c96;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.illumina-article-subheading {
+  margin: 30px 0 14px;
+  color: #18395f;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+.illumina-flowchart {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.illumina-flowchart-first {
+  max-width: 560px;
+  margin: 0 0 0 auto;
+}
+
+.illumina-flowchart-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+.illumina-second-content {
+  width: 100%;
+}
+
+.illumina-flowchart-second {
+  max-width: 760px;
+  margin: 30px auto 0;
+}
+
+/* Services heading */
+
+.illumina-services-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e9eef4;
+}
+
+.illumina-section-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #4385bd;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.illumina-services-heading h3 {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #18395f;
+  font-size: 25px;
+  font-weight: 650;
+  letter-spacing: -0.7px;
+}
+
+.illumina-service-count {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.illumina-service-count strong {
+  color: #2b75ae;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.illumina-service-count span {
+  color: #8b9bae;
+  font-size: 10px;
+}
+
+/* Service grid */
+
+.illumina-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 85px;
+}
+
+.illumina-service-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  overflow: hidden;
+  border: 1px solid #e8edf2;
+  border-radius: 13px;
+  background-color: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.illumina-service-card:hover {
+  transform: translateY(-4px);
+  border-color: #c6dbea;
+  box-shadow: 0 12px 28px rgba(34, 74, 112, 0.08);
+}
+
+.illumina-service-card:focus-visible {
+  outline: 2px solid #438bc2;
+  outline-offset: 2px;
+}
+
+.illumina-card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 17px;
+  padding-right: 17px;
+  padding-bottom: 0;
+  padding-left: 17px;
+}
+
+.illumina-card-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: #3987c2;
+}
+
+.illumina-card-category {
+  color: #8494a6;
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.illumina-card-arrow {
+  margin-left: auto;
+  color: #9aabba;
+  font-size: 16px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.illumina-service-card:hover .illumina-card-arrow {
+  transform: translate(3px, -3px);
+  color: #327db7;
+}
+
+/* Service images */
+
+.illumina-card-visual {
+  position: relative;
+  height: 170px;
+  margin: 14px 17px 0;
+  overflow: hidden;
+  border-radius: 9px;
+  background: #f1f7fc;
+}
+
+.illumina-service-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.illumina-service-card:hover .illumina-service-image {
+  transform: scale(1.04);
+}
+
+.illumina-card-bottom {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-top: 17px;
+  padding-right: 17px;
+  padding-bottom: 17px;
+  padding-left: 17px;
+}
+
+.illumina-card-platform {
+  margin-bottom: 8px;
+  color: #5e8db6;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+}
+
+.illumina-card-bottom h4 {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 9px;
+  margin-left: 0;
+  color: #1e3c5e;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.illumina-card-bottom p {
+  min-height: 58px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #7b8b9d;
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.illumina-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 19px;
+  padding-top: 12px;
+  border-top: 1px solid #edf1f5;
+  color: #347eb5;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.illumina-card-link span {
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.illumina-service-card:hover .illumina-card-link span {
+  transform: translateX(4px);
+}
+
+/* FAQ */
+
+.illumina-faq {
+  margin-bottom: 85px;
+}
+
+.illumina-faq-heading {
+  max-width: 720px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 36px;
+  margin-left: auto;
+  text-align: center;
+}
+
+.illumina-faq-heading .section-heading {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 12px;
+  margin-left: 0;
+  text-align: center;
+}
+
+.illumina-faq-heading p {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #7c8da2;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.illumina-faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 24px;
+  align-items: start;
+}
+
+.illumina-faq-column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+
+.illumina-faq-item {
+  border: 1px solid #e8edf2;
+  border-radius: 12px;
+  background-color: #ffffff;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.illumina-faq-item:hover {
+  border-color: #c6dbea;
+}
+
+.illumina-faq-open {
+  border-color: #8bbce5;
+  background-color: #f7fafd;
+}
+
+.illumina-faq-question-wrap {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.illumina-faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  padding-top: 18px;
+  padding-right: 22px;
+  padding-bottom: 18px;
+  padding-left: 22px;
+  border: 0;
+  background-color: transparent;
+  color: #1e3c5e;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.5;
+  text-align: left;
+  cursor: pointer;
+}
+
+.illumina-faq-question:focus-visible {
+  outline: 2px solid #438bc2;
+  outline-offset: -2px;
+  border-radius: 12px;
+}
+
+.illumina-faq-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #edf5fc;
+  color: #286fa8;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.illumina-faq-open .illumina-faq-icon {
+  transform: rotate(45deg);
+}
+
+.illumina-faq-answer {
+  display: none;
+  padding-top: 0;
+  padding-right: 22px;
+  padding-bottom: 20px;
+  padding-left: 22px;
+}
+
+.illumina-faq-open .illumina-faq-answer {
+  display: block;
+}
+
+.illumina-faq-answer p {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #687e94;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* CTA */
+
+.illumina-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-top: 45px;
+  padding-right: 50px;
+  padding-bottom: 45px;
+  padding-left: 50px;
+  border-radius: 19px;
+  background-color: #f0f6fc;
+}
+
+.illumina-cta-copy {
+  max-width: 620px;
+}
+
+.illumina-cta-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #5286b8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.illumina-cta-copy h3 {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 12px;
+  margin-left: 0;
+  color: #173d68;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  line-height: 1.3;
+}
+
+.illumina-cta-copy p {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #6c8096;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.illumina-cta-action {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Detail popup */
+
+.illumina-detail-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  background-color: rgba(13, 31, 51, 0.45);
+  backdrop-filter: blur(5px);
+}
+
+.illumina-detail-panel {
+  width: 100%;
+  max-width: 680px;
+  max-height: 88vh;
+  overflow-y: auto;
+  border: 1px solid #e5edf4;
+  border-radius: 17px;
+  background-color: #ffffff;
+  box-shadow: 0 25px 80px rgba(13, 36, 59, 0.2);
+}
+
+.illumina-detail-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 28px;
+  padding-right: 30px;
+  padding-bottom: 23px;
+  padding-left: 30px;
+  border-bottom: 1px solid #edf1f5;
+  background-color: #f7fafd;
+}
+
+.illumina-detail-header h3 {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 9px;
+  margin-left: 0;
+  color: #1c3c60;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.illumina-detail-category {
+  color: #8293a6;
+  font-size: 11px;
+}
+
+.illumina-detail-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #e2eaf0;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #59728b;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.illumina-detail-body {
+  padding-top: 25px;
+  padding-right: 30px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+}
+
+.illumina-detail-description span {
+  color: #4385bd;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.illumina-detail-best span {
+  color: #4385bd;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.illumina-detail-description p {
+  margin-top: 10px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #687e94;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.illumina-detail-best {
+  margin-top: 22px;
+  padding-top: 17px;
+  padding-right: 17px;
+  padding-bottom: 17px;
+  padding-left: 17px;
+  border-radius: 9px;
+  background-color: #f1f7fc;
+}
+
+.illumina-detail-best p {
+  margin-top: 7px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  color: #3e5d7b;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.illumina-detail-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 27px;
+}
+
+.illumina-detail-block h4 {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 14px;
+  margin-left: 0;
+  color: #234363;
+  font-size: 14px;
+}
+
+.illumina-detail-block ul {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.illumina-detail-block li {
+  position: relative;
+  padding-left: 17px;
+  color: #718398;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.illumina-detail-block li::before {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #65a1cf;
+  content: "";
+}
+
+.illumina-detail-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-top: 17px;
+  padding-right: 30px;
+  padding-bottom: 17px;
+  padding-left: 30px;
+  border-top: 1px solid #edf1f5;
+  background-color: #fbfcfd;
+}
+
+.illumina-detail-footer span {
+  color: #8393a4;
+  font-size: 11px;
+}
+
+.illumina-detail-footer a {
+  color: #347eb5;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.illumina-detail-footer a span {
+  margin-left: 5px;
+  color: #347eb5;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .illumina-first-content {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+
+  .illumina-flowchart-first {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .illumina-flowchart-second {
+    max-width: 720px;
+  }
+
+  .illumina-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .illumina-service-card:last-child:nth-child(3n + 1) {
+    grid-column: auto;
+  }
+
+  .illumina-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 38px;
+    padding-right: 32px;
+    padding-bottom: 38px;
+    padding-left: 32px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .illumina-section {
+    padding-top: 55px;
+    padding-right: 16px;
+    padding-bottom: 70px;
+    padding-left: 16px;
+  }
+
+  .illumina-heading {
+    margin-bottom: 22px;
+  }
+
+  .illumina-content-block {
+    margin-bottom: 50px;
+  }
+
+  .illumina-first-content {
+    margin-bottom: 32px;
+  }
+
+  .illumina-article p {
+    font-size: 14px;
+  }
+
+  .illumina-article-subheading {
+    font-size: 19px;
+  }
+
+  .illumina-flowchart-first,
+  .illumina-flowchart-second {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .illumina-services-heading {
+    align-items: flex-start;
+  }
+
+  .illumina-services-heading h3 {
+    font-size: 21px;
+  }
+
+  .illumina-service-count strong {
+    font-size: 21px;
+  }
+
+  .illumina-service-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+    margin-bottom: 60px;
+  }
+
+  .illumina-card-visual {
+    height: 180px;
+  }
+
+  .illumina-card-bottom p {
+    min-height: auto;
+  }
+
+  .illumina-faq {
+    margin-bottom: 60px;
+  }
+
+  .illumina-faq-heading {
+    margin-bottom: 26px;
+  }
+
+  .illumina-faq-list {
+    grid-template-columns: 1fr;
+    row-gap: 14px;
+  }
+
+  .illumina-faq-question {
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+  }
+
+  .illumina-faq-answer {
+    padding-right: 16px;
+    padding-bottom: 18px;
+    padding-left: 16px;
+  }
+
+  .illumina-cta {
+    padding-top: 30px;
+    padding-right: 22px;
+    padding-bottom: 30px;
+    padding-left: 22px;
+  }
+
+  .illumina-cta-copy h3 {
+    font-size: 21px;
+  }
+
+  .illumina-detail-backdrop {
+    align-items: flex-end;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
+  .illumina-detail-panel {
+    max-height: 90vh;
+    border-radius: 17px 17px 0 0;
+  }
+
+  .illumina-detail-header {
+    padding-top: 22px;
+    padding-right: 20px;
+    padding-bottom: 22px;
+    padding-left: 20px;
+  }
+
+  .illumina-detail-header h3 {
+    font-size: 20px;
+  }
+
+  .illumina-detail-body {
+    padding-top: 22px;
+    padding-right: 20px;
+    padding-bottom: 22px;
+    padding-left: 20px;
+  }
+
+  .illumina-detail-columns {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .illumina-detail-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 17px;
+    padding-right: 20px;
+    padding-bottom: 17px;
+    padding-left: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .illumina-section * {
+    transition-duration: 0.01ms;
+  }
+}

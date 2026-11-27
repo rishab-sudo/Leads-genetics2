@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import "./Epigenomics.css";
 
 import AnalysisPipeline from "../../components/Research/AnalysisPipeline";
-import EpigenomicsBanner from "../../components/Research/EpigenomicsBanner";
+import ServiceBanner from "../../components/Research/ServiceBanner";
 
 import epi1Image from "../../assets/epi1.jpg";
 
@@ -217,6 +217,8 @@ function Epigenomics() {
 
   return (
     <>
+
+  
       <Helmet>
         <title>Epigenomics & DNA Methylation Profiling Services | Leads Genetics</title>
         <meta
@@ -240,7 +242,9 @@ function Epigenomics() {
         />
       </Helmet>
 
-      <EpigenomicsBanner />
+<ServiceBanner 
+title={"Epigenomics"}
+></ServiceBanner>
 
       <main className="epi-page">
         <div className="epi-container">
@@ -252,7 +256,7 @@ function Epigenomics() {
               RESEARCH GENOMICS / EPIGENOMICS
             </span>
 
-            <h1 className="epi-main-title">
+            <h1 className="epi-main-title section-heading ">
               {pageData.title}
             </h1>
 

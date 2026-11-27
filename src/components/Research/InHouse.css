@@ -27,7 +27,7 @@
 }
 
 .inhouse-eyebrow {
-display: inline-flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 7px 14px;

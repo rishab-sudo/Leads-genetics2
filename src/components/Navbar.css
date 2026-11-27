@@ -1,4 +1,3 @@
-
 /* ================= GLOBAL ================= */
 
 * {
@@ -257,6 +256,13 @@ body {
   height: 100%;
 }
 
+/* Third level side panel (Research Technologies -> Illumina / PacBio) */
+
+.submenu-panel {
+  min-width: 225px;
+  z-index: 1200;
+}
+
 /* Dropdown links */
 
 .dropdown-link {
@@ -501,7 +507,7 @@ body {
 }
 
 .sidebar-sub.open {
-  max-height: 800px;
+  max-height: 900px;
 }
 
 /* Nested accordion */
@@ -514,7 +520,18 @@ body {
 }
 
 .sidebar-sub-nested.open {
-  max-height: 350px;
+  max-height: 550px;
+}
+
+/* Deep nested accordion (Research Technologies -> Illumina / PacBio) */
+
+.sidebar-sub-deep.open {
+  max-height: 200px;
+}
+
+.sidebar-sub-deep a {
+  font-size: 0.85rem;
+  color: #7c8ba1;
 }
 
 /* Submenu links */

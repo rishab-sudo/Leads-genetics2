@@ -275,6 +275,16 @@
   margin-bottom: 0px;
 }
 
+.tech-back-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 18px;
+  margin-bottom: 0px;
+}
+
 .tech-owned {
   background-color: #ffffff;
   padding-top: 64px;
@@ -584,6 +594,10 @@
     font-size: 12px;
   }
 
+  .tech-back-action {
+    margin-top: 14px;
+  }
+
   .tech-owned {
     padding-top: 48px;
     padding-bottom: 48px;
@@ -678,6 +692,10 @@
   .tech-back-text {
     font-size: 11px;
     line-height: 1.5;
+  }
+
+  .tech-back-action {
+    margin-top: 12px;
   }
 
   .tech-faq-question {

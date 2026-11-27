@@ -7,6 +7,7 @@ import Advance from "../components/Research/Advance";
 import Technology from "../components/Research/Technology";
 import Services from "../components/Services";
 import SampleRequirements from "../components/SampleRequirements";
+import GenoSer from "../components/Research/GenoSer"
 
 import "./Research.css";
 import Flow from "../components/Research/Flow";
@@ -68,8 +69,9 @@ const Research = () => {
 
 
       <Technology />
-      
+         <GenoSer/>
       <Services />
+   
       <Bio/>
       <SampleRequirements />
 

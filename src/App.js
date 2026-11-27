@@ -24,6 +24,8 @@ import Technologies from "./pages/Technologies";
 import Genomics from "./pages/Services/Genomics";
 import Epigenomics from "./pages/Services/Epigenomics";
 import Transcriptomics from "./pages/Services/Transcriptomics";
+import Illumina from "./components/Research/Illumina";
+import PacBio from "./components/Research/Pacbio";
 
 function App() {
   return (
@@ -93,6 +95,24 @@ function App() {
           path="/Genomics"
           element={<Genomics />}
         />
+
+        <Route
+          path="/Illumina"
+          element={<Illumina />}
+        />
+        <Route
+          path="/illumina"
+          element={<Illumina />}
+        />
+        <Route
+          path="/pacbio"
+          element={<PacBio />}
+        />
+                <Route
+          path="/Pacbio"
+          element={<PacBio />}
+        />
+
 
         <Route
           path="/epigenomics"

@@ -6,11 +6,11 @@ import { motion, MotionConfig } from "framer-motion";
 import "./Genomics.css";
 
 import GenomicsFAQ from "../../components/Research/GenomicsFAQ";
-import GenomicBanner from "../../components/Research/GenomicBanner";
 import GenoAbout from "../../components/Research/GenoAbout";
 import GenoSnp from "../../components/Research/GenoSnp";
-import GenoSer from "../../components/Research/GenoSer";
 import GenoAdv from "../../components/Research/GenoAdv";
+import ServiceBanner from "../../components/Research/ServiceBanner";
+
 
 function Genomics() {
   return (
@@ -39,13 +39,14 @@ function Genomics() {
           />
         </Helmet>
 
-        <GenomicBanner />
+<ServiceBanner
+title={"Genomic Sequencing"}
+description={"Every transcript. Every condition. Quantified"}
+/>
 
         <GenoAbout />
 
         <GenoSnp />
-
-        <GenoSer />
 
         <GenoAdv />
 

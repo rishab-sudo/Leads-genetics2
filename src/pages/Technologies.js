@@ -9,6 +9,7 @@ import pacbio from "../../src/assets/pacbio.jpg"
 import promethion from "../../src/assets/promethion.jpg"
 import onlink from "../../src/assets/onlink.jpg"
 import TechBanner from "../components/Research/TechBanner";
+import Button from "../components/Button";
 
 const serviceMicroarray = {
   label: "Illumina Microarray (iScan)",
@@ -35,6 +36,7 @@ const platforms = [
     text: "High-output population-scale short-read sequencing. Powers high-depth WGS, WES, stranded RNA-Seq, GBS, and Olink Explore HT proteomics readouts.",
     specs: "Paired-end 150 bp · High Q30 output · Multi-terabyte run capacity",
     service: serviceShortRead,
+    route: "/illumina",
   },
   {
     image: miseq,
@@ -68,6 +70,7 @@ const platforms = [
     text: "Delivers ~60–90 Gb of HiFi reads per run with ≥ 15 kb read lengths at Q30+ accuracy. Ideal for structural variants, Iso-Seq, and haplotype phasing.",
     specs: "~60-90 Gb HiFi / run · ≥ 15 kb read length · Q30+ single-molecule accuracy",
     service: serviceLongRead,
+    route: "/pacbio",
   },
   {
     image: promethion,
@@ -300,6 +303,17 @@ function Technologies() {
                         {platform.service.label}
                       </span>
                       <p className="tech-back-text">{platform.service.text}</p>
+                      {platform.route && (
+                        <div className="tech-back-action">
+                          <Button
+                            to={platform.route}
+                            variant="primary"
+                            size="small"
+                          >
+                            Know more services
+                          </Button>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </article>

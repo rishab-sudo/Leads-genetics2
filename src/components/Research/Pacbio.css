@@ -1,0 +1,1100 @@
+.pacbio-section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 75px 24px 100px;
+  background-color: #f3f6f9;
+  color: #15345b;
+  overflow: hidden;
+}
+
+.pacbio-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* ================================
+   OVERVIEW
+================================ */
+
+.pacbio-heading {
+  max-width: 1000px;
+  margin-bottom: 65px;
+}
+
+.pacbio-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #48896f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.pacbio-eyebrow-line {
+  width: 28px;
+  height: 2px;
+  background-color: #4b9a78;
+}
+
+.pacbio-heading .section-heading {
+  margin: 0 0 20px;
+}
+
+.pacbio-article {
+  max-width: 100%;
+}
+
+.pacbio-article p {
+  margin: 0 0 18px;
+  color: #667c96;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+/* ================================
+   FIGURES AND CAPTIONS
+================================ */
+
+.pacbio-figure {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.pacbio-figcaption {
+  margin: 12px 0 0;
+  color: #6c8096;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.pacbio-figcaption strong {
+  color: #235a48;
+  font-weight: 700;
+}
+
+/* ================================
+   WORKFLOW SECTION
+================================ */
+
+.pacbio-workflow {
+  margin-bottom: 85px;
+}
+
+.pacbio-workflow-heading {
+  max-width: 900px;
+  margin-bottom: 35px;
+}
+
+.pacbio-workflow-heading .section-heading {
+  margin: 0 0 16px;
+}
+
+.pacbio-workflow-heading > p {
+  max-width: 800px;
+  margin: 0;
+  color: #667c96;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* Workflow image */
+
+.pacbio-workflow-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 850px;
+  margin: 28px auto 32px;
+  padding: 18px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid #e8edf2;
+  border-radius: 16px;
+  background-color: #ffffff;
+}
+
+.pacbio-workflow-image img {
+  display: block;
+  width: 100%;
+  max-width: 780px;
+  max-height: 420px;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Workflow cards */
+
+.pacbio-workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pacbio-workflow-step {
+  position: relative;
+  padding: 20px 16px;
+  border: 1px solid #e8edf2;
+  border-radius: 13px;
+  background-color: #ffffff;
+  transition: transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.pacbio-workflow-step:hover {
+  transform: translateY(-3px);
+  border-color: #b9d9c9;
+}
+
+.pacbio-workflow-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  margin-bottom: 18px;
+  border-radius: 9px;
+  background-color: #eaf5ef;
+  color: #398364;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pacbio-workflow-step h3 {
+  margin: 0 0 12px;
+  color: #1e3c5e;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.pacbio-workflow-step p {
+  margin: 0;
+  color: #7b8b9d;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* ================================
+   PRINCIPLE OF SMRT SEQUENCING
+================================ */
+
+.pacbio-principle {
+  margin-bottom: 85px;
+}
+
+.pacbio-principle-heading {
+  margin-bottom: 30px;
+}
+
+.pacbio-principle-heading .section-heading {
+  margin: 0;
+}
+
+/* Principle content and image */
+
+.pacbio-principle-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.pacbio-principle-content p {
+  margin: 0 0 18px;
+  color: #667c96;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.pacbio-principle-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  padding: 25px;
+  overflow: hidden;
+  border: 1px solid #e8edf2;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.pacbio-principle-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* SMRTbell */
+
+.pacbio-smrtbell {
+  margin-top: 40px;
+  padding: 32px;
+  border: 1px solid #dcebe3;
+  border-radius: 15px;
+  background-color: #f0f7f3;
+}
+
+.pacbio-smrtbell h3 {
+  margin: 0 0 16px;
+  color: #235a48;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.pacbio-smrtbell p {
+  margin: 0 0 15px;
+  color: #617b70;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.pacbio-smrtbell p:last-child {
+  margin-bottom: 0;
+}
+
+/* Principle highlight cards */
+
+.pacbio-principle-points {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.pacbio-principle-point {
+  padding: 24px 20px;
+  border: 1px solid #e8edf2;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.pacbio-principle-point > span {
+  display: block;
+  margin-bottom: 13px;
+  color: #48896f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.pacbio-principle-point h4 {
+  margin: 0 0 10px;
+  color: #1e3c5e;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.pacbio-principle-point p {
+  margin: 0;
+  color: #7b8b9d;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* ================================
+   SERVICES HEADING
+================================ */
+
+.pacbio-services-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e9eef4;
+}
+
+.pacbio-section-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #48896f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.pacbio-services-heading h3 {
+  margin: 0;
+  color: #18395f;
+  font-size: 25px;
+  font-weight: 650;
+  letter-spacing: -0.7px;
+}
+
+.pacbio-service-count {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.pacbio-service-count strong {
+  color: #398364;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.pacbio-service-count span {
+  color: #8b9bae;
+  font-size: 10px;
+}
+
+/* ================================
+   SERVICE GRID
+================================ */
+
+.pacbio-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 85px;
+}
+
+.pacbio-service-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e8edf2;
+  border-radius: 13px;
+  background-color: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.pacbio-service-card:hover {
+  transform: translateY(-4px);
+  border-color: #bfdccd;
+  box-shadow: 0 12px 28px rgba(35, 90, 72, 0.08);
+}
+
+.pacbio-service-card:focus-visible {
+  outline: 2px solid #4b9a78;
+  outline-offset: 2px;
+}
+
+.pacbio-card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 17px 17px 0;
+}
+
+.pacbio-card-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: #4b9a78;
+}
+
+.pacbio-card-category {
+  color: #8494a6;
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.pacbio-card-arrow {
+  margin-left: auto;
+  color: #9aabba;
+  font-size: 16px;
+  transition: transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.pacbio-service-card:hover .pacbio-card-arrow {
+  transform: translate(3px, -3px);
+  color: #398364;
+}
+
+/* Service images */
+
+.pacbio-card-visual {
+  position: relative;
+  height: 170px;
+  margin: 14px 17px 0;
+  overflow: hidden;
+  border-radius: 9px;
+  background-color: #f0f7f3;
+}
+
+.pacbio-service-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.pacbio-service-card:hover .pacbio-service-image {
+  transform: scale(1.04);
+}
+
+/* Service card content */
+
+.pacbio-card-bottom {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 17px;
+}
+
+.pacbio-card-platform {
+  margin-bottom: 8px;
+  color: #568e73;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+}
+
+.pacbio-card-bottom h4 {
+  margin: 0 0 9px;
+  color: #1e3c5e;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.pacbio-card-bottom p {
+  min-height: 58px;
+  margin: 0;
+  color: #7b8b9d;
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.pacbio-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 19px;
+  padding-top: 12px;
+  border-top: 1px solid #edf1f5;
+  color: #398364;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.pacbio-card-link span {
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.pacbio-service-card:hover .pacbio-card-link span {
+  transform: translateX(4px);
+}
+
+/* ================================
+   FAQ
+================================ */
+
+.pacbio-faq {
+  margin-bottom: 85px;
+}
+
+.pacbio-faq-heading {
+  max-width: 720px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.pacbio-faq-heading .pacbio-section-label {
+  text-align: center;
+}
+
+.pacbio-faq-heading .section-heading {
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.pacbio-faq-heading p {
+  margin: 0;
+  color: #7c8da2;
+  font-size: 13px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.pacbio-faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 24px;
+  align-items: start;
+}
+
+.pacbio-faq-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pacbio-faq-item {
+  border: 1px solid #e8edf2;
+  border-radius: 12px;
+  background-color: #ffffff;
+  transition: border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.pacbio-faq-item:hover {
+  border-color: #bfdccd;
+}
+
+.pacbio-faq-open {
+  border-color: #8fc4a9;
+  background-color: #f7fbf9;
+}
+
+.pacbio-faq-question-wrap {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.pacbio-faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  padding: 18px 22px;
+  border: 0;
+  background-color: transparent;
+  color: #1e3c5e;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.5;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pacbio-faq-question:focus-visible {
+  outline: 2px solid #4b9a78;
+  outline-offset: -2px;
+  border-radius: 12px;
+}
+
+.pacbio-faq-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #e9f4ed;
+  color: #398364;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+.pacbio-faq-open .pacbio-faq-icon {
+  transform: rotate(45deg);
+}
+
+.pacbio-faq-answer {
+  display: none;
+  padding: 0 22px 20px;
+}
+
+.pacbio-faq-open .pacbio-faq-answer {
+  display: block;
+}
+
+.pacbio-faq-answer p {
+  margin: 0;
+  color: #687e94;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* ================================
+   CTA
+================================ */
+
+.pacbio-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 45px 50px;
+  border-radius: 19px;
+  background-color: #f0f7f3;
+}
+
+.pacbio-cta-copy {
+  max-width: 620px;
+}
+
+.pacbio-cta-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #48896f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.pacbio-cta-copy h3 {
+  margin: 0 0 12px;
+  color: #235a48;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  line-height: 1.3;
+}
+
+.pacbio-cta-copy p {
+  margin: 0;
+  color: #6c8096;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.pacbio-cta-action {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ================================
+   DETAIL MODAL
+================================ */
+
+.pacbio-detail-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(13, 31, 51, 0.45);
+  backdrop-filter: blur(5px);
+}
+
+.pacbio-detail-panel {
+  width: 100%;
+  max-width: 680px;
+  max-height: 88vh;
+  overflow-y: auto;
+  border: 1px solid #e5edf4;
+  border-radius: 17px;
+  background-color: #ffffff;
+  box-shadow: 0 25px 80px rgba(13, 36, 59, 0.2);
+}
+
+.pacbio-detail-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 28px 30px 23px;
+  border-bottom: 1px solid #edf1f5;
+  background-color: #f6faf8;
+}
+
+.pacbio-detail-header h3 {
+  margin: 0 0 9px;
+  color: #1c3c60;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.pacbio-detail-category {
+  color: #8293a6;
+  font-size: 11px;
+}
+
+.pacbio-detail-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #e2eaf0;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #59728b;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.pacbio-detail-body {
+  padding: 25px 30px;
+}
+
+.pacbio-detail-description span {
+  color: #48896f;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.pacbio-detail-best span {
+  color: #48896f;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.pacbio-detail-description p {
+  margin: 10px 0 0;
+  color: #687e94;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.pacbio-detail-best {
+  margin-top: 22px;
+  padding: 17px;
+  border-radius: 9px;
+  background-color: #f0f7f3;
+}
+
+.pacbio-detail-best p {
+  margin: 7px 0 0;
+  color: #3e5d7b;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.pacbio-detail-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 27px;
+}
+
+.pacbio-detail-block h4 {
+  margin: 0 0 14px;
+  color: #234363;
+  font-size: 14px;
+}
+
+.pacbio-detail-block ul {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pacbio-detail-block li {
+  position: relative;
+  padding-left: 17px;
+  color: #718398;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.pacbio-detail-block li::before {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #63a58a;
+  content: "";
+}
+
+.pacbio-detail-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 17px 30px;
+  border-top: 1px solid #edf1f5;
+  background-color: #fbfcfd;
+}
+
+.pacbio-detail-footer span {
+  color: #8393a4;
+  font-size: 11px;
+}
+
+.pacbio-detail-footer a {
+  color: #398364;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pacbio-detail-footer a span {
+  margin-left: 5px;
+  color: #398364;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1100px) {
+  .pacbio-workflow-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pacbio-principle-points {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .pacbio-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pacbio-faq-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .pacbio-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 38px 32px;
+  }
+
+  .pacbio-principle-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .pacbio-principle-visual {
+    min-height: auto;
+  }
+
+  .pacbio-principle-visual img {
+    max-height: 450px;
+  }
+
+  .pacbio-workflow-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .pacbio-section {
+    padding: 55px 16px 70px;
+  }
+
+  .pacbio-heading {
+    margin-bottom: 45px;
+  }
+
+  .pacbio-article p {
+    font-size: 14px;
+  }
+
+  .pacbio-figcaption {
+    font-size: 12px;
+  }
+
+  /* Workflow */
+
+  .pacbio-workflow {
+    margin-bottom: 60px;
+  }
+
+  .pacbio-workflow-heading {
+    margin-bottom: 25px;
+  }
+
+  .pacbio-workflow-heading > p {
+    font-size: 13px;
+  }
+
+  .pacbio-workflow-image {
+    max-width: 100%;
+    padding: 8px;
+    margin: 25px 0;
+    border-radius: 11px;
+  }
+
+  .pacbio-workflow-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .pacbio-workflow-step {
+    padding: 20px;
+  }
+
+  .pacbio-workflow-step p {
+    font-size: 12px;
+  }
+
+  /* Principle */
+
+  .pacbio-principle {
+    margin-bottom: 60px;
+  }
+
+  .pacbio-principle-layout {
+    gap: 20px;
+  }
+
+  .pacbio-principle-content p {
+    font-size: 13px;
+  }
+
+  .pacbio-principle-visual {
+    padding: 15px;
+  }
+
+  .pacbio-smrtbell {
+    margin-top: 25px;
+    padding: 23px;
+  }
+
+  .pacbio-smrtbell h3 {
+    font-size: 20px;
+  }
+
+  .pacbio-smrtbell p {
+    font-size: 13px;
+  }
+
+  .pacbio-principle-points {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .pacbio-principle-point {
+    padding: 20px;
+  }
+
+  /* Services */
+
+  .pacbio-services-heading {
+    align-items: flex-start;
+  }
+
+  .pacbio-services-heading h3 {
+    font-size: 21px;
+  }
+
+  .pacbio-service-count strong {
+    font-size: 21px;
+  }
+
+  .pacbio-service-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+    margin-bottom: 60px;
+  }
+
+  .pacbio-card-visual {
+    height: 180px;
+  }
+
+  .pacbio-card-bottom p {
+    min-height: auto;
+  }
+
+  /* FAQ */
+
+  .pacbio-faq {
+    margin-bottom: 60px;
+  }
+
+  .pacbio-faq-heading {
+    margin-bottom: 26px;
+  }
+
+  .pacbio-faq-question {
+    padding: 16px;
+  }
+
+  .pacbio-faq-answer {
+    padding: 0 16px 18px;
+  }
+
+  /* CTA */
+
+  .pacbio-cta {
+    padding: 30px 22px;
+  }
+
+  .pacbio-cta-copy h3 {
+    font-size: 21px;
+  }
+
+  /* Modal */
+
+  .pacbio-detail-backdrop {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .pacbio-detail-panel {
+    max-height: 90vh;
+    border-radius: 17px 17px 0 0;
+  }
+
+  .pacbio-detail-header {
+    padding: 22px 20px;
+  }
+
+  .pacbio-detail-header h3 {
+    font-size: 20px;
+  }
+
+  .pacbio-detail-body {
+    padding: 22px 20px;
+  }
+
+  .pacbio-detail-columns {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .pacbio-detail-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 17px 20px;
+  }
+}
+
+/* ================================
+   REDUCED MOTION
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .pacbio-section *,
+  .pacbio-section *::before,
+  .pacbio-section *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

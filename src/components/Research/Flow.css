@@ -2,7 +2,7 @@
 .lgflow-section {
   width: 100%;
   padding: 64px 0 72px;
-  background-color: #ffffff;
+  background-color: #f3f6f9;
   box-sizing: border-box;
 }
 
@@ -65,6 +65,7 @@
   gap: 28px;
 }
 
+/* Base line */
 .lgflow-timeline::before {
   content: "";
   position: absolute;
@@ -75,13 +76,34 @@
   background-color: #e3e9f0;
 }
 
+/* Travelling pulse along the line */
+.lgflow-timeline::after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 14px;
+  width: 140px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(37, 99, 235, 0) 0%,
+    #2563eb 50%,
+    rgba(37, 99, 235, 0) 100%
+  );
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.55);
+  animation: lgflow-travel-x 6s ease-in-out infinite;
+}
+
 .lgflow-step {
   position: relative;
   z-index: 1;
   min-width: 0;
 }
 
+/* Step number: breathing */
 .lgflow-step-number {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,6 +116,23 @@
   color: #0f172a;
   font-size: 13px;
   line-height: 1;
+  animation: lgflow-breathe 3s ease-in-out infinite;
+}
+
+/* Ripple ring (inherits the step colour from the border) */
+.lgflow-step-number::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid;
+  border-color: inherit;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  animation: lgflow-ripple 3s ease-out infinite;
 }
 
 .lgflow-number-green {
@@ -118,6 +157,32 @@
   color: #ffffff;
 }
 
+/* Stagger: each step breathes one after another */
+.lgflow-step:nth-child(1) .lgflow-step-number,
+.lgflow-step:nth-child(1) .lgflow-step-number::after {
+  animation-delay: 0s;
+}
+
+.lgflow-step:nth-child(2) .lgflow-step-number,
+.lgflow-step:nth-child(2) .lgflow-step-number::after {
+  animation-delay: 0.6s;
+}
+
+.lgflow-step:nth-child(3) .lgflow-step-number,
+.lgflow-step:nth-child(3) .lgflow-step-number::after {
+  animation-delay: 1.2s;
+}
+
+.lgflow-step:nth-child(4) .lgflow-step-number,
+.lgflow-step:nth-child(4) .lgflow-step-number::after {
+  animation-delay: 1.8s;
+}
+
+.lgflow-step:nth-child(5) .lgflow-step-number,
+.lgflow-step:nth-child(5) .lgflow-step-number::after {
+  animation-delay: 2.4s;
+}
+
 .lgflow-step-title {
   margin: 0 0 8px;
   color: #0f172a;
@@ -131,6 +196,71 @@
   color: #5b6675;
   font-size: 14px;
   line-height: 1.65;
+}
+
+/* Keyframes */
+@keyframes lgflow-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.18);
+  }
+}
+
+@keyframes lgflow-ripple {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+
+  70%,
+  100% {
+    opacity: 0;
+    transform: scale(1.9);
+  }
+}
+
+@keyframes lgflow-travel-x {
+  0% {
+    left: 14px;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    left: calc(100% - 154px);
+    opacity: 0;
+  }
+}
+
+@keyframes lgflow-travel-y {
+  0% {
+    top: 14px;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    top: calc(100% - 154px);
+    opacity: 0;
+  }
 }
 
 /* Tablet */
@@ -188,6 +318,20 @@
     height: auto;
   }
 
+  .lgflow-timeline::after {
+    top: 14px;
+    left: 13px;
+    width: 2px;
+    height: 140px;
+    background: linear-gradient(
+      180deg,
+      rgba(37, 99, 235, 0) 0%,
+      #2563eb 50%,
+      rgba(37, 99, 235, 0) 100%
+    );
+    animation: lgflow-travel-y 6s ease-in-out infinite;
+  }
+
   .lgflow-step {
     padding-left: 42px;
   }
@@ -206,5 +350,20 @@
 
   .lgflow-step-desc {
     font-size: 14px;
+  }
+}
+
+/* Reduced motion: turn everything off */
+@media (prefers-reduced-motion: reduce) {
+  .lgflow-timeline::after {
+    display: none;
+  }
+
+  .lgflow-step-number {
+    animation: none;
+  }
+
+  .lgflow-step-number::after {
+    display: none;
   }
 }
